@@ -46,15 +46,26 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-custom': 'linear-gradient(180deg, #121314 20%, rgba(0, 0, 0, 50) 50.94%)',
+        'custom-gradient':
+          'linear-gradient(150.47deg, rgba(255, 255, 255, 0.05) 55.03%, rgba(255, 255, 255, 0) 86.03%)',
+        'custom-gradient1':
+          'linear-gradient(150.47deg, rgba(255, 255, 255, 0.05) 55.03%, rgba(255, 255, 255, 0) 86.03%)',
+        'custom-gradient2':
+          'linear-gradient(360.47deg, rgba(255, 255, 255, 0.05) 55.03%, rgba(255, 255, 255, 0) 10.03%)',
+        'custom-gradient3': 'linear-gradient(182deg, rgb(15 16 16) 0%, rgb(0 0 0) 100%)',
+        'custom-gradient4':
+          'linear-gradient(172.47deg, rgba(255, 255, 255, 0.1) -35%, rgba(255, 255, 255, 0) 89.03%);',
+        'custom-gradient5':
+          'linear-gradient(125deg, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 89.03%);',
+        'bt-gradient':
+          'linear-gradient(#0000 0%, #00000005 7.2%, #00000009 10.29%, #00000013 14.7%, #00000026 21%, #0000004d 30%, #000 60%)',
+      },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+      
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
-      },
+      borderRadius: {},
       colors: {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
@@ -96,6 +107,7 @@ const config = {
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
         sans: ['var(--font-geist-sans)'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
@@ -105,6 +117,10 @@ const config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
+        },
+        'border-flow': {
+          '0%, 100%': { transform: 'translateX(-100%)' },
+          '50%': { transform: 'translateX(0)' },
         },
       },
       typography: () => ({
