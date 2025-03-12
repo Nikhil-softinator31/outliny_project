@@ -54,7 +54,7 @@ const Navbar = () => {
               <ul className=" items-center justify-center flex lg:max-w-[600px] xl:max-w-none gap-4  px-4 xl:px-8 py-1 bg-custom-gradient1 gradient-border">
                 {navItems.map((item, index) => (
                   <li key={index} className="relative group">
-                    <a
+                    <a  
                       href={item.href}
                       className="block py-2 px-2 xl:px-3 text-white md:hover:bg-transparent 
                       md:hover:text-gray-400 relative after:content-[''] after:block after:h-[2px] 

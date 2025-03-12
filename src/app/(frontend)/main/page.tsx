@@ -31,7 +31,7 @@ const page = () => {
         <Card1 />
         <FAQ />
         <Testimonial />
-        <SpotlightCard/>
+        {/* <SpotlightCard/> */}
         <BottomCard />
         <Footer/>  
 
