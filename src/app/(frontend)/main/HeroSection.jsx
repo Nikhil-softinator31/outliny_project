@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
 
 const HeroSection = () => {
@@ -23,14 +23,18 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="     ">
-        <div className="borderr ">
-          <div className=" ">
-            <div className="flex  gap-0 md:gap-10  ">
-              <img ref={imagesRef[0]} src="first.png" alt="Image 1" className="mt-0 m-1 object-fit    " />
-              <img ref={imagesRef[1]} src="second2.png" alt="Image 2" className="mt-1    " />
+      <div className="flex-auto overflow-hidden">
+        <div className="borderr">
+          <div className="">
+            <div className="flex gap-0 md:gap-10 code">
+              <img ref={imagesRef[0]} src="first.png" alt="Image 1" className="" />
+              <img ref={imagesRef[1]} src="second2.png" alt="Image 2" className="mt-1" />
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-center items-center h-[50vh]">
+          <img src="second2.png " alt="Image 1" className="md:hidden" />
         </div>
       </div>
     </>

@@ -9,10 +9,10 @@ const Carousel = () => {
   useEffect(() => {
     if (carouselRef.current) {
       gsap.to(carouselRef.current, {
-        x: '-50%', // Moves left continuously
-        duration: 15, // Adjust speed
+        x: '-50%',
+        duration: 15,
         ease: 'linear',
-        repeat: -1, // Infinite loop
+        repeat: -1,
       })
     }
   }, [])
@@ -31,17 +31,17 @@ const Carousel = () => {
   ]
 
   return (
-    <div className="relative w-full max-w-screen-xl mx-auto overflow-hidden bg-[#08090a]">
+    <div className="relative w-full max-w-screen-xl mx-auto overflow-hidden bg-[#08090a] lg:mb-20">
       {/* Gradient fade effect on both sides */}
-      <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#08090a] to-transparent z-10" />
-      <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#08090a] to-transparent z-10" />
+      <div className="absolute top-0 bottom-0 left-0 w-12 sm:w-16 bg-gradient-to-r from-[#08090a] to-transparent z-10" />
+      <div className="absolute top-0 bottom-0 right-0 w-12 sm:w-16 bg-gradient-to-l from-[#08090a] to-transparent z-10" />
 
       {/* Carousel Track */}
-      <div className="flex items-center gap-x-8" ref={carouselRef}>
+      <div className="flex items-center gap-x-6 sm:gap-x-8 flex-nowrap" ref={carouselRef}>
         {[...logos, ...logos].map((logo, index) => (
           <div
             key={index}
-            className="flex justify-center items-center min-w-[100px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[150px]  h-[80px] sm:h-[100px]"
+            className="flex justify-center items-center min-w-[100px] sm:min-w-[150px] md:min-w-[150px] lg:min-w-[180px] h-[60px] sm:h-[80px] md:h-[100px]"
           >
             <img src={logo} alt="brand logo" className="w-full h-auto object-contain" />
           </div>

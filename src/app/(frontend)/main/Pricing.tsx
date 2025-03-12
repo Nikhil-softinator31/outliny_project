@@ -68,7 +68,7 @@ const Pricing = () => {
         trigger: pricingRef.current,
         start: 'top 80%',
         end: 'bottom 20%',
-        toggleActions: 'restart play restart play', // Scroll up → stack back
+        toggleActions: 'restart play restart none', // Scroll up → stack back
         markers: false,
       },
     })
@@ -96,7 +96,7 @@ const Pricing = () => {
             <div
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="bg-custom-gradient5 p-6 sm:p-8 rounded-xl shadow-lg text-white flex flex-col items-start w-full "
+              className="bg-[#0f0f11] p-6 sm:p-8 rounded-xl shadow-lg text-white flex flex-col items-start w-full "
             >
               <img src={plan.img1} alt="" className="" />
               <h3 className="text-xl font-medium mt-5">{plan.name}</h3>

@@ -61,10 +61,12 @@ const config = {
           'linear-gradient(125deg, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 89.03%);',
         'bt-gradient':
           'linear-gradient(#0000 0%, #00000005 7.2%, #00000009 10.29%, #00000013 14.7%, #00000026 21%, #0000004d 30%, #000 60%)',
+        'custom-gradient10':
+          'linear-gradient(0deg, rgba(4, 1, 2, 0) 0%, rgba(255, 255, 255, 0.06) 100%)',
+        'custom-gradient11':
+          ' radial-gradient(circle, rgba(15,16,17,1) 0%, rgba(49,49,52,1) 0%, rgba(0,0,0,1) 100%)',
       },
-      animation: {
-      
-      },
+      animation: {},
       borderRadius: {},
       colors: {
         accent: {

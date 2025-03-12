@@ -52,20 +52,20 @@ const Main: React.FC = () => {
 
       {/* Main Content */}
       <div
-        className={`${poppins.className} bg-gradient-custom min-h-screen flex items-center justify-center px-4`}
+        className='font-poppins  bg-gradient-custom min-h-screen flex items-center justify-center px-4 mt-20'
       >
-        <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-[1200px] gap-10 lg:gap-20">
+        <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-[1200px] gap-10 lg:gap-20 mt-10 lg:mt-0">
           {/* Left Section */}
           <div
             ref={textContainerRef}
             className="flex flex-col gap-3 text-center lg:text-left max-w-lg"
           >
             <p className="text-[#8861B8] text-sm md:text-base">Advanced API documentation.</p>
-            <h1 className="text-2xl md:text-3xl font-semibold leading-snug text-white">
+            <h1 className="text-2xl md:text-3xl font-semibold font-poppins  text-white leading-[50px]">
               Manage Your PDF <br />
-              <span>Documents with ease.</span>
+              <span >Documents with ease.</span>
             </h1>
-            <p className="text-white mt-4 text-sm md:text-base leading-7">
+            <p className="text-white mt-4 text-sm md:text-base leading-7  font-extralight">
               Whether you need to create invoice PDFs, packing slips, contract documents, or labels,
               PDF Generator API helps you easily create document templates and generate PDF
               documents with the data you already have available.
@@ -79,7 +79,7 @@ const Main: React.FC = () => {
               {Object.entries(buttonOptions).map(([key, { label }]) => (
                 <button
                   key={key}
-                  className={`px-4 py-2 text-sm md:text-base rounded-lg transition-all duration-300 cursor-pointer ${
+                  className={`px-4 py-2 text-sm md:text-base rounded-lg transition-all duration-300 cursor-pointer font-poppins font-light ${
                     activeButton === key ? 'bg-[#202020] text-white' : 'text-[#FFFFFF99]'
                   }`}
                   onClick={() => setActiveButton(key)}

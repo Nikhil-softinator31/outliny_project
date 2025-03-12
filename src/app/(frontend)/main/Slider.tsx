@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import SpotlightCard from './SpotlightCard'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -11,7 +12,7 @@ const Slider = () => {
     {
       image: '/shield.svg',
       heading: 'Secure',
-      text: 'Our API endpoints are served through encrypted connections. You decide what is logged and if documents are stored.',
+      text: 'Our API endpoints Are Served Through Encrypted Connections. You Decide What is Logged And If Documents Are Stored.',
     },
     {
       image: '/star.svg',
@@ -30,7 +31,7 @@ const Slider = () => {
     },
     {
       image: '/card.svg',
-      heading: 'Safe Payment Processing',
+      heading: 'Safe Payment ',
       text: 'All payments are handled by Stripe. Docamatic never has direct access to any of your payment information.',
     },
     {
@@ -62,21 +63,26 @@ const Slider = () => {
   }, [])
 
   return (
-    <>
-      <div>
-        <div className="bg-[#08090a] min-h-screen flex justify-center items-center py-5">
-          <div
-            ref={(el) => {
-              cardsRef.current[0] = el
-            }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-1 gap-x-12"
-          >
-            {Data.map((data, index) => (
-              <div key={index} className="mt-6">
-                <div
-                  className="sm:w-[350px] flex-col p-5 rounded-2xl mx-auto space-y-4 mt-10  
-                 bg-[#0e0e0e] transition-all duration-300 
-                 hover:bg-custom-gradient1 border border-[#2b2a2a] cursor-pointer"
+    <div className="bg-[#000000] flex justify-center items-center py-5">
+      <div className="w-full lg:max-w-[80%] px-4">
+        <div
+          ref={(el) => {
+            cardsRef.current[0] = el
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {Data.map((data, index) => (
+            // Content goes here
+
+            <div key={index} className="mx-auto">
+              <div
+                className="w-full sm:max-w-[350px] flex flex-col p-5 rounded-2xl mx-auto space-y-4 mt-6 
+          transition-all duration-300 cursor-pointer"
+              >
+                {' '}
+                <SpotlightCard
+                  className="custom-spotlight-card"
+                  spotlightColor="rgba(180, 80, 255, 0.2)"
                 >
                   <img
                     src={data.image}
@@ -89,13 +95,13 @@ const Slider = () => {
                   <p className="text-[#FFFFFF] text-[13px] font-medium leading-[30px] text-left font-poppins">
                     {data.text}
                   </p>
-                </div>
+                </SpotlightCard>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

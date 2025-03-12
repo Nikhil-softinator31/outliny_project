@@ -36,22 +36,22 @@ const Navbar = () => {
 
   return (
     <nav className="h-[80px] bg-[#08090a] lg:mt-10">
-      <div className="h-full max-w-[1500px] mx-auto px-4 lg:px-8">
+      <div className="h-full max-w-[1600px] mx-auto ">
         <div className="h-full flex items-center justify-center">
           {/* Desktop Layout */}
-          <div className="flex items-center justify-between lg:justify-center w-full max-w-[1200px] lg:gap-8 xl:gap-16">
+          <div className="flex items-center justify-between lg:justify-center w-full lg:gap-8 xl:gap-16">
             {/* Logo */}
             <a href="https://outliny.com/" className="flex items-center flex-shrink-0">
               <img
                 src="/Logo.svg"
-                className="h-8 lg:h-10 w-[120px] lg:w-[140px] xl:w-[160px] object-contain"
+                className="h-8 lg:h-12 w-[120px] lg:w-[140px] xl:w-[140px] object-contain"
                 alt="Outliny Logo"
               />
             </a>
 
             {/* Desktop Navigation and Button */}
             <div className="hidden lg:flex lg:items-center lg:justify-between lg:flex-1 xl:justify-center xl:gap-16">
-              <ul className="flex items-center justify-center flex-1 lg:max-w-[600px] xl:max-w-none gap-4 xl:gap-8 px-4 xl:px-8 py-2 bg-custom-gradient1 gradient-border">  
+              <ul className=" items-center justify-center flex lg:max-w-[600px] xl:max-w-none gap-4  px-4 xl:px-8 py-1 bg-custom-gradient1 gradient-border">
                 {navItems.map((item, index) => (
                   <li key={index} className="relative group">
                     <a
@@ -59,16 +59,16 @@ const Navbar = () => {
                       className="block py-2 px-2 xl:px-3 text-white md:hover:bg-transparent 
                       md:hover:text-gray-400 relative after:content-[''] after:block after:h-[2px] 
                       after:w-full after:bg-white after:scale-x-0 group-hover:after:scale-x-100 
-                      after:transition-transform after:duration-300 font-poppins font-light text-[14px] xl:text-[16px] leading-[100%] capitalize whitespace-nowrap"
+                      after:transition-transform after:duration-300 font-poppins font-extralight text-[14px] xl:text-[16px] leading-[100%] capitalize whitespace-nowrap "
                     >
                       {item.name}
                     </a>
                   </li>
                 ))}
               </ul>
-              <div className="flex-shrink-0 ml-8">
-                <BuyTemplateButton />
-              </div>
+            </div>
+            <div className="flex-shrink-0 ml-8 hidden lg:block">
+              <BuyTemplateButton />
             </div>
 
             {/* Hamburger Button - Mobile Only */}
@@ -124,7 +124,7 @@ const Navbar = () => {
                     </a>
                   </li>
                 ))}
-                <li className="mt-6 w-full">
+                <li className=" w-full">
                   <BuyTemplateButton className="w-full" />
                 </li>
               </ul>
