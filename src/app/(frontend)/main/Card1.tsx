@@ -1,346 +1,139 @@
 'use client'
 
-import { useRef, useCallback, memo, createContext, useState, useContext, useEffect } from 'react'
-import { Search } from 'lucide-react'
-import { Input } from '@/components/ui/input'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef, useEffect, memo, forwardRef, ReactNode } from 'react'
 import Image from 'next/image'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// Create MouseEnter Context
-const MouseEnterContext = createContext<
-  [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
->(undefined)
+interface CardContainerProps {
+  children: ReactNode
+}
 
-// Card Container Component
 const CardContainer = memo(
-  ({ children, className }: { children: React.ReactNode; className?: string }) => {
-    const containerRef = useRef<HTMLDivElement>(null)
-    const [isMouseEntered, setIsMouseEntered] = useState(false)
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!containerRef.current) return
-      const { left, top, width, height } = containerRef.current.getBoundingClientRect()
-      const x = (e.clientX - left - width / 2) / 25
-      const y = (e.clientY - top - height / 2) / 25
-      containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`
-    }
-
-    const handleMouseEnter = () => {
-      setIsMouseEntered(true)
-    }
-
-    const handleMouseLeave = () => {
-      if (!containerRef.current) return
-      setIsMouseEntered(false)
-      containerRef.current.style.transform = 'rotateY(0deg) rotateX(0deg)'
-    }
-
-    return (
-      <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
-        <div className="py-4 flex items-center justify-center" style={{ perspective: '1000px' }}>
-          <div
-            ref={containerRef}
-            onMouseEnter={handleMouseEnter}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            className=" flex items-center justify-center relative transition-all duration-200 ease-linear"
-            style={{ transformStyle: 'preserve-3d' }}
-          >
-            {children}
-          </div>
-        </div>
-      </MouseEnterContext.Provider>
-    )
-  },
+  forwardRef<HTMLDivElement, CardContainerProps>(({ children }, ref) => (
+    <div ref={ref} className="py-4 flex items-center justify-center opacity-0 mx-auto">
+      {children}
+    </div>
+  )),
 )
-
 CardContainer.displayName = 'CardContainer'
 
-// Card Component
-const Card = memo(({ data }: { data: CardData }) => {
-  const cardRef = useRef<HTMLDivElement>(null)
-  const [isMouseEntered] = useContext(MouseEnterContext) || [false]
+interface CardProps {
+  data: {
+    imageSrc: string
+    description: string
+  }
+}
 
-  useGSAP(() => {
-    if (!cardRef.current) return
+const Card = memo(({ data }: CardProps) => {
+  const cardRef = useRef<HTMLDivElement | null>(null)
+  const containerRef = useRef<HTMLDivElement | null>(null)
 
+  useEffect(() => {
     const card = cardRef.current
-    const timeline = gsap.timeline()
-    let particleInterval: NodeJS.Timeout | null = null
+    const container = containerRef.current
+    if (!card || !container) return
 
-    // Initial state
-    gsap.set(card, {
-      backgroundColor: 'rgba(128, 128, 128, 0.1)',
-      backdropFilter: 'blur(10px)',
-      opacity: 0.7,
-      scale: 0.9,
-      y: 150,
-      boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.1)',
-    })
-
-    // Scroll trigger animation
-    gsap.to(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: 'top bottom-=100',
-        end: 'top center',
-        toggleActions: 'play none none reverse',
+    gsap.fromTo(
+      container,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: container,
+          start: 'top bottom-=100',
+          end: 'bottom center',
+          toggleActions: 'play none none reverse',
+        },
       },
-      opacity: 1,
-      scale: 1.05,
-      y: 0,
-      duration: 1.2,
-      ease: 'power4.out',
-    })
+    )
 
-    // Particle effect
-    const createParticle = () => {
-      const particle = document.createElement('div')
-      particle.className = 'particle'
-      card.appendChild(particle)
+    const handleMouseMove = (e: MouseEvent) => {
+      const { width, height, left, top } = card.getBoundingClientRect()
+      const x = e.clientX - left - width / 2
+      const y = e.clientY - top - height / 2
 
-      gsap.set(particle, {
-        position: 'absolute',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
-        borderRadius: '50%',
-        width: '4px',
-        height: '4px',
-        x: gsap.utils.random(0, card.offsetWidth),
-        y: gsap.utils.random(0, card.offsetHeight),
-      })
-
-      gsap.to(particle, {
-        y: '-=100',
-        opacity: 0,
-        duration: gsap.utils.random(1, 2),
-        ease: 'power1.out',
-        onComplete: () => particle.remove(),
+      gsap.to(card, {
+        rotationX: (-y / height) * 10,
+        rotationY: (x / width) * 10,
+        duration: 0.5,
+        ease: 'power2.out',
       })
     }
 
     const handleMouseEnter = () => {
-      particleInterval = setInterval(createParticle, 200)
-
-      gsap.to(card, {
-        background:
-          'linear-gradient(225deg, rgba(13,25,48,0.9) 0%, rgba(28,45,80,0.9) 50%, rgba(41,66,112,0.9) 100%)',
-        backdropFilter: 'blur(15px)',
-        boxShadow: '0 8px 32px 0 rgba(41,66,112,0.3)',
-        opacity: 1,
-        scale: 1.1,
-        duration: 0.4,
-        ease: 'power2.out',
-      })
-
-      card.querySelectorAll('p').forEach((p) => {
-        gsap.to(p, { color: '#ffffff', duration: 0.3 })
-      })
-
-      gsap.to(card.querySelectorAll('button'), {
-        scale: 1.1,
-        duration: 0.2,
-        ease: 'back.out(1.5)',
-      })
-
-      gsap.to(card.querySelector('img'), {
-        scale: 1.15,
-        duration: 0.4,
-        ease: 'power2.out',
-        z: 50,
-      })
+      gsap.to(card, { scale: 1.05, duration: 0.5, ease: 'elastic.out(1, 0.3)' })
     }
 
     const handleMouseLeave = () => {
-      if (particleInterval) {
-        clearInterval(particleInterval)
-        particleInterval = null
-      }
-
       gsap.to(card, {
-        background: 'rgba(128, 128, 128, 0.1)',
-        backdropFilter: 'blur(10px)',
-        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.1)',
-        opacity: 0.7,
+        rotationX: 0,
+        rotationY: 0,
         scale: 1,
-        duration: 0.4,
-        ease: 'power2.inOut',
-      })
-
-      card.querySelectorAll('p').forEach((p) => {
-        gsap.to(p, { color: '#6b7280', duration: 0.3 })
-      })
-
-      gsap.to(card.querySelectorAll('button'), {
-        scale: 1,
-        duration: 0.2,
-        ease: 'power2.inOut',
-      })
-
-      gsap.to(card.querySelector('img'), {
-        scale: 1,
-        duration: 0.4,
-        ease: 'power2.inOut',
-        z: 0,
+        duration: 0.6,
+        ease: 'elastic.out(1, 0.3)',
       })
     }
 
+    card.addEventListener('mousemove', handleMouseMove)
     card.addEventListener('mouseenter', handleMouseEnter)
     card.addEventListener('mouseleave', handleMouseLeave)
 
     return () => {
-      if (particleInterval) clearInterval(particleInterval)
+      card.removeEventListener('mousemove', handleMouseMove)
       card.removeEventListener('mouseenter', handleMouseEnter)
       card.removeEventListener('mouseleave', handleMouseLeave)
-      timeline.kill()
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
     }
   }, [])
 
   return (
-    <CardContainer>
+    <CardContainer ref={containerRef}>
       <div
         ref={cardRef}
-        data-bg={data.bgColor}
-        style={{
-          backgroundColor: 'rgba(128, 128, 128, 0.1)',
-          backdropFilter: 'blur(10px)',
-          boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.1)',
-          transform: isMouseEntered ? 'translateZ(50px)' : 'translateZ(0px)',
-        }}
-        className="card-reveal w-[310px] xs:w-[300px] sm:w-[320px] md:w-[340px] lg:w-[360px] h-[400px]  rounded-[20px] flex flex-col items-center text-center relative overflow-hidden backdrop-blur-md border border-white/10 transition-all duration-200"
+        className="w-full max-w-[260px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[320px] h-[250px] sm:h-[260px] md:h-[270px] lg:h-[280px] rounded-xl flex flex-col items-center text-center  bg-[#0a0a0a]
+        overflow-hidden bg-[gray-100/5] backdrop-blur-md border border-white/20
+        transition-transform duration-300 ease-in-out hover:border-white/50
+        transform-gpu perspective-1000"
       >
-        <div
-          className="absolute top-2 right-2 flex flex-col items-end"
-          style={{ transform: isMouseEntered ? 'translateZ(30px)' : 'translateZ(0px)' }}
-        >
-          <button className="bg-purple-600/80 backdrop-blur-sm text-white rounded-full p-2 m-1 hover:bg-purple-700 transition-colors duration-300">
-            🏆
-          </button>
-          <button className="bg-purple-600/80 backdrop-blur-sm text-white rounded-full p-2 m-1 hover:bg-purple-700 transition-colors duration-300">
-            🔍
-          </button>
+        <div className="relative w-28 sm:w-32 md:w-36 h-28 sm:h-32 md:h-36 mt-4 group overflow-hidde ">
+          <Image
+            src={data.imageSrc}
+            alt="Card Image"
+            fill
+            className="transition-all duration-500 grayscale group-hover:grayscale-0 object-cover rounded-md"
+            priority
+          />
         </div>
-        <Image
-          src={data.imageSrc}
-          alt="Card Image"
-          width={160}
-          height={160}
-          className="mt-4 transition-transform duration-500"
-          style={{ transform: isMouseEntered ? 'translateZ(70px)' : 'translateZ(0px)' }}
-          priority
-        />
-        <p
-          className="text-gray-400 text-sm mt-4 px-4 overflow-hidden transition-colors duration-300"
-          style={{ transform: isMouseEntered ? 'translateZ(40px)' : 'translateZ(0px)' }}
-        >
+        <p className="text-gray-200 text-xs sm:text-sm md:text-base mt-4 px-3 sm:px-4 md:px-6 md:w-[15vw] text-center">
           {data.description}
         </p>
-        <div
-          className="absolute bottom-4 w-full flex justify-between px-6"
-          style={{ transform: isMouseEntered ? 'translateZ(30px)' : 'translateZ(0px)' }}
-        >
-          <button className="text-white bg-gray-700/80 backdrop-blur-sm px-4 py-1 rounded-2xl hover:bg-gray-600 transition-colors duration-300">
-            View More
-          </button>
-          <button className="text-white bg-gray-700/80 backdrop-blur-sm px-4 py-1 rounded-2xl hover:bg-gray-600 transition-colors duration-300">
-            Use It
-          </button>
-        </div>
       </div>
     </CardContainer>
   )
 })
-
 Card.displayName = 'Card'
 
-// SearchBar Component
-const SearchBar = memo(() => (
-  <div className="flex flex-col sm:flex-row sm:justify-end mb-6 gap-3">
-    <button className="text-white py-2 w-full sm:w-auto px-4 rounded bg-gradient-to-br from-white/10 border border-gray-500">
-      AI Generated Template
-    </button>
-    <div className="relative w-full sm:w-auto">
-      <div className="absolute inset-y-0 left-3 flex items-center">
-        <Search className="h-4 w-4 text-gray-400" />
-      </div>
-      <Input
-        type="search"
-        placeholder="Search Template"
-        className="w-full pl-10 pr-12 py-2 bg-gradient-to-br from-white/10 border-gray-500 text-white placeholder:text-gray-400 border"
-      />
-    </div>
-  </div>
-))
+const cardData = [
+  { id: 1, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 2, imageSrc: '/car13.jpg', description: '1550+ free HTML email templates...' },
+  { id: 3, imageSrc: '/car13.jpg', description: 'Professional invoices and documents...' },
+  { id: 4, imageSrc: '/car13.jpg', description: 'Beautiful and responsive email templates...' },
+  { id: 5, imageSrc: '/car13.jpg', description: 'Customizable document generation...' },
+  { id: 6, imageSrc: '/car13.jpg', description: 'Automated workflow solutions...' },
+  { id: 7, imageSrc: '/car13.jpg', description: 'Optimize document automation...' },
+  { id: 8, imageSrc: '/car13.jpg', description: 'Enhanced productivity with automation...' },
+]
 
-SearchBar.displayName = 'SearchBar'
-
-// Types
-interface CardData {
-  id: number
-  imageSrc: string
-  description: string
-  bgColor: string
-}
-
-// Main Dashboard Component
 export default function Dashboard() {
-  const mainRef = useRef<HTMLDivElement>(null)
-  const cardsContainerRef = useRef<HTMLDivElement>(null)
-
-  const cardData: CardData[] = [
-    {
-      id: 1,
-      imageSrc: '/giraf.png',
-      description:
-        'Whether You Need To Create Invoice PDFs, Packing Slips, Contract Documents Or Labels...',
-      bgColor: '#ffffff',
-    },
-    {
-      id: 2,
-      imageSrc: '/happy.png',
-      description: '1550+ free HTML email templates...',
-      bgColor: '#feebcb',
-    },
-    {
-      id: 3,
-      imageSrc: '/girl_laptop.png',
-      description: 'Whether you need to create invoice PDFs...',
-      bgColor: '#d2effe',
-    },
-    {
-      id: 4,
-      imageSrc: '/girl_laptop.png',
-      description: 'This is another description...',
-      bgColor: '#d2effe',
-    },
-    {
-      id: 5,
-      imageSrc: '/happy.png',
-      description: 'This is another description...',
-      bgColor: '#f5ebca',
-    },
-    {
-      id: 6,
-      imageSrc: '/giraf.png',
-      description: 'This is another description...',
-      bgColor: '#d6bcf6',
-    },
-  ]
-
   return (
-    <div
-      ref={mainRef}
-      className="min-h-screen bg-[#00040F] text-white overflow-hidden px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 py-4 sm:py-6 md:py-8 lg:py-10 cursor-pointer"
-    >
-      <main className="rounded-[20px] border border-gray-600 p-3 sm:p-4 md:p-6 lg:p-8">
-        <SearchBar />
-        <div
-          ref={cardsContainerRef}
-          className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
-        >
+    <div className="min-h-screen bg-[#030303] text-white px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10">
+      <main className="rounded-2xl p-4 sm:p-8 md:p-12 lg:p-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {cardData.map((card) => (
             <Card key={card.id} data={card} />
           ))}

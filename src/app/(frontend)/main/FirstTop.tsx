@@ -48,9 +48,9 @@ const FirstTop: React.FC = () => {
   }, [])
 
   return (
-    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden max-h-[600px] text-left w-full md:w-[45vw] ml-5 border">
+    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full md:w-[47vw]  border">
       <h3 className="custom-text mt-5 text-3xl md:text-4xl p-5">Ready to Use Component</h3>
-      <p className="mt-5 text-[#878685]   break-words max-w-full text-sm md:text-base m-5 w-full md:w-[30vw]  text-left ">
+      <p className="mt-5 text-[#878685]   break-words  text-sm md:text-base m-5  md:w-[33vw]  text-left ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempore enim tempora
         distinctio non saepe obcaecati cum fugit quis. Lorem, ipsum dolor sit amet consectetur
         adipisicing elit. Ex in quo dolore eos. Repudiandae temporibus incidunt id optio mollitia
@@ -64,7 +64,7 @@ const FirstTop: React.FC = () => {
             'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 100%)',
           WebkitMaskImage:
             'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 100%)',
-          transform: 'rotate(357deg) skewX(21deg) skewY(9deg) translateX(29px);',
+          transform: 'rotate(350deg) skewX(21deg) skewY(9deg) translateX(29px);',
         }}
       >
         {[...Array(5)].map((_, i) => (

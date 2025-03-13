@@ -13,22 +13,9 @@ body {
   background-color: #08090a;
 }
 
-/* Outer Border */
-.borderr {
-      position: relative;
-    inset: 0;
-    border-radius: 10px;
-    border: 1px solid #1e1e1e;
-    background: var(--color-bg-primary);
-    width: 1600px;
-    height: 900px;
-    margin: 280px auto auto;
-    transform: translateX(0%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg);
-    transform-origin: top left;
-    backface-visibility: hidden;
+::-webkit-scrollbar {
+  display: none;
 }
-
-
 
 /* carousel css */
 
@@ -98,3 +85,27 @@ body {
 .hero {
   transform: skew(120);
 }
+
+
+/* herosection css */
+ .borderr {
+          position: relative;
+          inset: 0;
+          border-radius: 10px;
+          border: 1px solid #1e1e1e;
+          width: 1600px;
+          height: 900px;
+          margin: 280px auto auto;
+          transform: translateX(0%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg);
+          transform-origin: top left;
+          backface-visibility: hidden;
+        }
+
+        @media (max-width: 768px) {
+          .borderr {
+            display: none;
+          }
+          .code {
+            justify-content: center;
+          }
+        }
