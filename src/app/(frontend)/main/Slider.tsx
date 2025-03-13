@@ -74,8 +74,8 @@ const Slider = () => {
           {Data.map((data, index) => (
             <div key={index} className="mx-auto">
             <SpotlightCard
-              className="custom-spotlight-card "
-              spotlightColor="rgba(0, 229, 255, 0.2)"
+              className="custom-spotlight-card  "
+              spotlightColor="rgba(177, 177, 177, 0.2)"
             >
             
                 <div

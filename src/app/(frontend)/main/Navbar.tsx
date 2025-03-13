@@ -27,8 +27,8 @@ const Navbar = () => {
   const BuyTemplateButton = ({ className = '' }) => (
     <div className={`card example-2 ${className}`}>
       <div className="inner">
-        <button className="bg-[#181c25] flex items-center justify-center text-center text-white text-[14px] px-6 h-[38px] font-poppins font-light whitespace-nowrap">
-          Buy This Template
+        <button className="bg-[#181c25] flex items-center justify-center text-center text-white text-[14px] px-4 h-[38px] font-poppins font-light whitespace-nowrap">
+        Log In
         </button>
       </div>
     </div>

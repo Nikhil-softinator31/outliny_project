@@ -82,7 +82,7 @@ const Slider = () => {
                 {' '}
                 <SpotlightCard
                   className="custom-spotlight-card"
-                  spotlightColor="rgba(177, 177, 177, 0.2)"
+                  spotlightColor="rgba(87, 12, 226, 0.2)"
 
                 >
                   <img

@@ -109,7 +109,7 @@ const Card = memo(({ data }: CardProps) => {
             priority
           />
         </div>
-        <p className="text-gray-200 text-xs sm:text-sm md:text-base mt-4 px-3 sm:px-4 md:px-6 text-center">
+        <p className="text-gray-200 text-xs sm:text-sm md:text-base mt-4 px-3 sm:px-4 md:px-6 md:w-[15vw] text-center">
           {data.description}
         </p>
       </div>
@@ -120,13 +120,13 @@ Card.displayName = 'Card'
 
 const cardData = [
   { id: 1, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 2, imageSrc: '/car14.jpg', description: '1550+ free HTML email templates...' },
-  { id: 3, imageSrc: '/Clients.jpg', description: 'Professional invoices and documents...' },
-  { id: 4, imageSrc: '/giraf.png', description: 'Beautiful and responsive email templates...' },
-  { id: 5, imageSrc: '/happy.png', description: 'Customizable document generation...' },
-  { id: 6, imageSrc: '/img1.png', description: 'Automated workflow solutions...' },
-  { id: 7, imageSrc: '/img2.png', description: 'Optimize document automation...' },
-  { id: 8, imageSrc: '/img3.png', description: 'Enhanced productivity with automation...' },
+  { id: 2, imageSrc: '/car13.jpg', description: '1550+ free HTML email templates...' },
+  { id: 3, imageSrc: '/car13.jpg', description: 'Professional invoices and documents...' },
+  { id: 4, imageSrc: '/car13.jpg', description: 'Beautiful and responsive email templates...' },
+  { id: 5, imageSrc: '/car13.jpg', description: 'Customizable document generation...' },
+  { id: 6, imageSrc: '/car13.jpg', description: 'Automated workflow solutions...' },
+  { id: 7, imageSrc: '/car13.jpg', description: 'Optimize document automation...' },
+  { id: 8, imageSrc: '/car13.jpg', description: 'Enhanced productivity with automation...' },
 ]
 
 export default function Dashboard() {
