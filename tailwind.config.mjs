@@ -65,6 +65,8 @@ const config = {
           'linear-gradient(0deg, rgba(4, 1, 2, 0) 0%, rgba(255, 255, 255, 0.06) 100%)',
         'custom-gradient11':
           ' radial-gradient(circle, rgba(15,16,17,1) 0%, rgba(49,49,52,1) 0%, rgba(0,0,0,1) 100%)',
+        'custom-gradient12':
+          'linear-gradient(180deg, rgba(19, 20, 21, 0) 5%, #131415 50%, rgba(19, 20, 21, 0) 95%)',
       },
       animation: {},
       borderRadius: {},

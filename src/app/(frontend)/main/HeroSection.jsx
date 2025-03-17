@@ -34,7 +34,7 @@ const HeroSection = () => {
         </div>
 
         <div className="flex justify-center items-center h-[50vh]">
-          <img src="second2.png " alt="Image 1" className="md:hidden" />
+          <img src="second2.png " alt="Image 1" className="md:hidden mt-10" />
         </div>
       </div>
     </>

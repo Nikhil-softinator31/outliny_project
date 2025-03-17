@@ -120,20 +120,20 @@ Card.displayName = 'Card'
 
 const cardData = [
   { id: 1, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 2, imageSrc: '/car13.jpg', description: '1550+ free HTML email templates...' },
-  { id: 3, imageSrc: '/car13.jpg', description: 'Professional invoices and documents...' },
-  { id: 4, imageSrc: '/car13.jpg', description: 'Beautiful and responsive email templates...' },
-  { id: 5, imageSrc: '/car13.jpg', description: 'Customizable document generation...' },
-  { id: 6, imageSrc: '/car13.jpg', description: 'Automated workflow solutions...' },
-  { id: 7, imageSrc: '/car13.jpg', description: 'Optimize document automation...' },
-  { id: 8, imageSrc: '/car13.jpg', description: 'Enhanced productivity with automation...' },
+  { id: 2, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 3, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 4, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 5, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 6, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 7, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 8, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
 ]
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-[#030303] text-white px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10">
+    <div className="min-h-screen bg-[#030303] text-white px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10 ">
       <main className="rounded-2xl p-4 sm:p-8 md:p-12 lg:p-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {cardData.map((card) => (
             <Card key={card.id} data={card} />
           ))}

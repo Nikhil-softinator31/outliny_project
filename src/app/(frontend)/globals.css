@@ -17,38 +17,7 @@ body {
   display: none;
 }
 
-/* carousel css */
 
-@keyframes infiniteLoop {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(calc(-200px * 10), 0, 0);
-  }
-}
-
-.brandsCarousel {
-  position: relative;
-  overflow: hidden;
-}
-
-.brandsCarousel-overlay {
-  content: '';
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 50) 10%, rgba(250, 250, 240, 0) 90%);
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
-
-.carouselTrack {
-  width: calc(200px * 20);
-  animation: infiniteLoop 10s linear infinite;
-  animation-fill-mode: forwards;
-  will-change: transform;
-}
 
 /* testimonial csss */
 
@@ -104,8 +73,42 @@ body {
         @media (max-width: 768px) {
           .borderr {
             display: none;
+            
           }
           .code {
             justify-content: center;
           }
         }
+  
+/* real carousel css */
+@keyframes infiniteLoop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-200px * 10), 0, 0);
+    }
+}
+
+/* Tailwind ke liye animation class define karna */
+@layer utilities {
+    .animate-infiniteLoop {
+        animation: infiniteLoop 10s linear infinite;
+        will-change: transform;
+    }
+}
+
+
+/* pricing css */
+.pricinghover:hover {
+   
+    background: linear-gradient(179.17deg, rgba(57, 71, 227, 0.3) 0.71%, rgba(68, 9, 120, 0.3) 91.4%);
+  
+  } 
+  
+  .pricingbg{
+    
+  background-image:url('/bgblue.png') ;
+  
+  background-position: center;
+  }
