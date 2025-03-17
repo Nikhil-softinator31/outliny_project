@@ -1,4 +1,5 @@
 'use client'
+
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -21,11 +22,6 @@ const pricingPlans = [
       'Communication tools',
       'Reporting and analytics',
     ],
-    gradientColors: {
-      start: 'rgba(57, 71, 227, 0.6)',
-      mid: 'rgba(57, 71, 227, 0.3)',
-      end: 'rgba(68, 9, 120, 0.3)',
-    },
   },
   {
     img1: '/frame2.png',
@@ -41,11 +37,6 @@ const pricingPlans = [
       'Team collaboration',
       'Advanced analytics',
     ],
-    gradientColors: {
-      start: 'rgba(138, 43, 226, 0.6)',
-      mid: 'rgba(138, 43, 226, 0.3)',
-      end: 'rgba(68, 9, 120, 0.3)',
-    },
   },
   {
     img1: '/frame2.png',
@@ -61,11 +52,6 @@ const pricingPlans = [
       'Client communication',
       'Create custom reports tailored',
     ],
-    gradientColors: {
-      start: 'rgba(255, 69, 0, 0.6)',
-      mid: 'rgba(255, 69, 0, 0.3)',
-      end: 'rgba(68, 9, 120, 0.3)',
-    },
   },
 ]
 
@@ -97,25 +83,22 @@ const Pricing = () => {
     const card = cardRefs.current[index]
     if (!card) return
 
-    const colors = pricingPlans[index].gradientColors
-
     if (enter) {
       gsap.fromTo(
         card,
         {
-          background: `radial-gradient(circle at center, ${colors.start} 0%, ${colors.end} 0%)`,
+          background:
+            'radial-gradient(circle at center, rgba(57, 71, 227, 0.6) 0%, rgba(68, 9, 120, 0) 0%)',
         },
         {
-          background: `radial-gradient(circle at center, ${colors.mid} 30%, ${colors.end} 100%)`,
-          duration: 0.3,
+          background:
+            'radial-gradient(circle at center, rgba(57, 71, 227, 0.3) 30%, rgba(68, 9, 120, 0.3) 100%)',
+          duration: 0.5,
           ease: 'power2.out',
         },
       )
     } else {
-      gsap.to(card, {
-        background: 'transparent',
-        duration: 0.3,
-      })
+      gsap.to(card, { background: '' })
     }
   }
 
