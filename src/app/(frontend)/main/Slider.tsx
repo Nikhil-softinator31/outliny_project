@@ -63,7 +63,7 @@ const Slider = () => {
   }, [])
 
   return (
-    <div className="bg-[#08090a] flex justify-center items-center py-8 px-4">
+    <div className="bg-[#08090a] flex justify-center items-center py-8 px-4 ">
       <div className="w-full max-w-[1300px]">
         <div
           ref={(el) => {

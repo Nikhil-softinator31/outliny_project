@@ -13,7 +13,7 @@ interface CardContainerProps {
 
 const CardContainer = memo(
   forwardRef<HTMLDivElement, CardContainerProps>(({ children }, ref) => (
-    <div ref={ref} className="py-4 flex items-center justify-center opacity-0 mx-auto">
+    <div ref={ref} className="py-4 flex items-center justify-center opacity-0 mx-auto w-full">
       {children}
     </div>
   )),
@@ -100,16 +100,17 @@ const Card = memo(({ data }: CardProps) => {
         transition-transform duration-300 ease-in-out hover:border-white/50
         transform-gpu perspective-1000 group"
       >
-        <div className="relative w-28 sm:w-32 md:w-36 h-28 sm:h-32 md:h-36 mt-4 group overflow-hidde ">
+        <div className="relative w-full aspect-square max-w-[120px] xs:max-w-[140px] sm:max-w-[160px] md:max-w-[180px] mx-auto overflow-hidden">
           <Image
             src={data.imageSrc}
             alt="Card Image"
             fill
             className="transition-all duration-500 grayscale group-hover:grayscale-0 object-cover rounded-md"
+            sizes="(max-width: 640px) 120px, (max-width: 768px) 140px, (max-width: 1024px) 160px, 180px"
             priority
           />
         </div>
-        <p className="text-gray-200 text-xs sm:text-sm md:text-base mt-4 px-3 sm:px-4 md:px-6  text-center">
+        <p className="text-gray-200 text-xs sm:text-sm md:text-base mt-4 px-2 sm:px-3 md:px-4 w-full text-center">
           {data.description}
         </p>
       </div>
@@ -120,13 +121,13 @@ Card.displayName = 'Card'
 
 const cardData = [
   { id: 1, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 2, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 3, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 4, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 5, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 6, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 7, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
-  { id: 8, imageSrc: '/car13.jpg', description: 'Create invoice PDFs, packing slips, and more...' },
+  { id: 2, imageSrc: '/car13.jpg', description: '1550+ free HTML email templates...' },
+  { id: 3, imageSrc: '/car13.jpg', description: 'Professional invoices and documents...' },
+  { id: 4, imageSrc: '/car13.jpg', description: 'Beautiful and responsive email templates...' },
+  { id: 5, imageSrc: '/car13.jpg', description: 'Customizable document generation...' },
+  { id: 6, imageSrc: '/car13.jpg', description: 'Automated workflow solutions...' },
+  { id: 7, imageSrc: '/car13.jpg', description: 'Optimize document automation...' },
+  { id: 8, imageSrc: '/car13.jpg', description: 'Enhanced productivity with automation...' },
 ]
 
 export default function Dashboard() {

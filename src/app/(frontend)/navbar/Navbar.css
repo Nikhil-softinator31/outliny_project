@@ -34,7 +34,7 @@
   .example-2 .inner {
     position: relative;
     z-index: 1;
-    width: 175px;
+    width: 140px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -54,11 +54,7 @@
     }
   }
   
-  .example-2 .inner {
-    margin: 2px;
-    /* font-size: 10px; */
-    
-  }
+ 
   
   .example-2::before {
     content: "";

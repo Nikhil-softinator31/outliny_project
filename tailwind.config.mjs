@@ -67,6 +67,11 @@ const config = {
           ' radial-gradient(circle, rgba(15,16,17,1) 0%, rgba(49,49,52,1) 0%, rgba(0,0,0,1) 100%)',
         'custom-gradient12':
           'linear-gradient(180deg, rgba(19, 20, 21, 0) 5%, #131415 50%, rgba(19, 20, 21, 0) 95%)',
+        'custom-gradient13':
+          'linear-gradient(180deg, #EEEEEE 19.36%, rgba(227, 227, 227, 0) 75.98%)',
+        'custom-gradient14':
+          'linear-gradient(168.44deg, #B84CCB 8.49%, #245BE9 62.67%, #1C54E4 93.15%)',
+          'custom-gradient15': 'linear-gradient(0deg, rgba(6,25,60,1) 0%, rgba(37,23,55,1) 99%);',
       },
       animation: {},
       borderRadius: {},
@@ -112,6 +117,8 @@ const config = {
         mono: ['var(--font-geist-mono)'],
         sans: ['var(--font-geist-sans)'],
         poppins: ['Poppins', 'sans-serif'],
+        aldrich: ['Aldrich', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {

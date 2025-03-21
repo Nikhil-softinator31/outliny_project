@@ -70,11 +70,12 @@ const pricingPlans = [
 ]
 
 const Pricing = () => {
-  const pricingRef = useRef(null)
-  const cardRefs = useRef([])
-  const [hoverStates, setHoverStates] = useState(Array(pricingPlans.length).fill(false))
+  const pricingRef = useRef<HTMLDivElement | null>(null)
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+  const [hoverStates, setHoverStates] = useState<boolean[]>(Array(pricingPlans.length).fill(false))
 
   useGSAP(() => {
+    if (!cardRefs.current) return
     gsap.set(cardRefs.current, { y: 100, opacity: 0 })
 
     gsap.to(cardRefs.current, {
@@ -91,30 +92,34 @@ const Pricing = () => {
     })
   }, [])
 
-  const handleHover = (index, enter) => {
+  const handleHover = (index: number, enter: boolean) => {
     setHoverStates((prev) => prev.map((state, i) => (i === index ? enter : state)))
 
     const card = cardRefs.current[index]
     if (!card) return
 
-    const colors = pricingPlans[index].gradientColors
+   const plan = pricingPlans[index]
+   if (!plan) return
+
+   const colors = plan.gradientColors
+
 
     if (enter) {
       gsap.fromTo(
         card,
-        {
-          background: `radial-gradient(circle at center, ${colors.start} 0%, ${colors.end} 0%)`,
-        },
+        { background: `radial-gradient(circle at center, ${colors.start} 0%, ${colors.end} 0%)` },
         {
           background: `radial-gradient(circle at center, ${colors.mid} 30%, ${colors.end} 100%)`,
-          duration: 0.3,
+          duration: 0.5,
           ease: 'power2.out',
+          borderColor: 'rgba(255, 255, 255, 0.1)',
         },
       )
     } else {
       gsap.to(card, {
-        background: 'transparent',
-        duration: 0.3,
+        background: '#0f0f11',
+        duration: 0.5,
+        borderColor: 'rgba(255, 255, 255, 0.1)',
       })
     }
   }
@@ -125,19 +130,21 @@ const Pricing = () => {
       className="min-h-screen flex justify-center items-center bg-[#030303] font-poppins p-6 pricingbg"
     >
       <div className="w-full max-w-6xl text-center">
-        <h1 className="font-poppins text-2xl sm:text-4xl font-medium leading-snug text-white mt-3">
+        <h1 className="text-2xl sm:text-4xl font-medium leading-snug text-white mt-3">
           Simple, predictable pricing
         </h1>
-        <p className="font-poppins font-light text-sm sm:text-lg text-[#b0b0b0] mt-4 px-4">
+        <p className="text-sm sm:text-lg text-[#b0b0b0] mt-4 px-4">
           Find questions and answers related to the design system, purchase, updates, and support.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-10  ">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              ref={(el) => (cardRefs.current[index] = el)}
-              className="bg-[#0f0f11] p-6 sm:p-8 rounded-xl shadow-lg text-white flex flex-col items-start w-full pricinghover transition-all duration-500"
+              ref={(el) => {
+                if (el) cardRefs.current[index] = el
+              }}
+              className="bg-[#0f0f11] p-6 sm:p-8 rounded-xl shadow-lg text-white flex flex-col items-start w-full transition-all duration-500 border border-[#ffffff1a]"
               onMouseEnter={() => handleHover(index, true)}
               onMouseLeave={() => handleHover(index, false)}
             >
@@ -146,9 +153,7 @@ const Pricing = () => {
               <p className="text-gray-400 sm:text-left">{plan.description}</p>
               <p className="text-3xl font-bold mt-5">
                 {plan.price}{' '}
-                <span className="font-normal text-sm leading-6">
-                  {plan.price !== 'Free' ? '/ per month' : ''}
-                </span>
+                {plan.price !== 'Free' && <span className="font-normal text-sm">/ per month</span>}
               </p>
               <button className="mt-6 px-6 py-2 transition rounded-lg cursor-pointer w-full border border-[#FFFFFF1A] bg-custom-gradient4">
                 Get Started

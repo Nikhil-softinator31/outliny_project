@@ -5,9 +5,10 @@ import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import React from 'react'
 import { Poppins } from 'next/font/google'
+import { Aldrich } from 'next/font/google'
+import { Inter } from 'next/font/google'
 
 import { AdminBar } from '@/components/AdminBar'
-import { Footer } from '@/Footer/Component'
 import { Header } from '@/Header/Component'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
@@ -17,6 +18,8 @@ import { draftMode } from 'next/headers'
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
 import BackgroundVideo from './main/BackgroundVideo'
+import Footer from './main/Footer'
+import Navbar from './Navbar/page'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,12 +27,30 @@ const poppins = Poppins({
   variable: '--font-poppins',
 })
 
+const aldrich = Aldrich({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-aldrich',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'], // Adjust weights as needed
+  variable: '--font-inter',
+})
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
 
   return (
     <html
-      className={cn(GeistSans.variable, GeistMono.variable, poppins.variable)}
+      className={cn(
+        GeistSans.variable,
+        GeistMono.variable,
+        poppins.variable,
+        aldrich.variable,
+        inter.variable,
+      )}
       lang="en"
       suppressHydrationWarning
     >
@@ -46,13 +67,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             }}
           />
 
-          {/* <Header /> */}
-          {/* <div className="hero-navbar-background">
-            <BackgroundVideo />
-          </div> */}
+          <Navbar />
           <main>{children}</main>
-
-          {/* <Footer /> */}
+          <Footer />
         </Providers>
       </body>
     </html>

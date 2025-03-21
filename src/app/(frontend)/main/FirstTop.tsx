@@ -7,12 +7,12 @@ const FirstTop: React.FC = () => {
   const moveRefs = useRef<Map<number, HTMLDivElement>>(new Map())
 
   const imgCollection = [
-    '/car13.jpg',
-    '/car14.jpg',
-    '/car15.jpg',
-    '/car13.jpg',
-    '/car14.jpg',
-    '/car15.jpg',
+    '/car12.jpg',
+    '/car12.jpg',
+    '/car12.jpg',
+    '/car12.jpg',
+    '/car12.jpg',
+    '/car12.jpg',
   ]
 
   const addToRefs = (el: HTMLDivElement | null, index: number) => {

@@ -17,8 +17,6 @@ body {
   display: none;
 }
 
-
-
 /* testimonial csss */
 
 @keyframes marquee-left {
@@ -55,60 +53,105 @@ body {
   transform: skew(120);
 }
 
-
 /* herosection css */
- .borderr {
-          position: relative;
-          inset: 0;
-          border-radius: 10px;
-          border: 1px solid #1e1e1e;
-          width: 1600px;
-          height: 900px;
-          margin: 280px auto auto;
-          transform: translateX(0%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg);
-          transform-origin: top left;
-          backface-visibility: hidden;
-        }
+.borderr {
+  position: relative;
+  inset: 0;
+  border-radius: 10px;
+  border: 1px solid #1e1e1e;
+  width: 1600px;
+  height: 900px;
+  margin: 280px auto auto;
+  transform: translateX(0%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg);
+  transform-origin: top left;
+  backface-visibility: hidden;
+}
 
-        @media (max-width: 768px) {
-          .borderr {
-            display: none;
-            
-          }
-          .code {
-            justify-content: center;
-          }
-        }
-  
+@media (max-width: 768px) {
+  .borderr {
+    display: none;
+  }
+  .code {
+    justify-content: center;
+  }
+}
+
 /* real carousel css */
 @keyframes infiniteLoop {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(calc(-200px * 10), 0, 0);
-    }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-200px * 10), 0, 0);
+  }
 }
 
 /* Tailwind ke liye animation class define karna */
 @layer utilities {
-    .animate-infiniteLoop {
-        animation: infiniteLoop 10s linear infinite;
-        will-change: transform;
-    }
+  .animate-infiniteLoop {
+    animation: infiniteLoop 10s linear infinite;
+    will-change: transform;
+  }
 }
-
 
 /* pricing css */
 .pricinghover:hover {
-   
-    background: linear-gradient(179.17deg, rgba(57, 71, 227, 0.3) 0.71%, rgba(68, 9, 120, 0.3) 91.4%);
-  
-  } 
-  
-  .pricingbg{
-    
-  background-image:url('/bgblue.png') ;
-  
+  background: linear-gradient(179.17deg, rgba(57, 71, 227, 0.3) 0.71%, rgba(68, 9, 120, 0.3) 91.4%);
+}
+
+.pricingbg {
+  background-image: url('/bgblue.png');
+
   background-position: center;
+}
+
+.bg-custom-gradient4 {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.pricingbg {
+  background-image: url('/bgblue.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 640px) {
+  .pricingbg {
+    background-size: 200% auto;
   }
+}
+
+
+
+/* footer css */
+
+/* PAYLOAD 3D Section */
+
+/* Noise Texture */
+h1 {
+  background-image: url('/images/noise.png');
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+
+/* PAYLOAD Text */
+.Payload3D_text {
+  font-size: 21vw;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Invisible Gradient Circle (Still Affects the Hover) */
+.Payload3D_gradient {
+  filter: blur(100px);
+
+  border-radius: 100%;
+  /* background: radial-gradient(circle at center, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 50)); */
+  opacity: 0;
+}
