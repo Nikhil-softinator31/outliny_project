@@ -20,7 +20,7 @@ const BottomCard: React.FC = () => {
   }
 
   return (
-    <div id="Maindiv" className="flex flex-col gap-8 bg-black w-full text-white px-4 md:px-8">
+    <div id="Maindiv" className="flex flex-col gap-8 bg-black w-full text-white px-4 md:px-8 ">
       {/* First Section */}
       <div className="h-auto flex flex-col md:flex-row gap-8 w-full">
         <div className="w-full md:w-1/2">
@@ -42,13 +42,15 @@ const BottomCard: React.FC = () => {
                 <source src="/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+
+
             </div>
           </div>
         </div>
       </div>
 
       {/* Second Section */}
-      <div className="flex flex-col md:flex-row gap-8 w-full">
+      <div className="flex flex-col md:flex-row gap-8 w-full ">
         {/* Slider */}
         <div className="w-full md:w-1/4 bg-[#0E0E0E] rounded-2xl border border-[#202020] p-4">
           <div className="h-auto overflow-hidden">

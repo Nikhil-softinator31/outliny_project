@@ -73,15 +73,15 @@ const Main: React.FC = () => {
   }
 
   return (
-    <div className="font-poppins bg-gradient-custom min-h-screen flex items-center justify-center px-4 mt-20">
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-[1200px] gap-10 lg:gap-20 mt-10 lg:mt-0">
+    <div className="font-poppins bg-gradient-custom min-h-screen flex items-center justify-center px-4 mt-20 md:mt-0">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-[1200px] gap-10 lg:gap-20 mt-10 md:mt-0">
         {/* Left Section */}
         <div
           ref={textContainerRef}
           className="flex flex-col gap-3 text-center lg:text-left max-w-lg"
         >
           <p className="text-[#8861B8] text-sm md:text-base">Advanced API documentation.</p>
-          <h1 className="text-2xl md:text-3xl font-light text-white leading-[50px] ">
+          <h1 className="text-2xl md:text-3xl font-light text-white leading-[40px]  md:leading-[30px]  ">
             Manage Your PDF <br />
             <span>Documents with ease.</span>
           </h1>

@@ -27,7 +27,7 @@ const HeroSection = () => {
         <div className="borderr">
           <div className="">
             <div className="flex gap-0 md:gap-10 code">
-              <img ref={imagesRef[0]} src="first.png" alt="Image 1" className="" />
+              <img ref={imagesRef[0]} src="first.png" alt="Image 1" className="p-1 " />
               <img ref={imagesRef[1]} src="second2.png" alt="Image 2" className="mt-1" />
             </div>
           </div>

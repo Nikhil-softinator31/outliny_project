@@ -89,7 +89,7 @@ const Testimonials = () => {
   }, [isPausedRow2])
 
   return (
-    <div className="px-4 sm:px-6 lg:px-12 bg-black text-white min-h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div className="px-4 sm:px-6 lg:px-12 bg-[#08090a] text-white min-h-screen flex flex-col justify-center items-center overflow-hidden">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center">
         What People Are Saying
       </h2>
