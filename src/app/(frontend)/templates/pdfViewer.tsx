@@ -96,7 +96,7 @@ export default function PdfViewer() {
         {PDFDATA.map((data, index) => (
           <div
             key={index}
-            className="pdf-card p-6 rounded-2xl border-[#646464] border-t-[1px] border-l-[0.1px] border-r-[1px] mx-auto opacity-0"
+            className="pdf-card p-6 rounded-2xl border-[#646464] border mx-auto opacity-0"
           >
             <div className="grayscale hover:grayscale-0">
               <img src={data.image} alt={data.title} className="w-full h-auto rounded-lg mb-4 " />
@@ -115,7 +115,7 @@ export default function PdfViewer() {
               <button className="border-[1px] text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm">
                 {data.button1}
               </button>
-              <button className="border-[1px] text-[#ffffff] hover:text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm">
+              <button className="border-[1px] text-[#ffffff] hover:text-white px-7 py-2 rounded-lg transition-all duration-300 text-sm">
                 {data.button2}
               </button>
             </div>

@@ -23,7 +23,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="flex-auto overflow-hidden">
+      <div className="flex-auto overflow-hidden lg:mt-20">
         <div className="borderr">
           <div className="">
             <div className="flex gap-0 md:gap-10 code">

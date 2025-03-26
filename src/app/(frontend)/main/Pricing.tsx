@@ -22,10 +22,13 @@ const pricingPlans = [
       'Reporting and analytics',
     ],
     gradientColors: {
-      start: 'rgba(57, 71, 227, 0.6)',
-      mid: 'rgba(57, 71, 227, 0.3)',
-      end: 'rgba(68, 9, 120, 0.3)',
+      start: 'rgba(169, 169, 169, 0.15)',  // Very Light Dark Gray  
+      mid: 'rgba(105, 105, 105, 0.12)',   // Very Light Dim Gray  
+      end: 'rgba(0, 0, 0, 0.25)',        // Soft Black  
     },
+    
+    
+    
   },
   {
     img1: '/frame2.png',
@@ -42,10 +45,13 @@ const pricingPlans = [
       'Advanced analytics',
     ],
     gradientColors: {
-      start: 'rgba(138, 43, 226, 0.6)',
-      mid: 'rgba(138, 43, 226, 0.3)',
-      end: 'rgba(68, 9, 120, 0.3)',
+      start: 'rgba(138, 43, 226, 0.3)',  // Soft Blue-Violet
+      mid: 'rgba(72, 61, 139, 0.25)',    // Muted Dark Slate Blue
+      end: 'rgba(25, 25, 25, 0.4)',      // Softer Black
     },
+    
+    
+    
   },
   {
     img1: '/frame2.png',
@@ -62,10 +68,16 @@ const pricingPlans = [
       'Create custom reports tailored',
     ],
     gradientColors: {
-      start: 'rgba(255, 69, 0, 0.6)',
-      mid: 'rgba(255, 69, 0, 0.3)',
-      end: 'rgba(68, 9, 120, 0.3)',
+      start: 'rgba(128, 0, 128, 0.2)',  // Very Light Purple
+      mid: 'rgba(75, 0, 130, 0.15)',   // Faint Indigo
+      end: 'rgba(0, 0, 0, 0.3)',       // Soft Black
     },
+    // gradientColors: {
+    //   start: 'rgba(200, 200, 200, 0.10)',  // Softer Light Gray  
+    //   mid: 'rgba(150, 150, 150, 0.08)',   // Softer Dim Gray  
+    //   end: 'rgba(50, 50, 50, 0.18)',      // Softer Black  
+    // },
+    
   },
 ]
 
@@ -110,7 +122,7 @@ const Pricing = () => {
         { background: `radial-gradient(circle at center, ${colors.start} 0%, ${colors.end} 0%)` },
         {
           background: `radial-gradient(circle at center, ${colors.mid} 30%, ${colors.end} 100%)`,
-          duration: 0.5,
+          duration: 0.6,
           ease: 'power2.out',
           borderColor: 'rgba(255, 255, 255, 0.1)',
         },
@@ -118,7 +130,7 @@ const Pricing = () => {
     } else {
       gsap.to(card, {
         background: '#0f0f11',
-        duration: 0.5,
+        duration: 0.6,
         borderColor: 'rgba(255, 255, 255, 0.1)',
       })
     }

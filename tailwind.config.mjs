@@ -71,7 +71,10 @@ const config = {
           'linear-gradient(180deg, #EEEEEE 19.36%, rgba(227, 227, 227, 0) 75.98%)',
         'custom-gradient14':
           'linear-gradient(168.44deg, #B84CCB 8.49%, #245BE9 62.67%, #1C54E4 93.15%)',
-          'custom-gradient15': 'linear-gradient(0deg, rgba(6,25,60,1) 0%, rgba(37,23,55,1) 99%);',
+        'custom-gradient15': 'linear-gradient(0deg, rgba(6,25,60,1) 0%, rgba(37,23,55,1) 99%);',
+        'custom-gradient16':
+          ' linear-gradient(180deg, rgba(111 108 108 / 30%) 0%, rgba(255, 255, 255, 0.01) 100%)',
+        'custom-gradient17': 'llinear-gradient(137.59deg, #555555 20%, #fffff 75%)',
       },
       animation: {},
       borderRadius: {},

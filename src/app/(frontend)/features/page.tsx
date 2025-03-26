@@ -10,7 +10,7 @@ import Testimonials from '../main/Testimonial'
 
 const page = () => {
   return (
-    <div>
+    <div className='mt-20'>
       <HeroSection />
       <Carousel />
       <OutlinyLable1 />
