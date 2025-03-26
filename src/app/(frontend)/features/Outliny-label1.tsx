@@ -47,15 +47,15 @@ const OutlinyLable1 = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full px-4">
-      <div className="text-center max-w-[60%] mx-auto my-10">
+      <div className="text-center w-full md:max-w-[60%] mx-auto my-10">
         <h1
-          className=' text-white text-[28px] md:text-[40px] font-semibold leading-tight'
+          className=' text-white text-[26px] md:text-[40px] font-semibold leading-tight'
         >
           What is Outliny <span className="text-blue-600">white label</span> online graphic design
           tool?
         </h1>
       </div>
-      <div className="space-y-6 w-full max-w-[55%]">
+      <div className="space-y-6 w-full md:max-w-[55%]">
         {features.map((item, index) => (
           <div
             key={index}

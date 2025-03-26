@@ -1,82 +1,137 @@
 'use client'
-import './Navbar.css'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [hoverStyles, setHoverStyles] = useState({ left: 0, width: 0, opacity: 0 })
+  const navRef = useRef<HTMLDivElement>(null)
 
   const navItems = [
     { name: 'About Us', href: '/about' },
-    { name: 'Product', href: '/product' },
-    { name: 'features', href: '/features' },
+    { name: 'Features', href: '/features' },
     { name: 'Templates', href: '/templates' },
     { name: 'Resources', href: '/resources' },
     { name: 'Pricing', href: '/pricing' },
   ]
 
+  const handleHover = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (navRef.current) {
+      const target = e.target as HTMLElement
+      const { left, width } = target.getBoundingClientRect()
+      const navLeft = navRef.current.getBoundingClientRect().left
+      setHoverStyles({ left: left - navLeft, width, opacity: 1 })
+    }
+  }
+
+  const handleMouseLeave = () => {
+    setHoverStyles((prev) => ({ ...prev, opacity: 0 }))
+  }
+
   return (
-    <div className="relative flex justify-between lg:justify-around items-center py-5 md:py-8 lg:py-12 px-5 md:px-8">
-      {/* Logo */}
-      <a href="https://outliny.com/" className="flex items-center flex-shrink-0">
-        <img src="/Logo.svg" className="w-[100px] md:w-[120px] lg:w-[140px]" alt="Outliny Logo" />
-      </a>
+    <nav className="fixed w-full bg-[#08090a] text-white z-50 border-b border-[#232323]">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+        {/* Logo */}
+        <Link href="/">
+          <img src="/Logo.png" alt="Profound" className="h-10 lg:h-11" />
+        </Link>
 
-      {/* Desktop Navigation */}
-      <div className="hidden lg:block">
-        <ul className="flex    px-6  py-2 bg-custom-gradient1 rounded-lg gradient-border">
-          {navItems.map((item, index) => (
-            <li key={index} className="relative group">
-              <a
-                href={item.href}
-                className="block px-3 xl:px-4 text-white hover:text-gray-400 relative after:content-[''] after:block after:h-[2px] after:w-full after:bg-white after:scale-x-0 group-hover:after:scale-x-100 after:transition-transform after:duration-300 font-extralight text-[14px] xl:text-[16px] capitalize whitespace-nowrap"
-              >
-                {item.name}
-              </a>
-            </li>
+        {/* Desktop Navigation */}
+        <div
+          ref={navRef}
+          className="hidden lg:flex space-x-3 relative items-center"
+          onMouseLeave={handleMouseLeave}
+        >
+          <span
+            className="absolute top-1/2 -translate-y-1/2 h-10 bg-[#222121] rounded-3xl transition-all duration-300 ease-in-out -z-10"
+            style={{
+              left: `${hoverStyles.left}px`,
+              width: `${hoverStyles.width}px`,
+              opacity: hoverStyles.opacity,
+            }}
+          ></span>
+
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="relative text-[#b3b3b3] text-[16px] px-3 py-2 transition-all duration-200 hover:text-white"
+              onMouseEnter={handleHover}
+            >
+              {item.name}
+            </Link>
           ))}
-        </ul>
-      </div>
-
-      <div className="flex items-center">
-        {/* Login button */}
-        <div className="example-2 rounded-btn">
-          <div className="inner">
-            <button className=" border border-[#3c3f47] rounded-lg font-light ">Login</button>
-          </div>
         </div>
 
-        {/* Hamburger (Mobile only) */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden hamburger-btn text-white focus:outline-none z-30 ml-5"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Auth Buttons */}
+        <div className="hidden lg:flex space-x-4 items-center">
+          <Link href="/login" className="text-gray-400 hover:text-white text-sm font-medium">
+            Log in
+          </Link>
+          <Link
+            href="/get-started"
+            className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-[#505050] transition-all duration-200"
+          >
+            Get started
+          </Link>
+        </div>
+
+        {/* Mobile Menu & "Get Started" Button */}
+        <div className="flex items-center space-x-3 lg:hidden">
+          {!isMenuOpen && (
+            <Link
+              href="/get-started"
+              className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-[#505050] transition-all duration-200"
+            >
+              Get started
+            </Link>
+          )}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-gray-300 hover:text-white p-2"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`fixed inset-0 bg-black z-20 transform ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } lg:hidden flex flex-col justify-center rounded-menu`}
-      >
-        <ul className="flex flex-col items-center space-y-6 w-full px-8">
-          {navItems.map((item, index) => (
-            <li key={index} className="w-full text-center">
-              <a
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[#08090a] z-40 flex flex-col border-t border-[#232323]">
+          <div className="flex flex-col h-full px-6 py-4 space-y-2 flex-grow">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
                 href={item.href}
+                className=" text-white w-full text-left py-2 text-lg"
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-3 px-4 text-white text-xl font-light hover:text-gray-400"
               >
                 {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Buttons at Bottom */}
+          <div className="px-6 pb-6 space-y-3">
+            <Link
+              href="/login"
+              className="text-white border border-[#252525] py-2 text-base block text-center rounded-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Log in
+            </Link>
+            <Link
+              href="/get-started"
+              className="bg-white text-black px-4 py-2 rounded-md w-full text-center block text-base"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Get started
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
   )
 }
 

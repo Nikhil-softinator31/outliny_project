@@ -16,21 +16,17 @@ export default function About() {
   return (
     <>
       <div>
-        <div className="flex flex-col justify-center items-center m-6 lg:m-20 relative overflow-hidden">
-          <h1
-            className='font-poppins text-white font-extrabold  text-[24px] sm:text-[28px] md:text-[35px] lg:text-[45px] leading-[67.5px] text-center '
-          >
+        <div className="flex flex-col justify-center items-center m-6 lg:m-20 relative overflow-hidden ">
+          <h1 className="font-poppins text-white font-extrabold  text-[24px] sm:text-[28px] md:text-[35px] lg:text-[45px] leading-[67.5px] text-center gradient-text mt-20 ">
             About Us
           </h1>
-          <p
-            className='font-poppins text-[16px]  sm:text-[18px]  md:text-[22px]  lg:text-[24px] font-normal leading-[52.85px] text-white max-w-[90%] lg:max-w-[850px] text-center mt-2'
-          >
+          <p className="font-poppins text-[16px]  sm:text-[18px]  md:text-[22px]  lg:text-[24px] font-normal leading-[52.85px] text-white max-w-[90%] lg:max-w-[850px] text-center mt-2 gradient-text">
             Create PDFs Or Images For Resumes, Portfolios, Invoices, Receipts, And More With Our
             API, SDKs, And Integrations.
           </p>
           {/* Outliny Text */}
           <h1
-            className={`  ${aldrich.className} opacity-[0.05] bg-custom-gradient bg-clip-text text-transparent font-aldrich text-[60px] sm:text-[150px] md:text-[200px] lg:text-[250px] font-normal leading-tight  `}
+            className={`  ${aldrich.className} opacity-[0.05] bg-custom-gradient13 bg-clip-text text-transparent font-aldrich text-[60px] sm:text-[150px] md:text-[200px] lg:text-[250px] font-normal leading-tight  `}
           >
             Outliny
           </h1>
@@ -41,7 +37,6 @@ export default function About() {
         </div>
       </div>
       <Testimonials />
-      <Footer />
     </>
   )
 }

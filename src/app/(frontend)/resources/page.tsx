@@ -1,8 +1,15 @@
 import React from 'react'
+import Resources from './Resource'
+import Testimonials from '../main/Testimonial'
 
 const page = () => {
   return (
-    <div className='text-white'>thsiis resources page</div>
+    <div className=''>
+      
+      <Resources/>
+      <Testimonials/>
+
+    </div>
   )
 }
 

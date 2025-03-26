@@ -47,7 +47,7 @@ const OutlinyLable2 = () => {
   }, [])
 
   return (
-    <div className="flex flex-col justify-center items-center w-full px-4">
+    <div className="flex flex-col justify-center items-center w-full px-2">
       {/* Title */}
       <div className="text-center max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] mx-auto my-10">
         <h1 className="text-white text-[24px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold leading-tight">

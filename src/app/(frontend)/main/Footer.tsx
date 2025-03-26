@@ -2,153 +2,80 @@
 
 import React, { useState } from 'react'
 
-const Footer = () => {
+const footerLinks = [
+  {
+    title: 'Product',
+    links: [
+      'Content Management',
+      'Enterprise App Builder',
+      'Headless E-Commerce',
+      'Digital Asset Management',
+    ],
+  },
+  {
+    title: 'Developers',
+    links: ['Documentation', 'Community Help', 'Roadmap', 'Templates'],
+  },
+  {
+    title: 'Enterprise',
+    links: ['Pricing', 'Case Studies', 'Partner With Us', 'Security'],
+  },
+  {
+    title: 'Contact',
+    links: ['Terms of Service', 'Privacy Policy', 'Compare Payload', 'Contact Us'],
+  },
+]
+
+const Footer: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 })
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     setMousePosition({ x: e.clientX, y: e.clientY })
   }
 
   return (
     <footer
-      className="bg-[#08090a] text-white relative py-16 px-8 overflow-hidden"
+      className="relative py-10 px-8 overflow-hidden bg-[#08090a] text-white"
       onMouseMove={handleMouseMove}
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(8, 9, 10, 0.5), rgba(8, 9, 10, 0.5)), url('/Grid..svg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        zIndex: 0,
+      }}
     >
-      {/* Main Footer Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-4 gap-8 border-t border-gray-800 pt-10 relative z-10">
-        {/* Column 1 */}
-        <div>
-          <h3 className="text-lg font-medium mb-4">Product</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li>
-              <a href="#" className="hover:text-white">
-                Content Management
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Enterprise App Builder
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Headless E-Commerce
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Digital Asset Management
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 2 */}
-        <div>
-          <h3 className="text-lg font-medium mb-4">Developers</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li>
-              <a href="#" className="hover:text-white">
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Community Help
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Roadmap
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Templates
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 3 */}
-        <div>
-          <h3 className="text-lg font-medium mb-4">Enterprise</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li>
-              <a href="#" className="hover:text-white">
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Case Studies
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Partner With Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Security
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 4 */}
-        <div>
-          <h3 className="text-lg font-medium mb-4">Contact</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li>
-              <a href="#" className="hover:text-white">
-                Terms of Service
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Compare Payload
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
+      {/* Footer Grid */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-8  pt-10 relative z-10">
+        {footerLinks.map((section, index) => (
+          <div key={index} className="flex flex-col">
+            <h3 className="text-lg font-medium mb-4">{section.title}</h3>
+            <ul className="space-y-2 text-gray-400">
+              {section.links.map((link, linkIndex) => (
+                <li key={linkIndex}>
+                  <a href="#" className="hover:text-white">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
 
-      {/* Large "PAYLOAD" Text with Mask Effect */}
-      <div className="relative mt-40 h-[450px]">
+      {/* Large Text with Mask Effect */}
+      <div className="relative mt-40 h-[100px] md:h-[450px]">
         <div className="Payload3D_container">
           <div className="Payload3D_mask">
-            {/* Noise Effect with Mask */}
             <h1
-              className="Payload3D_text text-gray-700"
+              className="Payload3D_text text-gray-700 text-8xl font-bold text-center font-aldrich "
               style={{
-                WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0) 60%)`,
-                maskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0) 60%)`,
+                WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0) 100%)`,
+                maskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0) 60%) `,
               }}
             >
               Outliny
             </h1>
-
-            {/* Invisible Glowing Effect (Still Functional) */}
-            <div
-              className="Payload3D_gradient"
-              style={{
-                transform: `translate3d(calc(${mousePosition.x}px  -30rem), calc(${mousePosition.y}px - 55rem), 0)`,
-                filter: 'blur(50px)',
-                opacity: 0 /* 👈 Hides the gradient circle while keeping the effect */,
-              }}
-            ></div>
           </div>
         </div>
       </div>

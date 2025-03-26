@@ -15,10 +15,10 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <h1 className="text-white text-[22px] sm:text-[26px] md:text-[32px] lg:text-[42px] leading-tight font-extrabold text-center font-poppins px-4">
+      <h1 className="text-white text-[22px] sm:text-[26px] md:text-[32px] lg:text-[42px] leading-tight font-extrabold text-center font-poppins px-4 gradient-text">
         Amazing Features for Effortless Growth
       </h1>
-      <p className="text-white text-[16px] sm:text-[20px] md:text-[24px] text-center mx-auto leading-relaxed lg:w-[40em] mt-4 px-4">
+      <p className="text-white text-[16px] sm:text-[20px] md:text-[24px] text-center mx-auto leading-relaxed lg:w-[40em] mt-4 px-4 gradient-text ">
         Explore a world of innovation with our features, meticulously crafted to elevate every
         aspect of web development. Create PDFs or images for resumes, portfolios, invoices,
         receipts, and more with our API, SDKs, and integrations.
