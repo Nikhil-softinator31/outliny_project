@@ -64,7 +64,7 @@ const FirstTop: React.FC = () => {
             'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 100%)',
           WebkitMaskImage:
             'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 100%)',
-          transform: 'rotate(350deg) skewX(21deg) skewY(9deg) translateX(29px);',
+          transform: 'rotate(350deg) skewX(21deg) skewY(9deg) translateX(29px)',
         }}
       >
         {[...Array(5)].map((_, i) => (

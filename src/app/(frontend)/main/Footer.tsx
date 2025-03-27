@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer
-      className="relative py-10 px-8 overflow-hidden bg-[#08090a] text-white"
+      className=" py-1 px-8 overflow-hidden bg-[#08090a] text-white   "
       onMouseMove={handleMouseMove}
       style={{
         backgroundImage:
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
       }}
     >
       {/* Footer Grid */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-8  pt-10 relative z-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-8  pt-10 relative z-10 mt-10 ">
         {footerLinks.map((section, index) => (
           <div key={index} className="flex flex-col">
             <h3 className="text-lg font-medium mb-4">{section.title}</h3>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Large Text with Mask Effect */}
-      <div className="relative mt-40 h-[100px] md:h-[450px]">
+      <div className="relative mt-40 h-[100px] md:h-[200px] lg:h-[350px]">
         <div className="Payload3D_container">
           <div className="Payload3D_mask">
             <h1
