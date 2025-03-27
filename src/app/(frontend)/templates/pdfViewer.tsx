@@ -4,20 +4,10 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import { Open_Sans, Poppins } from 'next/font/google'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '600', '700', '800'],
-  variable: '--font-open-sans',
-})
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800'],
-})
 
 export default function PdfViewer() {
   const containerRef = useRef(null)
@@ -101,12 +91,12 @@ export default function PdfViewer() {
             <div className="grayscale hover:grayscale-0">
               <img src={data.image} alt={data.title} className="w-full h-auto rounded-lg mb-4 " />
               <h1
-                className={`text-white font-bold text-[18px] mb-2 text-left ${poppins.className}`}
+                className='text-white font-bold text-[18px] mb-2 text-left font-poppins'
               >
                 {data.title}
               </h1>
               <p
-                className={`text-[#ffffff] font-normal text-[14px] leading-5 mb-4 text-left ${poppins.className}`}
+                className='text-[#ffffff] font-normal text-[14px] leading-5 mb-4 text-left font-poppins'
               >
                 {data.subTitle}
               </p>

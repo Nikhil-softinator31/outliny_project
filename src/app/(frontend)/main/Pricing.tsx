@@ -137,6 +137,7 @@ const Pricing = () => {
   }
 
   return (
+    
     <section
       ref={pricingRef}
       className="min-h-screen flex justify-center items-center  font-poppins p-6 bg-custom-gradient18"

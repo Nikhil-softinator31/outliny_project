@@ -16,8 +16,8 @@ const buttonOptions = [
 
 const Main = () => {
   const [activeButton, setActiveButton] = useState('generate')
-  const containerRef = useRef(null) //refrence for  left side animation
-  const rightSectionRef = useRef(null) //refrence for  left side animation
+  const containerRef = useRef(null)//lef 
+  const rightSectionRef = useRef(null)
 
   useGSAP(() => {
     gsap.from(containerRef.current, {
@@ -91,7 +91,7 @@ const Main = () => {
               <button
                 key={id}
                 className={`px-4 py-2 text-sm md:text-base rounded-lg transition-all duration-300 font-light ${
-                  activeButton === id ? 'bg-[#202020] text-white' : 'text-[#FFFFFF99]'
+                  activeButton === id ? 'bg-[#2c2d2e] text-white' : 'text-[#FFFFFF99]'
                 }`}
                 onClick={() => handleButtonClick(id)}
               >
@@ -104,7 +104,7 @@ const Main = () => {
           <div className="flex justify-center items-center bg-custom-gradient h-[250px] sm:h-[279px] w-full sm:w-[500px] md:w-[600px] lg:w-[700px] rounded-lg mt-2">
             <Image
               className="image-transition rounded-lg"
-              src={buttonOptions.find(({ id }) => id === activeButton)?.image || '/default.png'}
+              src={buttonOptions.find(({ id }) => id === activeButton)?.image || 'null'}
               alt="PDF Illustration"
               width={500}
               height={200}
