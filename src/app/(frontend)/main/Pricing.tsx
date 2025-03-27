@@ -139,7 +139,7 @@ const Pricing = () => {
   return (
     <section
       ref={pricingRef}
-      className="min-h-screen flex justify-center items-center bg-[#030303] font-poppins p-6 pricingbg"
+      className="min-h-screen flex justify-center items-center  font-poppins p-6 bg-custom-gradient18"
     >
       <div className="w-full max-w-6xl text-center">
         <h1 className="text-2xl sm:text-4xl font-medium leading-snug text-white mt-3">

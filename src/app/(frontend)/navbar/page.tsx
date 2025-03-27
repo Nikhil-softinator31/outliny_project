@@ -1,12 +1,10 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [hoverStyles, setHoverStyles] = useState({ left: 0, width: 0, opacity: 0 })
-  const navRef = useRef<HTMLDivElement>(null)
 
   const navItems = [
     { name: 'About Us', href: '/about' },
@@ -15,19 +13,6 @@ const Navbar = () => {
     { name: 'Resources', href: '/resources' },
     { name: 'Pricing', href: '/pricing' },
   ]
-
-  const handleHover = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (navRef.current) {
-      const target = e.target as HTMLElement
-      const { left, width } = target.getBoundingClientRect()
-      const navLeft = navRef.current.getBoundingClientRect().left
-      setHoverStyles({ left: left - navLeft, width, opacity: 1 })
-    }
-  }
-
-  const handleMouseLeave = () => {
-    setHoverStyles((prev) => ({ ...prev, opacity: 0 }))
-  }
 
   return (
     <nav className="fixed w-full bg-[#08090a] text-white z-50 border-b border-[#232323]">
@@ -38,33 +23,23 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div
-          ref={navRef}
-          className="hidden lg:flex space-x-3 relative items-center"
-          onMouseLeave={handleMouseLeave}
-        >
-          <span
-            className="absolute top-1/2 -translate-y-1/2 h-10 bg-[#222121] rounded-3xl transition-all duration-300 ease-in-out -z-10"
-            style={{
-              left: `${hoverStyles.left}px`,
-              width: `${hoverStyles.width}px`,
-              opacity: hoverStyles.opacity,
-            }}
-          ></span>
+        <div className="hidden lg:flex space-x-3 relative">
+          {/* Sliding Background Effect */}
+          <div className="absolute top-1/2 -translate-y-1/2 h-10 bg-[#222121] rounded-3xl transition-all duration-500 ease-out scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100"></div>
 
           {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="relative text-[#b3b3b3] text-[16px] px-3 py-2 transition-all duration-200 hover:text-white"
-              onMouseEnter={handleHover}
-            >
-              {item.name}
-            </Link>
+            <div key={item.name} className="relative group">
+              <Link
+                href={item.href}
+                className="text-[#b3b3b3] text-[16px] px-4 py-2 transition-all duration-300 hover:text-white hover:bg-[#222121] rounded-3xl"
+              >
+                {item.name}
+              </Link>
+            </div>
           ))}
         </div>
 
-        {/* Auth Buttons */}
+        {/* Desktop Log in & Get Started */}
         <div className="hidden lg:flex space-x-4 items-center">
           <Link href="/login" className="text-gray-400 hover:text-white text-sm font-medium">
             Log in
@@ -77,7 +52,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu & "Get Started" Button */}
+        {/* Mobile Menu Button */}
         <div className="flex items-center space-x-3 lg:hidden">
           {!isMenuOpen && (
             <Link
@@ -104,7 +79,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className=" text-white w-full text-left py-2 text-lg"
+                className="text-white w-full text-left py-2 text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

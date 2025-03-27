@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 const testimonials = [
   {
@@ -35,15 +35,17 @@ const testimonials = [
   },
 ]
 
-const TestimonialRow = ({ direction }: { direction: 'left' | 'right' }) => (
+const TestimonialRow = ({ isPaused, setIsPaused, direction, refProp }) => (
   <div
-    className="relative w-full overflow-hidden mt-6 group"
+    className="relative w-full overflow-hidden mt-6"
+    onMouseEnter={() => setIsPaused(true)}
+    onMouseLeave={() => setIsPaused(false)}
     style={{
       maskImage:
         'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)',
     }}
   >
-    <div className={`flex space-x-4 sm:space-x-6 animate-marquee-${direction}`}>
+    <div ref={refProp} className={`flex space-x-4 sm:space-x-6 animate-marquee-${direction}`}>
       {testimonials.concat(testimonials).map((test, index) => (
         <div
           key={index}
@@ -73,13 +75,36 @@ const TestimonialRow = ({ direction }: { direction: 'left' | 'right' }) => (
 )
 
 const Testimonials = () => {
+  const [isPausedRow1, setIsPausedRow1] = useState(false)
+  const [isPausedRow2, setIsPausedRow2] = useState(false)
+  const row1Ref = useRef<HTMLDivElement | null>(null)
+  const row2Ref = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    row1Ref.current?.style.setProperty('animation-play-state', isPausedRow1 ? 'paused' : 'running')
+  }, [isPausedRow1])
+
+  useEffect(() => {
+    row2Ref.current?.style.setProperty('animation-play-state', isPausedRow2 ? 'paused' : 'running')
+  }, [isPausedRow2])
+
   return (
-    <div className="px-4 sm:px-6 lg:px-12 bg-[#08090a] text-white h-[500px] sm:h-[600px] md:h-[700px] flex flex-col justify-center items-center overflow-hidden">
+    <div className="px-4 sm:px-6 lg:px-12 bg-[#08090a] text-white  h-[500px] sm:h-[600px] md:h-[700px]  flex flex-col justify-center items-center overflow-hidden">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center gradient-text">
         What People Are Saying
       </h2>
-      <TestimonialRow direction="left" />
-      <TestimonialRow direction="right" />
+      <TestimonialRow
+        isPaused={isPausedRow1}
+        setIsPaused={setIsPausedRow1}
+        direction="left"
+        refProp={row1Ref}
+      />
+      <TestimonialRow
+        isPaused={isPausedRow2}
+        setIsPaused={setIsPausedRow2}
+        direction="right"
+        refProp={row2Ref}
+      />
     </div>
   )
 }

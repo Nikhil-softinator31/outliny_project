@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* herosection css */
-/* Body Styles */
+
 html,
 body {
   margin: 0;
@@ -18,7 +17,6 @@ body {
 }
 
 /* testimonial csss */
-
 @keyframes marquee-left {
   0% {
     transform: translateX(0);
@@ -37,6 +35,7 @@ body {
   }
 }
 
+/* Normal animation */
 .animate-marquee-left {
   display: flex;
   animation: marquee-left 20s linear infinite;
@@ -48,6 +47,13 @@ body {
   animation: marquee-right 20s linear infinite;
   will-change: transform;
 }
+
+/* ✅ Pause on hover */
+.group:hover .animate-marquee-left,
+.group:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+
 
 .hero {
   transform: skew(120);
@@ -94,33 +100,9 @@ body {
   }
 }
 
-/* pricing css */
-.pricinghover:hover {
-  background: linear-gradient(179.17deg, rgba(57, 71, 227, 0.3) 0.71%, rgba(68, 9, 120, 0.3) 91.4%);
-}
 
-.pricingbg {
-  background-image: url('/bgblue.png');
 
-  background-position: center;
-}
 
-.bg-custom-gradient4 {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-}
-
-.pricingbg {
-  background-image: url('/bgblue.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 640px) {
-  .pricingbg {
-    background-size: 200% auto;
-  }
-}
 
 
 

@@ -20,7 +20,7 @@ const BottomCard: React.FC = () => {
   }
 
   return (
-    <div id="Maindiv" className="flex flex-col gap-8 bg-black w-full text-white px-4 md:px-8 ">
+    <div id="Maindiv" className="flex flex-col gap-8  w-full text-white px-4 md:px-8 md:mb-10 ">
       {/* First Section */}
       <div className="h-auto flex flex-col md:flex-row gap-8 w-full">
         <div className="w-full md:w-1/2">

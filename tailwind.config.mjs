@@ -54,7 +54,7 @@ const config = {
           'linear-gradient(150.47deg, rgba(255, 255, 255, 0.05) 55.03%, rgba(255, 255, 255, 0) 86.03%)',
         'custom-gradient2':
           'linear-gradient(360.47deg, rgba(255, 255, 255, 0.05) 55.03%, rgba(255, 255, 255, 0) 10.03%)',
-        'custom-gradient3': 'linear-gradient(182deg, rgb(15 16 16) 0%, rgb(0 0 0) 100%)',
+        'custom-gradient3': 'linear-gradient(182deg, rgb(15 16 16) 0%, #08090a 100%)',
         'custom-gradient4':
           'linear-gradient(172.47deg, rgba(255, 255, 255, 0.1) -35%, rgba(255, 255, 255, 0) 89.03%);',
         'custom-gradient5':
@@ -74,7 +74,8 @@ const config = {
         'custom-gradient15': 'linear-gradient(0deg, rgba(6,25,60,1) 0%, rgba(37,23,55,1) 99%);',
         'custom-gradient16':
           ' linear-gradient(180deg, rgba(111 108 108 / 30%) 0%, rgba(255, 255, 255, 0.01) 100%)',
-        'custom-gradient17': 'llinear-gradient(137.59deg, #555555 20%, #fffff 75%)',
+        'custom-gradient17': 'linear-gradient(137.59deg, #555555 20%, #fffff 75%)',
+        'custom-gradient18': 'radial-gradient(circle, #4e0997 -59%, #08090a 45%)',
       },
       animation: {},
       borderRadius: {},

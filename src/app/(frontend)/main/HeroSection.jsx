@@ -1,12 +1,13 @@
 'use client'
 
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef } from 'react'
 import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const HeroSection = () => {
   const imagesRef = [useRef(null), useRef(null)]
 
-  useEffect(() => {
+  useGSAP(() => {
     const tl = gsap.timeline()
 
     tl.fromTo(

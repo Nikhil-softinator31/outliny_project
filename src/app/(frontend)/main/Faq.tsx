@@ -59,8 +59,8 @@ const FAQ = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center bg-custom-gradient3 text-white min-h-screen">
-        <div ref={faqSectionRef} className="w-full mx-auto p-6 mt-10 ">
+      <div className="flex justify-center items-center bg-custom-gradient3 text-white ">
+        <div ref={faqSectionRef} className="w-full mx-auto p-6   ">
           <h1 className="font-poppins text-xl sm:text-3xl md:text-[35px] font-medium leading-snug text-center mt-3  ">
             You've got questions about PDF Generator API. We've got answers
           </h1>

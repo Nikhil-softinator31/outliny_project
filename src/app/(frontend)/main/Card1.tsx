@@ -131,7 +131,7 @@ const cardData = [
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-[#030303] text-white px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10 ">
+    <div className=" bg-[#030303] text-white px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10 ">
       <main className="rounded-2xl p-4 sm:p-8 md:p-12 lg:p-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {cardData.map((card) => (
