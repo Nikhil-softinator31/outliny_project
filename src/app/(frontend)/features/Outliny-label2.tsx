@@ -1,8 +1,6 @@
 'use client'
 import { FaLongArrowAltRight } from 'react-icons/fa'
-import { useRef, useEffect } from 'react'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
+
 
 const data1 = [
   {
@@ -20,31 +18,7 @@ const data1 = [
 ]
 
 const OutlinyLable2 = () => {
-  const buttonRef = useRef<HTMLButtonElement | null>(null)
-  const textRef = useRef<HTMLSpanElement | null>(null)
-  const iconRef = useRef<HTMLSpanElement | null>(null)
-
-  useGSAP(() => {
-    if (buttonRef.current && textRef.current && iconRef.current) {
-      const tl = gsap.timeline({ paused: true })
-
-      tl.to([textRef.current, iconRef.current], {
-        duration: 0.2,
-        yPercent: -100,
-        ease: 'power2.in',
-      })
-        .set([textRef.current, iconRef.current], { yPercent: 100 })
-        .to([textRef.current, iconRef.current], { duration: 0.5, yPercent: 0 })
-
-      const handleMouseEnter = () => tl.play(0)
-
-      buttonRef.current.addEventListener('mouseenter', handleMouseEnter)
-
-      return () => {
-        buttonRef.current?.removeEventListener('mouseenter', handleMouseEnter)
-      }
-    }
-  }, [])
+ 
 
   return (
     <div className="flex flex-col justify-center items-center w-full px-2">
@@ -80,11 +54,11 @@ const OutlinyLable2 = () => {
 
       {/* Button */}
       <button
-        ref={buttonRef}
+      
         className="mt-8 bg-blue-700 text-white px-6 py-4 rounded-xl text-[16px] font-medium flex items-center overflow-hidden"
       >
-        <span ref={textRef}>Book a Demo</span>
-        <span ref={iconRef} className="ml-2 text-[24px]">
+        <span >Book a Demo</span>
+        <span  className="ml-2 text-[24px]">
           <FaLongArrowAltRight />
         </span>
       </button>
