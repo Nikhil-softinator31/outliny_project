@@ -30,9 +30,9 @@ const Page = () => {
           </p>
 
           <div className="mt-6">
-            <div className="bg-custom-gradient16 p-2 sm:p-3 rounded-lg flex justify-between w-full max-w-[415px] mx-auto border border-[#aaa6a6e7]">
+            <div className="bg-custom-gradient16 p-2 sm:p-3 rounded-lg flex justify-around w-full max-w-[415px] mx-auto border border-[#aaa6a6e7]">
               <button
-                className={`px-3 py-2 sm:px-4 md:px-6 lg:p-3 rounded-lg font-semibold text-sm sm:text-base md:text-lg flex-1 mx-0.5 transition-colors ${
+                className={`px-3 py-2 sm:px-4 md:px-6  rounded-lg font-semibold text-sm sm:text-base md:text-lg  mx-0.5 transition-colors ${
                   billingOption === 'monthly'
                     ? 'bg-white text-[#000A12]'
                     : 'bg-transparent text-white hover:bg-white/10'
@@ -42,7 +42,7 @@ const Page = () => {
                 Billed Monthly
               </button>
               <button
-                className={`px-3 py-2 sm:px-4 md:px-6 lg:p-3 rounded-lg font-semibold text-sm sm:text-base md:text-lg flex-1 mx-0.5 transition-colors ${
+                className={`px-3 py-2 sm:px-4 md:px-6  rounded-lg font-semibold text-sm sm:text-base md:text-lg  mx-0.5 transition-colors ${
                   billingOption === 'annually'
                     ? 'bg-white text-[#000A12]'
                     : 'bg-transparent text-white hover:bg-white/10'

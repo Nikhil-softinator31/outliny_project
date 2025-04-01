@@ -1,8 +1,7 @@
 
 'use client'
-import { useEffect, useRef } from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
-import gsap from 'gsap'
+
 
 
 
@@ -26,24 +25,7 @@ const features = [
 ]
 
 const OutlinyLable1 = () => {
-  const buttonRef = useRef(null)
-  const textRef = useRef(null)
-  const iconRef = useRef(null)
-
-  useEffect(() => {
-    if (textRef.current && iconRef.current) {
-      const tl = gsap.timeline({ paused: true })
-      tl.to([textRef.current, iconRef.current], {
-        duration: 0.2,
-        yPercent: -100,
-        ease: 'power2.in',
-      })
-        .set([textRef.current, iconRef.current], { yPercent: 100 })
-        .to([textRef.current, iconRef.current], { duration: 0.5, yPercent: 0 })
-
-      buttonRef.current.addEventListener('mouseenter', () => tl.play(0))
-    }
-  }, [])
+ 
 
   return (
     <div className="flex flex-col justify-center items-center w-full px-4">
@@ -74,11 +56,11 @@ const OutlinyLable1 = () => {
         ))}
       </div>
       <button
-        ref={buttonRef}
+      
         className="mt-8 bg-blue-700 text-white px-6 py-4 rounded-xl text-[16px] font-medium flex items-center overflow-hidden"
       >
-        <span ref={textRef}>Book a Demo</span>
-        <span ref={iconRef} className="ml-2 text-[24px]">
+        <span >Book a Demo</span>
+        <span  className="ml-2 text-[24px]">
           <FaLongArrowAltRight />
         </span>
       </button>

@@ -67,7 +67,7 @@ body {
   border: 1px solid #1e1e1e;
   width: 1600px;
   height: 900px;
-  margin: 280px auto auto;
+  margin: 180px auto auto;
   transform: translateX(0%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg);
   transform-origin: top left;
   backface-visibility: hidden;
@@ -107,19 +107,6 @@ body {
 
 
 /* footer css */
-
-/* PAYLOAD 3D Section */
-
-/* Noise Texture */
-h1 {
-  background-image: url('/images/noise.png');
-  background-size: cover;
-  background-position: center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  user-select: none;
-}
 
 /* PAYLOAD Text */
 .Payload3D_text {

@@ -16,7 +16,7 @@ const buttonOptions = [
 
 const Main = () => {
   const [activeButton, setActiveButton] = useState('generate')
-  const containerRef = useRef(null)//lef 
+  const containerRef = useRef(null) //lef
   const rightSectionRef = useRef(null)
 
   useGSAP(() => {
@@ -66,7 +66,7 @@ const Main = () => {
 
   return (
     <div className="font-poppins bg-gradient-custom min-h-[600px] flex items-center justify-center px-4 mt-20">
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-[1200px] gap-10">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-[1200px] gap-10 mt-[36px]">
         {/* Left Section */}
         <div ref={containerRef} className="flex flex-col gap-3 text-center lg:text-left max-w-lg">
           <p className="text-[#8861B8] text-sm md:text-base animate-text">
@@ -118,7 +118,7 @@ const Main = () => {
             </span>
           </h1>
           <p className="text-white">
-            We've built a complete document generation stack. Browse the API reference.
+            We&apos;ve built a complete document generation stack. Browse the API reference.
           </p>
         </div>
       </div>
