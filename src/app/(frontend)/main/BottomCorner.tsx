@@ -71,7 +71,7 @@ const BottomCorner: React.FC = () => {
         <span className="bg-red-500 text-xs text-white px-2 py-1 rounded">COMING SOON</span>
       </h2>
       <p className="mt-1 text-[#878685] break-words max-w-full text-left text-sm ">
-        Did the designer use PNGs again? We've got you covered. Social icons are a must for almost
+        Did the designer use PNGs again? We have got you covered. Social icons are a must for almost
         every website, but finding them in the right SVG format can be a pain.
       </p>
     </div>

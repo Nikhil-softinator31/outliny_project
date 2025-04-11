@@ -47,7 +47,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        'gradient-custom': 'linear-gradient(180deg, #121314 20%, rgba(0, 0, 0, 50) 50.94%)',
+        'gradient-custom': 'linear-gradient(180deg, #121314 20%, #08090a 50.94%)',
         'custom-gradient':
           'linear-gradient(150.47deg, rgba(255, 255, 255, 0.05) 55.03%, rgba(255, 255, 255, 0) 86.03%)',
         'custom-gradient1':
@@ -76,6 +76,7 @@ const config = {
           ' linear-gradient(180deg, rgba(111 108 108 / 30%) 0%, rgba(255, 255, 255, 0.01) 100%)',
         'custom-gradient17': 'linear-gradient(137.59deg, #555555 20%, #fffff 75%)',
         'custom-gradient18': 'radial-gradient(circle, #4e0997 -59%, #08090a 45%)',
+        'custom-gradient19':'linear-gradient(354.93deg, #131415 3.04%, rgba(19, 20, 21, 0) 94.94%)'
       },
       animation: {},
       borderRadius: {},

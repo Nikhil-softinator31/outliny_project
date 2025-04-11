@@ -1,18 +1,11 @@
 import React from 'react'
-import { Open_Sans } from 'next/font/google'
+
 
 import PdfViewer from './pdfViewer'
 
 
-import Testimonialss from '../main/Testimonial'
 import Testimonials from '../main/Testimonial'
 
-
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  weight: ['300', '400', '600', '700', '800'], 
-  variable: '--font-open-sans',
-})
 
 const page = () => {
   return (
@@ -28,7 +21,7 @@ const page = () => {
         {/* Content Centered Horizontally */}
         <div className=" mt-3 sm:mt-8  space-y-5  lg:space-y-9">
           <h1 className="text-white text-[20px] sm:text-[28px] md:text-[35px] lg:text-[45px] lg:leading-[67.5px] font-extrabold ">
-            CraftMyPDF's PDF Template Editor
+            CraftMyPDF PDF Template Editor
           </h1>
           <p className="text-white text-[12px] sm:text-[15px]  md:text-[18px]     sm:w-[50vw] md:w-[40vw] lg:w-[35vw] lg:leading-[30px]  mx-auto mt-2">
             Click on the Launch Editor button to see CraftMyPDF’s template editor in action

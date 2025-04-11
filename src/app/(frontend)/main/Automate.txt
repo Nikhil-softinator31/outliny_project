@@ -139,3 +139,16 @@ const Main: React.FC = () => {
 }
 
 export default Main
+
+
+
+
+importand code 
+
+ <h1
+            ref={fadeUpRef}
+            className="text-white p-1  text-[20px] sm:text-[30px] md:text-[32px] lg:text-[36px] xl:text-[40px]  max-w-none   text-inherit text-balance" 
+          >
+            Linear is a purpose-built tool for modern product development. Streamline issues,
+            projects, and product roadmaps.
+          </h1>

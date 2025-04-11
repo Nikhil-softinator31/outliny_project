@@ -20,13 +20,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <h2 className="text-white text-[22px] sm:text-[26px] md:text-[32px] lg:text-[42px] leading-tight font-extrabold font-poppins px-4 mt-8 gradient-text">
-        Amazing Features for Effortless Growth
+      <h2 className=" text-[22px] sm:text-[26px] md:text-[32px] lg:text-[42px] leading-tight font-extrabold font-poppins px-4 mt-8 gradient-text">
+        Outliny Features
       </h2>
-      <p className="text-white text-[16px] sm:text-[20px] md:text-[24px] leading-relaxed mx-auto mt-4 px-4 gradient-text lg:max-w-[40em]">
-        Explore a world of innovation with our features, meticulously crafted to elevate every
-        aspect of web development. Create PDFs or images for resumes, portfolios, invoices,
-        receipts, and more with our API, SDKs, and integrations.
+      <p className="text-white text-[16px] sm:text-[20px] md:text-[24px] leading-relaxed mx-auto mt-4 px-4  lg:max-w-[40em]">
+        Everything you need to effortlessly maintain brand consistency across all your digital
+        communications.
       </p>
     </div>
   )

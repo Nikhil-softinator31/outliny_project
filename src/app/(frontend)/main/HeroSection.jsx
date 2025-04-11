@@ -41,38 +41,38 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <div className="flex-auto overflow-hidden mt-5 sm:mt-20">
+    <div className="flex-auto overflow-hidden mt-5 sm:mt-8">
       <div className="text-white mt-20 flex justify-center items-center">
         <div className="max-w-[1000px]  lg:mr-72  ">
-          <div className='flex flex-col justify-center items-center sm:justify-start sm:items-start sm:pl-10  gap-2 md:gap-4'>
-            <h1
-              ref={text1}
-              className=" text-left text-[50px] sm:text-5xl   font-semibold"
-            >
+          <div className="flex flex-col justify-center items-center sm:justify-start sm:items-start sm:pl-4  gap-2 md:gap-4">
+            <h1 ref={text1} className=" text-left text-[50px] sm:text-5xl   font-semibold">
               Outliny
             </h1>
-            <p ref={text2} className="text-center sm:text-left sm:text-5xl flex-wrap text-3xl  font-semibold  ">
+            <p
+              ref={text2}
+              className="text-center sm:text-left sm:text-5xl   flex-wrap text-3xl  font-semibold  "
+            >
               Brand Consistency, Simplified.
             </p>
             <p
               ref={text3}
-              className="text-center sm:text-left text-xl  sm:text-xl sm:w-screen text-[#b0b0b0] max-w-[615px] font-semibold  flex-wrap"
-            >
+              className="text-center sm:text-left text-xl   sm:w-screen text-[#b0b0b0] w-full max-w-[615px] font-semibold  flex-wrap p-3 sm:p-0 text-balance  "
+            > 
               Centrally manage and automate your PDFs and email templates ensuring seamless brand
               consistency across every touchpoint.
             </p>
           </div>
         </div>
       </div>
-      <div className="borderr">
-        <div className="flex gap-0 md:gap-10 code">
+      <div className="">
+        <div className=" hidden borderr  md:flex gap-0 md:gap-10 code">
           <img ref={image1} src="first.png" alt="Image 1" className="p-1" />
           <img ref={image2} src="second2.png" alt="Image 2" className="mt-1" />
         </div>
       </div>
 
-      <div className="flex justify-center items-center h-[50vh]">
-        <img src="second2.png" alt="Image 1" className="md:hidden mt-10" />
+      <div className="flex justify-center items-center  ">
+        <img src="second2.png" alt="Image 1" className="md:hidden mt-10 ml-14 " />
       </div>
     </div>
   )
