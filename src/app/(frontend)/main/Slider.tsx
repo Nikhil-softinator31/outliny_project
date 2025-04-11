@@ -80,14 +80,14 @@ const Slider = () => {
 
   return (
     <>
-      <div className="bg-[#08090a] flex flex-col justify-center items-center py-8 px-4">
-        <h1 className="text-white font-semibold text-[60px] ">Why Outliny?</h1>
+      <div className="bg-[#08090a] flex flex-col justify-center items-center  px-4 md:mt-14">
+        <h1 className="text-white  font-medium  text-3xl p-8 lg:mb-10 lg:text-[50px] font-poppins  gradient-text">Why Outliny?</h1>
         <div className="max-w-[1400px] mx-auto">
           <div
             ref={(el) => {
               cardsRef.current[0] = el
             }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4  "
           >
             {Data.map((data, index) => (
               <div key={index} className="flex justify-center">
@@ -96,8 +96,8 @@ const Slider = () => {
                   spotlightColor="rgba(177, 177, 177, 0.2)"
                 >
                   <div
-                    className="flex flex-col p-6 rounded-2xl space-y-4 mt-6 
-              bg-custom-gradient transition-all duration-300 cursor-pointer shadow-lg h-full"
+                    className="  flex flex-col p-6 rounded-2xl space-y-3  mt-1
+              bg-custom-gradient transition-all duration-300 cursor-pointer shadow-lg h-[250px] md:h-[320px] "
                   >
                     <Image
                       src={data.image}

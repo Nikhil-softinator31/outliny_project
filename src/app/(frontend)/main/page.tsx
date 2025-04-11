@@ -15,7 +15,7 @@ import SpotlightCard from './SpotlightCard'
 // import HeroSection2 from './HeroSection2'
 // import BottomCards from './BottomCard'
 
-const page = () => {
+const Main = () => {
   return (
     <>
       
@@ -40,5 +40,4 @@ const page = () => {
   )
 }
 
-export default page
-
+export default Main

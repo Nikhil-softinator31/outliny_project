@@ -5,37 +5,23 @@ import { FaLongArrowAltRight } from 'react-icons/fa'
 
 const data1 = [
   {
-    heading: 'Online Graphic Design Tool:',
+    heading: 'Jinja Templating Engine',
     text: 'Explore a world of innovation with our Features, meticulously crafted to elevate every aspect of web development. Create PDFs or Images for resumes.',
   },
   {
-    heading: 'Unlimited Templates Designs:',
-    text: 'Outliny White Label Solution will be fully customized to meet your requirements.',
+    heading: 'Open-Source Transparency',
+    text: 'Outliny is proudly open-source, giving your developers full visibility and control. Customize or extend Outliny to perfectly fit your business needs.',
   },
-  {
-    heading: 'Multi Dollar Software:',
-    text: 'This instantly adds a multi-dollar software as your own proprietary product for free.',
-  },
-  {
-    heading: 'Give Huge Brand Boost:',
-    text: 'Outliny White Label Graphic Design Tool instantly gives you a huge brand boost to your company and builds user trust in your services.',
-  },
-  {
-    heading: 'Brand Perspective:',
-    text: 'Increase your brand value in the eyes of customers and investors. Kreateable’s White Label Graphic Design Tool gives them a bigger brand perspective.',
-  },
+  
 ]
 
 const OutlinyLable3 = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full px-2">
+    <div className="flex flex-col justify-center items-center w-full px-2 mt-20">
       {/* Title */}
       <div className="text-center w-full  md:max-w-[70%] lg:max-w-[60%] mx-auto my-10">
-        <h1
-          className='font-inter text-white text-[24px] sm:text-[30px] md:text-[39px] lg:text-[50px] font-semibold leading-tight'
-        >
-          Why should I use <span className="text-blue-600">white label</span> online graphic design
-          tool?
+        <h1 className="font-inter text-white text-[24px] sm:text-[30px] md:text-[39px] lg:text-[40px] font-semibold leading-tight gradient-text">
+          Developer-Friendly
         </h1>
       </div>
 
@@ -51,9 +37,7 @@ const OutlinyLable3 = () => {
 
             {/* Text Content */}
             <div className="w-full">
-              <p
-                className='text-white font-inter text-[16px] sm:text-[18px] font-bold leading-[28px]'
-              >
+              <p className="text-white font-inter text-[16px] sm:text-[18px] font-bold leading-[28px]">
                 {item.heading}
                 <span className="text-[#a9a7a7] ml-2 text-[15px] sm:text-[16px] font-light leading-[28px]">
                   {item.text}
@@ -65,10 +49,10 @@ const OutlinyLable3 = () => {
       </div>
 
       {/* Button */}
-      <button className="mt-6 sm:mt-8 bg-blue-700 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-xl text-[14px] sm:text-[16px] lg:text-[18px] font-medium flex items-center">
-        Book a Demo
-        <span className="ml-2 text-[20px] sm:text-[24px]">
-          <FaLongArrowAltRight className="text-white" />
+      <button className="mt-8 bg-blue-700 text-white px-5 py-3 rounded-xl text-[16px] font-medium flex items-center overflow-hiddenv">
+        <span>Book a Demo</span>
+        <span className="ml-2 text-[24px]">
+          <FaLongArrowAltRight />
         </span>
       </button>
     </div>

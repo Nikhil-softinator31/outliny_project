@@ -28,28 +28,34 @@ const FAQ = () => {
 
   const questions = [
     {
-      question: 'Why do I need to use a Design System?',
-      answer: 'Users can download logos from their dashboard.',
+      question: 'How does Outliny ensure my templates stay organized?',
+      answer:
+        'We provide built-in version control and intuitive navigation. Easily track changes,manage revisions, and organize all your templates in one place.',
     },
     {
-      question: 'Is there a preview or a free trial available?',
-      answer: 'Yes, we offer branding customization.',
+      question: 'How scalable is your document generation system?',
+      answer:
+        'Outliny’s document generation is designed for scale, easily managing everything from   small-scale, ad-hoc documents to high-volume enterprise workloads.',
     },
     {
-      question: 'Where can I purchase AlignUI Design System?',
-      answer: 'Yes, you can set your own pricing structure.',
+      question: 'Is Outliny secure enough for enterprise use?',
+      answer:
+        'Yes. Outliny meets rigorous compliance standards, including ISO 27001:2022 and SOC 2 Type II certification, ensuring industry-leading data security and privacy.',
     },
     {
-      question: 'What are the recent updates and enhancements in AlignUI?',
-      answer: 'Yes, our platform supports multiple payment gateways.',
+      question: 'Can I test Outliny before fully committing?',
+      answer:
+        'Definitely! Outliny offers generous free-tier pricing. You only pay if you use our servers for bulk generation. Easily test your templates with our CSV upload functionality.',
     },
     {
-      question: 'How do I install AlignUI Design System in Figma?',
-      answer: 'It is available in multiple languages including English, Spanish, and French.',
+      question: 'What are typical use-cases for Outliny?',
+      answer:
+        'Common scenarios include invoices, MoUs, certificates, HR documents, CRM   emails, address labels, signed contracts, transactional communications, and much more.',
     },
     {
-      question: 'Can I use AlignUI Design System for commercial projects?',
-      answer: 'Yes, it is fully responsive and mobile-friendly.',
+      question: 'Do you store logs or personal data?',
+      answer:
+        'No. Outliny is privacy-focused and does not store logs or personal data by default, except minimal usage counts for billing purposes.',
     },
   ]
 
@@ -59,18 +65,16 @@ const FAQ = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center bg-custom-gradient3 text-white ">
-        <div ref={faqSectionRef} className="w-full mx-auto p-6   ">
+      <div className="flex justify-center items-center bg-custom-gradient3 text-white mt-10 ">
+        <div ref={faqSectionRef} className="w-full mx-auto p-6 lg:mt-10    ">
           <h1 className="font-poppins text-xl sm:text-3xl md:text-[35px] font-medium leading-snug text-center mt-3  ">
-            You've got questions about PDF Generator API. We've got answers
+            You have got questions about PDF Generator API. We have got answers
           </h1>
-          <p className="font-poppins font-light text-[15px] sm:text-base md:text-lg text-[#535454] mt-6 text-center p-2 ">
+          <p className="font-poppins font-light text-[15px] sm:text-base md:text-lg text-[#535454] mt-6 text-center p-2 mb-10 ">
             Find questions and answers related to the design system, purchase, updates, and support.
           </p>
 
-          <h1 className="text-white text-[21px] sm:text-[30px] md:text-[50px] font-semibold leading-tight lg:leading-[72px] text-center p-5 mb-10">
-            Frequently <span className="text-blue-600">Asked</span> Questions
-          </h1>
+        
           <div className="flex flex-col items-center gap-6">
             {questions.map((item, index) => (
               <div

@@ -13,12 +13,16 @@ const footerLinks = [
     ],
   },
   {
-    title: 'Developers',
-    links: ['Documentation', 'Community Help', 'Roadmap', 'Templates'],
+    title: 'Industries',
+    links: ['Real Estate', 'Legal', 'Insurance', 'Accounting ','Marketing','Human Resources','Manufacturing','Sales'],
   },
   {
     title: 'Enterprise',
     links: ['Pricing', 'Case Studies', 'Partner With Us', 'Security'],
+  },
+  {
+    title: 'Developer',
+    links: ['Documentation', 'Template Editor', 'RoadMap', 'Contact Us'],
   },
   {
     title: 'Contact',
@@ -35,7 +39,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer
-      className=" py-1 px-8 overflow-hidden bg-[#08090a] text-white   "
+      className=" py-1 px-8 overflow-hidden bg-[#08090a] text-white mt-10   "
       onMouseMove={handleMouseMove}
       style={{
         backgroundImage:
@@ -46,7 +50,7 @@ const Footer: React.FC = () => {
       }}
     >
       {/* Footer Grid */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-8  pt-10 relative z-10 mt-10 ">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row md:justify-between gap-8  pt-10 relative z-10 mt-10 " >
         {footerLinks.map((section, index) => (
           <div key={index} className="flex flex-col">
             <h3 className="text-lg font-medium mb-4">{section.title}</h3>

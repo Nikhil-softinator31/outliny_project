@@ -1,15 +1,31 @@
 'use client'
-import React, { useState } from 'react'
-// import Register1 from './Register1'
+import React, { useRef, useState } from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import Testimonials from '../main/Testimonial'
 import Pricing from '../main/Pricing'
+import FAQ from './Faq'
 
 const Page = () => {
-  const [billingOption, setBillingOption] = useState('monthly')
+  const [billingOption, setBillingOption] = useState<'monthly' | 'annually'>('monthly')
+  const fadeUpRef = useRef<HTMLHeadingElement>(null)
 
   const handleToggle = (option: 'monthly' | 'annually') => {
     setBillingOption(option)
   }
+
+  useGSAP(() => {
+    gsap.fromTo(
+      fadeUpRef.current,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: 'power3.out',
+      },
+    )
+  }, [])
 
   return (
     <div className="mt-16 sm:mt-20 px-4 sm:px-8">
@@ -20,19 +36,24 @@ const Page = () => {
         </h1>
 
         {/* Content Centered Horizontally */}
-        <div className="relative z-10 mt-6 sm:mt-10">
-          <h1 className="text-white text-[22px] sm:text-[28px] md:text-[35px] lg:text-[45px] xl:text-[50px] font-extrabold gradient-text leading-tight">
+        <div className="relative z-10 mt-6 sm:mt-10 max-w-4xl mx-auto">
+       
+
+          <h1
+            ref={fadeUpRef}
+            className="text-white text-[13px] sm:text-[28px] md:text-[35px] lg:text-[45px]  font-extrabold gradient-text leading-tight mt-20"
+          >
             Choose The Perfect Plan For You
           </h1>
-          <p className="text-white text-[16px] sm:text-[18px] md:text-[20px] max-w-[90%] sm:max-w-[70%] md:max-w-[50%] lg:max-w-[40%] mx-auto mt-2">
-            A free plan has everything you need to generate PDF documents or images. No credit card
-            required!
+          <p  className="text-white text-[16px] sm:text-[18px] md:text-[25px] max-w-[90%] sm:max-w-[70%] md:max-w-[50%] lg:max-w-[80%] mx-auto mt-8 text-pretty">
+            Outliny is built to give developers full control without locking you into expensive
+            contracts or unpredictable bills.
           </p>
 
-          <div className="mt-6">
+          <div className="mt-10">
             <div className="bg-custom-gradient16 p-2 sm:p-3 rounded-lg flex justify-around w-full max-w-[415px] mx-auto border border-[#aaa6a6e7]">
               <button
-                className={`px-3 py-2 sm:px-4 md:px-6  rounded-lg font-semibold text-sm sm:text-base md:text-lg  mx-0.5 transition-colors ${
+                className={`px-3 py-2 sm:px-4 md:px-6 rounded-lg font-semibold text-sm sm:text-base md:text-lg mx-0.5 transition-colors ${
                   billingOption === 'monthly'
                     ? 'bg-white text-[#000A12]'
                     : 'bg-transparent text-white hover:bg-white/10'
@@ -42,7 +63,7 @@ const Page = () => {
                 Billed Monthly
               </button>
               <button
-                className={`px-3 py-2 sm:px-4 md:px-6  rounded-lg font-semibold text-sm sm:text-base md:text-lg  mx-0.5 transition-colors ${
+                className={`px-3 py-2 sm:px-4 md:px-6 rounded-lg font-semibold text-sm sm:text-base md:text-lg mx-0.5 transition-colors ${
                   billingOption === 'annually'
                     ? 'bg-white text-[#000A12]'
                     : 'bg-transparent text-white hover:bg-white/10'
@@ -59,12 +80,14 @@ const Page = () => {
             </p>
           </div>
         </div>
-
-       
       </div>
 
-      <Pricing />
-      <Testimonials />
+      {/* Pricing, FAQ and Testimonials sections */}
+      <div className="mt-12 space-y-12">
+        <Pricing />
+        <FAQ />
+        <Testimonials />
+      </div>
     </div>
   )
 }

@@ -9,40 +9,29 @@ const inter = Inter({
 
 const data1 = [
   {
-    heading: 'Sales Boost:',
-    text: 'With Outliny white label solution, you can offer your customers an all-in-one graphic design tool that can significantly increase your sales. This solution provides an easy and cost-effective way for your customers to create logos, social media posts, and other designs, which can boost sales and revenue.',
+    heading: 'Built-In Version Control:',
+    text: 'Easily track changes, revert to previous versions, and collaborate securely, ensuring templates stay accurate and aligned.',
   },
   {
-    heading: 'Additional Revenue:',
-    text: 'Offer this solution as a complimentary add-on or chargeable product/service to your customers. By doing so, you can create additional revenue streams while providing value to your customers.',
+    heading: 'Intuitive Navigation:',
+    text: 'Find, organize, and manage all templates effortlessly from a single unified dashboard.',
   },
   {
-    heading: 'Customer Retention:',
-    text: 'Providing your customers with a powerful graphic design tool enhances their overall experience, increasing retention and reducing customer churn while boosting lifetime customer value.',
+    heading: 'Save Time & Effort:',
+    text: 'Create and reuse standardized blocks like headers, footers, tables, and common design patterns across multiple templates streamlining workflow and reducing redundancy.',
   },
-  {
-    heading: 'Customer Satisfaction:',
-    text: 'This solution is designed to provide a seamless user experience. Offering a comprehensive design tool increases customer satisfaction, fostering loyalty and referrals.',
-  },
-  {
-    heading: 'Website Traffic:',
-    text: 'Integrating Outliny’s white-label solution into your website increases visitor engagement. Customers stay longer while using the tool, reducing bounce rates and driving more traffic.',
-  },
-  {
-    heading: 'Brand Value:',
-    text: 'Our white-label solution offers a fully customizable graphic design tool that matches your brand’s color scheme, logo, and aesthetics. This enhances brand recognition, loyalty, and perceived value among customers and investors.',
-  },
+  
 ]
 
 const OutlinyLable4 = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full px-2">
+    <div className="flex flex-col justify-center items-center w-full px-2 mt-20">
       {/* Title */}
       <div className="text-center max-w-[90%] sm:max-w-[80%] md:max-w-[65%] lg:max-w-[60%] mx-auto my-10">
         <h1
-          className={`${inter.className} text-white text-[24px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold leading-tight`}
-        >
-          Benefits of Implementing the <span className="text-blue-600">White Label</span> Solution
+          className={`${inter.className} text-white text-[24px] sm:text-[23px] md:text-[29px] lg:text-[40px] font-semibold leading-tight gradient-text`}
+        > 
+          Template Versioning & Management
         </h1>
       </div>
 
@@ -72,10 +61,10 @@ const OutlinyLable4 = () => {
       </div>
 
       {/* Button */}
-      <button className="mt-6 sm:mt-8 bg-blue-700 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-xl text-[14px] sm:text-[16px] lg:text-[18px] font-medium flex items-center">
-        Book a Demo
-        <span className="ml-2 text-[20px] sm:text-[24px]">
-          <FaLongArrowAltRight className="text-white" />
+      <button className="mt-8 bg-blue-700 text-white px-5 py-3 rounded-xl text-[16px] font-medium flex items-center overflow-hidden">
+        <span>Book a Demo</span>
+        <span className="ml-2 text-[24px]">
+          <FaLongArrowAltRight />
         </span>
       </button>
     </div>

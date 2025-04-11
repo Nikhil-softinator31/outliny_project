@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html,
 body {
   margin: 0;
@@ -54,7 +53,6 @@ body {
   animation-play-state: paused;
 }
 
-
 .hero {
   transform: skew(120);
 }
@@ -73,14 +71,7 @@ body {
   backface-visibility: hidden;
 }
 
-@media (max-width: 768px) {
-  .borderr {
-    display: none;
-  }
-  .code {
-    justify-content: center;
-  }
-}
+
 
 /* real carousel css */
 @keyframes infiniteLoop {
@@ -95,16 +86,9 @@ body {
 /* Tailwind ke liye animation class define karna */
 @layer utilities {
   .animate-infiniteLoop {
-    animation: infiniteLoop 10s linear infinite;
-    will-change: transform;
+    animation: infiniteLoop 25s linear infinite;
   }
 }
-
-
-
-
-
-
 
 /* footer css */
 
@@ -126,12 +110,10 @@ body {
 }
 
 .gradient-text {
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    background: linear-gradient(137.59deg, #555555 20%, #ffffff 75%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  background: linear-gradient(137.59deg, #555555 20%, #ffffff 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-
-

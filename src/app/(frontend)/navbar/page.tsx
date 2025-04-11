@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,20 +11,19 @@ const Navbar = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Features', href: '/features' },
     { name: 'Templates', href: '/templates' },
-    { name: 'Resources', href: '/resources' },
     { name: 'Pricing', href: '/pricing' },
   ]
 
   return (
     <nav className="fixed w-full bg-[#08090a] text-white z-50 border-b border-[#232323]">
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
         <Link href="/">
-          <img src="/Logo.png" alt="Profound" className="h-10 lg:h-11" />
+          <Image src="/Logo.svg" alt="Profound" width={150} height={200} className="h-10 lg:h-11" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex space-x-3 relative">
+        <div className="hidden lg:flex space-x-2 relative">
           {/* Sliding Background Effect */}
           <div className="absolute top-1/2 -translate-y-1/2 h-10 bg-[#222121] rounded-3xl transition-all duration-500 ease-out scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100"></div>
 

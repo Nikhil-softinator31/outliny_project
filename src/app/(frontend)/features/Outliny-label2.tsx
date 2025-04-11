@@ -4,16 +4,16 @@ import { FaLongArrowAltRight } from 'react-icons/fa'
 
 const data1 = [
   {
-    heading: 'Make Your Own Product/Service:',
-    text: 'Outliny White Label Graphic Design Tool provides a seamless solution where your users can design logos, social media posts, and other templates without even realizing they are using Kreateables Graphic Design Tool.',
+    heading: 'Centralized Email Templates',
+    text: 'Keep your brand consistent with centralized management for MJML-based responsive email templates, ideal for CRM campaigns, transactional notifications, and marketing outreach.',
   },
   {
-    heading: 'Simple Way To Implement:',
-    text: 'You can use this solution by simply providing a link on your existing website as one of your Product/Service.',
+    heading: 'Cloud Media Integration',
+    text: 'Seamlessly integrate with Cloudinary and Cloudfront to manage and host your media assets securely and efficiently.',
   },
   {
-    heading: 'Charge Desired Amount:',
-    text: 'You can include this solution in your packages for free or as an add-on product/service with some chargeable amount.',
+    heading: 'MJML-Compatible',
+    text: 'Export or import templates in industry-standard MJML format, ensuring total flexibility and no vendor lock-in',
   },
 ]
 
@@ -21,11 +21,11 @@ const OutlinyLable2 = () => {
  
 
   return (
-    <div className="flex flex-col justify-center items-center w-full px-2">
+    <div className="flex flex-col justify-center items-center w-full px-2 mt-20">
       {/* Title */}
       <div className="text-center max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%] mx-auto my-10">
-        <h1 className="text-white text-[24px] sm:text-[30px] md:text-[40px] lg:text-[50px] font-semibold leading-tight">
-          How can I use <span className="text-blue-600">white label</span> solution in my business?
+        <h1 className="text-white text-[24px] sm:text-[30px] md:text-[39px] lg:text-[50px] font-semibold leading-tight gradient-text">
+          Email Template Management
         </h1>
       </div>
 
@@ -53,16 +53,13 @@ const OutlinyLable2 = () => {
       </div>
 
       {/* Button */}
-      <button
-      
-        className="mt-8 bg-blue-700 text-white px-6 py-4 rounded-xl text-[16px] font-medium flex items-center overflow-hidden"
-      >
-        <span >Book a Demo</span>
-        <span  className="ml-2 text-[24px]">
+      <button className="mt-8 bg-blue-700 text-white px-5 py-3 rounded-xl text-[16px] font-medium flex items-center overflow-hidden">
+        <span>Book a Demo</span>
+        <span className="ml-2 text-[24px]">
           <FaLongArrowAltRight />
         </span>
       </button>
-    </div> 
+    </div>
   )
 }
 
