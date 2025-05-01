@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
         <Link href="/">
-          <Image src="/Logo.svg" alt="Profound" width={150} height={200} className="h-10 lg:h-11" />
+          <Image src="/Logo.svg" alt="Profound" width={150} height={200} className="h-10 lg:h-11 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

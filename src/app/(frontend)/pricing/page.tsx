@@ -45,7 +45,7 @@ const Page = () => {
           >
             Choose The Perfect Plan For You
           </h1>
-          <p  className="text-white text-[16px] sm:text-[18px] md:text-[25px] max-w-[90%] sm:max-w-[70%] md:max-w-[50%] lg:max-w-[80%] mx-auto mt-8 text-pretty">
+          <p  className="text-white text-[16px] sm:text-[18px] md:text-[22px] max-w-[90%]   lg:max-w-[80%] mx-auto mt-8 text-pretty leading-[25px] md:leading-8  font-poppins">
             Outliny is built to give developers full control without locking you into expensive
             contracts or unpredictable bills.
           </p>
@@ -89,7 +89,7 @@ const Page = () => {
         <Testimonials />
       </div>
     </div>
-  )
+  ) 
 }
 
 export default Page

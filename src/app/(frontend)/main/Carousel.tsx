@@ -18,7 +18,13 @@ const Carousel = () => {
 
   return (
     <section className=" py-8">
-      <div className="relative mx-auto h-[80px] max-w-[1200px] overflow-hidden">
+      <div
+        className="relative mx-auto h-[80px] max-w-[1200px] overflow-hidden"
+        style={{
+          maskImage:
+            'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)',
+        }}
+      >
         {/* Carousel Track */}
         <div className="flex min-w-max animate-infiniteLoop gap-6">
           {[...logos, ...logos].map((logo, index) => (
@@ -32,7 +38,6 @@ const Carousel = () => {
                 fill
                 sizes="(max-width: 768px) 100px, 200px"
                 className="object-contain"
-                
               />
             </div>
           ))}

@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
@@ -28,11 +29,11 @@ const Herosection = () => {
   }, [])
 
   return (
-    <div className="   py-10">
-      <div className="flex flex-col items-center">
+    <div className="py-10 ">
+      <div className="flex flex-col items-center  gap-5">
         <p
           ref={textref}
-          className="font-poppins text-[18px] sm:text-[20px] md:text-[22px] lg:text-[25px] max-w-7xl mx-auto font-normal leading-relaxed text-white text-center p-4 text-pretty md:mt-10"
+          className="font-poppins md:text-[18px] lg:text-[19px] max-w-5xl mx-auto text-white text-center p-4 md:mt-10 font-normal text-[16px] leading-[30px] text-pretty tracking-normal capitalize"
         >
           At Outliny, we believe that brand consistency shouldn’t be complicated. We’re dedicated to
           helping enterprises seamlessly manage their branding across digital documents and
@@ -40,45 +41,58 @@ const Herosection = () => {
           time.
         </p>
 
-        <div className="flex justify-center items-center mt-10 ">
-          <Image
-            src="/mobile.svg"
-            alt="logo"
-            width={600}
-            height={600}
-            className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] h-auto"
-          />
+        {/* Hero Section Banner */}
+        <div className="relative     ">
+          <h1
+            className={` opacity-[0.9] bg-custom-gradient bg-clip-text text-transparent font-aldrich text-[100px] sm:text-[160px] md:text-[200px] lg:text-[250px] xl:text-[300px] font-normal leading-tight text-center overflow-hidden`}
+          >
+            Outliny
+          </h1>
+          <div className="absolute inset-0 flex justify-center items-center top-20 sm:top-24 md:top-28 lg:top-32 xl:top-36">
+            <img
+              src="/logo7.png"
+              alt=""
+              className="w-[210px]  sm:w-[300px] md:w-[400px] lg:w-[500px]  opacity-80 "
+            />
+          </div>
         </div>
-
-        {/* mission section */}
-        <div className="w-full bg-custom-gradient19 py-20">
-          <div className="flex flex-col lg:flex-row justify-evenly max-w-[1200px] mx-auto items-center gap-10 h-[500px]">
-            <div>
-              <video className="w-full lg:w-[90%] h-full p-2 md:mt-20 rounded-xl" controls preload="metadata">
+      </div>
+      {/* Mission Section */}
+       <div className="w-full bg-custom-gradient19 sm:py-20 px-4 sm:px-6 lg:px-12  mt-[8rem] sm:mt-[10rem] "> 
+          <div className="flex flex-col lg:flex-row justify-between max-w-[1200px] mx-auto items-center gap-14 md:mt-10">
+            <div className="w-full lg:w-1/2">
+              <video
+                className="w-full aspect-video rounded-xl "
+                controls
+                preload="metadata"
+              >
                 <source src="/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="w-full">
-              <h1 className="text-white text-left text-[40px]  font-bold mb-10">
-                Our Misson
+            <div className="w-full lg:w-1/2">
+              <h1 className="text-white text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold mb-8 text-left ">
+                Our Mission
               </h1>
 
-              <ul className="text-white text-left mt-6  space-y-3 md:space-y-8 px-4 sm:px-0">
+              <ul className="text-white text-left space-y-5 sm:space-y-6 md:space-y-8 py-4">
                 {OutlinyFeatures.map((feature, index) => (
                   <li
                     key={index}
-                    className=" font-normal flex items-start gap-3 font-poppins text-[16px] leading-[100%] "
+                    className="flex items-start gap-4 font-poppins text-[16px] leading-snug"
                   >
-                    <span className="font-extrabold text-xl leading-[1.5] mr-3">•</span>
-                    <span>{feature}</span>
+                    <span className="w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] bg-custom-gradient20 text-white text-center flex items-center justify-center rounded-[10px] font-semibold text-lg sm:text-xl p-5">
+                      {(index + 1).toString().padStart(2, '0')}
+                    </span>
+                    <span className="text-base sm:text-[17px] leading-[24px] tracking-normal capitalize sm:mt-2">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-        </div>
-      </div>
+        </div> 
     </div>
   )
 }

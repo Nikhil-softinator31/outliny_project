@@ -69,7 +69,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
           <Navbar />
           <main>{children}</main>
-          {/* <Footer /> */}
+          <Footer />  
         </Providers>
       </body>
     </html>

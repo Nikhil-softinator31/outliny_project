@@ -6,15 +6,24 @@ const footerLinks = [
   {
     title: 'Product',
     links: [
-      'Content Management',
-      'Enterprise App Builder',
-      'Headless E-Commerce',
-      'Digital Asset Management',
+      'PDF Generation API',
+      'Generating PDFs from HTML',
+      'Creating PDFs from a URL',
+      'Enterprise Features',
     ],
   },
   {
     title: 'Industries',
-    links: ['Real Estate', 'Legal', 'Insurance', 'Accounting ','Marketing','Human Resources','Manufacturing','Sales'],
+    links: [
+      'Real Estate',
+      'Legal',
+      'Insurance',
+      'Accounting ',
+      'Marketing',
+      'Human Resources',
+      'Manufacturing',
+      'Sales',
+    ],
   },
   {
     title: 'Enterprise',
