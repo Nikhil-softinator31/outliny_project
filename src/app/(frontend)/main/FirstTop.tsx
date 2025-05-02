@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import Image from 'next/image'
 
 const FirstTop: React.FC = () => {
   const moveRefs = useRef<Map<number, HTMLDivElement>>(new Map())
@@ -48,9 +49,9 @@ const FirstTop: React.FC = () => {
   }, [])
 
   return (
-    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full md:w-[47vw]  border">
+    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full md:w-[48vw]   border">
       <h3 className="custom-text mt-5 text-3xl md:text-4xl p-5">Ready to Use Component</h3>
-      <p className="mt-5 text-[#878685]   break-words  text-sm md:text-base m-5  md:w-[33vw]  text-left ">
+      <p className="text-[#878685] text-sm sm:text-base leading-relaxed max-w-xl ml-5 ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempore enim tempora
         distinctio non saepe obcaecati cum fugit quis. Lorem, ipsum dolor sit amet consectetur
         adipisicing elit. Ex in quo dolore eos. Repudiandae temporibus incidunt id optio mollitia
@@ -70,10 +71,13 @@ const FirstTop: React.FC = () => {
         {[...Array(5)].map((_, i) => (
           <div key={i} ref={(el) => addToRefs(el, i)} className="w-1/5 space-y-5 md:space-y-2">
             {imgCollection.map((img, index) => (
-              <img
+           
+              <Image
                 key={index}
                 src={img}
                 alt={`img${index}`}
+                width={200}
+                height={200}
                 className="bt-img w-full h-20 md:h-10 lg:h-28 object-cover rounded-lg"
               />
             ))}

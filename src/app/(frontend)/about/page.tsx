@@ -2,7 +2,7 @@
 
 
 import Testimonials from '../main/Testimonial'
-import Flow from './Flow'
+import OutlinyFeatures from './OutlinyFeatures'
 import Herosection from './Herosection'
 
 
@@ -12,7 +12,7 @@ export default function About() {
     <>
       <div className='pt-16'>
         <Herosection />
-  <Flow/>
+ <OutlinyFeatures />
         <Testimonials />
       </div>
     </>

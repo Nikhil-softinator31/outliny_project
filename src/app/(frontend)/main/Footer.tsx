@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
       style={{
         backgroundImage:
           "linear-gradient(rgba(8, 9, 10, 0.5), rgba(8, 9, 10, 0.5)), url('/Grid..svg')",
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         backgroundPosition: 'center',
         zIndex: 0,
       }}

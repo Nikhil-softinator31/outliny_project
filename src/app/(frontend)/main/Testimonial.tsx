@@ -149,10 +149,22 @@ const TestimonialRow = ({
 
 const Testimonials = () => {
   return (
-    <div className=" bg-[#08090a] text-white h-[500px] sm:h-[600px] md:h-[700px] flex flex-col justify-center items-center overflow-hidden mt-10">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 text-center gradient-text">
-        What People Are Saying
-      </h2>
+    <div className=" bg-[#08090a] text-white  sm:h-[600px] md:h-[700px] flex flex-col justify-center items-center overflow-hidden  md:mt-10 ">
+      <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-8">
+        <h2 className="font-poppins font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-snug sm:leading-[40px] md:leading-[56px] lg:leading-[72px] tracking-normal text-center p-2">
+          Nice things people say about my work
+        </h2>
+        <p
+          className="font-poppins font-normal text-[14px] leading-7 tracking-normal text-center capitalize 
+          
+           lg:text-[20px] lg:leading-10 lg:w-[70%] mx-auto  text-pretty"
+        >
+          We have generated over millions of PDFs seamlessly! Our PDF Generation solutions have
+          empowered thousands of users worldwide, from individual developers to corporations, to
+          create high-quality PDFs efficiently.
+        </p>
+      </div>
+
       <TestimonialRow direction="left" data={testimonials1} />
       <TestimonialRow direction="right" data={testimonials2} />
     </div>
