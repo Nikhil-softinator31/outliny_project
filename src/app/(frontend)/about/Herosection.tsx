@@ -48,13 +48,13 @@ const Herosection = () => {
           >
             Outliny
           </h1>
-          <div className="absolute inset-0 flex justify-center items-center top-20 sm:top-24 md:top-28 lg:top-32 xl:top-36">
+          <div className="absolute inset-x-3 flex justify-center items-center top-20 sm:top-24 md:top-28 lg:top-30 ">
             <Image
               src="/logo7.png"
               alt="Outliny Logo"
-              width={500}
+              width={400}
               height={500}
-              className="w-[210px] sm:w-[300px] md:w-[400px] lg:w-[500px] opacity-80"
+              className="w-[210px] sm:w-[300px] md:w-[400px] lg:w-[600px] opacity-80"
               priority
             />
           </div>

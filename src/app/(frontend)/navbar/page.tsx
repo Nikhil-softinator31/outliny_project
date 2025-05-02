@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
         <Link href="/">
-          <Image src="/Logo.svg" alt="Profound" width={150} height={200} className="h-10 lg:h-11 w-auto" />
+          <Image src="/Logo.svg" alt="outliny" width={150} height={200} className="h-10 lg:h-11 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -73,7 +73,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 bg-[#08090a] z-40 flex flex-col border-t border-[#232323]">
+        <div className="lg:hidden fixed inset-x-0 top-16 bottom-0 bg-[#08090a] z-40 flex flex-col border-t border-[#232323]">
           <div className="flex flex-col h-full px-6 py-4 space-y-2 flex-grow">
             {navItems.map((item) => (
               <Link

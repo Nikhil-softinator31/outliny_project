@@ -149,7 +149,7 @@ const TestimonialRow = ({
 
 const Testimonials = () => {
   return (
-    <div className=" bg-[#08090a] text-white  sm:h-[600px] md:h-[700px] flex flex-col justify-center items-center overflow-hidden  md:mt-10 ">
+    <div className=" bg-[#08090a] text-white  sm:h-[600px] md:h-[700px] flex flex-col justify-center items-center overflow-hidden  md:mt-8 ">
       <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-8">
         <h2 className="font-poppins font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-snug sm:leading-[40px] md:leading-[56px] lg:leading-[72px] tracking-normal text-center p-2">
           Nice things people say about my work

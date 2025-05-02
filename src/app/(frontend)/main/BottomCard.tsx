@@ -69,9 +69,9 @@ const BottomCard: React.FC = () => {
       </div>
 
       {/* Second Section */}
-      <div className="flex flex-col md:flex-row gap-8 w-full ">
+      <div className="flex flex-col md:flex-row gap-8 w-full  flex-wrap">
         {/* Slider */}
-        <div className="w-full md:w-1/4 bg-[#0E0E0E] rounded-2xl border border-[#202020] p-4">
+        <div className="w-full md:w-1/2 lg:w-1/4 bg-[#0E0E0E] rounded-2xl border border-[#202020] p-4">
           <div className="h-auto overflow-hidden">
             <Slider {...settings}>
               {images.map((src, index) => (
@@ -102,7 +102,7 @@ const BottomCard: React.FC = () => {
         </div>
 
         {/* BottomCorner */}
-        <div className="w-full md:w-1/4 bg-[#0E0E0E] rounded-2xl border border-[#202020]">
+        <div className="w-full  overflow-hidden lg:w-1/4 bg-[#0E0E0E] rounded-2xl border border-[#202020]">
           <BottomCorner />
         </div>
       </div>

@@ -5,8 +5,10 @@ export default function OutlinyFeatures() {
 
       {/* Background Grid Section */}
       <div
-        className=" h-[450px] sm:min-h-[90vh] bg-center bg-contain bg-no-repeat grid place-items-center "
-        style={{ backgroundImage: "url('/Grid..svg')" }}
+        className=" h-[450px] md:h-[650px] bg-center bg-contain bg-no-repeat grid place-items-center "
+        style={{ backgroundImage: "url('/Grid..svg')",
+          marginTop:'50px',
+         }}
       >
         {/* base - sm: stacked layout */}
         <div className="flex flex-col items-center space-y-4   text-center text-base sm:text-lg md:hidden ">
