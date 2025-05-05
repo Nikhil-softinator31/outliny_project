@@ -23,7 +23,7 @@ import Navbar from './Navbar/page'
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['100', '200', '300','500', '400', '700'],
+  weight: ['100', '200', '300','500', '400', '600', '700'],
   variable: '--font-poppins',
 })
 
@@ -69,7 +69,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
           <Navbar />
           <main>{children}</main>
-          {/* <Footer /> */}
+          <Footer />  
         </Providers>
       </body>
     </html>

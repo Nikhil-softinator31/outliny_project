@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useEffect } from 'react'
+import React, { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
@@ -34,7 +34,7 @@ const BottomCorner: React.FC = () => {
   })
 
   return (
-    <div className="flex-col gap-3 m-10 text-left ">
+    <div className="flex-col gap-3 xl:m-10 p-4 text-left ">
       <div
         className="overflow-hidden rotate-[14deg]  "
         style={{
@@ -48,7 +48,7 @@ const BottomCorner: React.FC = () => {
           {icons.map((icon, index) => (
             <div
               key={index}
-              className=" p-3 min-h-20 min-w-30 -translate-x-80 m-1 rounded-lg border border-gray-600 text-center bg-[#0E0E0E] text-white"
+              className=" p-3 min-h-20  -translate-x-80 m-1 rounded-lg border border-gray-600 text-center bg-[#0E0E0E] text-white"
             >
               {icon}
             </div>
@@ -70,7 +70,7 @@ const BottomCorner: React.FC = () => {
         SVG Icons{' '}
         <span className="bg-red-500 text-xs text-white px-2 py-1 rounded">COMING SOON</span>
       </h2>
-      <p className="mt-1 text-[#878685] break-words max-w-full text-left text-sm ">
+      <p className="mt-1 text-[#878685] break-words  text-left text-sm ">
         Did the designer use PNGs again? We have got you covered. Social icons are a must for almost
         every website, but finding them in the right SVG format can be a pain.
       </p>

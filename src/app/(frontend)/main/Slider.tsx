@@ -17,7 +17,7 @@ const Slider = () => {
     },
     {
       image: '/star.svg',
-      heading: 'Email Templates Done Right:',
+      heading: 'Reliable and Scalable',
       text: ' Craft beautiful MJML-based responsive emails with our drag-and-drop editor. Centralize your CRM, transactional emails, marketing campaigns, and more, backed by cloud-friendly media hosting via Cloudfront and Cloudinary.',
     },
     {
@@ -81,7 +81,9 @@ const Slider = () => {
   return (
     <>
       <div className="bg-[#08090a] flex flex-col justify-center items-center  px-4 md:mt-14">
-        <h1 className="text-white  font-medium  text-3xl p-8 lg:mb-10 lg:text-[50px] font-poppins  gradient-text">Why Outliny?</h1>
+        <h1 className="text-white  font-medium  text-3xl p-8 lg:mb-10 lg:text-[50px] font-poppins  gradient-text">
+          Why Outliny?
+        </h1>
         <div className="max-w-[1400px] mx-auto">
           <div
             ref={(el) => {
@@ -107,10 +109,10 @@ const Slider = () => {
                       className="border border-[#817f7f77] p-2 rounded-xl"
                       priority
                     />
-                    <h1 className="text-[#e7e7e7] text-lg font-medium font-poppins">
+                    <h1 className="text-[#acabab] text-[20px] leading-[30px] tracking-[0%] font-semibold   ">
                       {data.heading}
                     </h1>
-                    <p className="text-[#c7bfbf] text-[13px] md:text-[16px] md:leading-[30px] text-left font-poppins font-normal">
+                    <p className="text-[#acabab] text-[13px] md:text-[16px] md:leading-[30px] text-left font-poppins font-normal">
                       {data.text}
                     </p>
                   </div>

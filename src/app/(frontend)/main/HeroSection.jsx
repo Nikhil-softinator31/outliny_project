@@ -46,18 +46,18 @@ const HeroSection = () => {
         <div className="max-w-[1000px]  lg:mr-72  ">
           <div className="flex flex-col justify-center items-center sm:justify-start sm:items-start sm:pl-4  gap-2 md:gap-4">
             <h1 ref={text1} className=" text-left text-[50px] sm:text-5xl   font-semibold">
-              Outliny
+              Outliny Brand
             </h1>
             <p
               ref={text2}
               className="text-center sm:text-left sm:text-5xl   flex-wrap text-3xl  font-semibold  "
             >
-              Brand Consistency, Simplified.
+              Consistency, Simplified.
             </p>
             <p
               ref={text3}
               className="text-center sm:text-left text-xl   sm:w-screen text-[#b0b0b0] w-full max-w-[615px] font-semibold  flex-wrap p-3 sm:p-0 text-balance  "
-            > 
+            >
               Centrally manage and automate your PDFs and email templates ensuring seamless brand
               consistency across every touchpoint.
             </p>

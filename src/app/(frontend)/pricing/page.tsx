@@ -37,21 +37,19 @@ const Page = () => {
 
         {/* Content Centered Horizontally */}
         <div className="relative z-10 mt-6 sm:mt-10 max-w-4xl mx-auto">
-       
-
           <h1
             ref={fadeUpRef}
-            className="text-white text-[13px] sm:text-[28px] md:text-[35px] lg:text-[45px]  font-extrabold gradient-text leading-tight mt-20"
+            className="text-white text-[13px] sm:text-[28px] md:text-[35px] lg:text-[45px]  font-extrabold  leading-[100%] tracking-normal mt-20 font-poppins "
           >
             Choose The Perfect Plan For You
           </h1>
-          <p  className="text-white text-[16px] sm:text-[18px] md:text-[25px] max-w-[90%] sm:max-w-[70%] md:max-w-[50%] lg:max-w-[80%] mx-auto mt-8 text-pretty">
+          <p className="text-white text-[18px]   max-w-[80%]    mx-auto mt-8 text-pretty leading-[25px] md:leading-10 tracking-normal font-poppins font-normal">
             Outliny is built to give developers full control without locking you into expensive
             contracts or unpredictable bills.
           </p>
 
           <div className="mt-10">
-            <div className="bg-custom-gradient16 p-2 sm:p-3 rounded-lg flex justify-around w-full max-w-[415px] mx-auto border border-[#aaa6a6e7]">
+            <div className="bg-custom-gradient20 p-2 sm:p-3 rounded-lg flex justify-around w-full max-w-[415px] mx-auto border border-[#535a5f]">
               <button
                 className={`px-3 py-2 sm:px-4 md:px-6 rounded-lg font-semibold text-sm sm:text-base md:text-lg mx-0.5 transition-colors ${
                   billingOption === 'monthly'
@@ -73,7 +71,7 @@ const Page = () => {
                 Billed Annually
               </button>
             </div>
-            <p className="text-white font-normal text-[14px] sm:text-[16px] md:text-[18px] max-w-[500px] mx-auto mt-4 sm:mt-6 md:mt-8 text-center">
+            <p className="text-white font-normal text-[14px] sm:text-[16px] md:text-[18px] max-w-[500px] mx-auto mt-4 sm:mt-6 md:mt-8 text-center font-poppins">
               {billingOption === 'monthly'
                 ? 'Upgrade to annual pricing to save up to 17%.'
                 : "You're saving up to 17% with annual billing!"}
@@ -89,7 +87,7 @@ const Page = () => {
         <Testimonials />
       </div>
     </div>
-  )
+  ) 
 }
 
 export default Page
