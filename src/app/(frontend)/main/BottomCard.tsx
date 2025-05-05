@@ -23,7 +23,7 @@ const BottomCard: React.FC = () => {
   return (
     <div
       id="Maindiv"
-      className="flex flex-col gap-8  w-full text-white px-4 md:px-8 md:mb-10 lg:mb-20 md:mt-20  flex-wrap  "
+      className="flex flex-col gap-8  w-full text-white px-4 md:px-4 md:mb-10 lg:mb-20 md:mt-20  flex-wrap  "
     >
       {/* First Section */}
       <div className="h-auto flex flex-col md:flex-row gap-8 w-full">
@@ -69,7 +69,7 @@ const BottomCard: React.FC = () => {
       </div>
 
       {/* Second Section */}
-      <div className="flex flex-col md:flex-row gap-8 w-full  flex-wrap">
+      <div className="flex flex-col md:flex-row gap-4 w-full  flex-wrap">
         {/* Slider */}
         <div className="w-full md:w-1/2 lg:w-1/4 bg-[#0E0E0E] rounded-2xl border border-[#202020] p-4">
           <div className="h-auto overflow-hidden">
@@ -88,7 +88,7 @@ const BottomCard: React.FC = () => {
             </Slider>
           </div>
           <div className="mt-5">
-            <h2 className="custom-text text-2xl sm:text-3xl text-left">Osmo Basics</h2>
+            <h2 className="custom-text text-2xl sm:text-3xl  lg:text-[1.75em] font-normal text-left ">Osmo Basics</h2>
             <p className="mt-5 text-[#878685] text-sm sm:text-base text-left">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni pariatur recusandae,
               cumque at debitis.
@@ -97,12 +97,12 @@ const BottomCard: React.FC = () => {
         </div>
 
         {/* Center Content */}
-        <div className="w-full md:w-[45%] bg-[#0E0E0E] rounded-2xl border border-[#202020] p-4">
+        <div className="w-full md:w-[40%] lg:w-[44%]  bg-[#0E0E0E] rounded-2xl border border-[#202020] ">
           <CenterDiv />
         </div>
 
         {/* BottomCorner */}
-        <div className="w-full  overflow-hidden lg:w-1/4 bg-[#0E0E0E] rounded-2xl border border-[#202020]">
+        <div className="w-full  overflow-hidden lg:w-[27%] bg-[#0E0E0E] rounded-2xl border border-[#202020]">
           <BottomCorner />
         </div>
       </div>
