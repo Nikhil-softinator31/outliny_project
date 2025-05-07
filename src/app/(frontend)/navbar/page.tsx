@@ -19,7 +19,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
         <Link href="/">
-          <Image src="/Logo.svg" alt="outliny" width={150} height={200} className="h-10 lg:h-11 w-auto" />
+          <Image
+            src="/Logo.svg"
+            alt="outliny"
+            width={150}
+            height={200}
+            className="h-10 lg:h-11 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -41,9 +47,14 @@ const Navbar = () => {
 
         {/* Desktop Log in & Get Started */}
         <div className="hidden lg:flex space-x-4 items-center">
-          <Link href="/login" className="text-gray-400 hover:text-white text-sm font-medium">
+          <Link
+            href="/login"
+            className="relative text-gray-400 hover:text-white text-sm font-medium group"
+          >
             Log in
+            <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
           </Link>
+
           <Link
             href="/get-started"
             className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-[#505050] transition-all duration-200"

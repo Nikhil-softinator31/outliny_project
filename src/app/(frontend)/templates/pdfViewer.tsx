@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image'
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -89,23 +89,26 @@ export default function PdfViewer() {
             className="pdf-card p-6 rounded-2xl border-[#646464] border mx-auto opacity-0"
           >
             <div className="grayscale hover:grayscale-0">
-              <img src={data.image} alt={data.title} className="w-full h-auto rounded-lg mb-4 " />
-              <h1
-                className='text-white font-bold text-[18px] mb-2 text-left font-poppins'
-              >
+              {/* <img src={data.image} alt={data.title} className="w-full h-auto rounded-lg mb-4 " /> */}
+              <Image
+                src={data.image}
+                alt="data.title"
+                width={100}
+                height={100}
+                className="w-full h-auto rounded-lg mb-4"
+              />
+              <h1 className="text-white font-bold text-[18px] mb-2 text-left font-poppins">
                 {data.title}
               </h1>
-              <p
-                className='text-[#ffffff] font-normal text-[14px] leading-5 mb-4 text-left font-poppins'
-              >
+              <p className="text-[#ffffff] font-normal text-[14px] leading-5 mb-4 text-left font-poppins">
                 {data.subTitle}
               </p>
             </div>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-4">
-              <button className="border-[1px] text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm">
+            <div className="flex  justify-center items-center gap-4 mt-4">
+              <button className="border-[1px] text-white px-4 py-2 rounded-lg transition-all duration-300 text-sm hover:bg-[#161616]">
                 {data.button1}
               </button>
-              <button className="border-[1px] text-[#ffffff] hover:text-white px-7 py-2 rounded-lg transition-all duration-300 text-sm">
+              <button className="border-[1px] text-[#ffffff] hover:text-white px-7 py-2 rounded-lg transition-all duration-300 text-sm hover:bg-[#161616]">
                 {data.button2}
               </button>
             </div>

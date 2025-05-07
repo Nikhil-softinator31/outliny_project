@@ -44,14 +44,16 @@ const Card = ({ data }: CardProps) => {
   }, [])
 
   return (
-    <div ref={containerRef} className="py-2 md:py-0 w-full md:w-auto">
+    <div
+      ref={containerRef}
+      className="bg-[#0a0a0a] rounded-xl border border-white/20 hover:border-white/50 transition duration-300 p-4 text-center flex flex-col items-center"
+    >
       <div
         ref={cardRef}
-        className="w-full md:w-auto sm:max-w-[250px] md:max-w-[300px] h-[250px] sm:h-[260px] md:h-[270px] rounded-xl flex flex-col items-center text-center bg-[#0a0a0a]
-        backdrop-blur-md border border-white/20 transition-transform duration-300 ease-in-out hover:border-white/50
-        perspective-1000 group mx-auto"
+        className="w-full max-w-[300px]  rounded-xl flex flex-col items-center justify-center  cursor-pointer
+        perspective-1000  group"
       >
-        <div className="relative w-28 sm:w-32 md:w-36 h-28 sm:h-32 md:h-36 mt-8">
+        <div className="relative w-full aspect-square max-w-[250px]">
           <Image
             src={data.imageSrc}
             alt="Card Image"
@@ -60,42 +62,35 @@ const Card = ({ data }: CardProps) => {
             priority
           />
         </div>
-        <p className="text-gray-200 text-xs sm:text-sm md:text-base mt-4 px-3 sm:px-4 md:px-6 text-center">
-          {data.description}
-        </p>
+        <p className="text-gray-200 text-sm sm:text-base mt-4 px-2 sm:px-4">{data.description}</p>
       </div>
     </div>
   )
 }
 
+
 const cardData = [
-  { id: 1, imageSrc: '/car13.jpg', description: 'Brand consistency' },
-  { id: 2, imageSrc: '/car13.jpg', description: ' Efficient workflow automation' },
-  { id: 3, imageSrc: '/car13.jpg', description: ' Compliance & security' },
-  { id: 4, imageSrc: '/car13.jpg', description: ' Open-source flexibility' },
-  { id: 5, imageSrc: '/car13.jpg', description: 'Automation support' },
-  {
-    id: 6,
-    imageSrc: '/car13.jpg',
-    description: 'Scalable operations & centralized template ',
-  },
-  { id: 7, imageSrc: '/car13.jpg', description: ' Real-Time Preview & Testing' },
-  { id: 8, imageSrc: '/car13.jpg', description: 'Template Versioning & Management' },
+  { id: 1, imageSrc: '/sit.jpg', description: 'Brand consistency' },
+  { id: 2, imageSrc: '/style.jpg', description: 'Efficient workflow automation' },
+  { id: 3, imageSrc: '/sit.jpg', description: 'Compliance & security' },
+  { id: 4, imageSrc: '/style.jpg', description: 'Open-source flexibility' },
+  { id: 5, imageSrc: '/laptop.jpg', description: 'Automation support' },
+  { id: 6, imageSrc: '/emailing.jpg', description: 'Scalable operations & centralized template' },
+  { id: 7, imageSrc: '/sit.jpg', description: 'Real-Time Preview & Testing' },
+  { id: 8, imageSrc: '/emailing.jpg', description: 'Template Versioning & Management' },
 ]
 
 export default function Dashboard() {
   return (
-    <div className=" text-white px-4 sm:px-6 py-6 sm:py-8 md:p-4 flex flex-col justify-center items-center mt-14 gap-10 ">
-      <div>
-        <h1 className=" text-center text-xl md:text-2xl lg:text-[35px] gradient-text ">
-          Ideal for Enterprises That Care About
-        </h1>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full xl:w-[65%]">
+    <section className="text-white px-4 sm:px-6 py-14 flex flex-col items-center gap-10">
+      <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold gradient-text">
+        Ideal for Enterprises That Care About
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 w-full max-w-[1200px]">
         {cardData.map((card) => (
           <Card key={card.id} data={card} />
         ))}
       </div>
-    </div>
+    </section>
   )
 }

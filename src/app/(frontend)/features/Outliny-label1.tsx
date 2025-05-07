@@ -26,32 +26,42 @@ const OutlinyLable1 = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full px-4 sm:mt-14 md:mt-24">
-      <div className="text-center w-full md:max-w-[60%] mx-auto my-10">
+      <div className="text-center w-full  mx-auto my-10">
         <h1 className=" text-white text-[26px] md:text-[40px] font-semibold leading-tight gradient-text">
           PDF Template Builder
         </h1>
       </div>
-      <div className="space-y-6 w-full md:max-w-[55%]">
+      <div className="space-y-6 w-full max-w-[90%] md:max-w-[70%] lg:max-w-[75%] xl:w-[55%]">
         {features.map((item, index) => (
           <div
             key={index}
             className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6"
           >
-            <div className="hidden sm:flex w-8 h-8 lg:w-9 lg:h-9 rounded-full border border-white flex-shrink-0 md:mt-1"></div>
-            <p className="text-white  text-[16px] sm:text-[18px] font-bold leading-[28px]">
-              {item.heading}
-              <span className="text-[#a9a7a7] ml-2 text-[15px] sm:text-[16px] font-light leading-[28px]">
-                {item.text}
-              </span>
-            </p>
+            {/* Circle */}
+            <div className="hidden sm:flex w-2 h-2  bg-white rounded-full border border-white flex-shrink-0 sm:mt-3"></div>
+
+            {/* Text Content */}
+            <div className="w-full">
+              <p className="font-inter text-[16px] sm:text-[18px] font-bold leading-[28px] text-white">
+                {item.heading}
+                <span className="text-[#a9a7a7] ml-2 text-[15px] sm:text-[16px] font-light leading-[28px]">
+                  {item.text}
+                </span>
+              </p>
+            </div>
           </div>
         ))}
       </div>
-      <button className="mt-8 bg-blue-700 text-white px-4 py-3 rounded-xl text-[16px] font-medium flex items-center overflow-hidden">
-        <span>Book a Demo</span>
-        <span className="ml-2 text-[24px]">
+      <button className="group mt-8 relative overflow-hidden bg-blue-700 text-white px-4 py-3 rounded-xl text-[16px] font-medium flex items-center transition-all duration-300">
+        <span className="relative z-10">Book a Demo</span>
+
+        {/* Animated Arrow */}
+        <span className="ml-2 relative z-10 text-[24px] transform transition-transform duration-300 group-hover:translate-x-1.5">
           <FaLongArrowAltRight />
         </span>
+
+        {/* Swipe background */}
+        <span className="absolute inset-0 bg-blue-800 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out z-0" />
       </button>
     </div>
   )
