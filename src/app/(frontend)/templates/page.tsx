@@ -23,7 +23,7 @@ const page = () => {
           </h1>
           <p className="text-white text-[12px] sm:text-[15px]  md:text-[18px]  w-full   sm:w-[30vw] md:w-[78vw] lg:w-[50vw] lg:leading-[30px]  mx-auto mt-2">
             Outliny comes with a growing library of prebuilt, brand-ready templates to help you hit
-            the ground running. Whether you're automating internal workflows or sending
+            the ground running. Whether you are automating internal workflows or sending
             customer-facing documents, our templates ensure your brand stays consistent, clear, and
             professional.
           </p>

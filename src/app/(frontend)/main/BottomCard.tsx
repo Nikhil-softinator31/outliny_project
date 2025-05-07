@@ -23,16 +23,16 @@ const BottomCard: React.FC = () => {
   return (
     <div
       id="Maindiv"
-      className="flex flex-col gap-8  w-full text-white px-4 md:px-4 md:mb-10 lg:mb-20 md:mt-20  flex-wrap  "
+      className="flex flex-col gap-4  w-full text-white px-4 md:px-4 md:mb-10 lg:mb-20 mt-10 md:mt-20  flex-wrap  "
     >
       {/* First Section */}
-      <div className="h-auto flex flex-col md:flex-row gap-8 w-full">
+      <div className="h-auto flex flex-col md:flex-row gap-4 w-full">
         <div className="w-full md:w-1/2">
           <FirstTop />
         </div>
 
-        <div className="bg-[#0E0E0E] rounded-2xl border border-[#202020] text-left w-full md:w-1/2 lg:w-[47%] max-h-[600px] overflow-hidden relative">
-          <div className="p-6 flex flex-col h-full gap-6">
+        <div className="bg-[#0E0E0E] rounded-2xl border border-[#202020] text-left w-full md:w-1/2 lg:w-[48%]  lg:mr-10 max-h-[600px] overflow-hidden relative">
+          <div className="p-6 flex flex-col h-full gap-4">
             <h3 className="text-white text-2xl sm:text-3xl font-semibold">Educational Content</h3>
 
             <p className="text-[#878685] text-sm sm:text-base leading-relaxed max-w-xl">
@@ -60,9 +60,6 @@ const BottomCard: React.FC = () => {
                 <source src="/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-
-    
-          
             </div>
           </div>
         </div>
@@ -88,7 +85,9 @@ const BottomCard: React.FC = () => {
             </Slider>
           </div>
           <div className="mt-5">
-            <h2 className="custom-text text-2xl sm:text-3xl  lg:text-[1.75em] font-normal text-left ">Osmo Basics</h2>
+            <h2 className="custom-text text-2xl sm:text-3xl  lg:text-[1.75em] font-normal text-left ">
+              Osmo Basics
+            </h2>
             <p className="mt-5 text-[#878685] text-sm sm:text-base text-left">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni pariatur recusandae,
               cumque at debitis.
@@ -97,7 +96,7 @@ const BottomCard: React.FC = () => {
         </div>
 
         {/* Center Content */}
-        <div className="w-full md:w-[40%] lg:w-[44%]  bg-[#0E0E0E] rounded-2xl border border-[#202020] ">
+        <div className="w-full md:w-[47%] lg:w-[44%]  bg-[#0E0E0E] rounded-2xl border border-[#202020] ">
           <CenterDiv />
         </div>
 
@@ -121,7 +120,11 @@ const CenterDiv: React.FC = () => {
         </p>
       </div>
       <div className="m-4 flex justify-center items-center w-full">
-        <img src="/ss.png" className="rounded-xl w-full h-auto object-cover" alt="Code Snippet Preview" />
+        <img
+          src="/ss.png"
+          className="rounded-xl w-full h-auto object-cover"
+          alt="Code Snippet Preview"
+        />
       </div>
     </div>
   )

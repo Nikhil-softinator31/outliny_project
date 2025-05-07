@@ -78,6 +78,7 @@ const config = {
         'custom-gradient18': 'radial-gradient(circle, #4e0997 -59%, #08090a 45%)',
         'custom-gradient19':'linear-gradient(354.93deg, #131415 3.04%, rgba(19, 20, 21, 0) 94.94%)',
         'custom-gradient20': 'linear-gradient(132.47deg, rgba(255, 255, 255, 0.1) -5.03%, rgba(255, 255, 255, 0) 86.03%)',
+       
       },
       animation: {},
       borderRadius: {},

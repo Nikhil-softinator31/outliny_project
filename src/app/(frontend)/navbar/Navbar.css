@@ -221,3 +221,16 @@
   opacity: 0.8;
   transition: opacity 0.2s ease-in-out;
 }
+
+
+.underline-anim {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease, transform-origin 0s 0.3s; /* delay origin change on hide */
+}
+
+.group:hover .underline-anim {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}

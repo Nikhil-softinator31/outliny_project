@@ -116,7 +116,7 @@ const FAQ = () => {
                     openIndex === index ? 'max-h-40 opacity-100 py-2' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="font-light text-[#c2c5c5] text-[14px] md:text-base leading-6 font-poppins">
+                  <p className="font-light text-[#c2c5c5] text-[14px] md:text-base leading-6 font-poppins ">
                     {item.answer}
                   </p>
                 </div>
