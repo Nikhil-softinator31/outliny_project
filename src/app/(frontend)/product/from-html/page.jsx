@@ -2,7 +2,7 @@ import React from 'react'
 
 const GeneratingPDFsFromHtml = () => {
   return (
-    <section className="mt-24 p-4 max-w-[90rem] mx-auto text-white">
+    <section className="mt-24 p-4 md:p-6 max-w-[90rem] mx-auto text-white">
       <h1 className="text-3xl sm:text-4xl font-bold mb-6 ">🧾 Generating PDFs from HTML</h1>
       <p className="text-base sm:text-lg text-gray-400 mb-6">
         Outliny allows you to generate beautiful, production-ready PDFs directly from raw HTML

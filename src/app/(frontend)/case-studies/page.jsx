@@ -3,7 +3,7 @@ import React from 'react'
 
 const CaseStudiesPage = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto p-4 py-20 text-[#d6d5d5] font-poppins ">
+    <div className="max-w-screen-2xl mx-auto p-4 md:px-8   py-20 text-[#d6d5d5] font-poppins ">
       <h1 className="text-4xl font-bold mt-10 mb-5 text-white">📚 Case Studies</h1>
       <p className="text-lg mb-10">
         See how businesses around the world are using Outliny to streamline communication, automate

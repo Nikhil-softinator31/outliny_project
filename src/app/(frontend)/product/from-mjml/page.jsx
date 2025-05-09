@@ -12,9 +12,6 @@ const GeneratingPdfPage = () => {
         into your email workflow.
       </p>
 
-      <span className="inline-block bg-green-600 text-white text-xs px-2 py-1 rounded-full mb-4">
-        🌱 Open Source Supported
-      </span>
 
       <h2 className="text-2xl font-semibold mt-10 mb-3">✨ Why MJML?</h2>
       <p className="text-gray-400 mb-4">
@@ -42,7 +39,7 @@ const GeneratingPdfPage = () => {
       </ol>
 
       <h2 className="text-2xl font-semibold mt-10 mb-3">🔧 Example API Usage</h2>
-      <pre className="bg-gray-100 rounded p-4 overflow-auto text-sm text-black">
+      <pre className="overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         <code>
           {`POST /api/v1/emails/generate-html
 Content-Type: application/json
@@ -59,7 +56,7 @@ Authorization: Bearer YOUR_API_KEY
       </pre>
 
       <p className="text-sm mt-2 text-gray-500">📩 Response:</p>
-      <pre className="bg-gray-100 rounded p-4 overflow-auto text-sm text-black">
+      <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         <code>
           {`{
   "html": "<!DOCTYPE html><html>...rendered responsive email...</html>"
@@ -114,7 +111,7 @@ Authorization: Bearer YOUR_API_KEY
         </a>
         <a
           href="/docs"
-          className="bg-gray-100 text-gray-700 px-6 py-3 rounded shadow hover:bg-gray-200 transition"
+          className="bg-gray-100 text-black px-6 py-3 rounded shadow hover:bg-gray-200 transition"
         >
           📘 See the Developer Docs
         </a>

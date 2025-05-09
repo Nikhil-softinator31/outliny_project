@@ -70,20 +70,32 @@ const Card = ({ data }: CardProps) => {
 
 
 const cardData = [
-  { id: 1, imageSrc: '/sit.jpg', description: 'Brand consistency' },
-  { id: 2, imageSrc: '/style.jpg', description: 'Efficient workflow automation' },
-  { id: 3, imageSrc: '/sit.jpg', description: 'Compliance & security' },
-  { id: 4, imageSrc: '/style.jpg', description: 'Open-source flexibility' },
-  { id: 5, imageSrc: '/laptop.jpg', description: 'Automation support' },
-  { id: 6, imageSrc: '/emailing.jpg', description: 'Scalable operations & centralized template' },
-  { id: 7, imageSrc: '/sit.jpg', description: 'Real-Time Preview & Testing' },
-  { id: 8, imageSrc: '/emailing.jpg', description: 'Template Versioning & Management' },
+  { id: 1, imageSrc: '/brandconsistency.jpg', description: 'Brand consistency' },
+  { id: 2, imageSrc: '/workflowAutomation.jpg', description: 'Efficient workflow automation' },
+  { id: 3, imageSrc: '/compliance&security.jpg', description: 'Compliance & security' },
+  { id: 4, imageSrc: '/opensourceflexibility.jpg', description: 'Open-source flexibility' },
+  { id: 5, imageSrc: '/Automation Support.jpg', description: 'Automation support' },
+  {
+    id: 6,
+    imageSrc: '/scalableoperations.jpg',
+    description: 'Scalable operations & centralized template',
+  },
+  {
+    id: 7,
+    imageSrc: '/realtimepreview.jpg',
+    description: 'Real-Time Preview & Testing',
+  },
+  {
+    id: 8,
+    imageSrc: '/templateversion.jpg',
+    description: 'Template Versioning & Management',
+  },
 ]
 
 export default function Dashboard() {
   return (
     <section className="text-white px-4 sm:px-6 py-14 flex flex-col items-center gap-10">
-      <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold gradient-text">
+      <h1 className="text-center text-2xl sm:text-3xl lg:text-4xl font-semibold ">
         Ideal for Enterprises That Care About
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 w-full max-w-[1200px]">

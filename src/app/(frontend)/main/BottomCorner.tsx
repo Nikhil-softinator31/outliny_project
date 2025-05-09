@@ -67,12 +67,12 @@ const BottomCorner: React.FC = () => {
       </div>
 
       <h2 className="text-2xl font-bold mt-10">
-        SVG Icons{' '}
+        Understand, Then Execute
         <span className="bg-red-500 text-xs text-white px-2 py-1 rounded">COMING SOON</span>
       </h2>
       <p className="mt-1 text-[#878685] break-words  text-left text-sm ">
-        Did the designer use PNGs again? We have got you covered. Social icons are a must for almost
-        every website, but finding them in the right SVG format can be a pain.
+        Learn not just how to use Outliny, but how to build systems that scale, comply with
+        enterprise standards, and empower your team.
       </p>
     </div>
   )

@@ -23,7 +23,7 @@ const Navbar = () => {
             src="/Logo.svg"
             alt="outliny"
             width={150}
-            height={200}
+            height={200}  
             className="h-10 lg:h-11 w-auto"
           />
         </Link>

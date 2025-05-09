@@ -5,9 +5,9 @@ import { CiMail } from 'react-icons/ci'
 
 const PartnersPage = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-4 py-20 text-[#d6d5d5] font-poppins">
+    <div className="max-w-screen-2xl mx-auto px-4 md:px-6 py-20 text-[#d6d5d5] font-poppins">
       <h1 className="text-4xl font-bold mb-6 mt-20 text-white">🤝 Partner with Us</h1>
-      <p className="mb-8 text-lg">
+      <p className="mb-8 text-lg p-2">
         Outliny is more than just a platform — it's a growing ecosystem of developers, agencies,
         technology providers, and innovators shaping the future of branded communication. We’re
         excited to collaborate with partners who share our vision of secure, flexible, and
