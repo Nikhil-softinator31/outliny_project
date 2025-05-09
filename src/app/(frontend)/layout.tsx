@@ -6,8 +6,9 @@ import { GeistSans } from 'geist/font/sans'
 import React from 'react'
 import { Poppins } from 'next/font/google'
 import { Aldrich } from 'next/font/google'
+import { Comic_Neue } from 'next/font/google'
 import { Inter } from 'next/font/google'
-
+import { Roboto } from 'next/font/google'
 import { AdminBar } from '@/components/AdminBar'
 import { Header } from '@/Header/Component'
 import { Providers } from '@/providers'
@@ -15,9 +16,10 @@ import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { draftMode } from 'next/headers'
 
+
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
-import BackgroundVideo from './main/BackgroundVideo'
+// import BackgroundVideo from './main/BackgroundVideo'
 import Footer from './main/Footer'
 import Navbar from './Navbar/page'
 
@@ -26,6 +28,12 @@ const poppins = Poppins({
   weight: ['100', '200', '300','500', '400', '600', '700'],
   variable: '--font-poppins',
 })
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'], // Choose based on your need
+  variable: '--font-roboto',
+})
+
 
 const aldrich = Aldrich({
   subsets: ['latin'],
@@ -50,6 +58,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         poppins.variable,
         aldrich.variable,
         inter.variable,
+        roboto.variable,
       )}
       lang="en"
       suppressHydrationWarning

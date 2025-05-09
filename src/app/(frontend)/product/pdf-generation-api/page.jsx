@@ -2,6 +2,16 @@
 import React from 'react'
 
 const GeneratingApiPage = () => {
+   
+
+    const errorRows = [
+      { code: 400, error: 'invalid_request', description: 'Missing or invalid fields' },
+      { code: 401, error: 'unauthorized', description: 'Missing/incorrect API key' },
+      { code: 404, error: 'template_not_found', description: "Template ID doesn't exist" },
+      { code: 500, error: 'internal_error', description: 'Server error—try later' },
+    ]
+
+ 
   return (
     <section className="mt-24 md:mt-28 max-w-7xl mx-auto text-white px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl sm:text-4xl font-bold mb-4">📄 PDF Generation API</h1>
@@ -12,14 +22,14 @@ const GeneratingApiPage = () => {
 
       {/* Endpoint */}
       <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📍 Endpoint</h2>
-      <pre className="bg-gray-100 rounded p-4 overflow-auto text-sm text-black">
+      <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         POST /api/v1/render/pdf
       </pre>
 
       {/* Auth */}
       <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">🔐 Authentication</h2>
       <p className="text-gray-400 mb-4">Include your API Key in the Authorization header:</p>
-      <pre className="bg-gray-100 rounded p-4 overflow-auto text-sm text-black">
+      <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         Authorization: Bearer YOUR_API_KEY
       </pre>
       <p className="text-sm text-gray-500 ">Need an API key? Create one in your dashboard.</p>
@@ -28,12 +38,12 @@ const GeneratingApiPage = () => {
       <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📥 Request Body</h2>
       <ul className="list-disc list-inside space-y-2 text-gray-400">
         <li>
-          <strong>template_id</strong> (string, <span className="">required</span>) –
-          ID of the template in Outliny
+          <strong>template_id</strong> (string, <span className="">required</span>) – ID of the
+          template in Outliny
         </li>
         <li>
-          <strong>parameters</strong> (object, <span className="">required</span>) –
-          Key-value pairs replacing Jinja variables
+          <strong>parameters</strong> (object, <span className="">required</span>) – Key-value pairs
+          replacing Jinja variables
         </li>
         <li>
           <strong>output_type</strong> (string, optional) – <code>pdf</code> (default) or{' '}
@@ -46,7 +56,7 @@ const GeneratingApiPage = () => {
 
       {/* Example Request */}
       <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📦 Example Request</h2>
-      <pre className="bg-gray-100 rounded p-4 overflow-auto text-sm text-black whitespace-pre-wrap">
+      <pre className=" overflow-hidden  whitespace-pre-wrap bg-[#1a1a1a] p-4 rounded text-[13px] md:text-[14px]  mb-6">
         {`POST https://api.outliny.com/api/v1/render/pdf
 Authorization: Bearer YOUR_API_KEY
 Content-Type: application/json
@@ -65,7 +75,7 @@ Content-Type: application/json
 
       {/* Example Responses */}
       <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📤 Example Response (URL)</h2>
-      <pre className="bg-gray-100 rounded p-4 overflow-auto text-sm text-black">
+      <pre className=" overflow-auto  bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         {`{
   "status": "success",
   "file_url": "https://api.outliny.com/files/generated/invoice-jane-doe.pdf"
@@ -73,7 +83,7 @@ Content-Type: application/json
       </pre>
 
       <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📤 Example Response (base64)</h2>
-      <pre className="bg-gray-100 rounded p-4 overflow-auto text-sm text-black">
+      <pre className="overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         {`{
   "status": "success",
   "file_base64": "JVBERi0xLjQKJc..."
@@ -103,27 +113,16 @@ Content-Type: application/json
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="border border-gray-700 px-2 py-1">400</td>
-              <td className="border border-gray-700 px-2 py-1">invalid_request</td>
-              <td className="border border-gray-700 px-2 py-1">Missing or invalid fields</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-700 px-2 py-1">401</td>
-              <td className="border border-gray-700 px-2 py-1">unauthorized</td>
-              <td className="border border-gray-700 px-2 py-1">Missing/incorrect API key</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-700 px-2 py-1">404</td>
-              <td className="border border-gray-700 px-2 py-1">template_not_found</td>
-              <td className="border border-gray-700 px-2 py-1">Template ID doesn't exist</td>
-            </tr>
-            <tr>
-              <td className="border border-gray-700 px-2 py-1">500</td>
-              <td className="border border-gray-700 px-2 py-1">internal_error</td>
-              <td className="border border-gray-700 px-2 py-1">Server error—try later</td>
-            </tr>
-          </tbody>
+           
+              {errorRows.map(({ code, error, description }) => (
+                <tr key={code}>
+                  <td className="border border-gray-700 px-2 py-1">{code}</td>
+                  <td className="border border-gray-700 px-2 py-1">{error}</td>
+                  <td className="border border-gray-700 px-2 py-1">{description}</td>
+                </tr>
+              ))}
+            </tbody>
+        
         </table>
       </div>
 
@@ -147,7 +146,7 @@ Content-Type: application/json
         </a>
         <a
           href="/docs"
-          className="bg-gray-100 text-gray-500 px-6 py-3 rounded shadow hover:bg-gray-200 transition text-center"
+          className="bg-gray-100 text-black px-6 py-3 rounded shadow hover:bg-gray-200 transition duration-200 text-center"
         >
           📘 See the Developer Docs
         </a>

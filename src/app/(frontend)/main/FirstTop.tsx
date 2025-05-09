@@ -50,12 +50,14 @@ const FirstTop: React.FC = () => {
 
   return (
     <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full md:w-[48vw]   border">
-      <h3 className="custom-text mt-5 text-3xl md:text-4xl p-5">Ready to Use Component</h3>
+      <h3 className="custom-text mt-5 text-3xl md:text-4xl p-5">
+        Ready-to-Use, Developer-Friendly Components
+      </h3>
       <p className="text-[#878685] text-sm sm:text-base leading-relaxed max-w-xl ml-5 ">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempore enim tempora
-        distinctio non saepe obcaecati cum fugit quis. Lorem, ipsum dolor sit amet consectetur
-        adipisicing elit. Ex in quo dolore eos. Repudiandae temporibus incidunt id optio mollitia
-        cum.
+        Skip the boilerplate. Outliny provides professionally designed, pre-built email and PDF
+        components that you can drag, drop, and customize instantly. Whether you are generating
+        invoices, sending HR updates, or building CRM flows—our template components are modular,
+        responsive, and built for speed.
       </p>
 
       <div
@@ -71,13 +73,12 @@ const FirstTop: React.FC = () => {
         {[...Array(5)].map((_, i) => (
           <div key={i} ref={(el) => addToRefs(el, i)} className="w-1/5 space-y-5 md:space-y-2">
             {imgCollection.map((img, index) => (
-           
               <Image
                 key={index}
                 src={img}
                 alt={`img${index}`}
-                width={200}
-                height={200}
+                width={2}
+                height={2}
                 className="bt-img w-full h-20 md:h-10 lg:h-28 object-cover rounded-lg"
               />
             ))}

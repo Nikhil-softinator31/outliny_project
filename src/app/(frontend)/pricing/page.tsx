@@ -28,22 +28,22 @@ const Page = () => {
   }, [])
 
   return (
-    <div className="mt-16 sm:mt-20 px-4 sm:px-8">
+    <div className=" sm:mt-20 ">
       <div className="relative text-center p-5">
         {/* Background Outliny Text */}
-        <h1 className="font-aldrich absolute -z-10 top-10 left-1/2 transform -translate-x-1/2 opacity-10 bg-custom-gradient bg-clip-text text-transparent text-[60px] sm:text-[100px] md:text-[150px] lg:text-[200px] xl:text-[300px] font-normal leading-tight">
+        <h1 className="font-aldrich   absolute  top-[30%] left-1/2 md:top-[23%] lg:top-[28%]  transform -translate-x-1/2 opacity-80 bg-custom-gradient12 bg-clip-text text-transparent text-[60px] sm:text-[100px] md:text-[200px] lg:text-[250px] xl:text-[280px] font-normal leading-tight">
           Outliny
         </h1>
 
         {/* Content Centered Horizontally */}
-        <div className="relative z-10 mt-6 sm:mt-10 max-w-4xl mx-auto">
+        <div className="relative mt-6 sm:mt-10 max-w-3xl mx-auto">
           <h1
             ref={fadeUpRef}
-            className="text-white text-[13px] sm:text-[28px] md:text-[35px] lg:text-[45px]  font-extrabold  leading-[100%] tracking-normal mt-20 font-poppins "
+            className="text-white text-[20px] sm:text-[28px] md:text-[35px] lg:text-[45px] font-extrabold leading-[100%] tracking-normal mt-20 font-poppins "
           >
             Choose The Perfect Plan For You
           </h1>
-          <p className="text-white text-[18px]   max-w-[80%]    mx-auto mt-8 text-pretty leading-[25px] md:leading-10 tracking-normal font-poppins font-normal">
+          <p className="text-white text-[15px] md:text-xl   mt-6 leading-[25px] md:leading-10 font-poppins font-normal">
             Outliny is built to give developers full control without locking you into expensive
             contracts or unpredictable bills.
           </p>
@@ -81,13 +81,13 @@ const Page = () => {
       </div>
 
       {/* Pricing, FAQ and Testimonials sections */}
-      <div className="mt-12 space-y-12">
+      <div className="mt-12 ">
         <Pricing />
         <FAQ />
         <Testimonials />
       </div>
     </div>
-  ) 
+  )
 }
 
 export default Page

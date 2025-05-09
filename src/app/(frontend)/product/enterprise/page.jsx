@@ -59,14 +59,6 @@ const EnterpriseFeaturesPage = () => {
         ]}
       />
 
-      <Section
-        title="🧩 Integrations"
-        items={[
-          'WordPress Plugin — Power your WooCommerce, CRM, and HRMS emails using Outliny templates.',
-          'CRM and ERP Integrations — Coming soon: Direct integrations with Salesforce, HubSpot, and more.',
-          'Custom Webhooks — Trigger events across your internal systems easily.',
-        ]}
-      />
 
       <Section
         title="💳 Flexible Billing for Enterprises"
@@ -80,24 +72,24 @@ const EnterpriseFeaturesPage = () => {
       <div className="mt-10">
         <h2 className="text-2xl font-semibold mb-4">🚀 Why Enterprises Choose Outliny</h2>
         <ul className="list-disc list-inside space-y-2 text-gray-400 text-sm sm:text-base">
-          <li>✅ Branding consistency across millions of emails and PDFs.</li>
-          <li>✅ Bank-level security standards.</li>
-          <li>✅ No vendor lock-in — you own your templates.</li>
-          <li>✅ Rapid API integration and world-class uptime.</li>
-          <li>✅ Open-source freedom and collaboration.</li>
+          <li> Branding consistency across millions of emails and PDFs.</li>
+          <li> Bank-level security standards.</li>
+          <li> No vendor lock-in — you own your templates.</li>
+          <li> Rapid API integration and world-class uptime.</li>
+          <li> Open-source freedom and collaboration.</li>
         </ul>
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
         <a
-          href="/contact-sales"
+          href="/contact"
           className="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition text-center"
         >
           👉 Talk to Our Team
         </a>
         <a
           href="/security"
-          className="bg-gray-100 text-gray-700 px-6 py-3 rounded shadow hover:bg-gray-200 transition text-center"
+          className="bg-gray-100 text-black px-6 py-3 rounded shadow hover:bg-gray-200 transition text-center"
         >
           👉 View Security and Compliance
         </a>

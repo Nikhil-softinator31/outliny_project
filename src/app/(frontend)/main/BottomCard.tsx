@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import FirstTop from './FirstTop'
 import BottomCorner from './BottomCorner'
 
+
 const BottomCard: React.FC = () => {
   const images = ['/car12.jpg', '/car12.jpg', '/car12.jpg', '/car12.jpg']
 
@@ -33,13 +34,13 @@ const BottomCard: React.FC = () => {
 
         <div className="bg-[#0E0E0E] rounded-2xl border border-[#202020] text-left w-full md:w-1/2 lg:w-[48%]  lg:mr-10 max-h-[600px] overflow-hidden relative">
           <div className="p-6 flex flex-col h-full gap-4">
-            <h3 className="text-white text-2xl sm:text-3xl font-semibold">Educational Content</h3>
+            <h3 className="text-white text-2xl sm:text-3xl font-semibold">Your Smart Start Zone</h3>
 
             <p className="text-[#878685] text-sm sm:text-base leading-relaxed max-w-xl">
-              Drag-and-drop tools might get you a quick animation, but if we’re realistic—that won’t
-              win awards. We want you to actually <em>understand</em> what you’re doing, how it
-              works, and how to nail it yourself next time. Learn the principles, build the skills,
-              and take control of your projects.
+              Drag-and-drop builders are great—but real power comes from understanding what’s under
+              the hood. At Outliny, we go beyond the visual editor. Our learning content helps
+              developers and teams master templating with Jinja, understand MJML, and automate PDF
+              generation with confidence.
             </p>
 
             {/* Mock browser frame */}
@@ -86,11 +87,12 @@ const BottomCard: React.FC = () => {
           </div>
           <div className="mt-5">
             <h2 className="custom-text text-2xl sm:text-3xl  lg:text-[1.75em] font-normal text-left ">
-              Osmo Basics
+              Outliny Basics
             </h2>
             <p className="mt-5 text-[#878685] text-sm sm:text-base text-left">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni pariatur recusandae,
-              cumque at debitis.
+              Get started quickly with the foundational tools of Outliny. From drag-and-drop
+              template editors to simple API calls using Jinja variables, everything is designed to
+              minimize setup and maximize productivity.
             </p>
           </div>
         </div>
@@ -113,17 +115,21 @@ const CenterDiv: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-around gap-6 w-full px-4">
       <div className="mt-8 w-full">
-        <h3 className="custom-text text-xl sm:text-2xl md:text-3xl text-left">Code Snippets</h3>
+        <h3 className="custom-text text-xl sm:text-2xl md:text-3xl text-left">
+          Instant PDF Generation via API – Just Plug & Play!
+        </h3>
         <p className="mt-2 text-[#878685] text-sm sm:text-base  text-left">
-          Not sure about you, but we find ourselves going back to old projects all the time to
-          quickly copy that snippet we used before. So we decided to keep track of them from now on.
+          No need for complex setups or third-party tools simply copy the generated URL from our app
+          and paste it into Postman. Instantly, your custom PDF is generated and ready to use!
         </p>
       </div>
       <div className="m-4 flex justify-center items-center w-full">
-        <img
+        <Image
           src="/ss.png"
           className="rounded-xl w-full h-auto object-cover"
           alt="Code Snippet Preview"
+          width={200}
+          height={200}
         />
       </div>
     </div>

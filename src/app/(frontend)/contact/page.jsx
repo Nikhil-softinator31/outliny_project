@@ -76,10 +76,16 @@ const Page = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white px-4 sm:px-8 md:px-20 py-28">
+    <div className="min-h-screen bg-black text-white px-4 sm:px-8 py-36 md:py-44">
+      {/* <p
+        ref={pararef}
+        className="font-aldrich text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[100%] tracking-wide text-center mb-16 opacity-100 bg-custom-gradient13 bg-clip-text text-transparent"
+      >
+        Get In Touch
+      </p> */}
       <p
         ref={pararef}
-        className="font-aldrich text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[100%] tracking-wide text-center mb-16 opacity-20 bg-custom-gradient13 bg-clip-text text-transparent"
+        className="font-aldrich text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[100%] tracking-wide text-center mb-12 gradient-text"
       >
         Get In Touch
       </p>
@@ -95,7 +101,7 @@ const Page = () => {
             <div key={id}>
               <label
                 htmlFor={id}
-                className="block mb-2 text-sm font-poppins font-normal text-[17px] capitalize"
+                className="block mb-3 text-sm font-poppins font-normal text-[17.39px] leading-[1] tracking-[0.05em]"
               >
                 {label}
               </label>
@@ -112,14 +118,14 @@ const Page = () => {
           <div>
             <label
               htmlFor="hearAbout"
-              className="block mb-2 text-sm font-poppins font-normal text-[17px] capitalize"
+              className="block mb-3 text-sm font-poppins font-normal text-[17.39px] capitalize leading-[1] tracking-[0.05em]"
             >
               How did you hear about us?
             </label>
             <select
               id="hearAbout"
               name="hearAbout"
-              className="w-full bg-[#101112] text-white p-4 rounded-md"
+              className="w-full bg-[#101112] text-white p-5 rounded-md text-[17.39px]"
               onChange={handleChange}
             >
               <option value="">Select an option</option>
@@ -132,20 +138,20 @@ const Page = () => {
           <div>
             <label
               htmlFor="service"
-              className="block mb-2 text-sm font-poppins font-normal text-[17px] capitalize"
+              className="block mb-3 text-sm font-poppins font-normal text-[17.39px] capitalize leading-[1] tracking-[0.05em]"
             >
               Services you are looking for
             </label>
             <select
               id="service"
               name="service"
-              className="w-full bg-[#101112] text-white p-4 rounded-md"
+              className="w-full bg-[#101112] text-white p-5 rounded-md text-[17.39px]"
               onChange={handleChange}
             >
-              <option value="">Select a service</option>
-              <option value="webdev">Website Development</option>
-              <option value="appdev">App Development</option>
-              <option value="design">UI/UX Design</option>
+              <option value="" >Select a service</option>
+              <option value="webdev" >Website Development</option>
+              <option value="appdev" >App Development</option>
+              <option value="design" >UI/UX Design</option>
             </select>
           </div>
         </div>
@@ -153,7 +159,7 @@ const Page = () => {
         <div>
           <label
             htmlFor="message"
-            className="block mb-2 text-sm font-poppins font-normal text-[17px] capitalize"
+            className="block mb-3 text-sm font-poppins font-normal text-[17.39px] capitalize leading-[1] tracking-[0.05em]"
           >
             Message
           </label>
@@ -194,8 +200,8 @@ const Page = () => {
         </p>
 
         {/* address section */}
-        <div className="bg-custom-gradient5 mt-12 max-w-3xl xl mx-auto rounded-lg overflow-hidden">
-          <div className="bg-gradient-to-r from-[#2b2a2a] to-[#0f0f0f] px-6 py-4 flex justify-between items-center">
+        <div className="bg-custom-gradient5 mt-12 max-w-3xl  mx-auto rounded-lg overflow-hidden">
+          <div className="bg-gradient-to-r from-[#2b2a2a] to-[#050505] px-6 py-4 flex ">
             <h2 className="font-bold text-white text-lg">IND</h2>
           </div>
           <div className="px-6 py-6 text-left text-[#c1c1c2] space-y-4 text-sm font-poppins">

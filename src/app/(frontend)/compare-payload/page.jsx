@@ -1,0 +1,198 @@
+import React from 'react'
+
+const ComparePayloadPage = () => {
+  return (
+    <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-[#d6d5d5] font-poppins space-y-16">
+      <div className="text-center space-y-4">
+        <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-bold mb-6 mt-10 md:mt-18 text-white">
+          Compare Payload
+        </h1>
+        <p className="text-base sm:text-lg max-w-5xl mx-auto">
+          Outliny's <span className="text-white font-semibold">Compare Payload</span> feature helps
+          you detect differences between two versions of input data used for rendering templates
+          (Emails or PDFs).
+        </p>
+      </div>
+
+      <div>
+        <p className="text-lg font-medium mb-4">This is useful for:</p>
+        <ul className="list-disc ml-6 sm:ml-10 space-y-3 text-sm sm:text-base">
+          <li>Verifying if dynamic content has changed before regenerating documents.</li>
+          <li>Auditing changes over time (e.g., invoice updates, contract version tracking).</li>
+          <li>Avoiding redundant API calls if the payload is identical.</li>
+        </ul>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl md:text-[30px] font-semibold text-white">
+          What is a Compare Payload?
+        </h2>
+        <p className="text-sm sm:text-base">
+          A Compare Payload request checks if two sets of template parameters would generate
+          different outputs — <strong className="text-white">without</strong> fully rendering the
+          Email or PDF. Instead of producing a document, it compares the incoming variables against
+          a previous version and tells you if there’s any difference.
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl md:text-[30px] font-semibold text-white">📍 Endpoint</h2>
+        <code className="block bg-[#1a1a1a] p-4 rounded text-sm">POST /api/v1/compare/payload</code>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl md:text-[30px] font-semibold text-white">🔐 Authentication</h2>
+        <p className="text-sm sm:text-base">
+          Just like all other API calls, you must include your API Key:
+        </p>
+        <code className="block bg-[#1a1a1a] p-4 rounded text-sm">
+          Authorization: Bearer YOUR_API_KEY
+        </code>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl md:text-[30px] font-semibold text-white">🧾 Request Body</h2>
+        <table className="w-full text-sm text-left border-collapse leading-10 ">
+          <thead>
+            <tr className="border-b border-[#444]">
+              <th className="py-2 text-[18px]">Field</th>
+              <th className="py-2 text-[18px]">Type</th>
+              <th className="py-2 text-[18px]">Required</th>
+              <th className="py-2 text-[18px]">Description</th>
+            </tr>
+          </thead>
+          <tbody className=''>
+            <tr className="border-b border-[#333]">
+              <td>template_id</td>
+              <td>string</td>
+              <td>✅ Yes</td>
+              <td>The ID of the template you're comparing against.</td>
+            </tr>
+            <tr className="border-b border-[#333]">
+              <td>old_parameters</td>
+              <td>object</td>
+              <td>✅ Yes</td>
+              <td>The original parameters used previously.</td>
+            </tr>
+            <tr className="border-b border-[#333]">
+              <td>new_parameters</td>
+              <td>object</td>
+              <td>✅ Yes</td>
+              <td>The new parameters you want to compare.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl md:text-[30px] font-semibold text-white">📦 Example Request</h2>
+        <pre className="bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto">
+          {`POST https://api.outliny.com/api/v1/compare/payload
+Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+
+{
+  "template_id": "template_abc123",
+  "old_parameters": {
+    "customer_name": "Alice Johnson",
+    "invoice_total": "$500"
+  },
+  "new_parameters": {
+    "customer_name": "Alice Johnson",
+    "invoice_total": "$500"
+  }
+}`}
+        </pre>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white">📤 Response</h2>
+        <p className="text-sm sm:text-base">Fields returned:</p>
+        <ul className="list-disc ml-6 space-y-2 text-sm sm:text-base">
+          <li>
+            <code>status</code> (string): "success"
+          </li>
+          <li>
+            <code>is_different</code> (boolean): true if payloads differ, false if identical
+          </li>
+          <li>
+            <code>differences</code> (object): fields that changed, if any
+          </li>
+        </ul>
+
+        <h3 className="text-lg font-semibold text-white">Example Response (Identical)</h3>
+        <pre className="bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto">
+          {`{
+  "status": "success",
+  "is_different": false,
+  "differences": {}
+}`}
+        </pre>
+
+        <h3 className="text-lg font-semibold text-white">Example Response (Differences Found)</h3>
+        <pre className="bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto">
+          {`{
+  "status": "success",
+  "is_different": true,
+  "differences": {
+    "invoice_total": {
+      "old": "$500",
+      "new": "$550"
+    }
+  }
+}`}
+        </pre>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white">🔥 When to Use Compare Payload</h2>
+        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base">
+          <li>
+            <strong className="text-white">Efficiency:</strong> Only regenerate PDFs or Emails when
+            data has actually changed.
+          </li>
+          <li>
+            <strong className="text-white">Auditing:</strong> Track small but critical updates in
+            contracts, invoices, HR letters, etc.
+          </li>
+          <li>
+            <strong className="text-white">Versioning:</strong> Decide when to store or archive
+            updated document versions.
+          </li>
+          <li>
+            <strong className="text-white">Optimization:</strong> Save API credits and system
+            processing by skipping unnecessary rendering.
+          </li>
+        </ul>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white">🧠 Important Notes</h2>
+        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base">
+          <li>Compare Payload only compares input parameters, not full rendered outputs.</li>
+          <li>Deep object comparison is supported (nested data structures too).</li>
+          <li>Only available for templates that use Jinja variables for dynamic content.</li>
+          <li>Fields not used in the template are ignored automatically for comparison.</li>
+        </ul>
+      </div>
+
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold text-white">🚀 Start Using Compare Payload!</h2>
+        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base">
+          <li>
+            <span className="underline text-white cursor-pointer">
+              👉 Check the Full API Reference
+            </span>
+          </li>
+          <li>
+            <span className="underline text-white cursor-pointer">
+              👉 Learn How to Optimize API Usage
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+export default ComparePayloadPage
