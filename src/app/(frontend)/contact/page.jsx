@@ -85,7 +85,7 @@ const Page = () => {
       </p> */}
       <p
         ref={pararef}
-        className="font-aldrich text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[100%] tracking-wide text-center mb-12 gradient-text"
+        className="font-aldrich text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[100%] tracking-wide text-center mb-12 text-white"
       >
         Get In Touch
       </p>

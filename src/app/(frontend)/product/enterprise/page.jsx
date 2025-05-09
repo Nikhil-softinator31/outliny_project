@@ -2,9 +2,11 @@ import React from 'react'
 
 const EnterpriseFeaturesPage = () => {
   return (
-    <section className="mt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-white">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-6">Enterprise Features</h1>
-      <p className="text-base sm:text-lg text-gray-400 mb-6">
+    <section className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a] ">
+      <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins">
+        Enterprise Features
+      </h1>
+      <p className="mb-4 max-w-7xl mx-auto text-center text-sm sm:text-base font-inter">
         Outliny is built for enterprises that demand security, scalability, and seamless brand
         consistency — across all emails and PDFs. Whether you're a fast-growing startup or a global
         enterprise, Outliny provides the infrastructure, compliance, and flexibility you need to
@@ -59,7 +61,6 @@ const EnterpriseFeaturesPage = () => {
         ]}
       />
 
-
       <Section
         title="💳 Flexible Billing for Enterprises"
         items={[
@@ -69,16 +70,16 @@ const EnterpriseFeaturesPage = () => {
         ]}
       />
 
-      <div className="mt-10">
-        <h2 className="text-2xl font-semibold mb-4">🚀 Why Enterprises Choose Outliny</h2>
-        <ul className="list-disc list-inside space-y-2 text-gray-400 text-sm sm:text-base">
-          <li> Branding consistency across millions of emails and PDFs.</li>
-          <li> Bank-level security standards.</li>
-          <li> No vendor lock-in — you own your templates.</li>
-          <li> Rapid API integration and world-class uptime.</li>
-          <li> Open-source freedom and collaboration.</li>
-        </ul>
-      </div>
+      <Section
+        title="🚀 Why Enterprises Choose Outliny"
+        items={[
+          'Branding consistency across millions of emails and PDFs.',
+          'Bank-level security standards.',
+          'Custom Contracts and Invoicing — Work directly with our enterprise sales team for tailored agreements.',
+          'Rapid API integration and world-class uptime.',
+          'Open-source freedom and collaboration.',
+        ]}
+      />
 
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
         <a
@@ -106,8 +107,8 @@ const EnterpriseFeaturesPage = () => {
 
 const Section = ({ title, items }) => (
   <div className="mt-10">
-    <h2 className="text-2xl font-semibold mb-3">{title}</h2>
-    <ul className="list-disc list-inside space-y-2 text-gray-400 text-sm sm:text-base">
+    <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3  ">{title}</h2>
+    <ul className="list-disc ml-6 md:ml-14  space-y-2 text-sm sm:text-base font-roboto">
       {items.map((item, i) => (
         <li key={i}>{item}</li>
       ))}

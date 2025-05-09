@@ -2,9 +2,9 @@ import React from 'react'
 
 const ComparePayloadPage = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-[#d6d5d5] font-poppins space-y-16">
+    <div className="max-w-[1580px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-[#ebebeb] font-poppins space-y-16">
       <div className="text-center space-y-4">
-        <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-bold mb-6 mt-10 md:mt-18 text-white">
+        <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-20 text-white font-poppins">
           Compare Payload
         </h1>
         <p className="text-base sm:text-lg max-w-5xl mx-auto">
@@ -61,7 +61,7 @@ const ComparePayloadPage = () => {
               <th className="py-2 text-[18px]">Description</th>
             </tr>
           </thead>
-          <tbody className=''>
+          <tbody className="">
             <tr className="border-b border-[#333]">
               <td>template_id</td>
               <td>string</td>
@@ -120,13 +120,15 @@ Content-Type: application/json
           </li>
         </ul>
 
+                 
+
         <h3 className="text-lg font-semibold text-white">Example Response (Identical)</h3>
         <pre className="bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto">
           {`{
-  "status": "success",
-  "is_different": false,
-  "differences": {}
-}`}
+       "status": "success",
+       "is_different": false,
+       "differences": {}
+        }`}
         </pre>
 
         <h3 className="text-lg font-semibold text-white">Example Response (Differences Found)</h3>
@@ -178,18 +180,23 @@ Content-Type: application/json
 
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold text-white">🚀 Start Using Compare Payload!</h2>
-        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base">
-          <li>
-            <span className="underline text-white cursor-pointer">
-              👉 Check the Full API Reference
-            </span>
-          </li>
-          <li>
-            <span className="underline text-white cursor-pointer">
-              👉 Learn How to Optimize API Usage
-            </span>
-          </li>
-        </ul>
+        <div className="flex  flex-col gap-2 ml-8">
+          <a
+            href="https://www.google.com/"
+            target="_blank"
+            className="underline text-white cursor-pointer"
+          >
+            👉 Check the Full API Reference
+          </a>
+
+          <a
+            href="https://www.google.com/"
+            target="_blank"
+            className="underline text-white cursor-pointer"
+          >
+            👉 Learn How to Optimize API Usage
+          </a>
+        </div>
       </div>
     </div>
   )

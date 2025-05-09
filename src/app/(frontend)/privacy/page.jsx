@@ -5,7 +5,7 @@ import { CiMail } from 'react-icons/ci'
 const PrivacyPolicyPage = () => {
   return (
     <div className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a] ">
-      <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-bold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins ">
+      <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins ">
         Privacy Policy
       </h1>
       <p className="mb-4 max-w-7xl mx-auto text-center text-sm sm:text-base font-inter">
@@ -185,7 +185,7 @@ const PrivacyPolicyPage = () => {
             <div className="flex items-start sm:items-center gap-2">
               <IoLocationOutline className="mt-1 sm:mt-0" />
               <p className="font-sans">
-                Address: Outliny, Inc. [165 D & E, Vidur Nagar, Indore, Madhya Pradesh 452009]
+                Address: Outliny, Inc. [165 D & E, Vidur Nagar, Indore Madhya Pradesh]
               </p>
             </div>
           </div>
