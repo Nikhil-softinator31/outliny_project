@@ -150,9 +150,9 @@ export default function OutlinyFeatures() {
 
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center w-64 text-base">
             <p>
-              Outline is flexible, API-driven built,
+              Outliny  is flexible, API-driven built,
               <br />
-              standards like MJML and Jinja2.
+              standards like MJML and Jinja2
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export default function OutlinyFeatures() {
             <p>
               Believe in transparency—how
               <br />
-              we handle data to how we price.
+              we handle data to how we price
             </p>
           </div>
 
@@ -176,7 +176,7 @@ export default function OutlinyFeatures() {
             <p>
               Your data security and privacy
               <br />
-              are our highest priority.
+              are our highest priority
             </p>
           </div>
 

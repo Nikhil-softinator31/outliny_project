@@ -2,19 +2,18 @@ import React from 'react'
 
 const TermsOfServicePage = () => {
   return (
-    <div className="bg-[#08090a] min-h-screen pt-[8rem] p-2 text-gray-300 font-poppins">
-      <div className="max-w-[95rem] w-full mx-auto px-2 sm:px-4">
-        <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-bold mb-6 mt-10 md:mt-18 text-white font-poppins">
+    <div className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
+      <div className="">
+        <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-6 text-white font-poppins ">
           Terms & Condition
         </h1>
-        <p className="text-sm md:text-lg text-gray-300 text-center">Last Updated: April 28, 2025</p>
 
         {/* Section 1 */}
         <section className="pt-6 mt-20 space-y-3">
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">
             1. Using Our Services
           </h2>
-          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base">
+          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
             <li>Be at least 18 years old or have legal permission from a parent/guardian.</li>
             <li>Provide accurate and complete information when creating your account.</li>
             <li>Comply with all applicable laws and regulations.</li>
@@ -31,7 +30,7 @@ const TermsOfServicePage = () => {
             2. Acceptable Use
           </h2>
           <p className="text-sm sm:text-base">You agree not to use Outliny to:</p>
-          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base ">
+          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto ">
             <li>Violate any law or regulation.</li>
             <li>Send spam or unsolicited communications.</li>
             <li>Upload, generate, or distribute illegal, offensive, or harmful content.</li>
@@ -63,7 +62,7 @@ const TermsOfServicePage = () => {
           <p className="text-sm sm:text-base">
             We take privacy seriously. Our practices are governed by our Privacy Policy.
           </p>
-          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base">
+          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
             <li>You retain ownership of your templates, files, and generated documents.</li>
             <li>We do not claim rights to your input or output data.</li>
             <li>We only process and temporarily store your data to deliver our Services.</li>
@@ -75,7 +74,7 @@ const TermsOfServicePage = () => {
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">
             5. Payment and Billing
           </h2>
-          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base">
+          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
             <li>Certain features may require payment.</li>
             <li>Payments are securely handled by third-party providers.</li>
             <li>All sales are final unless required by law.</li>
@@ -96,7 +95,9 @@ const TermsOfServicePage = () => {
 
         {/* Section 7 */}
         <section className="pt-6 mt-10 space-y-3">
-          <h2 className="text-xl font-semibold text-white">7. Changes to the Services</h2>
+          <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">
+            7. Changes to the Services
+          </h2>
           <p className="text-sm sm:text-base">
             We may update or modify our Services. Major changes will be communicated via email or
             dashboard. We aim to maintain backward compatibility whenever possible.
@@ -109,7 +110,7 @@ const TermsOfServicePage = () => {
           <p className="text-sm sm:text-base">
             You may stop using Outliny at any time. We may suspend or terminate your account if:
           </p>
-          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base">
+          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
             <li>You violate these Terms.</li>
             <li>Your usage causes legal liability.</li>
             <li>Termination is required by law or government order.</li>
@@ -133,7 +134,7 @@ const TermsOfServicePage = () => {
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">
             10. Limitation of Liability
           </h2>
-          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base">
+          <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
             <li>We are not liable for indirect, incidental, or consequential damages.</li>
             <li>
               Our total liability is limited to the amount paid in the last 12 months before a
@@ -176,6 +177,8 @@ const TermsOfServicePage = () => {
           <p className="text-sm sm:text-base">
             📍 Address: Outliny, Inc. [165 D & E, Vidur Nagar, Indore, Madhya Pradesh 452009]
           </p>
+
+        
         </section>
       </div>
     </div>
