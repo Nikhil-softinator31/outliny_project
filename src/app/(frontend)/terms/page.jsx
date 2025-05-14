@@ -7,7 +7,6 @@ const TermsOfServicePage = () => {
         <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-6 text-white font-poppins ">
           Terms & Condition
         </h1>
-        <p className="text-sm md:text-lg text-gray-300 text-center">Last Updated: April 28, 2025</p>
 
         {/* Section 1 */}
         <section className="pt-6 mt-20 space-y-3">

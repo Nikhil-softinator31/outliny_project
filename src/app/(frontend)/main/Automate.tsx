@@ -123,7 +123,7 @@ const Main: React.FC = () => {
             />
           </div>
 
-          <h1 className="text-[#8861B8] flex gap-2 ">
+          <h1 className="text-[#8861B8] flex gap-2 mt-2 ">
             Explore documentation
             <span>
               {/* <img src="arrow-right.svg" alt="" />  */}

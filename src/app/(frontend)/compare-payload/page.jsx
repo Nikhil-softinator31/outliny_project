@@ -7,7 +7,7 @@ const ComparePayloadPage = () => {
         <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-20 text-white font-poppins">
           Compare Payload
         </h1>
-        <p className="text-base sm:text-lg max-w-5xl mx-auto">
+        <p className="mb-4 max-w-4xl mx-auto text-center text-sm sm:text-base font-inter">
           Outliny's <span className="text-white font-semibold">Compare Payload</span> feature helps
           you detect differences between two versions of input data used for rendering templates
           (Emails or PDFs).
@@ -15,8 +15,10 @@ const ComparePayloadPage = () => {
       </div>
 
       <div>
-        <p className="text-lg font-medium mb-4">This is useful for:</p>
-        <ul className="list-disc ml-6 sm:ml-10 space-y-3 text-sm sm:text-base">
+        <p className="text-lg  mb-4  md:text-[30px] font-semibold text-white">
+          This is useful for:
+        </p>
+        <ul className="list-disc ml-6 sm:ml-10 space-y-3 text-sm sm:text-base font-roboto ">
           <li>Verifying if dynamic content has changed before regenerating documents.</li>
           <li>Auditing changes over time (e.g., invoice updates, contract version tracking).</li>
           <li>Avoiding redundant API calls if the payload is identical.</li>
@@ -106,9 +108,9 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-white">📤 Response</h2>
+        <h2 className="text-2xl md:text-[30px] font-semibold text-white">📤 Response</h2>
         <p className="text-sm sm:text-base">Fields returned:</p>
-        <ul className="list-disc ml-6 space-y-2 text-sm sm:text-base">
+        <ul className="list-disc ml-6 space-y-2 text-sm sm:text-base font-roboto ">
           <li>
             <code>status</code> (string): "success"
           </li>
@@ -120,15 +122,14 @@ Content-Type: application/json
           </li>
         </ul>
 
-                 
-
         <h3 className="text-lg font-semibold text-white">Example Response (Identical)</h3>
         <pre className="bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto">
           {`{
        "status": "success",
        "is_different": false,
        "differences": {}
-        }`}
+}`
+        }
         </pre>
 
         <h3 className="text-lg font-semibold text-white">Example Response (Differences Found)</h3>
@@ -147,8 +148,10 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-white">🔥 When to Use Compare Payload</h2>
-        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base">
+        <h2 className="text-2xl font-semibold md:text-[30px] text-white">
+          🔥 When to Use Compare Payload
+        </h2>
+        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base font-roboto ">
           <li>
             <strong className="text-white">Efficiency:</strong> Only regenerate PDFs or Emails when
             data has actually changed.
@@ -169,8 +172,8 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-white">🧠 Important Notes</h2>
-        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base">
+        <h2 className="text-2xl font-semibold md:text-[30px] text-white">🧠 Important Notes</h2>
+        <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base font-roboto ">
           <li>Compare Payload only compares input parameters, not full rendered outputs.</li>
           <li>Deep object comparison is supported (nested data structures too).</li>
           <li>Only available for templates that use Jinja variables for dynamic content.</li>
@@ -179,7 +182,9 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold text-white">🚀 Start Using Compare Payload!</h2>
+        <h2 className="text-2xl font-semibold md:text-[30px] text-white">
+          🚀 Start Using Compare Payload!
+        </h2>
         <div className="flex  flex-col gap-2 ml-8">
           <a
             href="https://www.google.com/"

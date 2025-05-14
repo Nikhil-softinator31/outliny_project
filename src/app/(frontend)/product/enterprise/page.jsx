@@ -2,11 +2,11 @@ import React from 'react'
 
 const EnterpriseFeaturesPage = () => {
   return (
-    <section className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a] ">
+    <section className="max-w-[100rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a] ">
       <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins">
         Enterprise Features
       </h1>
-      <p className="mb-4 max-w-7xl mx-auto text-center text-sm sm:text-base font-inter">
+      <p className=" max-w-7xl mx-auto text-center text-sm sm:text-base font-inter">
         Outliny is built for enterprises that demand security, scalability, and seamless brand
         consistency — across all emails and PDFs. Whether you're a fast-growing startup or a global
         enterprise, Outliny provides the infrastructure, compliance, and flexibility you need to
@@ -81,7 +81,7 @@ const EnterpriseFeaturesPage = () => {
         ]}
       />
 
-      <div className="flex flex-col sm:flex-row gap-4 mt-10">
+      <div className="flex flex-col sm:flex-row gap-4 mt-10 ml-10">
         <a
           href="/contact"
           className="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition text-center"
@@ -106,9 +106,9 @@ const EnterpriseFeaturesPage = () => {
 }
 
 const Section = ({ title, items }) => (
-  <div className="mt-10">
-    <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3  ">{title}</h2>
-    <ul className="list-disc ml-6 md:ml-14  space-y-2 text-sm sm:text-base font-roboto">
+  <div className="mt-16">
+    <h2 className="text-2xl md:text-[30px] font-semibold text-white   ">{title}</h2>
+    <ul className="list-disc ml-10 md:ml-16 mt-5 space-y-2 text-sm sm:text-base font-roboto">
       {items.map((item, i) => (
         <li key={i}>{item}</li>
       ))}
