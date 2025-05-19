@@ -8,63 +8,7 @@ const GeneratingApiPage = () => {
     { code: 404, error: 'template_not_found', description: "Template ID doesn't exist" },
     { code: 500, error: 'internal_error', description: 'Server error—try later' },
   ]
-  const RequestBodyData = [
-    {
-      field: 'template_id',
-      type: 'string',
-      required: 'Yes',
-      description: 'ID of the PDF template you created in Outliny.',
-    },
-    {
-      field: 'parameters',
-      type: 'object',
-      required: 'Yes',
-      description: 'Key-value pairs replacing Jinja variables in template.',
-    },
-    {
-      field: 'output_type',
-      type: 'string',
-      required: 'Optional',
-      description: 'pdf (default) or base64.',
-    },
-    {
-      field: 'filename',
-      type: 'string',
-      required: 'Optional',
-      description: 'Suggested filename for downloaded file',
-    },
-  ]
 
-  const ResponseData = [
-    {
-      field: 'status',
-      type: 'string',
-      description: 'success',
-    },
-    {
-      field: 'file_url',
-      type: 'string',
-      description: '	(If hosted) URL to download the PDF',
-    },
-    {
-      field: 'file_url',
-      type: 'string',
-
-      description: '(If output_type=base64) Base64-encoded PDF.',
-    },
-  ]
-
-  const OutputTypeData = [
-    {
-      value: 'pdf',
-      description: 'Hosted URL (default).',
-    },
-    {
-      value: 'base64',
-      description:
-        'Returns the PDF directly encoded in base64 string (useful for APIs, internal storage, etc.).',
-    },
-  ]
   return (
     <>
       <div className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
@@ -77,17 +21,13 @@ const GeneratingApiPage = () => {
         </p>
 
         {/* Endpoint */}
-        <h2 className="text-xl sm:text-2xl font-semibold  md:text-[30px]  mb-3 mt-20">
-          📍 Endpoint
-        </h2>
+        <h2 className="text-xl sm:text-2xl font-semibold  mb-3 mt-20">📍 Endpoint</h2>
         <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
           POST /api/v1/render/pdf
         </pre>
 
         {/* Auth */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          🔐 Authentication
-        </h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">🔐 Authentication</h2>
         <p className="text-gray-400 mb-4">Include your API Key in the Authorization header:</p>
         <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-3">
           Authorization: Bearer YOUR_API_KEY
@@ -95,12 +35,10 @@ const GeneratingApiPage = () => {
         <p className="text-sm text-gray-500 ">Need an API key? Create one in your dashboard.</p>
 
         {/* Request Body */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-9 mb-3  md:text-[30px]">
-          📥 Request Body
-        </h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-9 mb-3">📥 Request Body</h2>
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
-            <tr className=" bg-[#1a1a1a]">
+            <tr className="bg-gray-800">
               <th className="border border-gray-700 px-2 py-1 text-left">Field</th>
               <th className="border border-gray-700 px-2 py-1 text-left">Type</th>
               <th className="border border-gray-700 px-2 py-1 text-left">Required</th>
@@ -108,21 +46,41 @@ const GeneratingApiPage = () => {
             </tr>
           </thead>
           <tbody>
-            {RequestBodyData.map(({ field, type, required, description }) => (
-              <tr key={field}>
-                <td className="border border-gray-700 px-2 py-1">{field}</td>
-                <td className="border border-gray-700 px-2 py-1 ">{type}</td>
-                <td className="border border-gray-700 px-2 py-1 ">{required}</td>
-                <td className="border border-gray-700 px-2 py-1">{description}</td>
-              </tr>
-            ))}
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">template_id</td>
+              <td className="border border-gray-700 px-2 py-1">string</td>
+              <td className="border border-gray-700 px-2 py-1">✅ Yes</td>
+              <td className="border border-gray-700 px-2 py-1">
+                ID of the PDF template you created in Outliny.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">parameters</td>
+              <td className="border border-gray-700 px-2 py-1">object</td>
+              <td className="border border-gray-700 px-2 py-1">✅ Yes</td>
+              <td className="border border-gray-700 px-2 py-1">
+                Key-value pairs replacing Jinja variables in template.
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">output_type</td>
+              <td className="border border-gray-700 px-2 py-1">string</td>
+              <td className="border border-gray-700 px-2 py-1">Optional</td>
+              <td className="border border-gray-700 px-2 py-1">pdf (default) or base64.</td>
+            </tr>
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">filename</td>
+              <td className="border border-gray-700 px-2 py-1">string</td>
+              <td className="border border-gray-700 px-2 py-1">Optional</td>
+              <td className="border border-gray-700 px-2 py-1">
+                Suggested filename for downloaded file.
+              </td>
+            </tr>
           </tbody>
         </table>
 
         {/* Example Request */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-9 mb-3  md:text-[30px]">
-          📦 Example Request
-        </h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-9 mb-3">📦 Example Request</h2>
         <pre className=" overflow-hidden  whitespace-pre-wrap bg-[#1a1a1a] p-4 rounded text-[13px] md:text-[14px]  mb-6">
           {`POST https://api.outliny.com/api/v1/render/pdf
 Authorization: Bearer YOUR_API_KEY
@@ -135,39 +93,13 @@ Content-Type: application/json
     "invoice_number": "INV-2025-001",
     "amount_due": "$500",
     "due_date": "2025-05-10"
-  },
-  "filename": "invoice-jane-doe.pdf"
+    },
+    "filename": "invoice-jane-doe.pdf"
 }`}
         </pre>
 
-        {/* Response */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          📤 Response
-        </h2>
-        <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
-          <thead>
-            <tr className="bg-[#1a1a1a]">
-              <th className="border border-gray-700 px-2 py-1 text-left">Field</th>
-              <th className="border border-gray-700 px-2 py-1 text-left">Type</th>
-              <th className="border border-gray-700 px-2 py-1 text-left">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ResponseData.map(({ field, type, description }) => (
-              <tr key={description}>
-                <td className="border border-gray-700 px-2 py-1">{field}</td>
-                <td className="border border-gray-700 px-2 py-1 ">{type}</td>
-
-                <td className="border border-gray-700 px-2 py-1">{description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
         {/* Example Responses */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          📤 Example Response (default output)
-        </h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📤 Example Response (URL)</h2>
         <pre className=" overflow-auto  bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
           {`{
   "status": "success",
@@ -175,7 +107,7 @@ Content-Type: application/json
 }`}
         </pre>
 
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
+        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">
           📤 Example Response (base64)
         </h2>
         <pre className="overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
@@ -185,36 +117,69 @@ Content-Type: application/json
 }`}
         </pre>
 
-        {/* Output Types */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          ⚙️ Output Types Explained
-        </h2>
+        {/* Response */}
+        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📤 Response</h2>
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
-            <tr className="bg-[#1a1a1a]">
+            <tr className="bg-gray-800">
+              <th className="border border-gray-700 px-2 py-1 text-left">Field</th>
+              <th className="border border-gray-700 px-2 py-1 text-left">Type</th>
+              <th className="border border-gray-700 px-2 py-1 text-left">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">status</td>
+              <td className="border border-gray-700 px-2 py-1">string</td>
+              <td className="border border-gray-700 px-2 py-1">"success"</td>
+            </tr>
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">file_url</td>
+              <td className="border border-gray-700 px-2 py-1">string</td>
+              <td className="border border-gray-700 px-2 py-1">
+                (If hosted) URL to download the PDF
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">file_base64</td>
+              <td className="border border-gray-700 px-2 py-1">string</td>
+              <td className="border border-gray-700 px-2 py-1">
+                (If output_type=base64) Base64-encoded PDF
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        {/* Output Types */}
+        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">⚙️ Output Types Explained</h2>
+        <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
+          <thead>
+            <tr className="bg-gray-800">
               <th className="border border-gray-700 px-2 py-1 text-left">Value</th>
               <th className="border border-gray-700 px-2 py-1 text-left">Description</th>
             </tr>
           </thead>
           <tbody>
-            {OutputTypeData.map(({ value, description }) => (
-              <tr key={value}>
-                <td className="border border-gray-700 px-2 py-1">{value}</td>
-
-                <td className="border border-gray-700 px-2 py-1">{description}</td>
-              </tr>
-            ))}
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">pdf</td>
+              <td className="border border-gray-700 px-2 py-1">Hosted URL (default).</td>
+            </tr>
+            <tr>
+              <td className="border border-gray-700 px-2 py-1">base64</td>
+              <td className="border border-gray-700 px-2 py-1">
+                Returns the PDF directly encoded in base64 string (useful for APIs, internal
+                storage, etc.).
+              </td>
+            </tr>
           </tbody>
         </table>
 
         {/* Common Errors */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          ❗ Common Errors
-        </h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">❗ Common Errors</h2>
         <div className="overflow-x-auto">
           <table className="text-sm  w-full table-auto border-collapse border border-gray-700 mb-6">
             <thead>
-              <tr className="bg-[#1a1a1a] ">
+              <tr className="bg-gray-800 ">
                 <th className="border border-gray-700 px-2 py-1 text-left">HTTP Code</th>
                 <th className="border border-gray-700 px-2 py-1 text-left">Error</th>
                 <th className="border border-gray-700 px-2 py-1 text-left">Description</th>
@@ -233,12 +198,12 @@ Content-Type: application/json
         </div>
 
         {/* Notes */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-4 mb-3  md:text-[30px]">📚 Notes</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-4 mb-3">📚 Notes</h2>
         <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2  text-sm sm:text-base font-roboto">
           <li>
             Parameters must match Jinja variable names like <code>amount_due</code>
           </li>
-          <li>PDFs typically generate within 1-3 seconds</li>
+          <li>PDFs typically generate within 1–3 seconds</li>
           <li>Files are private, securely hosted, and expire after a set period</li>
         </ul>
 

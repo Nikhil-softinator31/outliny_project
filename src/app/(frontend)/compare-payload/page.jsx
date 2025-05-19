@@ -1,6 +1,26 @@
 import React from 'react'
 
 const ComparePayloadPage = () => {
+      const RequestBodyData = [
+        {
+          field: 'template_id',
+          type: 'string',
+          required: 'Yes',
+          description: "The ID of the template you're comparing against.",
+        },
+        {
+          field: 'old_parameters',
+          type: 'object',
+          required: 'Yes',
+          description: 'The original parameters used previously.',
+        },
+        {
+          field: 'new_parameters',
+          type: 'string',
+          required: 'object',
+          description: 'The new parameters you want to compare.',
+        },
+      ]
   return (
     <div className="max-w-[1580px] mx-auto px-4 sm:px-6 lg:px-8 py-20 text-[#ebebeb] font-poppins space-y-16">
       <div className="text-center space-y-4">
@@ -54,34 +74,26 @@ const ComparePayloadPage = () => {
 
       <div className="space-y-4">
         <h2 className="text-2xl md:text-[30px] font-semibold text-white">🧾 Request Body</h2>
-        <table className="w-full text-sm text-left border-collapse leading-10 ">
+    
+
+        <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6 leading-6">
           <thead>
-            <tr className="border-b border-[#444]">
-              <th className="py-2 text-[18px]">Field</th>
-              <th className="py-2 text-[18px]">Type</th>
-              <th className="py-2 text-[18px]">Required</th>
-              <th className="py-2 text-[18px]">Description</th>
+            <tr className=" bg-[#1a1a1a]">
+              <th className="border border-gray-700 px-2 py-1 text-left">Field</th>
+              <th className="border border-gray-700 px-2 py-1 text-left">Type</th>
+              <th className="border border-gray-700 px-2 py-1 text-left">Required</th>
+              <th className="border border-gray-700 px-2 py-1 text-left">Description</th>
             </tr>
           </thead>
-          <tbody className="">
-            <tr className="border-b border-[#333]">
-              <td>template_id</td>
-              <td>string</td>
-              <td>✅ Yes</td>
-              <td>The ID of the template you're comparing against.</td>
-            </tr>
-            <tr className="border-b border-[#333]">
-              <td>old_parameters</td>
-              <td>object</td>
-              <td>✅ Yes</td>
-              <td>The original parameters used previously.</td>
-            </tr>
-            <tr className="border-b border-[#333]">
-              <td>new_parameters</td>
-              <td>object</td>
-              <td>✅ Yes</td>
-              <td>The new parameters you want to compare.</td>
-            </tr>
+          <tbody>
+            {RequestBodyData.map(({ field, type, required, description }) => (
+              <tr key={field}>
+                <td className="border border-gray-700 px-2 py-1">{field}</td>
+                <td className="border border-gray-700 px-2 py-1 ">{type}</td>
+                <td className="border border-gray-700 px-2 py-1 ">{required}</td>
+                <td className="border border-gray-700 px-2 py-1">{description}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -128,8 +140,7 @@ Content-Type: application/json
        "status": "success",
        "is_different": false,
        "differences": {}
-}`
-        }
+}`}
         </pre>
 
         <h3 className="text-lg font-semibold text-white">Example Response (Differences Found)</h3>
