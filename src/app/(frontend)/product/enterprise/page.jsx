@@ -13,16 +13,15 @@ const EnterpriseFeaturesPage = () => {
         operate at scale.
       </p>
 
-      <Section
-        title="🔒 Enterprise-Grade Security"
-        items={[
-          'ISO 27001:2022 Certified — World-class information security management.',
-          'SOC 2 Type II Compliant — Independently audited data security and operational excellence.',
-          'End-to-End Encryption — All data at rest and in transit is always encrypted.',
-          'Zero-Log by Default — We do not store any content unless you choose to enable logging.',
-          'Employee Data Isolation — Outliny employees cannot view your templates or payloads.',
-        ]}
-      />
+      <h2 className="text-2xl font-semibold mt-20 mb-4 md:text-[30px] ">🔒 Enterprise-Grade Security</h2>
+      <ul  className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto ">
+        <li>ISO 27001:2022 Certified — World-class information security management.</li>
+        <li>SOC 2 Type II Compliant — Independently audited data security and operational excellence.</li>
+        <li>End-to-End Encryption — All data at rest and in transit is always encrypted.</li>
+        <li>Zero-Log by Default — We do not store any content unless you choose to enable logging.</li>
+        <li>Employee Data Isolation — Outliny employees cannot view your templates or payloads.</li>
+      </ul>
+  
 
       <Section
         title="🌎 Global Scalability"
@@ -106,7 +105,7 @@ const EnterpriseFeaturesPage = () => {
 }
 
 const Section = ({ title, items }) => (
-  <div className="mt-16">
+  <div className="mt-10">
     <h2 className="text-2xl md:text-[30px] font-semibold text-white   ">{title}</h2>
     <ul className="list-disc ml-10 md:ml-16 mt-5 space-y-2 text-sm sm:text-base font-roboto">
       {items.map((item, i) => (

@@ -5,144 +5,147 @@ import { MdPrivacyTip } from 'react-icons/md'
 import { CiMail } from 'react-icons/ci'
 import { FaArrowRightLong } from 'react-icons/fa6'
 
-
 const SecurityPage = () => {
-  const SecurityData=[
-        {
-          icon: <IoShieldCheckmarkSharp className="text-green-500" />,
-          title: 'Certified & Compliant',
-          points: [' ISO 27001:2022 Certified', ' SOC 2 Type II Compliant'],
-          description:
-            'These certifications reflect our commitment to secure systems, employee practices, access controls, and operational resilience.',
-        },
-        {
-          icon: <FaUserShield className="text-blue-400" />,
-          title: 'Zero Visibility Architecture',
-          points: [
-            'All customer data is encrypted at rest and in transit',
-            'No logs are stored by default',
-            'Outliny employees cannot read or access your templates or parameters',
-            "You're always in control of your content and your data",
-          ],
-        },
-        {
-          icon: <IoLockClosed className="text-yellow-400" />,
-          title: 'End-to-End Encryption',
-          points: [
-            'TLS 1.2+ for all data in transit',
-            'AES-256 encryption for data at rest',
-            'Secrets and keys stored securely using cloud-native vaults',
-            'Template variables and payloads are never persisted unless you opt-in',
-          ],
-        },
-        {
-          icon: <FaServer className="text-purple-400" />,
-          title: 'Granular Access Controls',
-          points: [
-            'Role-based access for template editing and deployment',
-            'Module-based templating for restricted shared components',
-            'Audit-friendly configuration (including for self-hosted instances)',
-          ],
-        },
-        {
-          icon: <IoEarthSharp className="text-green-400" />,
-          title: 'Self-Hosting? You’re in Charge',
-          points: [
-            'Full control over data residency and storage',
-            'Internal network deployments behind your own firewall',
-            'Integrate with your existing authentication systems',
-          ],
-        },
-        {
-          icon: <IoShieldCheckmarkSharp className="text-teal-400" />,
-          title: 'Security Best Practices We Follow',
-          points: [
-            'Static code analysis on all releases',
-            'CI/CD with signed artifacts',
-            'Regular third-party penetration testing',
-            'Principle of least privilege applied across services',
-            'No third-party analytics or trackers in the editor or API services',
-          ],
-        },
-        {
-          icon: <FaServer className="text-orange-400" />,
-          title: 'Data Handling Policy Highlights',
-          points: [
-            'No data is stored unless you opt in',
-            'No template parameters are logged',
-            'Logs (if enabled) are encrypted and kept short-lived',
-            'PDF and Email outputs are deleted immediately after rendering',
-          ],
-        },
-      ]
   return (
-    <div className="max-w-[1580px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-[#d6d5d5] ">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 mt-10 sm:mt-20 text-white text-center  font-poppins">
+    <div className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
+      <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins ">
         Security at Outliny
       </h1>
-      <p className="mb-4 sm:mb-6 text-base sm:text-xl text-center">
-        Built with <span className="text-white font-semibold">Security</span>,{' '}
-        <span className="text-white font-semibold">Privacy</span>, and{' '}
-        <span className="text-white font-semibold">Compliance</span> from Day One.
-      </p>
-      <p className="mb-8 mt-20 text-sm sm:text-base max-w-7xl">
+
+      <p className="mb-4 max-w-7xl mx-auto text-center text-sm sm:text-base font-inter">
         At Outliny, we understand that email and document templates often carry sensitive business
         and customer data. That’s why we built our platform with security-first principles and
         strict compliance frameworks to ensure your data remains safe, encrypted, and never exposed
         — not even to us.
       </p>
 
-      {SecurityData.map((section, index) => (
-        <section key={index} className="mb-10 sm:mb-12">
-          <div className="flex  items-center gap-2 text-lg sm:text-xl font-semibold mb-2 text-white font-poppins">
-            {section.icon}
-            {section.title}
-          </div>
-          <ul className="list-disc list-inside ml-8 text-sm sm:text-base space-y-1 mt-4 ">
-            {section.points.map((point, idx) => (
-              <li key={idx}>{point}</li>
-            ))}
-          </ul>
-          {section.description && (
-            <p className="mt-4 text-sm sm:text-base">{section.description}</p>
-          )}
-        </section>
-      ))}
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3 ">
+          🔐Certified & Compliant
+        </h2>
+        <p className="py-4 text-sm sm:text-base font-sans ml-2">
+          We may share necessary information with trusted third parties for:
+        </p>
 
-      {/* Privacy Philosophy */}
-      <section className="mb-12">
-        <div className="flex items-center gap-2 text-lg sm:text-xl font-semibold mb-2 text-white">
-          <MdPrivacyTip className="text-pink-400" />
-          Privacy-First Philosophy
-        </div>
-        <p className="text-sm sm:text-base ml-8 mt-3">
+        <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+          <li>ISO 27001:2022 Certified</li>
+          <li>SOC 2 Type II Compliant</li>
+        </ul>
+        <p className="py-2 italic text-sm sm:text-base font-inter ml-2">
+          These certifications reflect our commitment to secure systems, employee practices, access
+          controls, and operational resilience.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
+          🧊 Zero Visibility Architecture
+        </h2>
+        <p className="py-4 text-sm sm:text-base font-sans ml-2">We don’t see your data – ever.</p>
+        <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+          <li>All customer data is encrypted at rest and in transit</li>
+          <li>No logs are stored by default</li>
+          <li>Outliny employees cannot read or access your templates or parameters</li>
+        </ul>
+        <p className="py-2 italic text-sm sm:text-base font-inter ml-2">
+          You're always in control of your content and your data.
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
+          🔒 End-to-End Encryption
+        </h2>
+        <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+          <li>TLS 1.2+ for all data in transit</li>
+          <li>AES-256 encryption for data at rest</li>
+          <li>Secrets and keys stored securely using cloud-native vaults</li>
+          <li>Template variables and payloads are never persisted unless you opt-in</li>
+        </ul>
+      </div>
+
+      <div className="mb-10 sm:mb-12">
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
+          ⚙️ Granular Access Controls
+        </h2>
+        <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+          <li>Role-based access for template editing and deployment</li>
+          <li>Module-based templating for restricted shared components</li>
+          <li>Audit-friendly configuration (including for self-hosted instances)</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
+          🌍 Self-Hosting? You’re in Charge
+        </h2>
+
+        <p className="py-4 text-sm sm:text-base font-sans ml-2">
+          Outliny is fully open-source and can be self-hosted, giving you:
+        </p>
+        <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+          <li>Full control over data residency and storage</li>
+          <li>Internal network deployments behind your own firewall</li>
+          <li>Integrate with your existing authentication systems</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
+          🛡️ Security Best Practices We Follow
+        </h2>
+        <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+          <li>Static code analysis on all releases</li>
+          <li>CI/CD with signed artifacts</li>
+          <li>Regular third-party penetration testing</li>
+          <li>Principle of least privilege applied across services</li>
+          <li>No third-party analytics or trackers in the editor or API services</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
+          📄 Data Handling Policy Highlights
+        </h2>
+        <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+          <li>No data is stored unless you opt in</li>
+          <li>No template parameters are logged</li>
+          <li>Logs (if enabled) are encrypted and kept short-lived</li>
+          <li>PDF and Email outputs are deleted immediately after rendering</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
+          👁️ Privacy-First Philosophy
+        </h2>
+        <p className="text-sm sm:text-base ml-12 mt-3">
           Outliny was built with a simple rule:{' '}
           <strong className="text-white">your data is your data</strong>. We don’t read it, we don’t
           sell it, and we don’t use it to train any models. Ever.
         </p>
-        <p className="mt-2 text-sm sm:text-base ml-8 flex gap-2">
-          <span className='flex justify-center items-center'>
+        <div className="mt-2 text-sm sm:text-base ml-12 flex gap-2">
+          <span className="flex justify-center items-center">
             <FaArrowRightLong />
           </span>
           <a className="underline text-white cursor-pointer" href="/privacy" target="_blank">
             Read our full Privacy Policy
           </a>
-        </p>
-      </section>
+        </div>
+      </div>
 
-      {/* Contact */}
-      <section className="mt-16">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-white">
+      <div>
+        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
           🧠 Questions About Security?
         </h2>
-        <p className="mb-2 text-sm sm:text-base ml-8">
+        <p className="mb-3 text-sm sm:text-base ml-12">
           We’re happy to answer any specific security concerns or requirements. Reach out to us:
         </p>
-        <div className="flex flex-wrap gap-2  ml-8 items-center text-sm sm:text-base">
+        <div className="flex flex-wrap gap-2 ml-12 items-center text-sm sm:text-base">
           <CiMail className="text-lg" />
           <span className="text-white font-medium">Email:</span> security@outliny.io
         </div>
-      </section>
+      </div>
     </div>
   )
 }

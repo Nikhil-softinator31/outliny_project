@@ -15,8 +15,8 @@ const PrivacyPolicyPage = () => {
         in this policy.
       </p>
 
-      {/* Sections */}
-      <section>
+     
+    
         <div>
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3 ">
             1. Information We Collect
@@ -190,7 +190,7 @@ const PrivacyPolicyPage = () => {
             </div>
           </div>
         </div>
-      </section>
+    
     </div>
   )
 }

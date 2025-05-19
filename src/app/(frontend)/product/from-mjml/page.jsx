@@ -3,26 +3,25 @@ import React from 'react'
 
 const GeneratingPdfPage = () => {
   return (
-    <main className="mt-24 max-w-7xl mx-auto text-white p-4">
-      <h1 className="text-2xl md:text-4xl font-bold mb-4">
+    <main className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
+      <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins">
         Generate HTML from MJML for Email Templates
       </h1>
-      <p className="text-lg text-gray-400 mb-6">
+      <p className="mb-4 max-w-3xl mx-auto text-center text-sm sm:text-base font-inter">
         Convert MJML into production-ready responsive HTML with a single API call—fully integrated
         into your email workflow.
       </p>
 
-
-      <h2 className="text-2xl font-semibold mt-10 mb-3">✨ Why MJML?</h2>
-      <p className="text-gray-400 mb-4">
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">✨ Why MJML?</h2>
+      <p className=" mb-4">
         MJML is the open-source framework that makes responsive email design simple and reliable.
         But rendering it into robust HTML across all email clients can be tricky. That’s where
         Outliny comes in. We let you write in MJML and instantly generate HTML optimized for all
         major email clients—using our fast, scalable, and secure API.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3">🛠️ How It Works</h2>
-      <ol className="list-decimal list-inside space-y-2 text-gray-400">
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🛠️ How It Works</h2>
+      <ol className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto ">
         <li>
           <strong>Create your MJML template:</strong> Use Outliny's drag-and-drop GrapeJS Email
           Editor or write manually via API.
@@ -38,10 +37,9 @@ const GeneratingPdfPage = () => {
         </li>
       </ol>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3">🔧 Example API Usage</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🔧 Example API Usage</h2>
       <pre className="overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
-        <code>
-          {`POST /api/v1/emails/generate-html
+        {`POST /api/v1/emails/generate-html
 Content-Type: application/json
 Authorization: Bearer YOUR_API_KEY
 
@@ -52,30 +50,27 @@ Authorization: Bearer YOUR_API_KEY
     "signup_date": "2025-05-01"
   }
 }`}
-        </code>
       </pre>
 
-      <p className="text-sm mt-2 text-gray-500">📩 Response:</p>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">📩 Response:</h2>
       <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
-        <code>
-          {`{
+        {`{
   "html": "<!DOCTYPE html><html>...rendered responsive email...</html>"
 }`}
-        </code>
       </pre>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3">🧩 Features</h2>
-      <ul className="list-disc list-inside space-y-1 text-gray-400">
-        <li>✅ Supports MJML 4.15+</li>
-        <li>🔄 Full Jinja2 support</li>
-        <li>📦 Reusable modules (headers, footers, components)</li>
-        <li>📱 Mobile-first responsive design</li>
-        <li>🧑‍💻 Open source templates and examples</li>
-        <li>🚀 Ready for CRM, HRMS, marketing, and transactional emails</li>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🧩 Features</h2>
+      <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+        <li> Supports MJML 4.15+</li>
+        <li>Full Jinja2 support</li>
+        <li> Reusable modules (headers, footers, components)</li>
+        <li> Mobile-first responsive design</li>
+        <li> Open source templates and examples</li>
+        <li> Ready for CRM, HRMS, marketing, and transactional emails</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3">🧰 Use Cases</h2>
-      <ul className="list-disc list-inside space-y-1 text-gray-400">
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🧰 Use Cases</h2>
+      <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto">
         <li>CRM and Marketing Automation</li>
         <li>Internal HR Emails</li>
         <li>Signup / Welcome Emails</li>
@@ -83,21 +78,23 @@ Authorization: Bearer YOUR_API_KEY
         <li>Notifications and Alerts</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3">🔐 Security-First</h2>
-      <ul className="list-disc list-inside space-y-1 text-gray-400">
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🔐 Security-First</h2>
+      <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto">
         <li>No email content is logged</li>
         <li>Encrypted API communication</li>
         <li>ISO 27001:2022 & SOC 2 Type II Certified</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3">📥 Export or Import Anytime</h2>
-      <p className="text-gray-400 mb-4">
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">
+        📥 Export or Import Anytime
+      </h2>
+      <p className="text-gray-400 mb-4 ml-2">
         You’re never locked in. Outliny supports import/export of MJML and HTML, so you can move
         templates freely between systems.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3">💡 Tip for Developers</h2>
-      <p className="text-gray-400 mb-6">
+      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">💡 Tip for Developers</h2>
+      <p className="text-gray-400 mb-6 ml-2">
         Use our pre-built email components and themes to speed up development. No need to start from
         scratch—just customize and deploy.
       </p>
