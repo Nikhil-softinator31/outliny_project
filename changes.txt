@@ -1,0 +1,78 @@
+Changes Made to Implement Sidebar Active State and Default Route
+==========================================================
+
+File Modified: src/app/(frontend)/Industries/layout.tsx
+
+1. Added Required Imports
+------------------------
+- Added usePathname hook from next/navigation
+- Added useEffect hook from React
+
+2. Added Default Route Constant
+-----------------------------
+Added constant for default route:
+```
+const DEFAULT_ROUTE = '/industries/real-estate'
+```
+
+3. State Management Changes
+-------------------------
+- Removed local state for active index:
+  - Removed: const [activeIndex, setActiveIndex] = useState<number | null>(null)
+- Added pathname tracking:
+  - Added: const pathname = usePathname()
+
+4. Removed Click Handler
+----------------------
+Removed the handleItemClick function as it's no longer needed:
+```
+const handleItemClick = (index: number) => {
+  setActiveIndex(index)
+}
+```
+
+5. Added Default Route Redirect
+----------------------------
+Added useEffect to handle default route:
+```
+useEffect(() => {
+  if (pathname === '/industries') {
+    window.location.href = DEFAULT_ROUTE
+  }
+}, [pathname])
+```
+
+6. Updated Link Component
+-----------------------
+Changed the Link component's active state logic:
+- Before:
+```
+className={`${activeIndex === index ? 'bg-[#245BE9]' : ''}`}
+```
+- After:
+```
+className={`${pathname === route.href ? 'bg-[#245BE9]' : ''}`}
+```
+
+7. Simplified onClick Handler
+---------------------------
+- Before:
+```
+onClick={() => {
+  handleItemClick(index)
+  setIsSidebarOpen(false)
+}}
+```
+- After:
+```
+onClick={() => setIsSidebarOpen(false)}
+```
+
+Key Benefits of Changes
+=====================
+1. Sidebar links now stay in sync with footer navigation
+2. Active state is maintained based on current URL path
+3. First industry (Real Estate) is set as default when visiting /industries
+4. Code is more maintainable with URL-based state management
+5. Removed unnecessary state management code
+6. Type-safe implementation with constant for default route 
