@@ -1,0 +1,229 @@
+{/* 
+      <div className="flex flex-col gap-4  ">
+        <h1 className="font-poppins font-semibold text-[30px] leading-7 tracking-normal">
+          Why Sales Teams Choose Outliny
+        </h1>
+        <h2 className="font-poppins font-normal text-[14px] leading-[100%] tracking-[0%] capitalize">
+          Every touchpoint counts in sales. Outliny gives reps and sales ops teams the tools to
+          automate communication and ensure that every quote, follow-up, and contract stays
+          on-brand, accurate, and fast.
+        </h2>
+        <p className="font-normal text-[12px] leading-[100%] tracking-[0%] capitalize text-[#838484] font-poppins">
+          No more messy docs or outdated emails—just clean, professional templates your team can
+          trust.
+        </p>
+
+        <div className="flex justify-center items-center flex-col gap-4 mt-10">
+          <Image src="/pdf2.png" alt="sales" width={500} height={500} className="text-center" />
+          <Image src="/template.png" alt="sales" width={500} height={500} className="text-center" />
+          <Image src="/template.png" alt="sales" width={500} height={500} className="text-center" />
+        </div>
+      </div>
+
+       {/* New Section: Email Templates That Convert */}
+      <div className="mt-20">
+        <h2 className="text-2xl font-semibold mb-2">Email Templates That Convert</h2>
+        <p className="text-sm text-gray-400 mb-6">
+          Send Personalized, Branded Emails Across Every Stage Of Your Funnel With Modular MJML
+          Templates Managed In One Place.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+          {[
+            'Cold outreach & inbound lead replies',
+            'Product demos & discovery call scheduling',
+            'Quote delivery and pricing breakdowns',
+            'Follow-ups and nudges with dynamic variables',
+            'CRM-triggered emails',
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center gap-2">
+              <div className="bg-[#1f1f1f] p-4 rounded-full">
+                <Image src="/email-icon.svg" alt="icon" width={24} height={24} />
+              </div>
+              <p className="text-sm text-center">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>  
+
+      {/* New Section: Sales PDFs That Seal The Deal */}
+      <div className="mt-20">
+        <h2 className="text-2xl font-semibold mb-2">Sales PDFs That Seal The Deal</h2>
+        <p className="text-sm text-gray-400 mb-6">
+          Auto-Generate Custom PDFs For Quotes, Proposals, And Contracts—Fully Branded And
+          Dynamically Filled Via API.
+        </p>
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Use Cases List */}
+          <div className="flex flex-col gap-4 w-full lg:w-1/2">
+            {[
+              'Proposals And Pitch Decks',
+              'Custom Quotes And Pricing Sheets',
+              'Contracts, SOWs, And NDAs',
+              'Case Studies And Sales Brochures',
+              'One-Pagers, ROI Summaries, And Follow-Up Kits',
+            ].map((text, idx) => (
+              <div key={idx} className="flex items-center gap-4">
+                <div className="bg-[#1f1f1f] text-white w-10 h-10 flex items-center justify-center rounded-full font-semibold">
+                  {String(idx + 1).padStart(2, '0')}
+                </div>
+                <p>{text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Video/Image Preview */}
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <Image
+              src="/5325d210-20ba-49af-a497-d52f1200938b.png"
+              alt="PDF Preview"
+              width={400}
+              height={300}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Existing image previews */}
+      <div className="flex justify-center items-center flex-col gap-4 mt-20">
+        <Image src="/pdf2.png" alt="sales" width={500} height={500} />
+        <Image src="/template.png" alt="sales" width={500} height={500} />
+        <Image src="/template.png" alt="sales" width={500} height={500} />
+      </div> */}
+    </div>
+
+
+
+    -----------------
+
+    hamubre button
+     {/* hamburger button */}
+        {/* <button
+          onClick={toggleSidebar}
+          className="fixed top-20 left-4 lg:hidden text-white w-10 h-10 rounded-lg z-50 bg-black "
+          aria-label="Toggle sidebar"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            {isSidebarOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h16" />
+              </>
+            )}
+          </svg>
+        </button> */}
+
+
+
+
+
+
+        ------------------
+        layout.tsx
+
+
+
+
+        'use client'
+import React, { useState } from 'react'
+import Link from 'next/link'
+
+interface IndustriesProps {
+  children: React.ReactNode
+}
+
+const Industries: React.FC<IndustriesProps> = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
+  const handleItemClick = (index: number) => {
+    setActiveIndex(index)
+  }
+
+  const IndustriesRoutes = [
+    {
+      label: 'Real Estate',
+      href: '/industries/real-estate',
+    },
+    {
+      label: 'Legal',
+      href: '/industries/legal',
+    },
+    {
+      label: 'Insurance',
+      href: '/industries/insurance',
+    },
+    {
+      label: 'Accounting',
+      href: '/industries/accounting',
+    },
+    {
+      label: 'Marketing',
+      href: '/industries/marketing',
+    },
+    {
+      label: 'Human Resources',
+      href: '/industries/human-resources',
+    },
+    {
+      label: 'Manufacturing',
+      href: '/industries/manufacturing',
+    },
+    {
+      label: 'Sales',
+      href: '/industries/sales',
+    },
+  ]
+
+  return (
+    <div className="">
+      {/* Sidebar */}
+      <>
+      
+
+        {/* Sidebar */}
+        <div
+          className={`p-6 w-[345px] ml-20 mt-24 text-white border rounded-md h-[calc(100vh-120px)] rounded-r-2xl border-[#363636] sticky top-24  ${
+            isSidebarOpen ? 'block' : 'hidden'
+          } lg:block `}
+        >
+          <h1 className="text-2xl font-bold mb-4 ml-2">Industries</h1>
+          <ul className="space-y-3">
+            {IndustriesRoutes.map((route, index) => (
+              <li key={index}>
+                <Link
+                  href={route.href}
+                  className={` ${
+                    activeIndex === index ? 'bg-[#245BE9]' : ''
+                  } block px-4 rounded text-left font-normal text-[16px] leading-[40px] tracking-[0] capitalize font-poppins`}
+                  onClick={() => handleItemClick(index)}
+                >
+                  {route.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </>
+
+      {/* Main content */}
+      <div className=" w-full lg:w-[70%]  p-4 md:mt-20  mx-auto">
+        <div className="">{children}</div>
+      </div>
+    </div>
+  )
+}
+
+export default Industries

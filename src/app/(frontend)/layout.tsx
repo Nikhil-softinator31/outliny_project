@@ -16,7 +16,6 @@ import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { draftMode } from 'next/headers'
 
-
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
 // import BackgroundVideo from './main/BackgroundVideo'
@@ -25,7 +24,7 @@ import Navbar from './Navbar/page'
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['100', '200', '300','500', '400', '600', '700'],
+  weight: ['100', '200', '300', '500', '400', '600', '700'],
   variable: '--font-poppins',
 })
 const roboto = Roboto({
@@ -33,7 +32,6 @@ const roboto = Roboto({
   weight: ['300', '400', '500', '700'], // Choose based on your need
   variable: '--font-roboto',
 })
-
 
 const aldrich = Aldrich({
   subsets: ['latin'],
@@ -78,7 +76,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
           <Navbar />
           <main>{children}</main>
-          <Footer />  
+          <Footer />
         </Providers>
       </body>
     </html>

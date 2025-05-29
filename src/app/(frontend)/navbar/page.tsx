@@ -15,8 +15,8 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="fixed w-full bg-[#08090a] text-white z-50 border-b border-[#232323]">
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+    <nav className=" w-full bg-[#08090a] text-white z-50 border-b border-[#232323] fixed top-0">
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16 overflow-x-hidden">
         {/* Logo */}
         <Link href="/">
           <Image

@@ -80,6 +80,10 @@ const config = {
           'linear-gradient(354.93deg, #131415 3.04%, rgba(19, 20, 21, 0) 94.94%)',
         'custom-gradient20':
           'linear-gradient(132.47deg, rgba(255, 255, 255, 0.1) -5.03%, rgba(255, 255, 255, 0) 86.03%)',
+        'custom-gradient21': 'linear-gradient(180deg, #FFFFFF 0%, #B1B1B1 100%)',
+        'custom-gradient22': 'linear-gradient(180deg, #131415 3.04%, rgba(19, 20, 21, 0) 94.94%)',
+        
+
       },
       animation: {},
       borderRadius: {},
