@@ -24,7 +24,7 @@ export default function RealEstatePage() {
       arrow: '/arrow.svg',
     },
     {
-      text: 'CRM-triggered emails (e.g., HubSpot, WordPress plugins)',
+      text: 'CRM-triggered emails (e.g. WordPress plugins)',
       image: '/vector1.svg',
       arrow: '/arrow.svg',
     },
@@ -68,7 +68,7 @@ export default function RealEstatePage() {
     {
       quote:
         'We send over 2,000 lease agreements monthly through Outliny. The ability to maintain our brand while automating everything has been a game-changer.',
-      person: 'Director of Operations, Skyline Realty',
+      person: 'Director of Operations, Skyline ',
     },
     {
       quote:
@@ -128,12 +128,9 @@ export default function RealEstatePage() {
           Use Cases:
         </h3>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-5 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-start">
           {emailUseCases.map((text, index) => (
-            <div
-              key={index}
-              className="flex items-center flex-col lg:flex-row gap-10 lg:gap-4 justify-center"
-            >
+            <div key={index} className="flex flex-col items-center relative">
               <div className="flex flex-col items-center max-w-[180px]">
                 <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center mb-4">
                   <Image src={text.image} alt="icon" width={24} height={24} />
@@ -141,13 +138,9 @@ export default function RealEstatePage() {
                 <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
-                <Image
-                  src={text.arrow}
-                  alt="arrow"
-                  width={50}
-                  height={20}
-                  className="rotate-90 lg:rotate-0"
-                />
+                <div className="hidden lg:block absolute top-6 -right-4 transform translate-x-full">
+                  <Image src={text.arrow} alt="arrow" width={50} height={20} />
+                </div>
               )}
             </div>
           ))}
@@ -257,8 +250,6 @@ export default function RealEstatePage() {
 
       {/* Getting Started */}
       <div className="mt-20 p-4">
-       
-
         <div className="mt-8 flex flex-col gap-4">
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
             Create a Free Account

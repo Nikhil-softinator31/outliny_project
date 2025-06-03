@@ -38,9 +38,9 @@ const footerLinks = [
   {
     title: 'Developer',
     links: [
-      { label: 'Documentation', href: '/docs' },
-      { label: 'Template Editor', href: '/editor' },
-      { label: 'RoadMap', href: '/roadmap' },
+      { label: 'Documentation', href: '/developer/docs' },
+      { label: 'Template Editor', href: '/developer/template-editor' },
+      { label: 'RoadMap', href: '/developer/roadmap' },
     ],
   },
   {
