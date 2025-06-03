@@ -4,29 +4,24 @@ import Image from 'next/image'
 export default function InsurancePage() {
   const challengePoints = [
     {
-      text: 'High Volume Documentation: Policies, quotes, certificates, claims forms, and regulatory notices require consistent branding and accurate information.',
-      image: '/vector6.svg',
-      arrow: '/arrow.svg',
+      heading: 'High Volume Documentation:',
+      text: 'Policies, quotes, certificates, claims forms, and regulatory notices require consistent branding and accurate information.',
     },
     {
-      text: 'Regulatory Compliance: Communications must adhere to strict regulatory requirements that vary by region and line of business.',
-      image: '/vector2.svg',
-      arrow: '/arrow.svg',
+      heading: 'Regulatory Compliance:',
+      text: 'Communications must adhere to strict regulatory requirements that vary by region and line of business.',
     },
     {
-      text: 'Customer Experience: Clear, professional communications directly impact customer satisfaction and retention.',
-      image: '/vector3.svg',
-      arrow: '/arrow.svg',
+      heading: 'Customer Experience:',
+      text: 'Clear, professional communications directly impact customer satisfaction and retention.',
     },
     {
-      text: 'Operational Efficiency: Document preparation and email communications often involve manual processes that create bottlenecks.',
-      image: '/vector4.svg',
-      arrow: '/arrow.svg',
+      heading: 'Operational Efficiency:',
+      text: 'Document preparation and email communications often involve manual processes that create bottlenecks.',
     },
     {
-      text: 'Multi-Channel Delivery: Customers expect seamless communications across digital and print channels.',
-      image: '/vector1.svg',
-      arrow: '/arrow.svg',
+      heading: 'Multi-Channel Delivery:',
+      text: 'Customers expect seamless communications across digital and print channels.',
     },
   ]
 
@@ -46,11 +41,36 @@ export default function InsurancePage() {
   ]
 
   const quotesAndProposals = [
-    'Multi-option quote comparisons with dynamic tables',
-    'Personalized coverage recommendations',
-    'Premium breakdown visualizations',
-    'Digital delivery with tracking capabilities',
-    'Automated follow-up email sequences',
+    {
+      id: '01',
+      text: 'Multi-option quote comparisons with dynamic tables ',
+      image: '/vector6.svg',
+      arrow: '/arrow.svg',
+    },
+    {
+      id: '02',
+      text: 'Personalized coverage recommendations',
+      image: '/vector6.svg',
+      arrow: '/arrow.svg',
+    },
+    {
+      id: '03',
+      text: 'Premium breakdown visualizations',
+      image: '/vector6.svg',
+      arrow: '/arrow.svg',
+    },
+    {
+      id: '04',
+      text: 'Digital delivery with tracking capabilities',
+      image: '/vector6.svg',
+      arrow: '/arrow.svg',
+    },
+    {
+      id: '05',
+      text: 'Automated follow-up email sequences',
+      image: '/vector6.svg',
+      arrow: '/arrow.svg',
+    },
   ]
 
   const regulatoryNotices = [
@@ -143,27 +163,20 @@ export default function InsurancePage() {
           Insurance companies face unique challenges when managing customer communications:
         </p>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-5 items-center">
+        <div className="grid gap-4">
           {challengePoints.map((point, index) => (
             <div
               key={index}
-              className="flex items-center flex-col lg:flex-row gap-10 lg:gap-4 justify-center"
+              className="p-4   flex gap-2"
+              style={{
+                borderBottom: '1.16px solid',
+                borderImageSource:
+                  'linear-gradient(270deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%)',
+                borderImageSlice: 3,
+              }}
             >
-              <div className="flex flex-col items-center max-w-[280px]">
-                <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center mb-4">
-                  <Image src={point.image} alt="icon" width={24} height={24} />
-                </div>
-                <p className="text-[13px] text-gray-300 font-poppins text-center">{point.text}</p>
-              </div>
-              {index < 4 && (
-                <Image
-                  src={point.arrow}
-                  alt="arrow"
-                  width={50}
-                  height={20}
-                  className="rotate-90 lg:rotate-0"
-                />
-              )}
+              <p className="text-[16px] text-gray-300 font-poppins font-bold ">{point.heading}</p>
+              <p className="text-[16px] text-gray-300 font-poppins">{point.text}</p>
             </div>
           ))}
         </div>
@@ -256,30 +269,25 @@ export default function InsurancePage() {
           compliance with regulatory requirements.
         </p>
 
-        <div className="flex items-center flex-col lg:flex-row gap-20 lg:gap-40">
-          <div className="space-y-4">
-            {quotesAndProposals.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 border-b border-b-gray-600 pb-2"
-                style={{
-                  borderBottom: '1.16px solid',
-                  borderImageSource:
-                    'linear-gradient(270deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%)',
-                  borderImageSlice: 3,
-                }}
-              >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
-                  {String(index + 1).padStart(2, '0')}
+        <div className="flex flex-wrap justify-center lg:justify-start gap-5 items-center">
+          {quotesAndProposals.map((text, index) => (
+            <div
+              key={index}
+              className="flex items-center flex-col lg:flex-row gap-10 lg:gap-4 justify-center"
+            >
+              <div className="flex flex-col items-center max-w-[180px]">
+                <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center mb-4">
+                  <Image src={text.image} alt="icon" width={24} height={24} />
                 </div>
-                <p className="text-sm md:text-base text-white font-poppins">{item}</p>
+                <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
-            ))}
-          </div>
-
-          <div className="rounded-lg overflow-hidden max-w-[400px] shadow-lg">
-            <Image src="/vector2.svg" alt="PDF Preview" width={300} height={300} />
-          </div>
+              {index < 4 && (
+                <div className="hidden lg:block ">
+                  <Image src={text.arrow} alt="arrow" width={50} height={20} className="" />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 

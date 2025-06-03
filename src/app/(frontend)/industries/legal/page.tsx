@@ -12,7 +12,7 @@ export default function LegalPage() {
     },
     { text: 'Internal compliance or HR notifications', image: '/vector4.svg', arrow: '/arrow.svg' },
     {
-      text: 'Automated emails triggered by your case management software',
+      text: '"Automated emails from your case management software."',
       image: '/vector1.svg',
       arrow: '/arrow.svg',
     },
@@ -56,12 +56,12 @@ export default function LegalPage() {
     {
       quote:
         'We automated our retainer letter process using Outliny—now our paralegals generate and send branded documents in seconds.',
-      person: 'Managing Partner, Dalton & Rowe LLP',
+      person: 'Managing Partner',
     },
     {
       quote:
         'The security and compliance credentials gave us peace of mind. Outliny feels like a natural extension of our legal ops tech stack.',
-      person: 'Legal Operations Manager, TechLaw Inc.',
+      person: 'Legal Operations Manager',
     },
   ]
 
@@ -119,26 +119,19 @@ export default function LegalPage() {
           Use Cases:
         </h3>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-5 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-start">
           {emailUseCases.map((text, index) => (
-            <div
-              key={index}
-              className="flex items-center flex-col lg:flex-row gap-10 lg:gap-4 justify-center"
-            >
-              <div className="flex flex-col items-center max-w-[180px]">
+            <div key={index} className="flex flex-col items-center relative">
+              <div className="flex flex-col items-center w-full max-w-[180px]">
                 <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center mb-4">
                   <Image src={text.image} alt="icon" width={24} height={24} />
                 </div>
                 <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
-                <Image
-                  src={text.arrow}
-                  alt="arrow"
-                  width={50}
-                  height={20}
-                  className="rotate-90 lg:rotate-0"
-                />
+                <div className="hidden lg:block absolute top-6 -right-4 transform translate-x-full">
+                  <Image src={text.arrow} alt="arrow" width={50} height={20} />
+                </div>
               )}
             </div>
           ))}

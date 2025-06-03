@@ -112,7 +112,10 @@ export default function SalesPage() {
 
         <div className="flex flex-wrap justify-center lg:justify-start gap-5 items-center">
           {UseCases1.map((text, index) => (
-            <div key={index} className="flex items-center flex-col lg:flex-row gap-10 lg:gap-4 justify-center">
+            <div
+              key={index}
+              className="flex items-center flex-col lg:flex-row gap-10 lg:gap-4 justify-center"
+            >
               <div className="flex flex-col items-center max-w-[180px]">
                 <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center mb-4">
                   <Image src={text.image} alt="icon" width={24} height={24} />
@@ -120,13 +123,15 @@ export default function SalesPage() {
                 <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
+                <div className='hidden lg:block '>
                 <Image
                   src={text.arrow}
                   alt="arrow"
                   width={50}
                   height={20}
-                  className="rotate-90 lg:rotate-0"
-                />
+                    className=""
+                  />
+                </div>
               )}
             </div>
           ))}
