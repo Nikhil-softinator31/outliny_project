@@ -82,11 +82,11 @@ export default function AccountingPage() {
   ]
 
   return (
-    <div className="text-white mt-28 lg:mt-5 p-4">
+    <div className="text-white  lg:mt-5 p-4">
       {/* Header Section */}
       <div className="flex flex-col gap-4 p-4">
-        <h1 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
-          📊 Outliny for Accounting
+        <h1 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
+           Outliny for Accounting
         </h1>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Automate reports, invoices, and secure client emails—without compromising on brand or

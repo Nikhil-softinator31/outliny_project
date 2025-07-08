@@ -19,7 +19,6 @@ export default function SalesPage() {
       image: '/vector4.svg',
       arrow: '/arrow.svg',
     },
-
   ]
 
   const UseCases2 = [
@@ -62,13 +61,13 @@ export default function SalesPage() {
     },
     {
       quote:
-        "Our team no longer wastes time fixing document formatting. Outliny ensures every slip and email is right—every time.",
+        'Our team no longer wastes time fixing document formatting. Outliny ensures every slip and email is right—every time.',
       person: ' Systems Lead, DeltaForge ',
     },
   ]
 
   return (
-    <div className="text-white mt-28 lg:mt-5 p-4">
+    <div className="text-white  lg:mt-5 p-4">
       {/* Header Section */}
       <div className="flex flex-col gap-4 p-4">
         <h1 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
@@ -107,8 +106,8 @@ export default function SalesPage() {
 
       {/* Email Templates */}
       <div className="mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] mb-3">
-          📧 Operational Emails, Automated & Branded
+        <h2 className="font-poppins font-semibold text-[24px] md:text-[30px] mb-3">
+          Operational Emails, Automated & Branded
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Design and manage all your operational and logistics-related emails in one place, with
@@ -147,8 +146,8 @@ export default function SalesPage() {
 
       {/* Sales PDFs */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📄 PDF Templates for Mission-Critical Documents
+        <h2 className="text-[20px] sm:[25px] md:text-[30px] font-semibold font-poppins mb-2">
+          PDF Templates for Mission-Critical Documents
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Generate and deliver production-grade PDF documents using dynamic data and pre-approved
@@ -219,8 +218,8 @@ export default function SalesPage() {
 
       {/* Compliance Section */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3">
-          🔐 Industrial-Grade Security & Compliance
+        <h2 className="text-[23px] md:text-[30px] font-poppins font-semibold mb-3">
+          Industrial-Grade Security & Compliance
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           With data moving across departments, vendors, and regions, security is non-negotiable.
@@ -242,8 +241,8 @@ export default function SalesPage() {
       </div>
 
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3">
-          🧰 Built to Fit Your Manufacturing Tech Stack
+        <h2 className="text-[20px] sm:text-[25px] md:text-[30px] font-poppins font-semibold mb-3 ">
+          Built to Fit Your Manufacturing Tech Stack
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           With data moving across departments, vendors, and regions, security is non-negotiable.
@@ -267,7 +266,7 @@ export default function SalesPage() {
       {/* Testimonials Section */}
       <div className="mt-20">
         <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          💬 What Manufacturing Teams Are Saying
+          What Manufacturing Teams Are Saying
         </h2>
         {testimonials.map((testimonial, idx) => (
           <div key={idx} className="mb-8">

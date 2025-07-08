@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { FaArrowRightLong } from 'react-icons/fa6'
 
 export default function InsurancePage() {
   const challengePoints = [
@@ -138,11 +139,19 @@ export default function InsurancePage() {
     person: 'Regional Insurance Provider',
   }
 
+  const gettingStartedSteps = [
+    'Schedule a Demo: See Outliny in action with insurance-specific examples',
+    'Proof of Concept: Test with a specific document type at no cost',
+    'Implementation Planning: Our experts will help map your communication workflows',
+    'Integration: Connect with your existing systems through our API',
+    'Template Development: Create or customize templates for your specific needs',
+  ]
+
   return (
-    <div className="text-white mt-28 lg:mt-5 p-4">
+    <div className="text-white  lg:mt-5 p-4">
       {/* Header Section */}
       <div className="flex flex-col gap-4 p-4">
-        <h1 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
+        <h1 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize md:leading-[35px]">
           Transform Insurance Communications with Outliny
         </h1>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
@@ -167,7 +176,7 @@ export default function InsurancePage() {
           {challengePoints.map((point, index) => (
             <div
               key={index}
-              className="p-4   flex gap-2"
+              className="p-4   flex gap-2 flex-wrap"
               style={{
                 borderBottom: '1.16px solid',
                 borderImageSource:
@@ -176,7 +185,7 @@ export default function InsurancePage() {
               }}
             >
               <p className="text-[16px] text-gray-300 font-poppins font-bold ">{point.heading}</p>
-              <p className="text-[16px] text-gray-300 font-poppins">{point.text}</p>
+              <p className="text-[16px] text-gray-300 font-poppins ">{point.text}</p>
             </div>
           ))}
         </div>
@@ -185,7 +194,7 @@ export default function InsurancePage() {
       {/* Policy Document Generation */}
       <div className="mt-20 p-4">
         <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📄 Policy Document Generation
+          Policy Document Generation
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Generate professionally branded policy documents, certificates of insurance, and
@@ -206,7 +215,7 @@ export default function InsurancePage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -223,7 +232,7 @@ export default function InsurancePage() {
       {/* Claims Communications */}
       <div className="mt-20 p-4">
         <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📱 Claims Communications
+          Claims Communications
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Streamline the entire claims communication process, from first notice of loss to
@@ -244,7 +253,7 @@ export default function InsurancePage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -261,7 +270,7 @@ export default function InsurancePage() {
       {/* Quotes and Proposals */}
       <div className="mt-20 p-4">
         <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          💰 Quotes and Proposals
+          Quotes and Proposals
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Create beautiful, professional quote documents that stand out from competitors.
@@ -269,7 +278,7 @@ export default function InsurancePage() {
           compliance with regulatory requirements.
         </p>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-5 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3   xl:grid-cols-5 gap-8 items-start">
           {quotesAndProposals.map((text, index) => (
             <div
               key={index}
@@ -282,7 +291,7 @@ export default function InsurancePage() {
                 <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
-                <div className="hidden lg:block ">
+                <div className="rotate-90 md:rotate-0 ">
                   <Image src={text.arrow} alt="arrow" width={50} height={20} className="" />
                 </div>
               )}
@@ -294,7 +303,7 @@ export default function InsurancePage() {
       {/* Regulatory Notices */}
       <div className="mt-20 p-4">
         <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📋 Regulatory Notices
+          Regulatory Notices
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Manage the complex world of regulatory communications with templates that automatically
@@ -314,7 +323,7 @@ export default function InsurancePage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -331,7 +340,7 @@ export default function InsurancePage() {
       {/* Case Study */}
       <div className="mt-20">
         <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          📊 Implementation Highlights: Case Study
+          Implementation Highlights: Case Study
         </h2>
         <div className="mb-8">
           <p className="text-gray-300 font-poppins text-sm md:text-base mb-3 font-normal">
@@ -345,8 +354,8 @@ export default function InsurancePage() {
 
       {/* Compliance Section */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3">
-          🔐 Compliance & Security
+        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3 ">
+          Compliance & Security
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           Outliny&apos;s platform is designed with insurance compliance requirements in mind:
@@ -354,7 +363,7 @@ export default function InsurancePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {compliancePoints.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins shrink-0">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -364,18 +373,17 @@ export default function InsurancePage() {
           ))}
         </div>
       </div>
-
       {/* Integration Capabilities */}
       <div className="mt-20 bg-custom-gradient22 p-6 rounded-xl">
         <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white">
-          🔄 Integration Capabilities
+          Integration Capabilities
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-10">
           Seamlessly connect Outliny with your existing insurance technology stack:
         </p>
         <div className="flex flex-col gap-10">
           {integrationCapabilities.map((feature, idx) => (
-            <div key={idx} className="flex items-start gap-6">
+            <div key={idx} className="flex items-start gap-6 ">
               <span className="text-[#888] text-lg font-semibold">{feature.id}</span>
               <div>
                 <p className="text-white font-semibold text-base md:text-lg mb-5">
@@ -399,7 +407,7 @@ export default function InsurancePage() {
       {/* ROI Section */}
       <div className="mt-20 p-4">
         <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3">
-          📈 ROI for Insurance Companies
+          ROI for Insurance Companies
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           Implementing Outliny delivers measurable return on investment:
@@ -407,7 +415,7 @@ export default function InsurancePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {roiPoints.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins shrink-0">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -421,44 +429,22 @@ export default function InsurancePage() {
       {/* Getting Started */}
       <div className="mt-20 p-4">
         <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          🚀 Getting Started
+          Getting Started
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           Ready to transform your insurance communications?
         </p>
         <div className="flex flex-col gap-4 mt-6">
-          <div className="flex items-center gap-2">
-            <span className="text-blue-500">→</span>
-            <p className="text-white">
-              Schedule a Demo: See Outliny in action with insurance-specific examples
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-blue-500">→</span>
-            <p className="text-white">
-              Proof of Concept: Test with a specific document type at no cost
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-blue-500">→</span>
-            <p className="text-white">
-              Implementation Planning: Our experts will help map your communication workflows
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-blue-500">→</span>
-            <p className="text-white">
-              Integration: Connect with your existing systems through our API
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-blue-500">→</span>
-            <p className="text-white">
-              Template Development: Create or customize templates for your specific needs
-            </p>
-          </div>
+          {gettingStartedSteps.map((step, index) => (
+            <div key={index} className="flex items-center gap-4 ">
+              <span className="text-blue-500 text-xl">
+                <FaArrowRightLong />
+              </span>
+              <p className="text-white ">{step}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   )
-}
+} 

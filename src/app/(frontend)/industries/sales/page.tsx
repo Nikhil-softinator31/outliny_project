@@ -55,7 +55,7 @@ export default function SalesPage() {
   ]
 
   return (
-    <div className="text-white mt-28 lg:mt-5 p-4">
+    <div className="text-white  lg:mt-5 p-4">
       {/* Header Section */}
       <div className="flex flex-col gap-4 p-4">
         <h1 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
@@ -76,7 +76,7 @@ export default function SalesPage() {
 
       {/* Why Sales Teams Choose Outliny */}
       <div className="flex flex-col gap-4 mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] leading-7">
+        <h2 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px]">
           Why Sales Teams Choose Outliny
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
@@ -90,15 +90,15 @@ export default function SalesPage() {
         </p>
 
         <div className="flex flex-col items-center gap-4 mt-10">
-          <Image src="/pdf2.png" alt="sales" width={700} height={100} />
-          <Image src="/template.png" alt="sales" width={700} height={100} />
-          <Image src="/template.png" alt="sales" width={700} height={100} />
+         <Image src="/pdf2.png" alt="sales" width={700} height={100} />
+        <Image src="/template.png" alt="sales" width={700} height={100} />
+        <Image src="/template.png" alt="sales" width={700} height={100} />
         </div>
       </div>
 
       {/* Email Templates */}
-      <div className="mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] mb-3">
+      <div className="mt-20 p-4 flex flex-col gap-4 ">
+        <h2 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px] ">
           Email Templates That Convert
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
@@ -106,11 +106,11 @@ export default function SalesPage() {
           templates managed in one place.
         </h2>
 
-        <h3 className="font-semibold text-lg mt-5 mb-6 font-poppins text-[20px] leading-[29px] capitalize">
+        <h3 className="font-semibold text-lg  mb-6 font-poppins text-[20px] leading-[29px] capitalize">
           Use Cases:
         </h3>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-5 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-start">
           {UseCases1.map((text, index) => (
             <div
               key={index}
@@ -123,14 +123,8 @@ export default function SalesPage() {
                 <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
-                <div className='hidden lg:block '>
-                <Image
-                  src={text.arrow}
-                  alt="arrow"
-                  width={50}
-                  height={20}
-                    className=""
-                  />
+                <div className="hidden lg:block  ">
+                  <Image src={text.arrow} alt="arrow" width={80} height={20} className="" />
                 </div>
               )}
             </div>
@@ -139,20 +133,20 @@ export default function SalesPage() {
       </div>
 
       {/* Sales PDFs */}
-      <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
+      <div className="mt-20 p-4 flex flex-col gap-4 ">
+        <h2 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px]">
           Sales PDFs That Seal The Deal
         </h2>
-        <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
+        <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins ">
           Auto-generate custom PDFs for quotes, proposals, and contracts—fully branded and
           dynamically filled via API.
         </p>
 
-        <h3 className="font-semibold text-lg mt-5 mb-6 font-poppins text-[20px] leading-[29px] capitalize">
+        <h3 className="font-semibold text-lg  mb-6 font-poppins text-[20px] leading-[29px] capitalize">
           Use Cases:
         </h3>
 
-        <div className="flex  items-center flex-col lg:flex-row  gap-20 lg:gap-40">
+        <div className="flex  items-center flex-col lg:flex-row  gap-20 ">
           <div className="space-y-4">
             {UseCases2.map((item, index) => (
               <div
@@ -165,7 +159,7 @@ export default function SalesPage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -211,18 +205,18 @@ export default function SalesPage() {
       </div>
 
       {/* Compliance Section */}
-      <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3">
+      <div className="mt-20 p-4 flex flex-col gap-4 ">
+        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px] ">
           Compliance & Brand Integrity, Always
         </h2>
-        <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
+        <p className="text-gray-400 font-poppins text-sm md:text-base ">
           Outliny Helps Protect Your Deals And Your Data
         </p>
-        <h3 className="text-white font-semibold font-poppins mb-4 text-lg">Use Cases:</h3>
+        <h3 className="text-white font-semibold font-poppins  text-lg">Use Cases:</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {compliancePoints.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins shrink-0">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -252,7 +246,7 @@ export default function SalesPage() {
 
       {/* CTA */}
       <div className="flex justify-center items-center mt-20">
-        <button className="bg-custom-gradient21 p-4 rounded-xl text-black w-[300px] h-[50px] font-poppins font-bold text-[14px]">
+        <button className="bg-custom-gradient21 p-4 rounded-xl text-black w-[300px] h-[50px] font-poppins font-bold text-[14px]  ">
           Start Free Today
         </button>
       </div>
