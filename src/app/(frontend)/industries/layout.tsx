@@ -119,7 +119,7 @@ const Industries: React.FC<IndustriesProps> = ({ children }) => {
 
       {/* Main content */}
       <div
-        className={`w-full lg:w-[70%] p-4 mt-16 transition-opacity duration-300 ${
+        className={`w-full lg:w-[70%] p-4 mt-16 transition-opacity duration-300 mx-auto ${
           isSidebarOpen ? 'opacity-0 lg:opacity-100' : 'opacity-100'
         }`}
       >

@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Large Text with Mask Effect */}
-      <div className="relative mt-40 h-[100px] md:h-[200px] lg:h-[350px]">
+      <div className="relative  h-[100px] md:h-[200px] lg:h-[350px]">
         <div className="Payload3D_mask">
           <h1
             className="Payload3D_text text-gray-700 text-8xl font-bold text-center font-aldrich"

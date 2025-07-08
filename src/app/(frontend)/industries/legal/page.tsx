@@ -27,7 +27,7 @@ export default function LegalPage() {
   ]
 
   const securityFeatures = [
-    { id: '01', text: 'Zero visibility: even Outliny employees can&apos;t see your data' },
+    { id: '01', text: "Zero visibility: even Outliny employees can't see your data" },
     { id: '02', text: 'Logs disabled by default' },
     { id: '03', text: 'Fully encrypted at rest and in transit' },
     { id: '04', text: 'Share templates across teams securely' },
@@ -66,11 +66,11 @@ export default function LegalPage() {
   ]
 
   return (
-    <div className="text-white mt-28 lg:mt-5 p-4">
+    <div className="text-white  lg:mt-5 p-4">
       {/* Header Section */}
       <div className="flex flex-col gap-4 p-4">
-        <h1 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
-          ⚖️ Outliny for Legal Teams
+        <h1 className="text-[23px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
+          Outliny for Legal Teams
         </h1>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Automate legal document workflows with secure, branded emails and PDFs.
@@ -86,7 +86,7 @@ export default function LegalPage() {
 
       {/* Why Legal Teams Trust Outliny */}
       <div className="flex flex-col gap-4 mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] leading-7">
+        <h2 className="text-[22px] sm:text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px]">
           Why Legal Professionals Trust Outliny
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
@@ -106,20 +106,20 @@ export default function LegalPage() {
       </div>
 
       {/* Email Templates */}
-      <div className="mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] mb-3">
-          📧 Professional Email Templates, Done Right
+      <div className="mt-20 p-4 flex flex-col gap-4">
+        <h2 className="text-[24px] sm:text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize  lg:leading-[35px]">
+          Professional Email Templates, Done Right
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Use our drag-and-drop MJML editor or start from a gallery of legal-focused templates to
           deliver well-structured, responsive emails that look great in every inbox.
         </h2>
 
-        <h3 className="font-semibold text-lg mt-5 mb-6 font-poppins text-[20px] leading-[29px] capitalize">
+        <h3 className="font-semibold text-lg  mb-6 font-poppins text-[20px] leading-[29px] capitalize">
           Use Cases:
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-start ">
           {emailUseCases.map((text, index) => (
             <div key={index} className="flex flex-col items-center relative">
               <div className="flex flex-col items-center w-full max-w-[180px]">
@@ -129,7 +129,7 @@ export default function LegalPage() {
                 <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
-                <div className="hidden lg:block absolute top-6 -right-4 transform translate-x-full">
+                <div className="rotate-90 space-y-6">
                   <Image src={text.arrow} alt="arrow" width={50} height={20} />
                 </div>
               )}
@@ -139,16 +139,16 @@ export default function LegalPage() {
       </div>
 
       {/* PDF Generation */}
-      <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📄 Generate Legal PDFs with Confidence
+      <div className="mt-20 p-4 flex flex-col gap-4">
+        <h2 className="text-[24px]  md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px]">
+          Generate Legal PDFs with Confidence
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Create templates once—then render dynamic, professional-grade PDFs anytime through our
           secure API.
         </p>
 
-        <div className="flex items-center flex-col lg:flex-row gap-20 lg:gap-40">
+        <div className="flex items-center flex-col lg:flex-row gap-20 max-w-[1000px]">
           <div className="space-y-4">
             {pdfUseCases.map((item, index) => (
               <div
@@ -161,7 +161,7 @@ export default function LegalPage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -176,9 +176,9 @@ export default function LegalPage() {
       </div>
 
       {/* Security Section */}
-      <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3">
-          🔐 Security and Compliance Built In
+      <div className="mt-20 p-4 flex flex-col gap-4">
+        <h2 className="text-[25px]  md:text-[30px] font-poppins font-semibold leading-[29px] capitalize ">
+          Security and Compliance Built In
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           Outliny is ISO 27001:2022 and SOC 2 Type II certified. We follow the highest standards for
@@ -187,7 +187,7 @@ export default function LegalPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {securityFeatures.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins shrink-0">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -201,9 +201,9 @@ export default function LegalPage() {
       {/* Integration Section */}
       <div className="mt-20 bg-custom-gradient22 p-6 rounded-xl">
         <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white">
-          ⚙️ Integrate with Your Legal Stack
+          Integrate with Your Legal Stack
         </h2>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 mt-10">
           {integrationFeatures.map((feature, idx) => (
             <div key={idx} className="flex items-start gap-6">
               <span className="text-[#888] text-lg font-semibold">{feature.id}</span>
@@ -227,9 +227,9 @@ export default function LegalPage() {
       </div>
 
       {/* Testimonials Section */}
-      <div className="mt-20">
-        <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          💬 What Legal Teams Are Saying
+      <div className="mt-20 flex flex-col gap-4">
+        <h2 className="text-[23px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px] ">
+          What Legal Teams Are Saying
         </h2>
         {testimonials.map((testimonial, idx) => (
           <div key={idx} className="mb-8">
@@ -246,7 +246,7 @@ export default function LegalPage() {
       {/* Getting Started */}
       <div className="mt-20 p-4">
         <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          🎯 Get Started Today
+         Get Started Today
         </h2>
         <div className="flex flex-col gap-4 mt-6">
           <div className="flex items-center gap-2">
@@ -271,10 +271,6 @@ export default function LegalPage() {
           <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
             Start Free
           </button>
-          <p className="text-gray-400 text-center">
-            Or <span className="text-blue-500 cursor-pointer hover:underline">Schedule a Demo</span>{' '}
-            with our team to learn how Outliny fits your firm&apos;s workflow.
-          </p>
         </div>
       </div>
     </div>

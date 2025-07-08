@@ -18,24 +18,18 @@ import SpotlightCard from './SpotlightCard'
 const Main = () => {
   return (
     <>
-      
-
-   
-  
-     
+      <div className='p-2'>
         <HeroSection />
 
-        <Carousel />
         <Slider />
         <Automate />
+        <Carousel />
         <Card1 />
         <FAQ />
         <Testimonial />
-        <SpotlightCard/>
-        <BottomCard />                  
-     
-
-
+        <SpotlightCard />
+        <BottomCard />
+      </div>
     </>
   )
 }

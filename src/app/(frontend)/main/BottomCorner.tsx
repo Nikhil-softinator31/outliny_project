@@ -65,15 +65,15 @@ const BottomCorner: React.FC = () => {
           ))}
         </div>
       </div>
+      <div className="flex flex-col">
+        <h2 className="text-2xl font-bold mt-10">Understand, Then Execute</h2>
+        <button className="bg-red-500 text-xs text-white text-center p-1 rounded w-[110px]">COMING SOON</button>
 
-      <h2 className="text-2xl font-bold mt-10">
-        Understand, Then Execute
-        <span className="bg-red-500 text-xs text-white px-2 py-1 rounded">COMING SOON</span>
-      </h2>
       <p className="mt-1 text-[#878685] break-words  text-left text-sm ">
         Learn not just how to use Outliny, but how to build systems that scale, comply with
-        enterprise standards, and empower your team.
-      </p>
+          enterprise standards, and empower your team.
+        </p>
+      </div>
     </div>
   )
 }

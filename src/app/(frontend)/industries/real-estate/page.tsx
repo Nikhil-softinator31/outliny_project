@@ -39,7 +39,7 @@ export default function RealEstatePage() {
   ]
 
   const leaseWorkflow = [
-    { id: '01', text: 'Create a lease agreement template with dynamic fields (Jinja variables)' },
+    { id: '01', text: 'Create a lease agreement template with dynamic fields ' },
     { id: '02', text: 'Populate data through API (tenant name, property, rent, dates)' },
     { id: '03', text: 'Render & download instantly as PDF' },
     { id: '04', text: 'Send as email attachment or save to cloud' },
@@ -78,11 +78,11 @@ export default function RealEstatePage() {
   ]
 
   return (
-    <div className="text-white mt-28 lg:mt-5 p-4">
+    <div className="text-white  lg:mt-5 p-4">
       {/* Header Section */}
       <div className="flex flex-col gap-4 p-4">
-        <h1 className="text-[25px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
-          🏡 Outliny for Real Estate
+        <h1 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
+          Outliny for Real Estate
         </h1>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Streamline communications. Impress clients. Close deals faster.
@@ -98,7 +98,7 @@ export default function RealEstatePage() {
 
       {/* Why Real Estate Teams Choose Outliny */}
       <div className="flex flex-col gap-4 mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] leading-7">
+        <h2 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px] ">
           Why Real Estate Teams Choose Outliny
         </h2>
         <p className="text-[12px] md:text-[14px] text-[#838484] font-poppins leading-5 md:leading-6 capitalize">
@@ -115,16 +115,16 @@ export default function RealEstatePage() {
       </div>
 
       {/* Email Templates */}
-      <div className="mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] mb-3">
-          📧 Emails That Make an Impression
+      <div className="mt-20 p-4 flex flex-col  gap-4">
+        <h2 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize ">
+          Emails That Make an Impression
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Use Outliny to create stunning, responsive email templates using our MJML editor and
           drag-drop builder.
         </h2>
 
-        <h3 className="font-semibold text-lg mt-5 mb-6 font-poppins text-[20px] leading-[29px] capitalize">
+        <h3 className="font-semibold text-lg  mb-6 font-poppins text-[20px] leading-[29px] capitalize">
           Use Cases:
         </h3>
 
@@ -135,10 +135,10 @@ export default function RealEstatePage() {
                 <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center mb-4">
                   <Image src={text.image} alt="icon" width={24} height={24} />
                 </div>
-                <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
+                <p className="text-[13px] text-gray-300  font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
-                <div className="hidden lg:block absolute top-6 -right-4 transform translate-x-full">
+                <div className="hidden lg:block absolute top-6 -right-4 transform translate-x-[30%]">
                   <Image src={text.arrow} alt="arrow" width={50} height={20} />
                 </div>
               )}
@@ -148,16 +148,16 @@ export default function RealEstatePage() {
       </div>
 
       {/* PDF Generation */}
-      <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📄 PDF Documents—Branded & Automated
+      <div className="mt-20 p-4 flex flex-col gap-4">
+        <h2 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize lg:leading-[35px] ">
+          PDF Documents Branded & Automated
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Generate high-quality, on-brand PDFs with dynamic content for every stage of the property
           lifecycle.
         </p>
 
-        <div className="flex items-center flex-col lg:flex-row gap-20 lg:gap-40">
+        <div className="flex items-center justify-between flex-col lg:flex-row gap-20  max-w-[1000px]">
           <div className="space-y-4">
             {pdfUseCases.map((item, index) => (
               <div
@@ -170,7 +170,7 @@ export default function RealEstatePage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -185,14 +185,14 @@ export default function RealEstatePage() {
       </div>
 
       {/* Lease Agreement Workflow */}
-      <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-3">
-          💡 Example Flow: Lease Agreement Automation
+      <div className="mt-20 p-4 ">
+        <h2 className="text-[23px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize mb-10 md:leading-[35px]">
+          Example Flow: Lease Agreement Automation
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {leaseWorkflow.map((item, index) => (
-            <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+            <div key={index} className="flex items-center gap-4  ">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins shrink-0 ">
                 {item.id}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -203,12 +203,12 @@ export default function RealEstatePage() {
         </div>
       </div>
 
-      {/* Integration Section */}
-      <div className="mt-20 bg-custom-gradient22 p-6 rounded-xl">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white">
+      {/* Integration Section  bg-custom-gradient22 is optional*/}
+      <div className="mt-20  p-6 rounded-xl bg-custom-gradient22 ">
+        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white text-balance">
           🛠 Tools Your Team Will Love
         </h2>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 mt-10">
           {integrationFeatures.map((feature, idx) => (
             <div key={idx} className="flex items-start gap-6">
               <span className="text-[#888] text-lg font-semibold">{feature.id}</span>
@@ -234,7 +234,7 @@ export default function RealEstatePage() {
       {/* Testimonials Section */}
       <div className="mt-20">
         <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          💬 Real Estate Clients Say...
+          Real Estate Clients Say...
         </h2>
         {testimonials.map((testimonial, idx) => (
           <div key={idx} className="mb-8">
