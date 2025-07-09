@@ -34,14 +34,14 @@ const BottomCorner: React.FC = () => {
   })
 
   return (
-    <div className="flex-col gap-3 xl:m-10 p-4 text-left ">
+    <div className="flex-col gap-3 lg:m-10 p-4 text-left md:mt-20">
       <div
-        className="overflow-hidden rotate-[14deg]  "
+        className="overflow-hidden rotate-[14deg] "
         style={{
           maskImage:
             'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%)',
           WebkitMaskImage:
-            'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%)',
+            'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%)'             
         }}
       >
         <div className="flex " ref={animateScrollRightRef}>
@@ -65,7 +65,7 @@ const BottomCorner: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-1">
         <h2 className="text-2xl font-bold mt-10">Understand, Then Execute</h2>
         <button className="bg-red-500 text-xs text-white text-center p-1 rounded w-[110px]">COMING SOON</button>
 

@@ -70,11 +70,10 @@ const FAQ = () => {
           <h1 className="font-poppins text-xl sm:text-3xl md:text-[35px] font-medium leading-snug text-center mt-3  ">
             You have got questions about PDF Generator API. We have got answers
           </h1>
-          <p className="font-poppins font-light text-[15px] sm:text-base md:text-lg text-[#535454] mt-6 text-center p-2 mb-10 ">
+          <p className="font-poppins font-light text-[15px] sm:text-base md:text-lg text-[#928f8f] mt-6 text-center p-2 mb-10 ">
             Find questions and answers related to the design system, purchase, updates, and support.
           </p>
 
-        
           <div className="flex flex-col items-center gap-6">
             {questions.map((item, index) => (
               <div
