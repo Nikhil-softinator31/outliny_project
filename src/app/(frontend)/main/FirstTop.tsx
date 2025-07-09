@@ -49,7 +49,7 @@ const FirstTop: React.FC = () => {
   }, [])
 
   return (
-    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full md:w-[48vw]   border">
+    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full    border">
       <h3 className="custom-text mt-5 text-3xl md:text-4xl p-5">
         Ready-to-Use, Developer-Friendly Components
       </h3>
