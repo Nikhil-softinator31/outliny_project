@@ -8,12 +8,12 @@ const FirstTop: React.FC = () => {
   const moveRefs = useRef<Map<number, HTMLDivElement>>(new Map())
 
   const imgCollection = [
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
+    '/pic1.png',
+    '/pic7.png',
+    '/pic3.png',
+    '/pic4.png',
+    '/pic5.png',
+    '/pic6.png',
   ]
 
   const addToRefs = (el: HTMLDivElement | null, index: number) => {
@@ -77,9 +77,9 @@ const FirstTop: React.FC = () => {
                 key={index}
                 src={img}
                 alt={`img${index}`}
-                width={2}
-                height={2}
-                className="bt-img w-full h-20 md:h-10 lg:h-28 object-cover rounded-lg"
+                width={600}
+                height={600}
+                className=" w-full h-20 md:h-10 lg:h-28 object-cover rounded-lg"
               />
             ))}
           </div>

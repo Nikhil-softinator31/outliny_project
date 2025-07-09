@@ -7,7 +7,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import FirstTop from './FirstTop'
 import BottomCorner from './BottomCorner'
 
-
 const BottomCard: React.FC = () => {
   const images = ['/car12.jpg', '/car12.jpg', '/car12.jpg', '/car12.jpg']
 
@@ -42,7 +41,6 @@ const BottomCard: React.FC = () => {
               developers and teams master templating with Jinja, understand MJML, and automate PDF
               generation with confidence.
             </p>
-
             {/* Mock browser frame */}
             <div className="relative bg-[#1A1A1A] rounded-xl border border-[#2c2c2c] overflow-hidden pt-6 px-4 pb-4">
               {/* Fake browser bar */}
@@ -125,7 +123,7 @@ const CenterDiv: React.FC = () => {
       </div>
       <div className="m-4 flex justify-center items-center w-full">
         <Image
-          src="/ss.png"
+          src="/apii.png"
           className="rounded-xl w-full h-auto object-cover"
           alt="Code Snippet Preview"
           width={200}

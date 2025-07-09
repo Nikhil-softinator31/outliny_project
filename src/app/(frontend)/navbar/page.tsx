@@ -15,7 +15,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className=" w-full bg-[#08090a] text-white z-50 border-b border-[#232323] fixed top-0">
+    <nav className="w-full bg-[#08090a] text-white z-50 border-b border-[#232323] fixed top-0">
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16 overflow-x-hidden">
         {/* Logo */}
         <Link href="/">
@@ -23,29 +23,25 @@ const Navbar = () => {
             src="/Logo.svg"
             alt="outliny"
             width={150}
-            height={200}  
+            height={200}
             className="h-10 lg:h-11 w-auto"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex space-x-2 relative">
-          {/* Sliding Background Effect */}
-          <div className="absolute top-1/2 -translate-y-1/2 h-10 bg-[#222121] rounded-3xl transition-all duration-500 ease-out scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100"></div>
-
+        <div className="hidden lg:flex space-x-2">
           {navItems.map((item) => (
-            <div key={item.name} className="relative group">
-              <Link
-                href={item.href}
-                className="text-[#b3b3b3] text-[16px] px-4 py-2 transition-all duration-300 hover:text-white hover:bg-[#222121] rounded-3xl"
-              >
-                {item.name}
-              </Link>
-            </div>
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-[#b3b3b3] text-[16px] px-4 py-2 transition-all duration-300 hover:text-white hover:bg-[#222121] rounded-3xl"
+            >
+              {item.name}
+            </Link>
           ))}
         </div>
 
-        {/* Desktop Log in & Get Started */}
+        {/* Desktop Buttons */}
         <div className="hidden lg:flex space-x-4 items-center">
           <Link
             href="/login"
@@ -54,7 +50,6 @@ const Navbar = () => {
             Log in
             <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-white origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
           </Link>
-
           <Link
             href="/get-started"
             className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-[#505050] transition-all duration-200"
@@ -98,7 +93,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Buttons at Bottom */}
           <div className="px-6 pb-6 space-y-3">
             <Link
               href="/login"
