@@ -15,10 +15,10 @@ const Main: React.FC = () => {
 
   // Button options and their images
   const buttonOptions = [
-    { id: 'generate', label: 'Generate Document', image: '/js.png' },
-    { id: 'edit', label: 'Edit Template', image: '/mask1.png' },
-    { id: 'templates', label: 'Get Templates', image: '/mask1.png' },
-    { id: 'workspaces', label: 'Get Workspaces', image: '/js.png' },
+    { id: 'generate', label: 'Generate Document', image: '/generateDocument.png' },
+    { id: 'edit', label: 'Edit Template', image: '/editTemplate.png' },
+    { id: 'templates', label: 'Get Templates', image: '/getTemplate.png' },
+    { id: 'workspaces', label: 'Get Workspaces', image: '/getWorkspace.png' },
   ]
 
   // GSAP Animations
@@ -100,7 +100,7 @@ const Main: React.FC = () => {
         {/* Right Section */}
         <div
           ref={rightSectionRef}
-          className="flex flex-col gap-4 w-full lg:flex-1 lg:max-w-[800px] mt-6 lg:mt-10"
+          className="flex flex-col gap-4 w-full lg:flex-1 lg:max-w-[680px] mt-6 lg:mt-10"
         >
           {/* Buttons */}
           <div className="bg-[#171819] p-3 flex flex-wrap justify-center gap-2 w-full rounded-2xl">
@@ -125,9 +125,9 @@ const Main: React.FC = () => {
                 buttonOptions.find((button) => button.id === activeButton)?.image ?? '/default.png'
               }
               alt="PDF Illustration"
-              width={600}
-              height={350}
-              className="rounded-lg max-w-full max-h-full w-auto h-auto object-contain md:w-[500px] lg:w-[400px] xl:w-[500px]"
+              width={100}
+              height={100}
+              className="rounded-lg max-w-full max-h-full w-auto h-auto object-contain md:w-[500px] lg:w-[400px] xl:w-[550px]"
             />
           </div>
 

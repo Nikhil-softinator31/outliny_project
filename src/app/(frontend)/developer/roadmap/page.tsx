@@ -137,7 +137,7 @@ const RoadmapPage = () => {
       </div>
 
       {/* Open to Feedback */}
-      <div className="mt-16 bg-[#181C25] p-8 rounded-lg">
+      <div className="mt-16 p-8 rounded-lg">
         <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-6 flex items-center gap-3">
           <BiMessageDetail className="text-pink-400" />
           Open to Feedback!

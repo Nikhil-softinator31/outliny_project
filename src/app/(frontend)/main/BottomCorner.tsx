@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 gsap.registerPlugin(useGSAP)
 
 const BottomCorner: React.FC = () => {
-  const icons: string[] = ['APPLE', 'AWARDS', 'BEHANCE', 'GOOGLE', 'INSTAGRAM', 'LINKEDIN']
+  const icons: string[] = ['GENERATE', 'EDITING',  'DOWNLOAD', 'CERTIFICATE']
   const animateScrollRightRef = useRef<HTMLDivElement | null>(null)
   const animateScrollLeftRef = useRef<HTMLDivElement | null>(null)
 
