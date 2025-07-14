@@ -8,12 +8,9 @@ import FirstTop from './FirstTop'
 import BottomCorner from './BottomCorner'
 import { useRef,useState,useEffect } from 'react'
 
-<<<<<<< HEAD
-=======
 import { CiPlay1 } from "react-icons/ci";
 import { CiPause1 } from "react-icons/ci";
 
->>>>>>> mayank
 const BottomCard: React.FC = () => {
   const images = ['/one.png', '/two.png', '/three.png', '/four.png']
 
@@ -64,16 +61,6 @@ const BottomCard: React.FC = () => {
               At Outliny, we go beyond the visual editor. Our learning content helps developers and teams master
               templating with Jinja, understand MJML, and automate PDF generation with confidence.
             </p>
-<<<<<<< HEAD
-            {/* Mock browser frame */}
-            <div className="relative bg-[#1A1A1A] rounded-xl border border-[#2c2c2c] overflow-hidden pt-6 px-4 pb-4">
-              {/* Fake browser bar */}
-              <div className="absolute top-2 left-4 flex space-x-2">
-                <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
-                <span className="w-3 h-3 rounded-full bg-green-500"></span>
-              </div>
-=======
         <div
       className="relative bg-[#1A1A1A] rounded-xl border w-full border-[#2c2c2c] overflow-hidden  pt-2 px-4 pb-4 sm:h-screen  group"
       onMouseEnter={() => setShowPauseBtn(true)}
@@ -120,7 +107,6 @@ const BottomCard: React.FC = () => {
     </div> 
     {/* div ending  */}
 
->>>>>>> mayank
 
       </div>
 
@@ -175,26 +161,6 @@ const BottomCard: React.FC = () => {
 
 const CenterDiv: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="flex flex-col items-center justify-around gap-6 w-full px-4">
-      <div className="mt-8 w-full">
-        <h3 className="custom-text text-xl sm:text-2xl md:text-3xl text-left">
-          Instant PDF Generation via API – Just Plug & Play!
-        </h3>
-        <p className="mt-2 text-[#878685] text-sm sm:text-base  text-left">
-          No need for complex setups or third-party tools simply copy the generated URL from our app
-          and paste it into Postman. Instantly, your custom PDF is generated and ready to use!
-        </p>
-      </div>
-      <div className="m-4 flex justify-center items-center w-full">
-        <Image
-          src="/apii.png"
-          className="rounded-xl w-full h-auto object-cover"
-          alt="Code Snippet Preview"
-          width={200}
-          height={200}
-        />
-=======
     <div className="flex flex-col items-start gap-6 px-4 py-8">
       <h3 className="text-xl sm:text-2xl md:text-3xl">Instant PDF Generation via API – Just Plug & Play!</h3>
       <p className="text-[#878685] text-sm sm:text-base">
@@ -211,7 +177,6 @@ const CenterDiv: React.FC = () => {
             className="w-full  h-auto  lg:h-[300px] xl:h-[240px] rounded-lg object-fit"
           />
         </div>
->>>>>>> mayank
       </div>
     </div>
   )
