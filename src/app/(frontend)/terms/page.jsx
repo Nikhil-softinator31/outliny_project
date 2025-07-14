@@ -47,7 +47,7 @@ const TermsOfServicePage = () => {
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">
             3. API Usage Limits
           </h2>
-          <p className="leading-relaxed text-sm sm:text-base max-w-6xl">
+          <p className="leading-relaxed text-sm sm:text-base max-w-4xl">
             We offer generous free tiers and pay-as-you-go pricing. Abuse of free tiers may result
             in suspension or throttling. Specific limits are outlined in your account dashboard and
             on our Pricing page.
@@ -87,7 +87,7 @@ const TermsOfServicePage = () => {
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">
             6. Open Source Notice
           </h2>
-          <p className="text-sm sm:text-base">
+          <p className="text-sm sm:text-base max-w-4xl">
             Outliny's core is open source. Use or contributions are subject to the applicable
             open-source licenses (e.g., MIT License).
           </p>
@@ -98,7 +98,7 @@ const TermsOfServicePage = () => {
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">
             7. Changes to the Services
           </h2>
-          <p className="text-sm sm:text-base">
+          <p className="text-sm sm:text-base max-w-4xl">
             We may update or modify our Services. Major changes will be communicated via email or
             dashboard. We aim to maintain backward compatibility whenever possible.
           </p>

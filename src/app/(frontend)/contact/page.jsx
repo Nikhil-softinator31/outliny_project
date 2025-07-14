@@ -115,7 +115,7 @@ const Page = () => {
             </div>
           ))}
 
-          <div>
+          <div className="">
             <label
               htmlFor="hearAbout"
               className="block mb-3 text-sm font-poppins font-normal text-[17.39px] capitalize leading-[1] tracking-[0.05em]"
@@ -125,7 +125,7 @@ const Page = () => {
             <select
               id="hearAbout"
               name="hearAbout"
-              className="w-full bg-[#101112] text-white p-5 rounded-md text-[17.39px]"
+              className="w-full truncate  bg-[#101112]  text-white p-5 rounded-md text-[17px]"
               onChange={handleChange}
             >
               <option value="">Select an option</option>
@@ -210,7 +210,7 @@ const Page = () => {
                 <IoLocationOutline />
               </span>
               <p>
-                <span className="text-white font-medium">Address :</span> 165 D & E, Vidur Nagar,
+                <span className="text-white font-medium font-poppins">Address :</span> 165 D & E, Vidur Nagar,
                 Indore, Madhya Pradesh 452009
               </p>
             </div>
@@ -219,7 +219,7 @@ const Page = () => {
                 <IoCallOutline />
               </span>
               <p>
-                <span className="text-white font-medium">Contact on :</span> 088271 11112
+                <span className="text-white font-poppins font-medium">Contact on :</span> 088271 11112
               </p>
             </div>
             <div className="flex  gap-3">
@@ -227,7 +227,7 @@ const Page = () => {
                 <MdMailOutline />
               </span>
               <p>
-                <span className="text-white font-medium">Email :</span> info@softinator.com
+                <span className="text-white font-poppins font-medium">Email :</span> info@softinator.com
               </p>
             </div>
           </div>
