@@ -29,7 +29,7 @@ const OutlinyLable4 = () => {
       {/* Title */}
       <div className="text-center max-w-[90%] sm:max-w-[80%] md:max-w-[65%] lg:max-w-[60%] mx-auto my-10">
         <h1
-          className={`${inter.className} text-white text-[24px] sm:text-[23px] md:text-[29px] lg:text-[40px] font-semibold leading-tight gradient-text`}
+          className={`${inter.className} text-white text-[26px] sm:text-[26px] md:text-[40px] lg:text-[40px] font-semibold leading-tight `}
         >
           Template Versioning & Management
         </h1>

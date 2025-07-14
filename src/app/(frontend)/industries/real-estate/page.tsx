@@ -78,7 +78,7 @@ export default function RealEstatePage() {
   ]
 
   return (
-    <div className="text-white  lg:mt-5 p-4">
+    <div className="text-white  lg:mt-5 p-4 ">
       {/* Header Section */}
       <div className="flex flex-col gap-4 p-4">
         <h1 className="text-[24px] md:text-[30px] font-poppins font-semibold leading-[29px] capitalize">
@@ -92,7 +92,7 @@ export default function RealEstatePage() {
           PDFs—without reinventing the wheel every time.
         </p>
         <div className="flex justify-center items-center">
-          <Image src="/pdf.svg" alt="real estate" width={500} height={500} />
+          <Image src="/pdf.svg" alt="real estate" width={578} height={323} />
         </div>
       </div>
 
@@ -108,7 +108,7 @@ export default function RealEstatePage() {
         </p>
 
         <div className="flex flex-col items-center gap-4 mt-10">
-          <Image src="/pdf2.png" alt="real estate" width={700} height={100} />
+          <Image src="/pdf2.png" alt="real estate" width={625} height={211} />
           <Image src="/template.png" alt="real estate" width={700} height={100} />
           <Image src="/template.png" alt="real estate" width={700} height={100} />
         </div>
@@ -250,12 +250,12 @@ export default function RealEstatePage() {
 
       {/* Getting Started */}
       <div className="mt-20 p-4">
-        <div className="mt-8 flex flex-col gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
-            Create a Free Account
-          </button>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4">
+        <button className="bg-custom-gradient21 p-4 rounded-xl text-black w-[300px] h-[50px] font-poppins font-bold text-[14px]  ">
+          Create a free account
+        </button>
           <p className="text-gray-400 text-center">
-            Or <span className="text-blue-500 cursor-pointer hover:underline">Book a Demo</span> to
+            Or <span className="text-blue-500 font-poppins cursor-pointer hover:underline">Book a Demo</span> to
             see how Outliny can help your real estate operation scale smarter.
           </p>
         </div>

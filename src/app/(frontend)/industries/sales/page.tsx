@@ -70,7 +70,7 @@ export default function SalesPage() {
           email and PDF templates that are secure, reusable, and easy to personalize.
         </p>
         <div className="flex justify-center items-center">
-          <Image src="/pdf.svg" alt="sales" width={500} height={500} />
+          <Image src="/pdf.svg" alt="sales" width={578} height={323} />
         </div>
       </div>
 

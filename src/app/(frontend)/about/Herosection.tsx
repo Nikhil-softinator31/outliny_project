@@ -61,15 +61,15 @@ const Herosection = () => {
         </div>
       </div>
       {/* Mission Section */}
-      <div className="w-full bg-custom-gradient19 sm:py-20 px-4 sm:px-6 lg:px-12  mt-[8rem] sm:mt-[10rem] ">
-        <div className="flex flex-col lg:flex-row justify-between max-w-[1200px] mx-auto items-center gap-14 md:mt-10">
+      <div className="w-full bg-custom-gradient19  sm:py-20 px-4 sm:px-6 lg:px-12  mt-[8rem] sm:mt-[10rem] ">
+        <div className="flex flex-col lg:flex-row justify-between  max-w-[1200px] mx-auto items-center gap-28 md:mt-10">
           <div className="w-full lg:w-1/2">
             <video className="w-full aspect-video rounded-xl " controls preload="metadata">
               <source src="/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 ">
             <h1 className="text-white text-[28px] sm:text-[32px] md:text-[36px]  font-bold mb-8 text-left font-poppins  text-4xl leading-none tracking-normal ">
               Our Mission
             </h1>

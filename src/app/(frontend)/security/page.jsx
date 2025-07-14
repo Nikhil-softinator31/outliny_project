@@ -7,7 +7,7 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 
 const SecurityPage = () => {
   return (
-    <div className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
+    <div className="max-w-[99rem] mx-auto py-16  px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
       <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins ">
         Security at Outliny
       </h1>
@@ -19,7 +19,7 @@ const SecurityPage = () => {
         — not even to us.
       </p>
 
-      <div>
+      <div  >
         <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3 ">
           🔐Certified & Compliant
         </h2>
@@ -31,7 +31,7 @@ const SecurityPage = () => {
           <li>ISO 27001:2022 Certified</li>
           <li>SOC 2 Type II Compliant</li>
         </ul>
-        <p className="py-2 italic text-sm sm:text-base font-inter ml-2">
+        <p className="py-2 italic text-sm sm:text-base font-inter ml-2 max-w-[600px] ">
           These certifications reflect our commitment to secure systems, employee practices, access
           controls, and operational resilience.
         </p>
@@ -119,7 +119,7 @@ const SecurityPage = () => {
         <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
           👁️ Privacy-First Philosophy
         </h2>
-        <p className="text-sm sm:text-base ml-12 mt-3">
+        <p className="text-sm sm:text-base ml-12 mt-3 max-w-[600px]">
           Outliny was built with a simple rule:{' '}
           <strong className="text-white">your data is your data</strong>. We don’t read it, we don’t
           sell it, and we don’t use it to train any models. Ever.
