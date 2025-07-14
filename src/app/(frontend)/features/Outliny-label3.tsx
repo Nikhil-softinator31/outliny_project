@@ -20,7 +20,7 @@ const OutlinyLable3 = () => {
     <div className="flex flex-col justify-center items-center w-full px-2 mt-20">
       {/* Title */}
       <div className="text-center w-full  md:max-w-[75%]  mx-auto my-10">
-        <h1 className="font-inter text-white text-[24px] sm:text-[30px] md:text-[39px] lg:text-[40px] font-semibold leading-tight gradient-text">
+        <h1 className="font-inter text-white text-[26px] sm:text-[26px] md:text-[40px] lg:text-[40px] font-semibold leading-tight ">
           Developer-Friendly
         </h1>
       </div>

@@ -159,7 +159,7 @@ export default function InsurancePage() {
           across all policyholder touchpoints.
         </h2>
         <div className="flex justify-center items-center">
-          <Image src="/pdf.svg" alt="insurance" width={500} height={500} />
+          <Image src="/pdf.svg" alt="insurance" width={578} height={323} />
         </div>
       </div>
 
