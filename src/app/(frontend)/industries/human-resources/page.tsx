@@ -64,7 +64,7 @@ export default function HumanResourcesPage() {
           polished, secure communications—at scale and with zero design overhead.
         </p>
         <div className="flex justify-center items-center">
-          <Image src="/pdf.svg" alt="hr" width={500} height={500} />
+          <Image src="/pdf.svg" alt="hr" width={578} height={323} />
         </div>
       </div>
 
@@ -156,7 +156,7 @@ export default function HumanResourcesPage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center shrink-0 text-white text-sm font-semibold font-mono">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -181,7 +181,7 @@ export default function HumanResourcesPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {compliancePoints.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center shrink-0 text-white text-sm font-semibold font-poppins">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -263,6 +263,12 @@ export default function HumanResourcesPage() {
             <p className="text-white">Credits never expire</p>
           </div>
         </div>
+      </div>
+
+      <div className="flex justify-center items-center mt-20">
+        <button className="bg-custom-gradient21 p-4 rounded-xl text-black w-[300px] h-[50px] font-poppins font-bold text-[14px]  ">
+          Start Free Today
+        </button>
       </div>
     </div>
   )

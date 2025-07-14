@@ -149,7 +149,7 @@ const PrivacyPolicyPage = () => {
           <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
             8. International Data Transfers
           </h2>
-          <p className="mb-4 text-sm sm:text-base max-w-7xl font-sans">
+          <p className="mb-4 text-sm sm:text-base max-w-4xl font-sans">
             Outliny is a global service. If you are located outside of our primary hosting region,
             your data may be transferred to, and processed in, other countries. We take steps to
             ensure your data remains protected according to this Privacy Policy.
@@ -160,7 +160,7 @@ const PrivacyPolicyPage = () => {
           <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
             9. Changes to This Privacy Policy
           </h2>
-          <p className="mb-4 text-sm sm:text-base max-w-7xl font-sans">
+          <p className="mb-4 text-sm sm:text-base max-w-4xl font-sans">
             We may update this policy from time to time. When we do, we will post the updated
             version here and notify users if significant changes are made. We encourage you to
             review this policy regularly.

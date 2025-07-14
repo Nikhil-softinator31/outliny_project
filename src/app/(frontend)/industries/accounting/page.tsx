@@ -97,7 +97,7 @@ export default function AccountingPage() {
           workflows with branded, secure, and programmable templates.
         </p>
         <div className="flex justify-center items-center">
-          <Image src="/pdf.svg" alt="accounting" width={500} height={500} />
+          <Image src="/pdf.svg" alt="accounting" width={578} height={323} />
         </div>
       </div>
 
@@ -182,7 +182,7 @@ export default function AccountingPage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center shrink-0 text-white text-sm font-semibold font-mono">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
@@ -208,7 +208,7 @@ export default function AccountingPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {securityFeatures.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold shrink-0 font-poppins">
                 {item.id}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -288,15 +288,16 @@ export default function AccountingPage() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-            Get Started for Free
-          </button>
-          <p className="text-gray-400 text-center">
+        <div className="flex flex-col justify-center space-y-4 items-center mt-20">
+        <button className="bg-custom-gradient21 p-4 rounded-xl text-black w-[300px] h-[50px] font-poppins font-bold text-[14px]  ">
+          Start Free Today
+        </button>
+
+        <p className="text-gray-400 text-center">
             Or <span className="text-blue-500 cursor-pointer hover:underline">Book a Demo</span> to
-            see how Outliny fits your accounting workflow.
+            see how Outliny fits your marketing team or agency workflow.
           </p>
-        </div>
+      </div>  
       </div>
     </div>
   )

@@ -120,14 +120,14 @@ const TestimonialRow = ({
   direction: 'left' | 'right'
   data: Testimonial[]
 }) => (
-  <div className="relative w-full overflow-hidden mt-6 group">
+  <div className="relative w-full overflow-hidden mt-6 group ">
     <div className={`flex space-x-4 sm:space-x-6 animate-marquee-${direction}`}>
       {data.concat(data).map((test, index) => (
         <div
           key={index}
-          className="min-w-[260px] sm:min-w-[320px] md:min-w-[420px] p-4 sm:p-6 rounded-xl bg-[#ffffff05] border border-gray-700 shadow-lg text-left cursor-pointer transition-all duration-300 hover:bg-custom-gradient1"
+          className="min-w-[260px] sm:min-w-[320px]  md:min-w-[420px] p-4 sm:p-6 rounded-xl bg-[#ffffff05] border border-gray-700 shadow-lg text-left cursor-pointer transition-all duration-300 hover:bg-custom-gradient1"
         >
-          <p className="text-gray-300 mb-3 sm:mb-4 text-xs sm:text-sm md:text-base">{test.para}</p>
+          <p className="text-gray-300 mb-3 sm:mb-4 font-poppins text-xs sm:text-sm md:text-base">{test.para}</p>
           <div className="flex items-center gap-3 sm:gap-4">
             <Image
               src={test.img}
@@ -149,7 +149,7 @@ const TestimonialRow = ({
 
 const Testimonials = () => {
   return (
-    <div className=" bg-[#08090a] text-white  sm:h-[600px] md:h-[700px] flex flex-col justify-center items-center overflow-hidden  md:mt-8 ">
+    <div className=" bg-[#08090a] text-white min-h-[690px]  sm:h-[600px] md:h-[600px] flex flex-col justify-center items-center   md:mt-8 ">
       <div className="px-4 sm:px-6 md:px-12 lg:px-20 py-8">
         <h2 className="font-poppins font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-snug sm:leading-[40px] md:leading-[56px] lg:leading-[72px] tracking-normal text-center p-2">
           Nice things people say about my work
@@ -165,10 +165,12 @@ const Testimonials = () => {
         </p>
       </div>
 
-      <TestimonialRow direction="left" data={testimonials1} />
+      <TestimonialRow  direction="left" data={testimonials1} />
       <TestimonialRow direction="right" data={testimonials2} />
     </div>
+
   )
 }
+
 
 export default Testimonials

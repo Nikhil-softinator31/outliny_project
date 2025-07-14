@@ -8,12 +8,12 @@ const FirstTop: React.FC = () => {
   const moveRefs = useRef<Map<number, HTMLDivElement>>(new Map())
 
   const imgCollection = [
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
-    '/car12.jpg',
+    '/pic1.png',
+    '/pic7.png',
+    '/pic3.png',
+    '/pic4.png',
+    '/pic5.png',
+    '/pic2.png',
   ]
 
   const addToRefs = (el: HTMLDivElement | null, index: number) => {
@@ -49,7 +49,7 @@ const FirstTop: React.FC = () => {
   }, [])
 
   return (
-    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full md:w-[48vw]   border">
+    <div className="bg-[#0E0E0E] rounded-2xl border-[#1e1e1e] overflow-hidden  max-h-[600px] text-left w-full  border">
       <h3 className="custom-text mt-5 text-3xl md:text-4xl p-5">
         Ready-to-Use, Developer-Friendly Components
       </h3>
@@ -77,9 +77,10 @@ const FirstTop: React.FC = () => {
                 key={index}
                 src={img}
                 alt={`img${index}`}
-                width={2}
-                height={2}
-                className="bt-img w-full h-20 md:h-10 lg:h-28 object-cover rounded-lg"
+                width={252}
+                height={300}
+                 
+                className=" w-full h-20 md:h-10 lg:h-28 object-cover rounded-lg"
               />
             ))}
           </div>

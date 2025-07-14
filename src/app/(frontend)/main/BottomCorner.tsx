@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 gsap.registerPlugin(useGSAP)
 
 const BottomCorner: React.FC = () => {
-  const icons: string[] = ['APPLE', 'AWARDS', 'BEHANCE', 'GOOGLE', 'INSTAGRAM', 'LINKEDIN']
+  const icons: string[] = ['GENERATE', 'EDITING', 'DOWNLOAD', 'CERTIFICATE']
   const animateScrollRightRef = useRef<HTMLDivElement | null>(null)
   const animateScrollLeftRef = useRef<HTMLDivElement | null>(null)
 
@@ -34,7 +34,7 @@ const BottomCorner: React.FC = () => {
   })
 
   return (
-    <div className="flex-col gap-3 xl:m-10 p-4 text-left ">
+    <div className="flex-col gap-3 mb-1 md:mt-20 sm:mt-6 xl:m-8 lg:mt-8 mt-8 xl:mt-16 text-left ">
       <div
         className="overflow-hidden rotate-[14deg]  "
         style={{
@@ -65,15 +65,16 @@ const BottomCorner: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col">
-        <h2 className="text-2xl font-bold mt-10">Understand, Then Execute</h2>
-        <button className="bg-red-500 text-xs text-white text-center p-1 rounded w-[110px]">COMING SOON</button>
+      <div className="flex flex-col gap-2 px-4 sm:px-6 md:px-8 xl:px-0 mt-4 sm:mt-4">
+  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">Understand, Then Execute</h2>
+  <button className="bg-red-500 text-xs text-white px-3 py-1 rounded w-fit">COMING SOON</button>
+  <p className="text-sm sm:text-base text-[#878685] text-left break-words">
+    Learn not just how to use Outliny, but how to build systems that scale, comply with
+    enterprise standards, and empower your team.
+  </p>
+</div>
 
-      <p className="mt-1 text-[#878685] break-words  text-left text-sm ">
-        Learn not just how to use Outliny, but how to build systems that scale, comply with
-          enterprise standards, and empower your team.
-        </p>
-      </div>
+
     </div>
   )
 }

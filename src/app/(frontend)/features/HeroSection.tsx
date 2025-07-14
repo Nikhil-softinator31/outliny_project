@@ -20,7 +20,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <h2 className=" text-[22px] sm:text-[26px] md:text-[32px] lg:text-[42px] leading-tight font-extrabold font-poppins px-4 mt-8 gradient-text">
+      <h2 className=" text-[26px] sm:text-[26px] md:text-[40px] lg:text-[40px] leading-tight font-extrabold font-poppins px-4 mt-8 text-white">
         Outliny Features
       </h2>
       <p className="text-white text-[14px] sm:text-[20px] md:text-[20px] mx-auto mt-4 md:mt-10 px-4  lg:max-w-[40em] font-poppins leading-9" >

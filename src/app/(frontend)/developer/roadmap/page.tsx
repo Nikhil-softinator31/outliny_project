@@ -82,7 +82,7 @@ const RoadmapPage = () => {
         Roadmap
       </h1>
 
-      <p className="mb-4 max-w-7xl mx-auto text-center text-sm sm:text-base font-inter">
+      <p className="mb-4 max-w-5xl mx-auto text-center text-sm sm:text-base font-inter">
         At Outliny, we&apos;re committed to building the world&apos;s most flexible, secure, and
         developer-friendly platform for branded Emails and PDFs. Here&apos;s a look at what&apos;s
         coming next!
@@ -137,7 +137,7 @@ const RoadmapPage = () => {
       </div>
 
       {/* Open to Feedback */}
-      <div className="mt-16 bg-[#181C25] p-8 rounded-lg">
+      <div className="mt-16   rounded-lg">
         <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-6 flex items-center gap-3">
           <BiMessageDetail className="text-pink-400" />
           Open to Feedback!
