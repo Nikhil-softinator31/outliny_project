@@ -95,11 +95,11 @@ const Footer: React.FC = () => {
         ))}
       </div>
 
-      {/* Large Text with Mask Effect */}
+      {/* Outliny Text with Mask Effect */}
       <div className="relative  h-[100px] md:h-[200px] lg:h-[350px]">
-        <div className="Payload3D_mask">
+        <div>
           <h1
-            className="Payload3D_text text-gray-700 text-8xl font-bold text-center font-aldrich"
+            className="Payload3D_text text-gray-700 text-8xl font-bold font-aldrich"
             style={{
               WebkitMaskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 60%, rgba(255,255,255,0) 100%)`,
               maskImage: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.9) 20%, rgba(255,255,255,0) 60%)`,

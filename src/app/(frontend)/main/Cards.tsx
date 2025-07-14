@@ -8,7 +8,7 @@ import SpotlightCard from './SpotlightCard'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const Slider = () => {
+const Cards = () => {
   const Data = [
     {
       image: '/shield.svg',
@@ -81,7 +81,7 @@ const Slider = () => {
   return (
     <>
       <div className="bg-[#08090a] flex flex-col justify-center items-center  px-4 md:mt-14">
-        <h1 className="text-white  font-medium  text-3xl p-8 lg:mb-10 lg:text-[50px] font-poppins  gradient-text">
+        <h1 className="text-white  font-semibold  text-3xl p-8 lg:mb-10 lg:text-[50px] font-poppins">
           Why Outliny?
         </h1>
         <div className="max-w-[1400px] mx-auto">
@@ -126,4 +126,4 @@ const Slider = () => {
   )
 }
 
-export default Slider
+export default Cards

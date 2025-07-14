@@ -62,7 +62,7 @@ const Herosection = () => {
       </div>
       {/* Mission Section */}
       <div className="w-full bg-custom-gradient19 sm:py-20 px-4 sm:px-6 lg:px-12  mt-[8rem] sm:mt-[10rem] ">
-        <div className="flex flex-col lg:flex-row justify-between max-w-[1200px] mx-auto items-center gap-14 md:mt-10">
+        <div className="flex flex-col lg:flex-row justify-around max-w-[1200px] mx-auto items-center gap-14 md:mt-10">
           <div className="w-full lg:w-1/2">
             <video className="w-full aspect-video rounded-xl " controls preload="metadata">
               <source src="/video.mp4" type="video/mp4" />

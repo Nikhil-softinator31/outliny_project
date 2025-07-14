@@ -1,33 +1,32 @@
 'use client'
 import HeroSection from './HeroSection'
-import Carousel from './Carousel'
+import Cards from './Cards'
 import Automate from './Automate'
+import Carousel from './Carousel'
 import Testimonial from './Testimonial'
 import FAQ from './Faq'
-import Slider from './Slider'
+
 import BottomCard from './BottomCard'
 
 import Card1 from './Card1'
 
-import BackgroundVideo from './BackgroundVideo'
+
 import SpotlightCard from './SpotlightCard'
 
-// import HeroSection2 from './HeroSection2'
-// import BottomCards from './BottomCard'
+
 
 const Main = () => {
   return (
     <>
       <div className='p-2'>
         <HeroSection />
-
-        <Slider />
+        <Cards/>
+        <SpotlightCard />
         <Automate />
         <Carousel />
         <Card1 />
         <FAQ />
         <Testimonial />
-        <SpotlightCard />
         <BottomCard />
       </div>
     </>

@@ -22,16 +22,15 @@ const BottomCard: React.FC = () => {
 
   return (
     <div
-      id="Maindiv"
-      className="flex flex-col gap-4  w-full text-white px-4 md:px-4 md:mb-10 lg:mb-20 mt-10 md:mt-20  flex-wrap  "
+      className="flex flex-col gap-4  w-full text-white px-4 md:px-4 md:mb-10 lg:mb-20 mt-10 md:mt-20  flex-wrap"
     >
       {/* First Section */}
       <div className="h-auto flex flex-col md:flex-row gap-4 w-full">
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-[49%]">
           <FirstTop />
         </div>
 
-        <div className="bg-[#0E0E0E] rounded-2xl border border-[#202020] text-left w-full md:w-1/2 lg:w-[48%]  lg:mr-10 max-h-[600px] overflow-hidden relative">
+        <div className="bg-[#0E0E0E] rounded-2xl border border-[#202020] text-left w-full md:w-1/2 lg:w-[48%]   max-h-[600px] overflow-hidden relative">
           <div className="p-6 flex flex-col h-full gap-4">
             <h3 className="text-white text-2xl sm:text-3xl font-semibold">Your Smart Start Zone</h3>
 
@@ -43,20 +42,15 @@ const BottomCard: React.FC = () => {
             </p>
             {/* Mock browser frame */}
             <div className="relative bg-[#1A1A1A] rounded-xl border border-[#2c2c2c] overflow-hidden pt-6 px-4 pb-4">
-              {/* Fake browser bar */}
-              <div className="absolute top-2 left-4 flex space-x-2">
-                <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
-                <span className="w-3 h-3 rounded-full bg-green-500"></span>
-              </div>
+
 
               {/* Your video */}
-              <video
-                className="rounded-md w-full mt-6 border border-[#2c2c2c]"
+              <video 
+                className="rounded-md w-full mt-4 border border-[#2c2c2c]"
                 controls
                 preload="metadata"
               >
-                <source src="/video.mp4" type="video/mp4" />
+                <source src="/video.mp4" type="video/mp4"   />
                 Your browser does not support the video tag.
               </video>
             </div>

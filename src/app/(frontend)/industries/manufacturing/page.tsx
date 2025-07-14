@@ -171,7 +171,7 @@ export default function SalesPage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono">
+                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>

@@ -13,8 +13,8 @@ const HeroSection = () => {
 
   useGSAP(() => {
     gsap.fromTo(
-      [text1.current, text2.current, text3.current], // Array of refs
-      { opacity: 0, y: 50, filter: 'blur(10px)' },
+      [text1.current, text2.current, text3.current],
+      { opacity: 0, y: 50, filter: 'blur(20px)' },
       {
         opacity: 1,
         y: 0,
@@ -42,33 +42,30 @@ const HeroSection = () => {
 
   return (
     <div className="flex-auto overflow-hidden mt-5 sm:mt-8 ">
-      <div className="text-white mt-20 flex justify-start items-center">
-        <div className="max-w-[1000px] lg:ml-[17%]   ">
-          <div className="flex flex-col justify-start items-center sm:justify-start sm:items-start sm:pl-4  md:gap-4">
-            <h1 ref={text1} className="  text-[30px] sm:text-5xl   font-semibold text-left">
-              Outliny Brand
-            </h1>
-            <p
-              ref={text2}
-              className="  text-[30px] sm:text-5xl   flex-wrap text-3xl  font-semibold  "
-            >
-              Consistency, Simplified.
-            </p>
-            <p
-              ref={text3}
-              className="text-center sm:text-left text-xl   sm:w-screen text-[#b0b0b0] w-full max-w-[615px] font-semibold  flex-wrap p-3 sm:p-0   "
-            >
-              Centrally manage and automate your PDFs and email templates ensuring seamless brand
-              consistency across every touchpoint.
-            </p>
-          </div>
+      <div className="text-white mt-20  max-w-[1280px] mx-auto">
+        <div className="flex flex-col  items-center  sm:items-start sm:pl-4  sm:gap-4 ">
+          <h1 ref={text1} className="  text-[30px] sm:text-5xl   font-semibold text-left">
+            Outliny Brand
+          </h1>
+          <p
+            ref={text2}
+            className=" text-[30px] sm:text-5xl   flex-wrap text-3xl  font-semibold  "
+          >
+            Consistency, Simplified.
+          </p>
+          <p
+            ref={text3}
+            className="text-center sm:text-left text-xl sm:w-screen text-[#b0b0b0] w-full max-w-[615px] font-semibold  flex-wrap p-3 sm:p-0   "
+          >
+            Centrally manage and automate your PDFs and email templates ensuring seamless brand
+            consistency across every touchpoint.
+          </p>
         </div>
       </div>
-      <div className="">
-        <div className=" hidden borderr  md:flex gap-0 md:gap-10 code">
-          <img ref={image1} src="first.png" alt="Image 1" className="p-1" />
-          <img ref={image2} src="second2.png" alt="Image 2" className="mt-1" />
-        </div>
+
+      <div className=" hidden borderr  md:flex gap-0 md:gap-10 code">
+        <img ref={image1} src="first.png" alt="Image 1" className="p-1" />
+        <img ref={image2} src="second2.png" alt="Image 2" className="mt-1" />
       </div>
 
       <div className="flex justify-center items-center  ">
