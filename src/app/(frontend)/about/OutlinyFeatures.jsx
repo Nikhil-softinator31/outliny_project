@@ -45,7 +45,7 @@ export default function OutlinyFeatures() {
         </div>
 
         {/* md and up: full diagram */}
-        <div className="relative hidden md:grid w-full max-w-5xl h-[500px] place-items-center">
+        <div className="relative hidden md:grid w-full max-w-5xl h-[500px] place-items-center ml-3">
           {/* Center Text */}
           <div className="text-4xl font-light absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 font-poppins text-white text-center">
             What Drives Us

@@ -12,7 +12,7 @@ export default function About() {
     <>
       <div className='pt-16'>
         <Herosection />
- <OutlinyFeatures />
+       <OutlinyFeatures />
         <Testimonials />
       </div>
     </>
