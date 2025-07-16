@@ -1,5 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import { CiUnlock } from "react-icons/ci";
+import { GiBrain } from "react-icons/gi";
+import { HiOutlineMail } from "react-icons/hi";
+import { CiSettings } from "react-icons/ci";
+import { PiTargetDuotone } from "react-icons/pi";
+import { IoIosPaper } from "react-icons/io";
 
 export default function AccountingPage() {
   const emailUseCases = [
@@ -121,8 +127,8 @@ export default function AccountingPage() {
 
       {/* Email Templates */}
       <div className="mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] mb-3">
-          📧 Automate Financial Email Communication
+        <h2 className="font-poppins flex gap-3 font-semibold text-[25px] md:text-[30px] mb-3">
+          <HiOutlineMail className='mt-2'/>  Automate Financial Email Communication
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Use our MJML-powered builder to create and manage financial email templates that look
@@ -161,8 +167,8 @@ export default function AccountingPage() {
 
       {/* PDF Generation */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📄 Generate PDFs with Financial Precision
+        <h2 className="text-[25px] md:text-[30px] flex gap-3 font-semibold font-poppins mb-2">
+          <IoIosPaper className='mt-1'/> Generate PDFs with Financial Precision
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Build dynamic, multi-page PDFs using drag-and-drop or custom code, powered by Jinja
@@ -198,8 +204,8 @@ export default function AccountingPage() {
 
       {/* Security Section */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-3">
-          🔐 Data Security That Meets Compliance
+        <h2 className="text-[25px] flex gap-3 md:text-[30px] font-semibold font-poppins mb-3">
+          <CiUnlock className='mt-1'/>  Data Security That Meets Compliance
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           Handling sensitive financial data comes with serious responsibility. Outliny is built with
@@ -221,8 +227,8 @@ export default function AccountingPage() {
 
       {/* Integration Section */}
       <div className="mt-20 bg-custom-gradient22 p-6 rounded-xl">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white">
-          ⚙️ Built for Finance Tools & Platforms
+        <h2 className="text-[25px] md:text-[30px] flex gap-3  font-semibold font-poppins mb-4 text-white">
+          <CiSettings className='mt-2'/> Built for Finance Tools & Platforms
         </h2>
         <div className="flex flex-col gap-10">
           {integrationFeatures.map((feature, idx) => (
@@ -249,8 +255,8 @@ export default function AccountingPage() {
 
       {/* Testimonials Section */}
       <div className="mt-20">
-        <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          💬 What Finance Teams Are Saying
+        <h2 className="text-[25px] font-poppins flex gap-3 text-white font-semibold md:text-[30px] mb-3">
+          <GiBrain className='mt-2'/>  What Finance Teams Are Saying
         </h2>
         {testimonials.map((testimonial, idx) => (
           <div key={idx} className="mb-8">
@@ -266,24 +272,24 @@ export default function AccountingPage() {
 
       {/* Getting Started */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          🎯 Start With Confidence
+        <h2 className="text-[25px] font-poppins flex gap-3 text-white font-semibold md:text-[30px] mb-3">
+          <PiTargetDuotone className='mt-2'/>  Start With Confidence
         </h2>
         <div className="flex flex-col gap-4 mt-6">
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span>✔</span>
             <p className="text-white">300 professional emails/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">100 secure PDFs/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">Pay-as-you-go credits</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">No vendor lock-in</p>
           </div>
         </div>

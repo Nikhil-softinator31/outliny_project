@@ -127,6 +127,13 @@ const Pricing = () => {
     }
   }
 
+  
+
+
+
+
+
+
   return (
     <section
       ref={pricingRef}

@@ -1,5 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import { HiOutlineMail } from "react-icons/hi";
+import { IoIosPaper } from "react-icons/io";
+import { CiUnlock } from "react-icons/ci";
+import { GiBrain } from "react-icons/gi";
+import { PiTargetDuotone } from "react-icons/pi";
+import { FaHandshake } from "react-icons/fa";
 
 export default function HumanResourcesPage() {
   const emailUseCases = [
@@ -91,8 +97,8 @@ export default function HumanResourcesPage() {
 
       {/* Email Templates */}
       <div className="mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] mb-3">
-          📧 HR Emails That Feel Personal, at Scale
+        <h2 className="font-poppins flex gap-3  font-semibold text-[25px] md:text-[30px] mb-3">
+          <HiOutlineMail className='mt-2'/> HR Emails That Feel Personal, at Scale
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Use our drag-and-drop MJML editor or start with pre-built templates to send branded,
@@ -131,8 +137,8 @@ export default function HumanResourcesPage() {
 
       {/* PDFs Section */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📄 PDFs for Every HR Scenario
+        <h2 className="text-[25px] md:text-[30px] flex gap-3 font-semibold font-poppins mb-2">
+          <IoIosPaper className='mt-2'/>  PDFs for Every HR Scenario
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Generate clean, branded PDF documents with dynamic variables through the Outliny API.
@@ -172,8 +178,8 @@ export default function HumanResourcesPage() {
 
       {/* Compliance Section */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-poppins font-semibold mb-3">
-          🔐 Built for HR Compliance & Confidentiality
+        <h2 className="text-[25px] md:text-[30px] flex gap-3 font-poppins font-semibold mb-3">
+          <CiUnlock className='mt-2'/>  Built for HR Compliance & Confidentiality
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           HR data is sensitive by nature—Outliny protects it at every step.
@@ -194,8 +200,8 @@ export default function HumanResourcesPage() {
 
       {/* Developer Friendly Section */}
       <div className="mt-20 bg-custom-gradient22 p-6 rounded-xl">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white">
-          🤝 Empower HR & IT Together
+        <h2 className="text-[25px] md:text-[30px] flex gap-3 font-semibold font-poppins mb-4 text-white">
+          <FaHandshake className='mt-2'/> Empower HR & IT Together
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-10">
           HR works best when it works with tech. Outliny gives both sides the tools they need:
@@ -225,8 +231,8 @@ export default function HumanResourcesPage() {
 
       {/* Testimonials Section */}
       <div className="mt-20">
-        <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          💬 What HR Teams Are Saying
+        <h2 className="text-[25px] font-poppins flex gap-3 text-white font-semibold md:text-[30px] mb-3">
+          <GiBrain className='mt-2'/> What HR Teams Are Saying
         </h2>
         {testimonials.map((testimonial, idx) => (
           <div key={idx} className="mb-8">
@@ -242,24 +248,24 @@ export default function HumanResourcesPage() {
 
       {/* Pricing Section */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          🎯 Start Building a Better Employee Experience
+        <h2 className="text-[25px] flex gap-3 font-poppins text-white font-semibold md:text-[30px] mb-3">
+          <PiTargetDuotone className='mt-2'/> Start Building a Better Employee Experience
         </h2>
         <div className="flex flex-col gap-4 mt-6">
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">300 branded emails/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">100 HR PDFs/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">No monthly fee or subscription</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">Credits never expire</p>
           </div>
         </div>

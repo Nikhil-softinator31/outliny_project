@@ -1,5 +1,13 @@
 import React from 'react'
-
+import { FaMapPin } from "react-icons/fa";
+import { CiUnlock } from "react-icons/ci";
+import { BsBoxSeam } from "react-icons/bs";
+import { RiNewspaperLine } from "react-icons/ri"; 
+import { ImUpload2 } from "react-icons/im";
+import { FaFireAlt } from "react-icons/fa";
+import { IoRocketOutline } from "react-icons/io5";
+import { BiSolidHandRight } from "react-icons/bi";
+import { GiBrain } from "react-icons/gi";
 const ComparePayloadPage = () => {
       const RequestBodyData = [
         {
@@ -58,12 +66,12 @@ const ComparePayloadPage = () => {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl md:text-[30px] font-semibold text-white">📍 Endpoint</h2>
+        <h2 className="text-2xl md:text-[30px] font-semibold flex gap-3 text-white"><FaMapPin /> Endpoint</h2>
         <code className="block bg-[#1a1a1a] p-4 rounded text-sm">POST /api/v1/compare/payload</code>
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl md:text-[30px] font-semibold text-white">🔐 Authentication</h2>
+        <h2 className="text-2xl md:text-[30px] font-semibold flex gap-3 text-white"><CiUnlock /> Authentication</h2>
         <p className="text-sm sm:text-base">
           Just like all other API calls, you must include your API Key:
         </p>
@@ -73,7 +81,7 @@ const ComparePayloadPage = () => {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl md:text-[30px] font-semibold text-white">🧾 Request Body</h2>
+        <h2 className="text-2xl md:text-[30px] font-semibold flex gap-3 text-white"><RiNewspaperLine /> Request Body</h2>
     
 
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6 leading-6">
@@ -99,7 +107,7 @@ const ComparePayloadPage = () => {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl md:text-[30px] font-semibold text-white">📦 Example Request</h2>
+        <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white"><BsBoxSeam/> Example Request</h2>
         <pre className="bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto">
           {`POST https://api.outliny.com/api/v1/compare/payload
 Authorization: Bearer YOUR_API_KEY
@@ -120,7 +128,7 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl md:text-[30px] font-semibold text-white">📤 Response</h2>
+        <h2 className="text-2xl md:text-[30px] font-semibold flex gap-3 text-white"><ImUpload2 /> Response</h2>
         <p className="text-sm sm:text-base">Fields returned:</p>
         <ul className="list-disc ml-6 space-y-2 text-sm sm:text-base font-roboto ">
           <li>
@@ -159,8 +167,8 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold md:text-[30px] text-white">
-          🔥 When to Use Compare Payload
+        <h2 className="text-2xl font-semibold flex gap-3 md:text-[30px] text-white">
+        <FaFireAlt /> When to Use Compare Payload
         </h2>
         <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base font-roboto ">
           <li>
@@ -183,7 +191,7 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold md:text-[30px] text-white">🧠 Important Notes</h2>
+        <h2 className="text-2xl font-semibold md:text-[30px] flex gap-3 text-white"><GiBrain/> Important Notes</h2>
         <ul className="list-disc ml-6 sm:ml-16 space-y-3 text-sm sm:text-base font-roboto ">
           <li>Compare Payload only compares input parameters, not full rendered outputs.</li>
           <li>Deep object comparison is supported (nested data structures too).</li>
@@ -193,24 +201,24 @@ Content-Type: application/json
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-2xl font-semibold md:text-[30px] text-white">
-          🚀 Start Using Compare Payload!
+        <h2 className="text-2xl font-semibold flex gap-3 md:text-[30px] text-white">
+        <IoRocketOutline />Start Using Compare Payload!
         </h2>
         <div className="flex  flex-col gap-2 ml-8">
           <a
             href="https://www.google.com/"
             target="_blank"
-            className="underline text-white cursor-pointer"
+            className="underline flex gap-3 text-white cursor-pointer"
           >
-            👉 Check the Full API Reference
+            <BiSolidHandRight/>  Check the Full API Reference
           </a>
 
           <a
             href="https://www.google.com/"
             target="_blank"
-            className="underline text-white cursor-pointer"
+            className="underline flex gap-3 text-white cursor-pointer"
           >
-            👉 Learn How to Optimize API Usage
+            <BiSolidHandRight/> Learn How to Optimize API Usage
           </a>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { FaArrowRightLong } from 'react-icons/fa6'
 
+
 export default function InsurancePage() {
   const challengePoints = [
     {
@@ -437,7 +438,7 @@ export default function InsurancePage() {
         <div className="flex flex-col gap-4 mt-6">
           {gettingStartedSteps.map((step, index) => (
             <div key={index} className="flex items-center gap-4 ">
-              <span className="text-blue-500 text-xl">
+              <span className=" text-xl">
                 <FaArrowRightLong />
               </span>
               <p className="text-white ">{step}</p>

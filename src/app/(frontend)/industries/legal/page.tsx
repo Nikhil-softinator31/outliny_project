@@ -250,19 +250,19 @@ export default function LegalPage() {
         </h2>
         <div className="flex flex-col gap-4 mt-6">
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">300 secure emails/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">100 PDF documents/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">No subscription required</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">Credits never expire</p>
           </div>
         </div>

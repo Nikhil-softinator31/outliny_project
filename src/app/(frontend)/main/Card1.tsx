@@ -31,9 +31,10 @@ const Card = ({ data }: CardProps) => {
         duration: 0.8,
         scrollTrigger: {
           trigger: container,
+          // once:true,
           start: 'top bottom-=100',
           end: 'bottom center',
-          toggleActions: 'play none none reverse',
+          toggleActions: 'play none none none',
         },
       },
     )
@@ -69,10 +70,15 @@ const Card = ({ data }: CardProps) => {
 }
 
 
+
+
+
+
+
 const cardData = [
-  { id: 1, imageSrc: '/brandconsistency.jpg', description: 'Brand consistency' },
+  { id: 1, imageSrc: '/brandconsistency.webp', description: 'Brand consistency' },
   { id: 2, imageSrc: '/workflowAutomation.jpg', description: 'Efficient workflow automation' },
-  { id: 3, imageSrc: '/compliance&security.jpg', description: 'Compliance & security' },
+  { id: 3, imageSrc: '/compliance&security.webp', description: 'Compliance & security' },
   { id: 4, imageSrc: '/opensourceflexibility.jpg', description: 'Open-source flexibility' },
   { id: 5, imageSrc: '/Automation Support.jpg', description: 'Automation support' },
   {

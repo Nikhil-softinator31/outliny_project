@@ -71,7 +71,7 @@ const BottomCorner: React.FC = () => {
   <p className="text-sm sm:text-base text-[#878685] text-left break-words">
     Learn not just how to use Outliny, but how to build systems that scale, comply with
     enterprise standards, and empower your team.
-  </p>
+  </p> 
 </div>
 
 

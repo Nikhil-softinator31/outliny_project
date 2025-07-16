@@ -1,13 +1,23 @@
 // pages/case-studies.tsx
 import React from 'react'
-
+import { RiBookShelfLine } from "react-icons/ri";
+import { FaRegBuilding } from "react-icons/fa";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { IoManOutline } from "react-icons/io5";
+import { IoEarthOutline } from "react-icons/io5";
+import { IoRocketOutline } from "react-icons/io5";
+import { BsGraphUp } from "react-icons/bs";
+import { BiSolidHandRight } from "react-icons/bi";
 const CaseStudiesPage = () => {
   
   return (
     <div className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
-      <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins">
-        📚 Case Studies
-      </h1>
+      
+      <h1 className="flex items-center justify-center gap-3 text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins">
+  <RiBookShelfLine />
+  Case Studies
+</h1>
+
 
       <p className="mb-4 max-w-5xl mx-auto text-center text-sm sm:text-base font-inter">
         See how businesses around the world are using Outliny to streamline communication, automate
@@ -15,8 +25,8 @@ const CaseStudiesPage = () => {
       </p>
 
       {/* Case Study 1 */}
-      <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3">
-        🏢 Case Study 1: Scaling Customer Communications for a Growing SaaS Company
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white mt-20 mb-3">
+       <FaRegBuilding /> Case Study 1: Scaling Customer Communications for a Growing SaaS Company
       </h2>
       <div className="">
         <p className="mb-2 font-medium">Client: FastTrack CRM (B2B SaaS Platform)</p>
@@ -41,8 +51,8 @@ const CaseStudiesPage = () => {
       </ul>
 
       {/* Case Study 2 */}
-      <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        🛒 Case Study 2: Automating Invoices and Labels for an E-commerce Brand
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+      <HiOutlineShoppingCart /> Case Study 2: Automating Invoices and Labels for an E-commerce Brand
       </h2>
       <p className="mb-2 font-medium">Client: TrendyGoods Online Store</p>
       <p className="mb-2">Challenge:</p>
@@ -64,8 +74,8 @@ const CaseStudiesPage = () => {
       </ul>
 
       {/* Case Study 3 */}
-      <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        🧑‍💼 Case Study 3: Modernizing Internal HR Communications
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+      <IoManOutline /> Case Study 3: Modernizing Internal HR Communications
       </h2>
       <p className="mb-2 font-medium">Client: GlobalConsult HR Solutions</p>
       <p className="mb-2">Challenge:</p>
@@ -86,9 +96,9 @@ const CaseStudiesPage = () => {
         <li>Enhanced HR branding and employee experience.</li>
       </ul>
 
-      {/* Case Study 4 */}
-      <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        🌍 Case Study 4: Secure Document Delivery for a Fintech Startup
+      {/* Case Study 4 */} 
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+        <IoEarthOutline />Case Study 4: Secure Document Delivery for a Fintech Startup
       </h2>
       <p className="mb-2 font-medium">Client: FinPro Lending</p>
       <p className="mb-2">Challenge:</p>
@@ -110,8 +120,8 @@ const CaseStudiesPage = () => {
       </ul>
 
       {/* Why Outliny */}
-      <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        🚀 Why Companies Choose Outliny
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+      <IoRocketOutline /> Why Companies Choose Outliny
       </h2>
       <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
         <li>Fast integration and API-first approach.</li>
@@ -121,13 +131,14 @@ const CaseStudiesPage = () => {
       </ul>
 
       {/* CTA */}
-      <h2 className="text-2xl font-bold mb-4 text-white">📈 Your Success Story Starts Here</h2>
+      <h2 className="text-2xl font-bold mb-4 flex gap-3 text-white"><BsGraphUp />
+      Your Success Story Starts Here</h2>
       <div className="flex flex-col sm:flex-row gap-4">
-        <button className="bg-white text-black px-6 py-3 font-semibold rounded-xl hover:bg-[#c5c4c4] transition-all duration-200">
-          👉 Start Free with Outliny
+        <button className="bg-white text-black px-6 flex gap-3 py-3 font-semibold rounded-xl hover:bg-[#c5c4c4] transition-all duration-200">
+        <BiSolidHandRight className='mt-1'/> Start Free with Outliny
         </button>
-        <button className="border  px-6 py-3 font-semibold rounded-xl hover:bg-[#1a1a1a] transition-all duration-200">
-          👉 Talk to Our Team About Your Needs
+        <button className="border  px-6 py-3 gap-3 flex   font-semibold rounded-xl hover:bg-[#1a1a1a] transition-all duration-200">
+        <BiSolidHandRight className='mt-1'/>Talk to Our Team About Your Needs
         </button>
       </div>
     </div>

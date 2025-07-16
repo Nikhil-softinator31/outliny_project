@@ -1,4 +1,12 @@
 import React from 'react'
+import { CiUnlock } from "react-icons/ci";
+import { FaFireAlt } from "react-icons/fa";
+import { FaGlobeAsia } from "react-icons/fa";
+import { IoShieldOutline } from "react-icons/io5";
+import { BiSolidHandRight } from "react-icons/bi";
+import { IoRocketOutline } from "react-icons/io5";
+import { CiCreditCard1 } from "react-icons/ci";
+import { MdDeveloperBoard } from "react-icons/md";
 
 const EnterpriseFeaturesPage = () => {
   return (
@@ -13,7 +21,7 @@ const EnterpriseFeaturesPage = () => {
         operate at scale.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-20 mb-4 md:text-[30px] ">🔒 Enterprise-Grade Security</h2>
+      <h2 className="text-2xl font-semibold mt-20 mb-4 flex gap-3 md:text-[30px] "><CiUnlock/> Enterprise-Grade Security</h2>
       <ul  className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto ">
         <li>ISO 27001:2022 Certified — World-class information security management.</li>
         <li>SOC 2 Type II Compliant — Independently audited data security and operational excellence.</li>
@@ -24,7 +32,12 @@ const EnterpriseFeaturesPage = () => {
   
 
       <Section
-        title="🌎 Global Scalability"
+         title={
+          <div className="flex items-center gap-3">
+            <FaGlobeAsia className="" />
+            <span>Global Scalability</span>
+          </div>
+        }
         items={[
           'High-Availability Cloud Infrastructure — Always-on systems designed for reliability.',
           'Auto-Scaling — Seamlessly handle traffic spikes across APIs.',
@@ -34,7 +47,14 @@ const EnterpriseFeaturesPage = () => {
       />
 
       <Section
-        title="🔥 Centralized Template Management"
+       
+       title={
+        <div className="flex items-center gap-3">
+          <FaFireAlt className="" />
+          <span>Centralized Template Management</span>
+        </div>
+      }
+        
         items={[
           'Enterprise Template Libraries — Centralize your PDFs and Emails across teams, brands, and departments.',
           'Granular Access Control — Coming soon: Define who can edit, publish, or view templates.',
@@ -43,7 +63,13 @@ const EnterpriseFeaturesPage = () => {
       />
 
       <Section
-        title="🛡️ Compliance and Privacy by Design"
+       title={
+        <div className="flex items-center gap-3">
+          <IoShieldOutline className="" />
+          <span>Compliance and Privacy by Design</span>
+        </div>
+      }
+        
         items={[
           'Fully GDPR Ready — Outliny follows the highest standards for data privacy.',
           'Customizable Data Retention — Control how long generated assets are stored, or disable storage entirely.',
@@ -52,7 +78,14 @@ const EnterpriseFeaturesPage = () => {
       />
 
       <Section
-        title="🛠️ Developer Flexibility"
+      
+      title={
+        <div className="flex items-center gap-3">
+          <MdDeveloperBoard className="" />
+          <span> Developer Flexibility</span>
+        </div>
+      }
+        
         items={[
           'Open Standards — MJML for Emails, JSON APIs, Jinja templating — no vendor lock-in.',
           'Custom Modules — Build and share reusable components across your organization.',
@@ -61,7 +94,13 @@ const EnterpriseFeaturesPage = () => {
       />
 
       <Section
-        title="💳 Flexible Billing for Enterprises"
+      title={
+        <div className="flex items-center gap-3">
+          <CiCreditCard1 className="" />
+          <span> Flexible Billing for Enterprises</span>
+        </div>
+      }
+       
         items={[
           'Pay-As-You-Go Credits — No monthly minimums. Scale at your own pace.',
           'Volume Discounts — Special rates for high-volume users.',
@@ -70,7 +109,13 @@ const EnterpriseFeaturesPage = () => {
       />
 
       <Section
-        title="🚀 Why Enterprises Choose Outliny"
+        title={
+          <div className="flex items-center gap-3">
+            <IoRocketOutline className="" />
+            <span> Why Enterprises Choose Outliny</span>
+          </div>
+        }
+       
         items={[
           'Branding consistency across millions of emails and PDFs.',
           'Bank-level security standards.',
@@ -83,21 +128,21 @@ const EnterpriseFeaturesPage = () => {
       <div className="flex flex-col sm:flex-row gap-4 mt-10 ml-10">
         <a
           href="/contact"
-          className="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition text-center"
+          className="bg-blue-600 text-white flex gap-3 px-6 py-3 rounded shadow hover:bg-blue-700 transition text-center"
         >
-          👉 Talk to Our Team
+          <BiSolidHandRight className='mt-1'/> Talk to Our Team
         </a>
         <a
           href="/security"
-          className="bg-gray-100 text-black px-6 py-3 rounded shadow hover:bg-gray-200 transition text-center"
+          className="bg-gray-100 text-black flex gap-3 px-6 py-3 rounded shadow hover:bg-gray-200 transition text-center"
         >
-          👉 View Security and Compliance
+          <BiSolidHandRight className='mt-1'/> View Security and Compliance
         </a>
         <a
           href="/signup"
-          className="bg-gray-800 text-white px-6 py-3 rounded shadow hover:bg-gray-900 transition text-center"
+          className="bg-gray-800 text-white px-6 flex gap-3 py-3 rounded shadow hover:bg-gray-900 transition text-center"
         >
-          👉 Sign Up and Start Free
+          <BiSolidHandRight className='mt-1'/> Sign Up and Start Free
         </a>
       </div>
     </section>

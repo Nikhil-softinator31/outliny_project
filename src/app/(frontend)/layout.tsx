@@ -20,7 +20,8 @@ import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
 // import BackgroundVideo from './main/BackgroundVideo'
 import Footer from './main/Footer'
-import Navbar from './Navbar/page'
+// import Navbar from './Navbar/page'
+import Navbar from './navbar/page'
 
 const poppins = Poppins({
   subsets: ['latin'],

@@ -4,6 +4,14 @@ import { FaServer, FaUserShield } from 'react-icons/fa'
 import { MdPrivacyTip } from 'react-icons/md'
 import { CiMail } from 'react-icons/ci'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { CiUnlock } from "react-icons/ci";
+import { BsBox } from "react-icons/bs"; 
+import { MdLockOutline } from "react-icons/md";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoEarthOutline } from "react-icons/io5";
+import { FiShield } from "react-icons/fi";
+import { FaRegEye } from "react-icons/fa";
+import { GiBrain } from "react-icons/gi";
 
 const SecurityPage = () => {
   return (
@@ -20,8 +28,8 @@ const SecurityPage = () => {
       </p>
 
       <div  >
-        <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3 ">
-          🔐Certified & Compliant
+        <h2 className="text-2xl md:text-[30px] flex gap-3  font-semibold text-white mt-20 mb-3 ">
+        <CiUnlock />  Certified & Compliant
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans ml-2">
           We may share necessary information with trusted third parties for:
@@ -38,8 +46,8 @@ const SecurityPage = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
-          🧊 Zero Visibility Architecture
+        <h2 className="text-2xl md:text-[30px] flex gap-3  font-semibold mt-10 mb-3 text-white ">
+        <BsBox /> Zero Visibility Architecture
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans ml-2">We don’t see your data – ever.</p>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
@@ -53,8 +61,8 @@ const SecurityPage = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
-          🔒 End-to-End Encryption
+        <h2 className="text-2xl md:text-[30px] flex gap-3  font-semibold mt-10 mb-3 text-white ">
+        <MdLockOutline />  End-to-End Encryption
         </h2>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>TLS 1.2+ for all data in transit</li>
@@ -65,8 +73,8 @@ const SecurityPage = () => {
       </div>
 
       <div className="mb-10 sm:mb-12">
-        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
-          ⚙️ Granular Access Controls
+        <h2 className="text-2xl md:text-[30px] flex gap-3  font-semibold mt-10 mb-3 text-white ">
+        <IoSettingsOutline /> Granular Access Controls
         </h2>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Role-based access for template editing and deployment</li>
@@ -76,8 +84,8 @@ const SecurityPage = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
-          🌍 Self-Hosting? You’re in Charge
+        <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white ">
+        <IoEarthOutline /> Self-Hosting? You’re in Charge
         </h2>
 
         <p className="py-4 text-sm sm:text-base font-sans ml-2">
@@ -91,8 +99,8 @@ const SecurityPage = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
-          🛡️ Security Best Practices We Follow
+        <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white ">
+        <FiShield />Security Best Practices We Follow
         </h2>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Static code analysis on all releases</li>
@@ -116,8 +124,8 @@ const SecurityPage = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
-          👁️ Privacy-First Philosophy
+        <h2 className="text-2xl md:text-[30px] flex gap-3  font-semibold mt-10 mb-3 text-white ">
+        <FaRegEye /> Privacy-First Philosophy
         </h2>
         <p className="text-sm sm:text-base ml-12 mt-3 max-w-[600px]">
           Outliny was built with a simple rule:{' '}
@@ -135,8 +143,8 @@ const SecurityPage = () => {
       </div>
 
       <div>
-        <h2 className="text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white ">
-          🧠 Questions About Security?
+        <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white ">
+        <GiBrain /> Questions About Security?
         </h2>
         <p className="mb-3 text-sm sm:text-base ml-12">
           We’re happy to answer any specific security concerns or requirements. Reach out to us:

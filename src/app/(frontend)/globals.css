@@ -115,3 +115,9 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ensures smoother transform animations */
+.card {
+  will-change: transform;
+  transform-style: preserve-3d; /* supports the 3‑D tilt */
+}

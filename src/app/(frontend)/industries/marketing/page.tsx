@@ -1,5 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
+import { CiUnlock } from "react-icons/ci";
+import { GiBrain } from "react-icons/gi";
+import { PiTargetDuotone } from "react-icons/pi";
+import { HiOutlineMail } from "react-icons/hi";
+import { IoIosPaper } from "react-icons/io";
+import { FaToolbox } from "react-icons/fa6";
 
 export default function MarketingPage() {
   const emailUseCases = [
@@ -107,8 +113,8 @@ export default function MarketingPage() {
 
       {/* Email Templates */}
       <div className="mt-20 p-4">
-        <h2 className="font-poppins font-semibold text-[25px] md:text-[30px] mb-3">
-          📧 Email Templates for Campaigns & Automation
+        <h2 className="font-poppins flex gap-3 font-semibold text-[25px] md:text-[30px] mb-3">
+          <HiOutlineMail className='mt-2'/>  Email Templates for Campaigns & Automation
         </h2>
         <h2 className="font-poppins text-[14px] md:text-[16px] leading-5 md:leading-6 capitalize">
           Design beautiful, responsive emails using our MJML editor. Share and reuse blocks across
@@ -147,8 +153,8 @@ export default function MarketingPage() {
 
       {/* PDF Generation */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-2">
-          📄 PDFs That Market Smarter
+        <h2 className="text-[25px] flex gap-3 md:text-[30px] font-semibold font-poppins mb-2">
+          <IoIosPaper className='mt-2'/>  PDFs That Market Smarter
         </h2>
         <p className="text-[14px] md:text-[16px] text-gray-300 font-poppins mb-6">
           Generate automated PDFs for lead magnets, performance reports, or branded
@@ -184,8 +190,8 @@ export default function MarketingPage() {
 
       {/* Collaboration Features */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-3">
-          🧰 Built for Creative-Dev Collaboration
+        <h2 className="text-[25px] md:text-[30px] flex gap-3 font-semibold font-poppins mb-3">
+          <FaToolbox className='mt-2'/> Built for Creative-Dev Collaboration
         </h2>
         <p className="text-gray-400 font-poppins text-sm md:text-base mb-6">
           Outliny bridges the gap between marketing teams and developers by offering:
@@ -206,8 +212,8 @@ export default function MarketingPage() {
 
       {/* Security Section */}
       <div className="mt-20 bg-custom-gradient22 p-6 rounded-xl">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white">
-          🔐 Secure, Scalable, Brand-Safe
+        <h2 className="text-[25px] md:text-[30px] flex gap-3 font-semibold font-poppins mb-4 text-white">
+          <CiUnlock className='mt-2'/>  Secure, Scalable, Brand-Safe
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {securityFeatures.map((item, index) => (
@@ -225,8 +231,8 @@ export default function MarketingPage() {
 
       {/* Testimonials Section */}
       <div className="mt-20">
-        <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          💬 What Marketing Teams Are Saying
+        <h2 className="text-[25px] font-poppins flex gap-3 text-white font-semibold md:text-[30px] mb-3">
+          <GiBrain className='mt-2'/> What Marketing Teams Are Saying
         </h2>
         {testimonials.map((testimonial, idx) => (
           <div key={idx} className="mb-8">
@@ -242,24 +248,24 @@ export default function MarketingPage() {
 
       {/* Getting Started */}
       <div className="mt-20 p-4">
-        <h2 className="text-[25px] font-poppins text-white font-semibold md:text-[30px] mb-3">
-          🎯 Try It Free – No Strings Attached
+        <h2 className="text-[25px] font-poppins flex gap-3 text-white font-semibold md:text-[30px] mb-3">
+          <PiTargetDuotone className='mt-2'/> Try It Free – No Strings Attached
         </h2>
         <div className="flex flex-col gap-4 mt-6">
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">300 emails/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">100 PDF documents/month</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">Zero subscription fees</p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500">✔</span>
+            <span >✔</span>
             <p className="text-white">Credits never expire</p>
           </div>
         </div>

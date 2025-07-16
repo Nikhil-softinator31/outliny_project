@@ -1,11 +1,18 @@
 import React from 'react'
 import { CiMail } from 'react-icons/ci'
+import { FaRegHandshake } from "react-icons/fa6";
+import { FaPuzzlePiece } from "react-icons/fa6";
+import { GoGoal } from "react-icons/go";
+import { BsGraphUp } from "react-icons/bs";
+import { GiJusticeStar } from "react-icons/gi";
+import { BiSolidHandRight } from "react-icons/bi";
+import { GiBrain } from "react-icons/gi";
 
 const PartnersPage = () => {
   return (
     <div className="max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a] ">
-      <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins ">
-        🤝 Partner with Us
+      <h1 className=" flex items-center justify-center gap-3 text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins ">
+      <FaRegHandshake /> Partner with Us
       </h1>
       <p className="mb-4 max-w-7xl mx-auto text-center text-sm sm:text-base font-inter">
         Outliny is more than just a platform — it's a growing ecosystem of developers, agencies,
@@ -16,8 +23,8 @@ const PartnersPage = () => {
 
       {/* Why Partner */}
 
-      <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-4 ">
-        🧩 Why Partner with Outliny?
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white mt-20 mb-4 ">
+      <FaPuzzlePiece /> Why Partner with Outliny?
       </h2>
       <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2  text-sm sm:text-base font-roboto">
         <li>
@@ -44,8 +51,8 @@ const PartnersPage = () => {
 
       {/* Partnership Opportunities */}
 
-      <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-10 mb-4 ">
-        🤝 Partnership Opportunities
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white mt-10 mb-4 ">
+      <FaRegHandshake /> Partnership Opportunities
       </h2>
       <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2  text-sm sm:text-base font-roboto">
         <li>
@@ -72,8 +79,9 @@ const PartnersPage = () => {
 
       {/* Ideal Partner Profiles */}
 
-      <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-10 mb-4 ">
-        🎯 Ideal Partner Profiles
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white mt-10 mb-4 ">
+      <GoGoal />
+      Ideal Partner Profiles
       </h2>
       <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2  text-sm sm:text-base font-roboto">
         <li>Digital agencies looking to streamline client branding</li>
@@ -85,8 +93,8 @@ const PartnersPage = () => {
 
       {/* What You’ll Get */}
 
-      <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-10 mb-4 ">
-        📈 What You’ll Get
+      <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white mt-10 mb-4 ">
+      <BsGraphUp /> What You’ll Get
       </h2>
       <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2  text-sm sm:text-base font-roboto">
         <li>Dedicated partner support</li>
@@ -98,20 +106,20 @@ const PartnersPage = () => {
 
       {/* Call to Action */}
 
-      <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-10 mb-4 ">
-        🌟 Ready to Partner with Outliny?
+      <h2 className="text-2xl md:text-[30px] flex gap-3  font-semibold text-white mt-10 mb-4 ">
+      <GiJusticeStar /> Ready to Partner with Outliny?
       </h2>
 
       <div className="flex flex-col">
         <div className="flex  gap-3 items-center mb-1 ml-10">
-          👉
+        <BiSolidHandRight />
           <a href="https://outliny.com/partners" className="underline text-white cursor-pointer">
 
             Apply to Become a Partner
           </a>
         </div>
         <div className="flex  gap-3 items-center mb-1 ml-10">
-          👉
+        <BiSolidHandRight />
           <a href="https://outliny.com/partners" className="underline text-white cursor-pointer">
           
             Contact Our Partnerships Team
@@ -121,7 +129,7 @@ const PartnersPage = () => {
 
       {/* Contact Info */}
 
-      <h2 className="text-2xl font-semibold mb-3 text-white mt-10">💬 Have Questions?</h2>
+      <h2 className="text-2xl font-semibold mb-3  flex gap-3   text-white mt-10"><GiBrain/> Have Questions?</h2>
       <p className="mb-1 ml-10">Reach out directly:</p>
       <div className="flex gap-3 items-center mb-1 ml-10">
         <CiMail className="text-lg" />

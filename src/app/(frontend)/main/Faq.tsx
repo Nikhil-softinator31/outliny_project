@@ -85,7 +85,7 @@ const FAQ = () => {
                   className="flex justify-between items-center cursor-pointer text-xl font-medium"
                   onClick={() => toggleAnswer(index)}
                 >
-                  <span className="ml-4 font-light text-[#c2c5c5] text-[14px] md:text-base leading-6 font-poppins ">
+                  <span className="ml-4 font-light text-[#c2c5c5] text-[14px] md:text-base leading-6 font-manrope  ">
                     {item.question}
                   </span>
 

@@ -4,6 +4,7 @@ import { IoCheckmarkCircle } from 'react-icons/io5'
 import { BsRocketTakeoff } from 'react-icons/bs'
 import { TbBrain } from 'react-icons/tb'
 import { BiMessageDetail } from 'react-icons/bi'
+import { BsStars } from "react-icons/bs";
 
 const RoadmapPage = () => {
   const completedFeatures = [
@@ -91,13 +92,13 @@ const RoadmapPage = () => {
       {/* Recently Completed */}
       <div>
         <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-6 flex items-center gap-3">
-          <IoCheckmarkCircle className="text-green-500" />
+          <IoCheckmarkCircle  />
           Recently Completed
         </h2>
         <ul className="space-y-3 ml-2">
           {completedFeatures.map((feature, index) => (
             <li key={index} className="flex items-center gap-3 text-sm sm:text-base">
-              <span className="text-green-500">✓</span>
+              <span >✓</span>
               {feature}
             </li>
           ))}
@@ -107,7 +108,7 @@ const RoadmapPage = () => {
       {/* In Progress */}
       <div>
         <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-16 mb-6 flex items-center gap-3">
-          <BsRocketTakeoff className="text-blue-400" />
+          <BsRocketTakeoff  />
           In Progress
         </h2>
         <div className="space-y-6 ml-2">
@@ -123,7 +124,7 @@ const RoadmapPage = () => {
       {/* Planned (Next) */}
       <div>
         <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-16 mb-6 flex items-center gap-3">
-          <TbBrain className="text-purple-400" />
+          <TbBrain  />
           Planned (Next)
         </h2>
         <div className="space-y-6 ml-2">
@@ -139,7 +140,7 @@ const RoadmapPage = () => {
       {/* Open to Feedback */}
       <div className="mt-16   rounded-lg">
         <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-6 flex items-center gap-3">
-          <BiMessageDetail className="text-pink-400" />
+          <BiMessageDetail  />
           Open to Feedback!
         </h2>
         <p className="text-sm sm:text-base mb-6">
@@ -167,8 +168,8 @@ const RoadmapPage = () => {
 
       {/* Thank You Note */}
       <div className="mt-16 text-center">
-        <h2 className="text-xl font-semibold text-white mb-4">
-          🌟 Thank you for being part of Outliny&apos;s journey!
+        <h2 className="text-xl font-semibold flex gap-2 items-center justify-center text-white mb-4">
+        <BsStars /> Thank you for being part of Outliny&apos;s journey!
         </h2>
         <p className="text-sm sm:text-base max-w-3xl mx-auto">
           Every feature, every improvement — it&apos;s all to make sure your branding and

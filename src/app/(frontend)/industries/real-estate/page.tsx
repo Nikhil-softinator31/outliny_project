@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { RiTeamLine } from "react-icons/ri";
 
 export default function RealEstatePage() {
   const emailUseCases = [
@@ -205,8 +206,8 @@ export default function RealEstatePage() {
 
       {/* Integration Section  bg-custom-gradient22 is optional*/}
       <div className="mt-20  p-6 rounded-xl bg-custom-gradient22 ">
-        <h2 className="text-[25px] md:text-[30px] font-semibold font-poppins mb-4 text-white text-balance">
-          🛠 Tools Your Team Will Love
+        <h2 className="text-[25px] md:text-[30px] font-semibold flex gap-3 font-poppins mb-4 text-white text-balance">
+           <RiTeamLine className='mt-1'/> Tools Your Team Will Love
         </h2>
         <div className="flex flex-col gap-10 mt-10">
           {integrationFeatures.map((feature, idx) => (

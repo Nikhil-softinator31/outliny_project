@@ -1,5 +1,15 @@
 // app/generating-api/page.tsx
 import React from 'react'
+import { FaMapPin } from "react-icons/fa";
+import { BsBoxSeam } from "react-icons/bs";
+import { ImUpload2 } from "react-icons/im";
+import { CiUnlock } from "react-icons/ci";
+import { IoSettingsOutline } from "react-icons/io5";
+import { FaExclamation } from "react-icons/fa6";
+import { RiBookShelfLine } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
+import { HiLink } from "react-icons/hi2";
+import { FaBook } from "react-icons/fa";
 
 const GeneratingApiPage = () => {
   const errorRows = [
@@ -77,16 +87,16 @@ const GeneratingApiPage = () => {
         </p>
 
         {/* Endpoint */}
-        <h2 className="text-xl sm:text-2xl font-semibold  md:text-[30px]  mb-3 mt-20">
-          📍 Endpoint
+        <h2 className="text-xl sm:text-2xl flex gap-3 font-semibold  md:text-[30px]  mb-3 mt-20">
+          <FaMapPin/> Endpoint
         </h2>
         <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
           POST /api/v1/render/pdf
         </pre>
 
         {/* Auth */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          🔐 Authentication
+        <h2 className="text-xl sm:text-2xl flex gap-3 font-semibold mt-10 mb-3  md:text-[30px]">
+         <CiUnlock/> Authentication
         </h2>
         <p className="text-gray-400 mb-4">Include your API Key in the Authorization header:</p>
         <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-3">
@@ -95,8 +105,8 @@ const GeneratingApiPage = () => {
         <p className="text-sm text-gray-500 ">Need an API key? Create one in your dashboard.</p>
 
         {/* Request Body */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-9 mb-3  md:text-[30px]">
-          📥 Request Body
+        <h2 className="text-xl sm:text-2xl flex gap-3 font-semibold mt-9 mb-3  md:text-[30px]">
+          <ImUpload2/> Request Body
         </h2>
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
@@ -120,8 +130,8 @@ const GeneratingApiPage = () => {
         </table>
 
         {/* Example Request */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-9 mb-3  md:text-[30px]">
-          📦 Example Request
+        <h2 className="text-xl sm:text-2xl flex gap-3 font-semibold mt-9 mb-3  md:text-[30px]">
+          <BsBoxSeam/> Example Request
         </h2>
         <pre className=" overflow-hidden  whitespace-pre-wrap bg-[#1a1a1a] p-4 rounded text-[13px] md:text-[14px]  mb-6">
           {`POST https://api.outliny.com/api/v1/render/pdf
@@ -141,8 +151,8 @@ Content-Type: application/json
         </pre>
 
         {/* Response */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          📤 Response
+        <h2 className="text-xl sm:text-2xl flex gap-2 font-semibold mt-10 mb-3  md:text-[30px]">
+        <ImUpload2/>Response
         </h2>
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
@@ -165,8 +175,8 @@ Content-Type: application/json
         </table>
 
         {/* Example Responses */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          📤 Example Response (default output)
+        <h2 className="text-xl sm:text-2xl flex gap-3 font-semibold mt-10 mb-3  md:text-[30px]">
+        <ImUpload2/> Example Response (default output)
         </h2>
         <pre className=" overflow-auto  bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
           {`{
@@ -175,8 +185,8 @@ Content-Type: application/json
 }`}
         </pre>
 
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          📤 Example Response (base64)
+        <h2 className="text-xl flex gap-3 sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
+        <ImUpload2/> Example Response (base64)
         </h2>
         <pre className="overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
           {`{
@@ -186,8 +196,8 @@ Content-Type: application/json
         </pre>
 
         {/* Output Types */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          ⚙️ Output Types Explained
+        <h2 className="text-xl sm:text-2xl flex gap-3 font-semibold mt-10 mb-3  md:text-[30px]">
+        <IoSettingsOutline /> Output Types Explained
         </h2>
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
@@ -208,8 +218,8 @@ Content-Type: application/json
         </table>
 
         {/* Common Errors */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3  md:text-[30px]">
-          ❗ Common Errors
+        <h2 className="text-xl sm:text-2xl flex gap-3 font-semibold mt-10 mb-3  md:text-[30px]">
+        <FaExclamation /> Common Errors
         </h2>
         <div className="overflow-x-auto">
           <table className="text-sm  w-full table-auto border-collapse border border-gray-700 mb-6">
@@ -233,7 +243,8 @@ Content-Type: application/json
         </div>
 
         {/* Notes */}
-        <h2 className="text-xl sm:text-2xl font-semibold mt-4 mb-3  md:text-[30px]">📚 Notes</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold mt-4 mb-3  md:text-[30px] flex gap-3"><RiBookShelfLine />
+        Notes</h2>
         <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2  text-sm sm:text-base font-roboto">
           <li>
             Parameters must match Jinja variable names like <code>amount_due</code>
@@ -246,21 +257,21 @@ Content-Type: application/json
         <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-10">
           <a
             href="/dashboard/pdf-generator"
-            className="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition text-center"
+            className="bg-blue-600 text-white px-6 flex gap-3 py-3 rounded shadow hover:bg-blue-700 transition text-center"
           >
-            🔗 Use the PDF Generator
+           <HiLink className='mt-1'/> Use the PDF Generator
           </a>
           <a
             href="/docs"
-            className="bg-gray-100 text-black px-6 py-3 rounded shadow hover:bg-gray-200 transition duration-200 text-center"
+            className="bg-gray-100 text-black flex gap-3 px-6 py-3 rounded shadow hover:bg-gray-200 transition duration-200 text-center"
           >
-            📘 See the Developer Docs
+            <FaBook className='mt-1'/> See the Developer Docs
           </a>
           <a
             href="https://github.com/outliny"
-            className="bg-gray-800 text-white px-6 py-3 rounded shadow hover:bg-gray-900 transition text-center"
+            className="bg-gray-800 flex gap-3 text-white px-6 py-3 rounded shadow hover:bg-gray-900 transition text-center"
           >
-            💬 Ask on GitHub
+            <FaGithub className='mt-1' /> Ask on GitHub
           </a>
         </div>
       </div>

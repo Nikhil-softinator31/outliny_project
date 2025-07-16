@@ -2,6 +2,15 @@ import React from 'react'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { IoMailOutline } from 'react-icons/io5'
 import { PiFilePdf } from 'react-icons/pi'
+import { IoCreate } from "react-icons/io5";
+import { IoColorPaletteOutline } from "react-icons/io5";
+import { FaFire } from "react-icons/fa6";
+import { RiBookShelfLine } from "react-icons/ri";
+import { FaPuzzlePiece } from "react-icons/fa6";
+import { TbTargetArrow } from "react-icons/tb";
+import { IoRocketOutline } from "react-icons/io5";
+import { BsBoxSeam } from "react-icons/bs";
+import { GrOverview } from "react-icons/gr";
 
 const TemplateEditorPage = () => {
   const features = [
@@ -28,8 +37,8 @@ const TemplateEditorPage = () => {
 
       {/* What You Can Create */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3">
-          ✨ What You Can Create
+        <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold text-white mt-20 mb-3">
+        <IoCreate /> What You Can Create
         </h2>
 
         <div className="space-y-8 ml-2">
@@ -56,8 +65,8 @@ const TemplateEditorPage = () => {
 
       {/* Easy Drag-and-Drop Design */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          🎨 Easy Drag-and-Drop Design
+        <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+        <IoColorPaletteOutline /> Easy Drag-and-Drop Design
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Our visual editors are built on top of industry-leading tools:
@@ -75,8 +84,8 @@ const TemplateEditorPage = () => {
 
       {/* Dynamic Data with Jinja Variables */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          🔥 Dynamic Data with Jinja Variables
+        <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
+        <FaFire /> Dynamic Data with Jinja Variables
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Easily insert dynamic fields into your templates using Jinja syntax:
@@ -94,8 +103,8 @@ const TemplateEditorPage = () => {
 
       {/* Professional Template Gallery */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          📚 Professional Template Gallery
+        <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+        <RiBookShelfLine /> Professional Template Gallery
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Get started faster with our curated library:
@@ -116,8 +125,8 @@ const TemplateEditorPage = () => {
 
       {/* Modular Design */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          🧩 Modular Design
+        <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+        <FaPuzzlePiece /> Modular Design
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Build custom modules — reusable blocks (like footers, headers, legal notices) that your
@@ -130,8 +139,8 @@ const TemplateEditorPage = () => {
 
       {/* Features Overview */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          Features Overview
+        <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
+         <GrOverview/> Features Overview
         </h2>
         <div className="overflow-x-auto  rounded-lg p-4">
           <table className="min-w-[500px] sm:min-w-full text-sm sm:text-base">
@@ -160,8 +169,9 @@ const TemplateEditorPage = () => {
 
       {/* Import and Export Templates */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          📦 Import and Export Templates
+        <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
+        <BsBoxSeam />
+        Import and Export Templates
         </h2>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Emails: Fully MJML compatible — import/export easily.</li>
@@ -174,8 +184,8 @@ const TemplateEditorPage = () => {
 
       {/* Built for Teams and Enterprises */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          🎯 Built for Teams and Enterprises
+        <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
+        <TbTargetArrow /> Built for Teams and Enterprises
         </h2>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Centralize all templates in one secure, organized place.</li>
@@ -186,8 +196,9 @@ const TemplateEditorPage = () => {
 
       {/* Start Building Now */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          🚀 Start Building Now!
+        <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
+        <IoRocketOutline />
+        Start Building Now!
         </h2>
         <div className="space-y-4 ml-4 sm:ml-6 md:ml-12">
           {[
@@ -205,8 +216,8 @@ const TemplateEditorPage = () => {
 
       {/* Pro Tips */}
       <div>
-        <h2 className="text-xl sm:text-2xl md:text-[30px] font-semibold mt-10 mb-3 text-white">
-          🔥 Pro Tips
+        <h2 className="text-xl sm:text-2xl flex gap-3   md:text-[30px] font-semibold mt-10 mb-3 text-white">
+        <FaFire /> Pro Tips
         </h2>
         <ul className="list-disc ml-7 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Use Jinja loops and conditionals for advanced dynamic content.</li>

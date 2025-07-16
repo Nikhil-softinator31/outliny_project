@@ -1,4 +1,6 @@
 import React from 'react'
+import { MdOutlineMarkEmailUnread } from "react-icons/md";
+import { FaMapPin } from "react-icons/fa";
 
 const TermsOfServicePage = () => {
   return (
@@ -168,14 +170,14 @@ const TermsOfServicePage = () => {
         {/* Section 13 */}
         <section className="pt-6 mt-10 space-y-3">
           <h2 className="text-2xl md:text-[30px] font-semibold text-white mb-4">13. Contact</h2>
-          <p className="text-sm sm:text-base">
-            📧 Email:{' '}
+          <p className="text-sm sm:text-base flex gap-3">
+          <MdOutlineMarkEmailUnread className='mt-1' /> Email:{' '}
             <a href="mailto:legal@outliny.com" className="text-blue-400 hover:underline">
               legal@outliny.com
             </a>
           </p>
-          <p className="text-sm sm:text-base">
-            📍 Address: Outliny, Inc. [165 D & E, Vidur Nagar, Indore, Madhya Pradesh 452009]
+          <p className="text-sm sm:text-base flex gap-3">
+          <FaMapPin className='mt-1' /> Address: Outliny, Inc. [165 D & E, Vidur Nagar, Indore, Madhya Pradesh 452009]
           </p>
 
         

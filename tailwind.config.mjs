@@ -132,6 +132,9 @@ const config = {
         aldrich: ['Aldrich', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
+        urbanist: ['Urbanist', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
+
       },
       keyframes: {
         'accordion-down': {

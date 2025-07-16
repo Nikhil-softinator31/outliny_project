@@ -1,5 +1,16 @@
 // app/generating-pdf/page.tsx
 import React from 'react'
+import { ImUpload2 } from "react-icons/im";
+import { CiUnlock } from "react-icons/ci";
+import { FaBook } from "react-icons/fa";
+import { HiLink } from "react-icons/hi2";
+import { FaGithub } from "react-icons/fa";
+import { FaLightbulb } from "react-icons/fa6";
+import { FaPuzzlePiece } from "react-icons/fa6";
+import { BsStars } from "react-icons/bs";
+import { FaToolbox } from "react-icons/fa";
+import { GoWorkflow } from "react-icons/go";
+import { FaGlobe } from "react-icons/fa";
 
 const GeneratingPdfPage = () => {
   return (
@@ -12,7 +23,8 @@ const GeneratingPdfPage = () => {
         into your email workflow.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">✨ Why MJML?</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 flex gap-3 md:text-[30px] "><BsStars />
+      Why MJML?</h2>
       <p className=" mb-4">
         MJML is the open-source framework that makes responsive email design simple and reliable.
         But rendering it into robust HTML across all email clients can be tricky. That’s where
@@ -20,7 +32,7 @@ const GeneratingPdfPage = () => {
         major email clients—using our fast, scalable, and secure API.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🛠️ How It Works</h2>
+      <h2 className="text-2xl font-semibold mt-10 flex gap-3 mb-3 md:text-[30px] "><GoWorkflow /> How It Works</h2>
       <ol className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto ">
         <li>
           <strong>Create your MJML template:</strong> Use Outliny's drag-and-drop GrapeJS Email
@@ -37,7 +49,7 @@ const GeneratingPdfPage = () => {
         </li>
       </ol>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🔧 Example API Usage</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 flex gap-3  md:text-[30px] "><FaGlobe /> Example API Usage</h2>
       <pre className="overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         {`POST /api/v1/emails/generate-html
 Content-Type: application/json
@@ -52,14 +64,14 @@ Authorization: Bearer YOUR_API_KEY
 }`}
       </pre>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">📩 Response:</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 flex gap-3 md:text-[30px] "><ImUpload2/> Response:</h2>
       <pre className=" overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
         {`{
   "html": "<!DOCTYPE html><html>...rendered responsive email...</html>"
 }`}
       </pre>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🧩 Features</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 flex gap-3  md:text-[30px] "><FaPuzzlePiece /> Features</h2>
       <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto">
         <li> Supports MJML 4.15+</li>
         <li>Full Jinja2 support</li>
@@ -69,7 +81,8 @@ Authorization: Bearer YOUR_API_KEY
         <li> Ready for CRM, HRMS, marketing, and transactional emails</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🧰 Use Cases</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 flex gap-3 md:text-[30px] "><FaToolbox />
+      Use Cases</h2>
       <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto">
         <li>CRM and Marketing Automation</li>
         <li>Internal HR Emails</li>
@@ -78,22 +91,22 @@ Authorization: Bearer YOUR_API_KEY
         <li>Notifications and Alerts</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">🔐 Security-First</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 flex gap-3 md:text-[30px] "> <CiUnlock/> Security-First</h2>
       <ul className="list-disc ml-6 md:ml-12 mb-4 space-y-2 text-sm sm:text-base font-roboto">
         <li>No email content is logged</li>
         <li>Encrypted API communication</li>
         <li>ISO 27001:2022 & SOC 2 Type II Certified</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">
-        📥 Export or Import Anytime
+      <h2 className="text-2xl font-semibold flex gap-3 mt-10 mb-3 md:text-[30px] ">
+        <CiUnlock/> Export or Import Anytime
       </h2>
       <p className="text-gray-400 mb-4 ml-2">
         You’re never locked in. Outliny supports import/export of MJML and HTML, so you can move
         templates freely between systems.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-3 md:text-[30px] ">💡 Tip for Developers</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-3 flex gap-3 md:text-[30px] "><FaLightbulb /> Tip for Developers</h2>
       <p className="text-gray-400 mb-6 ml-2">
         Use our pre-built email components and themes to speed up development. No need to start from
         scratch—just customize and deploy.
@@ -102,21 +115,21 @@ Authorization: Bearer YOUR_API_KEY
       <div className="flex flex-wrap gap-4 mt-6">
         <a
           href="/dashboard/html-generator"
-          className="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white px-6 flex gap-3 py-3 rounded shadow hover:bg-blue-700 transition"
         >
-          🔗 Use the HTML Generator
+          <HiLink className='mt-1'/> Use the HTML Generator
         </a>
         <a
           href="/docs"
-          className="bg-gray-100 text-black px-6 py-3 rounded shadow hover:bg-gray-200 transition"
+          className="bg-gray-100 text-black px-6 flex gap-3  py-3 rounded shadow hover:bg-gray-200 transition"
         >
-          📘 See the Developer Docs
+          <FaBook className='mt-1 '/> See the Developer Docs
         </a>
         <a
           href="https://github.com/outliny"
-          className="bg-gray-800 text-white px-6 py-3 rounded shadow hover:bg-gray-900 transition"
+          className="bg-gray-800 text-white flex gap-3 px-6 py-3 rounded shadow hover:bg-gray-900 transition"
         >
-          💬 Ask on GitHub
+          <FaGithub className='mt-1'/> Ask on GitHub
         </a>
       </div>
     </main>

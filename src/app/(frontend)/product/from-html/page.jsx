@@ -1,4 +1,12 @@
 import React from 'react'
+import { FaMapPin } from "react-icons/fa";
+import { CiUnlock } from "react-icons/ci";
+import { ImUpload2 } from "react-icons/im";
+import { BiSolidHandRight } from "react-icons/bi";
+import { FaFireAlt } from "react-icons/fa";
+import { BsBoxSeam } from "react-icons/bs";
+import { PiMagnifyingGlassFill } from "react-icons/pi"; 
+import { RiRestartFill } from "react-icons/ri";
 
 
 const GeneratingPDFsFromHtml = () => {
@@ -82,8 +90,8 @@ const RequestBodyData = [
       </p>
 
       <div className="mt-20">
-        <h2 className="text-2xl md:text-[30px] font-semibold text-white mt-20 mb-3">
-          🛠️ What is HTML-to-PDF Generation?
+        <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white mt-20 mb-3">
+        <PiMagnifyingGlassFill /> What is HTML-to-PDF Generation?
         </h2>
         <ul className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>
@@ -95,14 +103,14 @@ const RequestBodyData = [
       </div>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-3">📍 Endpoint</h2>
+        <h2 className="text-2xl font-semibold  flex gap-3 md:text-[30px] mb-3"> <FaMapPin/> Endpoint</h2>
         <ul className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>POST /api/v1/render/pdf/html</li>
         </ul>
       </div>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-3">🔐 Authentication</h2>
+        <h2 className="text-2xl font-semibold md:text-[30px] flex gap-3 mb-3"><CiUnlock/> Authentication</h2>
         <ul className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Like all API requests, you must include your API Key:</li>
           <li>Authorization: Bearer YOUR_API_KEY</li>
@@ -110,7 +118,7 @@ const RequestBodyData = [
       </div>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-3">📥 Request Body</h2>
+        <h2 className="text-2xl font-semibold md:text-[30px] flex gap-3 mb-3"><ImUpload2/>  Request Body</h2>
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
             <tr className="bg-[#1a1a1a] ">
@@ -134,7 +142,7 @@ const RequestBodyData = [
       </div>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-3">📦 Example Request</h2>
+        <h2 className="text-2xl font-semibold flex gap-3 md:text-[30px] mb-3"><BsBoxSeam/> Example Request</h2>
         <pre className="overflow-hidden whitespace-pre-wrap bg-[#1a1a1a] p-4 rounded text-[13px] md:text-[14px] mb-6">
           {`POST https://api.outliny.com/api/v1/render/pdf/html
 Authorization: Bearer YOUR_API_KEY
@@ -162,7 +170,7 @@ curl -X POST "https://outliny.com/api/getHtml" -H "Content-Type: application/jso
       </div>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-3">📤 Response</h2>
+        <h2 className="text-2xl font-semibold flex gap-3 md:text-[30px] mb-3"><ImUpload2/>  Response</h2>
 
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
@@ -186,7 +194,7 @@ curl -X POST "https://outliny.com/api/getHtml" -H "Content-Type: application/jso
       </div>
 
       {/* Example Responses */}
-      <h2 className="text-xl sm:text-2xl font-semibold mt-10 mb-3">📤 Example Response</h2>
+      <h2 className="text-xl sm:text-2xl font-semibold mt-10 flex gap-3 mb-3"><ImUpload2/>  Example Response</h2>
       <pre className=" overflow-auto  bg-[#1a1a1a] p-2 md:p-4 rounded text-sm overflow-x-auto mb-6">
         {`{
   "status": "success",
@@ -203,7 +211,7 @@ Or, if output_type: base64:
       </pre>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-3">📐 Page Settings Options</h2>
+        <h2 className="text-2xl font-semibold text-white md:text-[30px] mb-3">📐 Page Settings Options</h2>
 
         <table className="text-sm w-full table-auto border-collapse border border-gray-700 mb-6">
           <thead>
@@ -236,8 +244,8 @@ Or, if output_type: base64:
       </div>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-3">
-          🔥 Best Practices for HTML-to-PDF
+        <h2 className="text-2xl flex gap-3 font-semibold md:text-[30px] mb-3">
+          <FaFireAlt/> Best Practices for HTML-to-PDF
         </h2>
         <ul className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Use inline styles (style="") where possible for more consistent rendering.</li>
@@ -253,8 +261,8 @@ Or, if output_type: base64:
       </div>
 
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold md:text-[30px] mb-4">
-          Start Generating PDFs from HTML Today!
+        <h2 className="text-2xl flex gap-3 font-semibold md:text-[30px] mb-4">
+         <RiRestartFill/>  Start Generating PDFs from HTML Today!
         </h2>
         <ul className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li> Explore Full API Docs</li>
@@ -265,15 +273,15 @@ Or, if output_type: base64:
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
         <a
           href="/api-docs"
-          className="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition text-center"
+          className="bg-blue-600 flex gap-3 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition text-center"
         >
-          👉 Explore Full API Docs
+          <BiSolidHandRight className='mt-1'/> Explore Full API Docs
         </a>
         <a
           href="/advanced-pdf-options"
-          className="bg-gray-100 text-gray-700 px-6 py-3 rounded shadow hover:bg-gray-200 transition text-center"
+          className="bg-gray-100 text-gray-700 px-6 py-3 rounded shadow hover:bg-gray-200 transition flex gap-3 text-center"
         >
-          👉 Learn More About Advanced PDF Options
+          <BiSolidHandRight className='mt-1'/> Learn More About Advanced PDF Options
         </a>
       </div>
     </div>
