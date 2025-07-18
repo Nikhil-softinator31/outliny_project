@@ -44,7 +44,7 @@ const OutlinyLable1 = () => {
             <div className="w-full">
               <p className="font-inter text-[14px] sm:text-[18px] font-bold leading-[28px] text-white">
                 {item.heading}
-                <span className="text-[#a9a7a7] ml-2 text-[15px] sm:text-[16px] font-light leading-[28px]">
+                <span className="text-[#a9a7a7] ml-2 text-[15px] sm:text-[16px] font-light leading-[28px] ">
                   {item.text}
                 </span>
               </p>

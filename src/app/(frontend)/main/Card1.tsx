@@ -76,24 +76,24 @@ const Card = ({ data }: CardProps) => {
 
 
 const cardData = [
-  { id: 1, imageSrc: '/brandconsistency.webp', description: 'Brand consistency' },
-  { id: 2, imageSrc: '/workflowAutomation.jpg', description: 'Efficient workflow automation' },
+  { id: 1, imageSrc: '/card-images/brandconsistency.webp', description: 'Brand consistency' },
+  { id: 2, imageSrc: '/card-images/workflowAutomation.webp', description: 'Efficient workflow automation' },
   { id: 3, imageSrc: '/compliance&security.webp', description: 'Compliance & security' },
-  { id: 4, imageSrc: '/opensourceflexibility.jpg', description: 'Open-source flexibility' },
-  { id: 5, imageSrc: '/Automation Support.jpg', description: 'Automation support' },
+  { id: 4, imageSrc: '/card-images/opensourceflexibility.webp', description: 'Open-source flexibility' },
+  { id: 5, imageSrc: '/card-images/Automation Support.webp', description: 'Automation support' },
   {
     id: 6,
-    imageSrc: '/scalableoperations.jpg',
+    imageSrc: '/card-images/scalableoperations.webp',
     description: 'Scalable operations & centralized template',
   },
   {
     id: 7,
-    imageSrc: '/realtimepreview.jpg',
+    imageSrc: '/card-images/realtimepreview.webp',
     description: 'Real-Time Preview & Testing',
   },
   {
     id: 8,
-    imageSrc: '/templateversion.jpg',
+    imageSrc: '/card-images/templateversion.webp  ',
     description: 'Template Versioning & Management',
   },
 ]

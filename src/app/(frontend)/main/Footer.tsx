@@ -86,7 +86,8 @@ const Footer: React.FC = () => {
                     className="group relative text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     {link.label}
-                    <span className="absolute left-0 -bottom-0.5 h-[0.5px] w-full bg-[#94a7bb] scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-500 ease-in-out" />
+                    {/* <span className="absolute left-0 -bottom-0.5 h-[0.5px] w-full bg-[#94a7bb] scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-500 ease-in-out" /> */}
+                    <span className="absolute bottom-0 left-0  w-full h-[3%] bg-[#94a7bb] scale-x-0 group-hover:scale-x-100  transition-transform duration-300 ease-in-out transform origin-right group-hover:origin-left" />
                   </Link>
                 </li>
               ))}
