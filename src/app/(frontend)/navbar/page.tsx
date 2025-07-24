@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex space-x-2">
+        <div className="hidden lg:flex gap-2">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -42,8 +42,8 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden lg:flex space-x-4 items-center">
-          <Link href="/login" className="group relative inline-block overflow-hidden h-10 w-19">
+        <div className="hidden lg:flex gap-4  items-center">
+          <Link href="/login" className="group relative  overflow-hidden h-10 w-19">
             <div className="flex flex-col transition-transform duration-700 ease-in-out group-hover:-translate-y-[40px]">
               <span className="h-10 leading-10 text-center text-white">Log in</span>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
 
           <Link
             href="/get-started"
-            className="bg-white group relative inline-block overflow-hidden  h-9 w-19  text-black px-4 scale-x-100 hover:scale-95 rounded-md text-sm font-medium transition-all duration-00"
+            className="bg-white group relative  overflow-hidden  h-9 w-19  text-black px-4 scale-x-100 hover:scale-95 rounded-md text-sm font-medium transition-all duration-00"
           >
             <div className="flex flex-col transition-transform duration-700 ease-in-out group-hover:-translate-y-[40px]">
               <span className="h-10 leading-10 text-center ">Get Started</span>
@@ -67,14 +67,14 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex items-center space-x-3 lg:hidden">
-          {!isMenuOpen && (
+          {
             <Link
               href="/get-started"
               className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-[#505050] transition-all duration-200"
             >
               Get started
             </Link>
-          )}
+          }
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-300 hover:text-white p-2"
