@@ -92,3 +92,4 @@ export const plugins: Plugin[] = [
   }),
   payloadCloudPlugin(),
 ]
+
