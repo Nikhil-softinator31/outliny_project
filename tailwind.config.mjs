@@ -132,6 +132,7 @@ const config = {
         aldrich: ['Aldrich', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
+        'ibm-plex-sans': ['IBM Plex Sans', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
