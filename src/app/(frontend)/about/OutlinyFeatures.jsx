@@ -47,7 +47,7 @@ export default function OutlinyFeatures() {
         {/* md and up: full diagram */}
         <div className="relative hidden md:grid w-full max-w-5xl h-[500px] place-items-center">
           {/* Center Text */}
-          <div className="text-4xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10  font-poppins font-semibold text-center">
+          <div className="text-4xl font-light absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 font-poppins text-white text-center">
             What Drives Us
           </div>
 
@@ -156,7 +156,7 @@ export default function OutlinyFeatures() {
             </p>
           </div>
 
-          <div className="absolute left-0 top-1/4 text-left w-64 text-base">
+          <div className="absolute left-0 top-1/4 ml-3 text-left w-64 text-base">
             <p>
               Believe in transparency—how
               <br />

@@ -80,7 +80,7 @@ export default function LegalPage() {
           with speed, accuracy, and compliance—without sacrificing branding or control.
         </p>
         <div className="flex justify-center items-center">
-          <Image src="/pdf.svg" alt="legal" width={500} height={500} />
+          <Image src="/pdf.svg" alt="legal" width={578} height={323} />
         </div>
       </div>
 
@@ -121,7 +121,7 @@ export default function LegalPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 items-start ">
           {emailUseCases.map((text, index) => (
-            <div key={index} className="flex flex-col items-center relative">
+            <div key={index} className="flex items-center flex-col lg:flex-row gap-10 lg:gap-4 justify-center">
               <div className="flex flex-col items-center w-full max-w-[180px]">
                 <div className="w-12 h-12 rounded-full bg-[#1A1A1A] flex items-center justify-center mb-4">
                   <Image src={text.image} alt="icon" width={24} height={24} />
@@ -129,7 +129,7 @@ export default function LegalPage() {
                 <p className="text-[13px] text-gray-300 font-poppins text-center">{text.text}</p>
               </div>
               {index < 4 && (
-                <div className="rotate-90 space-y-6">
+                <div className="rotate-90 md:rotate-0 ">
                   <Image src={text.arrow} alt="arrow" width={50} height={20} />
                 </div>
               )}
@@ -267,11 +267,11 @@ export default function LegalPage() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-            Start Free
-          </button>
-        </div>
+        <div className="flex justify-center items-center mt-20">
+        <button className="bg-custom-gradient21 p-4 rounded-xl text-black w-[300px] h-[50px] font-poppins font-bold text-[14px]  ">
+          Start Free Today
+        </button>
+      </div>
       </div>
     </div>
   )

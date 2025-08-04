@@ -83,7 +83,7 @@ export default function SalesPage() {
           office.e.
         </p>
         <div className="flex justify-center items-center">
-          <Image src="/pdf.svg" alt="sales" width={500} height={500} />
+          <Image src="/pdf.svg" alt="sales" width={578} height={323} />
         </div>
       </div>
 
@@ -163,7 +163,7 @@ export default function SalesPage() {
             {UseCases2.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 border-b border-b-gray-600 pb-2"
+                className="flex items-center  gap-4 border-b border-b-gray-600 pb-2"
                 style={{
                   borderBottom: '1.16px solid',
                   borderImageSource:
@@ -171,9 +171,10 @@ export default function SalesPage() {
                   borderImageSlice: 3,
                 }}
               >
-                <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono shrink-0">
-                  {String(index + 1).padStart(2, '0')}
-                </div>
+                <div className="w-12 h-12 flex-shrink-0 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-mono text-center leading-none">
+  {String(index + 1).padStart(2, '0')}
+</div>
+
                 <p className="text-sm md:text-base text-white font-poppins">{item}</p>
               </div>
             ))}
@@ -229,7 +230,7 @@ export default function SalesPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {compliancePoints.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center shrink-0 justify-center text-white text-sm font-semibold font-poppins">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">
@@ -252,7 +253,7 @@ export default function SalesPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {compliancePoints2.map((item, index) => (
             <div key={index} className="flex items-center gap-4 p-4">
-              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center justify-center text-white text-sm font-semibold font-poppins">
+              <div className="w-12 h-12 rounded-md bg-[#181C25] flex items-center shrink-0 justify-center text-white text-sm font-semibold font-poppins">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <p className="text-white text-sm md:text-base font-normal tracking-[0] capitalize font-poppins">

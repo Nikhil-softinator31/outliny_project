@@ -27,7 +27,7 @@ const OutlinyLable1 = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full px-4 sm:mt-14 md:mt-24">
       <div className="text-center w-full  mx-auto my-10">
-        <h1 className=" text-white text-[26px] md:text-[40px] font-semibold leading-tight gradient-text">
+        <h1 className=" text-white text-[26px] md:text-[40px] font-semibold leading-tight">
           PDF Template Builder
         </h1>
       </div>
@@ -42,7 +42,7 @@ const OutlinyLable1 = () => {
 
             {/* Text Content */}
             <div className="w-full">
-              <p className="font-inter text-[16px] sm:text-[18px] font-bold leading-[28px] text-white">
+              <p className="font-inter text-[14px] sm:text-[18px] font-bold leading-[28px] text-white">
                 {item.heading}
                 <span className="text-[#a9a7a7] ml-2 text-[15px] sm:text-[16px] font-light leading-[28px]">
                   {item.text}
