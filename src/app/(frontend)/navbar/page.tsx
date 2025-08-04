@@ -67,18 +67,19 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex items-center space-x-3 lg:hidden">
-          {
+          {!isMenuOpen &&(
             <Link
               href="/get-started"
               className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-[#505050] transition-all duration-200"
             >
               Get started
             </Link>
-          }
+          )}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-300 hover:text-white p-2"
           >
+          
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
