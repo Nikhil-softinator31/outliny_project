@@ -21,6 +21,13 @@ import { getServerSideURL } from '@/utilities/getURL'
 // import BackgroundVideo from './main/BackgroundVideo'
 import Footer from './main/Footer'
 import Navbar from './Navbar/page'
+import { IBM_Plex_Sans } from 'next/font/google'
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '600'], 
+  variable: '--font-ibm-plex-sans',
+})
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -57,6 +64,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         aldrich.variable,
         inter.variable,
         roboto.variable,
+        ibmPlexSans.variable, 
       )}
       lang="en"
       suppressHydrationWarning

@@ -99,12 +99,12 @@ const Page = () => {
             { id: 'website', label: 'Website', type: 'text' },
           ].map(({ id, label, type }) => (
             <div key={id}>
-              <label
+              <label0
                 htmlFor={id}
                 className="block mb-3 text-sm font-poppins font-normal text-[17.39px] leading-[1] tracking-[0.05em]"
               >
                 {label}
-              </label>
+              </label0>
               <input
                 type={type}
                 id={id}
@@ -186,7 +186,7 @@ const Page = () => {
       <div className="mt-16 text-center px-2">
         <h1
           ref={headingRef}
-          className="font-poppins font-bold text-[clamp(24px,6vw,35px)] leading-tight"
+          className="font-poppins font-bold text-[35px] leading-tight"
         >
           Visit us Anytime
         </h1>

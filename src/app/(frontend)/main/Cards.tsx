@@ -8,7 +8,7 @@ import SpotlightCard from './SpotlightCard'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const Slider = () => {
+const Cards = () => {
   const Data = [
     {
       image: '/shield.svg',
@@ -126,4 +126,4 @@ const Slider = () => {
   )
 }
 
-export default Slider
+export default Cards
