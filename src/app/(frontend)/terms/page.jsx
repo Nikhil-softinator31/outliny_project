@@ -1,7 +1,4 @@
 import React from 'react'
-import { MdOutlineMarkEmailUnread } from "react-icons/md";
-import { FaMapPin } from "react-icons/fa";
-
 
 
 const termsContent = [

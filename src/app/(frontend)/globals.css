@@ -19,7 +19,7 @@ body {
 /* Custom scrollbar for sidebar - hidden by default, visible on hover  for terms and condition page and others */
 .sidebar-scrollbar {
   /* Reserve space for scrollbar to prevent layout shift */
-  padding-right: 1px;
+  padding-right: 4px;
 }
 
 .sidebar-scrollbar::-webkit-scrollbar {
