@@ -7,8 +7,8 @@ const sections = [
   'Whose Personal Data We Collect',
   'When We Collect Personal Data',
   'What Personal Data We Collect',
-  'How We Use Your Data and Why',
   'Cookies and Tracking Technologies',
+  'How We Use Your Data and Why',
   ' Sharing Your Personal Data',
   'Data Retention',
   'International Data Transfers',
@@ -18,6 +18,7 @@ const sections = [
   'Changes to This Policy',
   'Contact Us',
 ]
+
 
 export default function TermsLayout({ children }: { children: ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -43,7 +44,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
       </p>
       <div className="flex relative  ">
         {/* Bottom Navigation Bar */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#08090a] border-t border-[#3a3939]">
+        <div className="lg:hidden fixed bottom-0 left-0 right-0  bg-[#08090a] border-t border-[#3a3939]">
           <div className="flex items-center justify-between px-4 py-3">
             <span className="text-white font-medium font-ibm-plex-sans">OUTLINY</span>
             <button
@@ -57,7 +58,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
 
         {/* Mobile Sidebar */}
         <div
-          className={`fixed inset-0  lg:hidden transition-opacity duration-800 ${
+          className={` lg:hidden transition-opacity duration-800 ${
             isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         >
@@ -71,9 +72,9 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
 
           {/* Sidebar (Slide from bottom to top) */}
           <div
-            className={`absolute bottom-0 left-0 w-full h-full transform transition-transform duration-300 ease-in-out ${
+            className={`absolute bottom-0 left-0 w-full max-h-screen transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? 'translate-y-0' : 'translate-y-full'
-            } bg-[#08090a] border-t border-gray-600 overflow-y-auto sidebar-scrollbar`}
+            } bg-[#08090a] border-t border-gray-600 overflow-y-auto`}
           >
             <div className="p-6 mt-16">
               <h2 className="text-xl font-semibold text-white mb-6 font-ibm-plex-sans">
@@ -111,7 +112,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
         </aside>
 
         {/* Main content injected here */}
-        <main className="flex-1 scroll-smooth md:ml-8 lg:ml-24">{children}</main>
+        <main className=" flex-1 scroll-smooth md:ml-8 lg:ml-24 ">{children}</main>
       </div>
     </div>
   )

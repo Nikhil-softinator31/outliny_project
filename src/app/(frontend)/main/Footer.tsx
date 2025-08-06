@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
       }}
     >
       {/* Footer Grid */}
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row md:justify-between gap-8 pt-10 relative z-10 mt-10">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row md:justify-between gap-8 pt-10  mt-10">
         {footerLinks.map((section, index) => (
           <div key={index} className="flex flex-col">
             <h3 className="text-lg font-medium mb-4">{section.title}</h3>

@@ -127,360 +127,401 @@ const termsContent = [
     title: 'Who We Are and How to Contact Us',
     content: (
       <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
+        <div className="ml-6">
+          <p className="mb-4 text-sm sm:text-base font-roboto ">
+            Outliny is a secure, developer-focused platform that empowers enterprises to design,
+            manage, and deliver consistent branding across all internal and external
+            communications&mdash;especially emails and PDF documents. Whether you're building HRMS
+            notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
+            helps you streamline and centralize all your branded communication templates in one
+            place.
+          </p>
+          <ul className="list-disc  md:ml-5 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+            <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
+            <li>Single-page PDF generation (via PDFme)</li>
+            <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
+            <li>Jinja templating support for variable logic and reuse</li>
+            <li>Modular developer tools to build once and reuse templates across departments</li>
+            <li>WordPress plugin integration for WooCommerce and CRM emails</li>
+            <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
+          </ul>
+          <p className="mb-4 text-sm sm:text-base font-roboto">
+            Outliny is open-source and developer-friendly&mdash;use our hosted version with a
+            generous free tier or self-host using our GitHub codebase.
+          </p>
+          <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
+          <ul className="  mb-4 text-sm sm:text-base font-roboto">
+            <li className="mb-1">📍 Outliny Technologies</li>
+            <li className="mb-1">
+              🌐 Website:{' '}
+              <a href="https://www.outliny.com" className="underline">
+                www.outliny.com
+              </a>
+            </li>
+          </ul>
+          <p className="mb-4 text-sm sm:text-base font-roboto">
+            We are here to support secure, branded, and scalable communication for your
+            organization.
+          </p>
+        </div>
+      </>
+    ),
+  },
+  {
+    title: 'Your Rights Regarding Your Personal Data',
+    content: (
+      <>
+        <p className="mb-3 text-sm sm:text-base font-roboto ml-6">
+          Depending on your jurisdiction, you have the following rights:
         </p>
         <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
+          <li>
+            <span className="font-medium">Access:</span> Request a copy of your personal data.
+          </li>
+          <li>
+            <span className="font-medium">Correction:</span> Request correction of incomplete or
+            inaccurate data.
+          </li>
+          <li>
+            <span className="font-medium">Erasure:</span> Request deletion of your data when it’s no
+            longer necessary.
+          </li>
+          <li>
+            <span className="font-medium">Objection:</span> Object to data processing based on
+            legitimate interest or for direct marketing.
+          </li>
+          <li>
+            <span className="font-medium">Restriction:</span> Request a temporary pause in data
+            processing under certain conditions.
+          </li>
+          <li>
+            <span className="font-medium">Portability:</span> Request to receive your data in a
+            machine-readable format.
+          </li>
+          <li>
+            <span className="font-medium">Withdraw Consent:</span> Where processing is based on
+            consent, you may withdraw it at any time.
           </li>
         </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
+        <p className="mb-3 text-sm sm:text-base font-roboto ml-6">
+          To exercise any of these rights, email us at{' '}
+          <a href="mailto:info@softinator.com" className="underline">
+            info@softinator.com
+          </a>
+          . We may ask you to verify your identity before proceeding. We aim to respond within one
+          month.
         </p>
       </>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: ' Whose Personal Data We Collect',
     content: (
       <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
+        <p className="mb-3 text-sm sm:text-base font-roboto ml-6">
+          We may collect personal data from:
         </p>
         <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
+          <li>Our users (individuals or developers using our platform)</li>
+          <li>Employees or representatives of companies using Outliny</li>
+          <li>Contributors to our open-source codebase</li>
+          <li>Individuals interacting with us through support, email, or our website</li>
         </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
-          </li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
-        </p>
       </>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: 'When We Collect Personal Data',
     content: (
       <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
-        </p>
+        <p className="mb-3 text-sm sm:text-base font-roboto ml-6">We may process your data when:</p>
         <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
+          <li>You create an account or sign in (including via OAuth)</li>
+          <li>You use our template editors or APIs</li>
+          <li>You send or receive emails through our services</li>
+          <li>You communicate with us (e.g., support, inquiries)</li>
+          <li>You interact with our website, documentation, or integrations</li>
         </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
-          </li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
-        </p>
       </>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: 'What Personal Data We Collect',
     content: (
       <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
-        </p>
-        <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
-          </li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
-        </p>
+        <div className="ml-6">
+          <p className="mb-3 text-sm sm:text-base font-roboto ">
+            Outliny collects minimal and essential personal data to deliver our services
+            effectively, support security and compliance, improve functionality, and provide support
+            when needed. We are fully committed to respecting user privacy and following strict
+            security protocols aligned with our ISO 27001:2022 and SOC 2 Type II certifications.
+            <br />
+            We do not store or access your content (email bodies, PDFs, variables, etc.) unless
+            explicitly enabled for debugging. Logs are disabled by default.
+          </p>
+          <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">
+            Information You Provide to Us
+          </h3>
+          <p className="mb-3 text-sm sm:text-base font-roboto">
+            While using Outliny, you may share certain information that identifies you as an
+            individual ("Personal Data"). Below is an overview of the types of personal data we may
+            collect:
+          </p>
+        </div>
+
+        {/* Personal Data Table */}
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 ">
+        {dataSections.map((section, index) => (
+          <div key={index} className="bg-[#08090a] border border-gray-700 rounded-xl p-8">
+            <div className="flex items-center gap-3 mb-3 ">
+              {section.icon}
+              <h3 className="text-lg sm:text-xl font-semibold text-white">{section.title}</h3>
+            </div>
+            <ul className="text-sm sm:text-base text-[#dddddd] space-y-2">
+              {section.items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div> */}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:ml-6">
+          {dataSections.map((section, index) => {
+            const isLast = index === dataSections.length - 1
+            const isIncompleteRow = dataSections.length % 3 !== 0 && isLast
+
+            return (
+              <div
+                key={index}
+                className={`bg-[#08090a] border border-gray-700 rounded-xl p-8 ${
+                  isIncompleteRow
+                    ? 'lg:col-span-3 flex flex-col  justify-self-center lg:w-[33%]'
+                    : ''
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {section.icon}
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">{section.title}</h3>
+                </div>
+                <ul className="text-sm sm:text-base text-[#dddddd] space-y-2">
+                  {section.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
+        <div className='ml-6'>
+          <p className="mb-3 mt-4 text-sm sm:text-base font-roboto">
+            We do not collect any special categories of personal data (e.g. ethnicity, political
+            beliefs, health data) or knowingly collect information from individuals under the age of
+            18.
+          </p>
+          <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">
+            Aggregated Data
+          </h3>
+          <p className="mb-3 text-sm sm:text-base font-roboto ">
+            We may collect, use, and share aggregated, anonymized data (e.g., total number of
+            templates created, average API response times) to monitor platform performance and usage
+            patterns. This data does not identify any individual and is used solely for improving
+            our services.
+          </p>
+          <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">
+            We Do Not Collect or Process:
+          </h3>
+          <ul className="list-disc ml-6 md:ml-5 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+            <li>
+              Special categories of personal data (e.g., race, religion, political opinions,
+              biometric data)
+            </li>
+            <li>Criminal or legal background data</li>
+            <li>Content data unless voluntarily shared for debugging</li>
+            <li>Persistent behavioral tracking or third-party advertising data</li>
+          </ul>
+        </div>
       </>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: 'Cookies and Tracking Technologies',
     content: (
       <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
-        </p>
-        <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
-          </li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
-        </p>
+        <div className="ml-6">
+          <p className="mb-3 text-sm sm:text-base font-roboto ">
+            Outliny uses cookies and similar technologies for:
+          </p>
+          <ul className="list-disc ml-6 md:ml-5 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+            <li>Essential functionality (e.g., session management)</li>
+            <li>Analytics and performance (e.g., via Google Analytics)</li>
+            <li>Customization (e.g., remembering editor preferences)</li>
+          </ul>
+          <p className="mb-3 text-sm sm:text-base font-roboto">
+            You can manage or disable cookies via your browser settings. Some features may not
+            function properly without cookies.
+          </p>
+        </div>
       </>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: 'How We Use Your Data and Why',
     content: (
       <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
+        <p className="mb-3 text-sm sm:text-base font-roboto ml-6">
+          We only share your personal data in the following situations:
         </p>
-        <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
-          </li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
-        </p>
+        {/* Sharing Table */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 ml-6">
+          {recipientSections.map((section, index) => {
+            const isLast = index === dataSections.length - 1
+            const isIncompleteRow = dataSections.length % 3 !== 0 && isLast
+
+            return (
+              <div
+                key={index}
+                className={`bg-[#08090a] border border-gray-700 rounded-xl p-8 ${
+                  isIncompleteRow
+                    ? 'lg:col-span-3 flex flex-col  justify-self-center lg:w-[33%]'
+                    : ''
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {section.icon}
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">{section.title}</h3>
+                </div>
+                <ul className="text-sm sm:text-base text-[#dddddd] space-y-2">
+                  {section.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
       </>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: 'Sharing Your Personal Data',
     content: (
       <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
+        <p className="mb-3 text-sm sm:text-base font-roboto ml-6">
+          We only share your personal data in the following situations:
         </p>
-        <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
-          </li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
-        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 ml-6">
+          {recipientSections.map((section, index) => {
+            const isLast = index === dataSections.length - 1
+            const isIncompleteRow = dataSections.length % 3 !== 0 && isLast
+
+            return (
+              <div
+                key={index}
+                className={`bg-[#08090a] border border-gray-700 rounded-xl p-8 ${
+                  isIncompleteRow
+                    ? 'lg:col-span-3 flex flex-col  justify-self-center lg:w-[33%]'
+                    : ''
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  {section.icon}
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">{section.title}</h3>
+                </div>
+                <ul className="text-sm sm:text-base text-[#dddddd] space-y-2">
+                  {section.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
       </>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: 'Data Retention',
     content: (
-      <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
-        </p>
-        <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
-          <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
-            </a>
-          </li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
-        </p>
-      </>
+      <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+        <li>Templates and configurations remain until deleted by the user.</li>
+        <li>Billing records are retained as required by law.</li>
+        <li>API logs, if enabled, are stored for up to 7 days.</li>
+      </ul>
     ),
   },
   {
-    title: 'Who We Are and How to Contact Us',
+    title: 'International Data Transfers',
     content: (
-      <>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is a secure, developer-focused platform that empowers enterprises to design,
-          manage, and deliver consistent branding across all internal and external
-          communications&mdash;especially emails and PDF documents. Whether you're building HRMS
-          notifications, CRM emails, dynamic invoices, or personalized PDF attachments, Outliny
-          helps you streamline and centralize all your branded communication templates in one place.
-        </p>
-        <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
-          <li>Drag-and-drop multi-page PDF template creation (via GrapeJS + Puppeteer)</li>
-          <li>Single-page PDF generation (via PDFme)</li>
-          <li>MJML-based responsive email templates (with GrapeJS email editor)</li>
-          <li>Jinja templating support for variable logic and reuse</li>
-          <li>Modular developer tools to build once and reuse templates across departments</li>
-          <li>WordPress plugin integration for WooCommerce and CRM emails</li>
-          <li>ISO 27001:2022 and SOC 2 Type II level security across everything we do</li>
-        </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          Outliny is open-source and developer-friendly&mdash;use our hosted version with a generous
-          free tier or self-host using our GitHub codebase.
-        </p>
-        <h3 className="text-lg md:text-xl font-medium mb-3 text-white font-inter">Contact Us:</h3>
-        <ul className="ml-6 md:ml-11 mb-4 text-sm sm:text-base font-roboto">
-          <li className="mb-1">📍 Outliny Technologies</li>
+      <p className="mb-4 text-sm sm:text-base font-roboto ml-6 ">
+        Your data may be stored or processed in countries outside your jurisdiction. We implement
+        standard contractual clauses and safeguard mechanisms to ensure lawful international
+        transfers.
+      </p>
+    ),
+  },
+  {
+    title: 'How We Protect Your Data',
+    content: (
+      <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+        <li>Data in transit: Encrypted using TLS 1.3</li>
+        <li>Data at rest: Encrypted using AES-256</li>
+        <li>Logging: Disabled by default</li>
+        <li>Access: Restricted to authorized personnel only, based on least privilege</li>
+        <li>Monitoring: Regular audits and vulnerability scanning</li>
+        <li>We are ISO 27001:2022 and SOC 2 Type II certified.</li>
+      </ul>
+    ),
+  },
+  {
+    title: 'Google Authentication',
+    content: (
+      <ul className="list-disc ml-6 md:ml-11 mb-4 space-y-2 text-sm sm:text-base font-roboto">
+        <li>
+          If you choose to log in via Google: We access basic profile data (name, email) for
+          authentication only.
+        </li>
+        <li>We do not access your emails, calendar, or documents.</li>
+        <li>This data is handled securely and in accordance with this policy.</li>
+      </ul>
+    ),
+  },
+  {
+    title: 'External Links',
+    content: (
+      <p className="ml-6 text-sm sm:text-base font-roboto">
+        Outliny’s platform may contain links to third-party websites. We are not responsible for the
+        privacy practices of those websites. Always review their privacy policies separately.
+      </p>
+    ),
+  },
+  {
+    title: 'Changes to This Policy',
+    content: (
+      <p className="ml-6 text-sm sm:text-base font-roboto">
+        We may revise this Privacy Policy periodically. Changes will be posted here with an updated
+        “Effective Date.” Your continued use of Outliny after any update constitutes your acceptance
+        of the revised policy.
+      </p>
+    ),
+  },
+  {
+    title: 'Contact Us (Privacy)',
+    content: (
+      <div>
+        <p className="ml-6">Have questions, feedback, or a data access request?</p>
+        <ul className="ml-6 md:ml-11 mb-3 text-sm sm:text-base font-roboto">
           <li className="mb-1">
-            🌐 Website:{' '}
-            <a href="https://www.outliny.com" className="underline">
-              www.outliny.com
+            📩 Email:{' '}
+            <a href="mailto:info@softinator.com" className="underline">
+              info@softinator.com
             </a>
           </li>
         </ul>
-        <p className="mb-4 text-sm sm:text-base font-roboto">
-          We are here to support secure, branded, and scalable communication for your organization.
+        <p className="mb-8 text-sm sm:text-base font-roboto ml-6">
+          We’re committed to protecting your privacy and maintaining transparency.
         </p>
-      </>
+      </div>
     ),
   },
 ]

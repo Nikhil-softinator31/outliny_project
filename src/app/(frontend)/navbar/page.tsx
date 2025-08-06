@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -13,6 +13,18 @@ const Navbar = () => {
     { name: 'Templates', href: '/templates' },
     { name: 'Pricing', href: '/pricing' },
   ]
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden' 
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
+
 
   return (
     <nav className="w-full bg-[#08090a] text-white z-50 border-b border-[#232323] fixed top-0">
@@ -20,7 +32,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/Logo.svg" 
+            src="/Logo.svg"
             alt="outliny"
             width={150}
             height={200}
@@ -67,7 +79,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="flex items-center space-x-3 lg:hidden">
-          {!isMenuOpen &&(
+          {!isMenuOpen && (
             <Link
               href="/get-started"
               className="bg-white text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-[#505050] transition-all duration-200"
@@ -79,7 +91,6 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-gray-300 hover:text-white p-2"
           >
-          
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

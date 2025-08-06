@@ -1,6 +1,6 @@
 'use client'
 import React, { ReactNode, useState } from 'react'
-import {  Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 const sections = [
   'Definitions',
   'Description of Service',
@@ -53,25 +53,17 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
 
         {/* Mobile Sidebar */}
         <div
-          className={`fixed inset-0  lg:hidden transition-opacity duration-800 ${
-            isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          className={`fixed inset-0  lg:hidden transition-opacity duration-800    ${
+            isMenuOpen ? 'opacity-100 pointer-events-auto z-30 ' : 'opacity-0 pointer-events-none '
           }`}
         >
-          {/* Backdrop */}
-          <div
-            className={`absolute inset-0 bg-black transition-opacity duration-800 ${
-              isMenuOpen ? 'bg-opacity-50' : 'bg-opacity-0'
-            }`}
-            onClick={() => setIsMenuOpen(false)}
-          />
-
           {/* Sidebar (Slide from bottom to top) */}
           <div
-            className={`absolute bottom-0 left-0 w-full h-full transform transition-transform duration-300 ease-in-out ${
+            className={`absolute bottom-0 left-0 w-full h-full transform transition-transform  duration-300 ease-in-out  ${
               isMenuOpen ? 'translate-y-0' : 'translate-y-full'
             } bg-[#08090a] border-t border-gray-600 overflow-y-auto sidebar-scrollbar`}
           >
-            <div className="p-6 mt-16">
+            <div className="p-6 mt-16 mb-12">
               <h2 className="text-xl font-semibold text-white mb-6 font-ibm-plex-sans">
                 Table of Contents
               </h2>
@@ -81,7 +73,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
                     key={idx}
                     href={`#section-${idx + 1}`}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block text-white transition font-semibold text-[16px] leading-normal tracking-[0.39px] font-ibm-plex-sans hover:text-gray-300 py-2"
+                    className="block text-white  font-semibold text-[16px] leading-normal tracking-[0.39px] font-ibm-plex-sans hover:text-gray-300 py-2"
                   >
                     {idx + 1}. {title}
                   </a>
