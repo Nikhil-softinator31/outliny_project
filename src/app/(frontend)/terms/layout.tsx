@@ -60,7 +60,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
           {/* Sidebar (Slide from bottom to top) */}
           <div
             className={`absolute bottom-0 left-0 w-full h-full transform transition-transform  duration-300 ease-in-out  ${
-              isMenuOpen ? 'translate-y-0' : 'translate-y-full'
+              isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
             } bg-[#08090a] border-t border-gray-600 overflow-y-auto sidebar-scrollbar`}
           >
             <div className="p-6 mt-16 mb-12">

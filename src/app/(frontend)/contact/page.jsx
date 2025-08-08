@@ -99,12 +99,12 @@ const Page = () => {
             { id: 'website', label: 'Website', type: 'text' },
           ].map(({ id, label, type }) => (
             <div key={id}>
-              <label0
+              <label
                 htmlFor={id}
                 className="block mb-3 text-sm font-poppins font-normal text-[17.39px] leading-[1] tracking-[0.05em]"
               >
                 {label}
-              </label0>
+              </label>
               <input
                 type={type}
                 id={id}

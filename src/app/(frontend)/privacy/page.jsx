@@ -313,7 +313,7 @@ const termsContent = [
             )
           })}
         </div>
-        <div className='ml-6'>
+        <div className="ml-6">
           <p className="mb-3 mt-4 text-sm sm:text-base font-roboto">
             We do not collect any special categories of personal data (e.g. ethnicity, political
             beliefs, health data) or knowingly collect information from individuals under the age of

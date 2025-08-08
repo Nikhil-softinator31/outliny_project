@@ -19,7 +19,6 @@ const sections = [
   'Contact Us',
 ]
 
-
 export default function TermsLayout({ children }: { children: ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
@@ -44,7 +43,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
       </p>
       <div className="flex relative  ">
         {/* Bottom Navigation Bar */}
-        <div className="lg:hidden fixed bottom-0 left-0 right-0  bg-[#08090a] border-t border-[#3a3939]">
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#08090a] border-t border-[#3a3939]">
           <div className="flex items-center justify-between px-4 py-3">
             <span className="text-white font-medium font-ibm-plex-sans">OUTLINY</span>
             <button
@@ -58,25 +57,17 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
 
         {/* Mobile Sidebar */}
         <div
-          className={` lg:hidden transition-opacity duration-800 ${
-            isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          className={`fixed inset-0  lg:hidden transition-opacity duration-800    ${
+            isMenuOpen ? 'opacity-100 pointer-events-auto z-30 ' : 'opacity-0 pointer-events-none '
           }`}
         >
-          {/* Backdrop */}
-          <div
-            className={`absolute inset-0 bg-black transition-opacity duration-800 ${
-              isMenuOpen ? 'bg-opacity-50' : 'bg-opacity-0'
-            }`}
-            onClick={() => setIsMenuOpen(false)}
-          />
-
           {/* Sidebar (Slide from bottom to top) */}
           <div
-            className={`absolute bottom-0 left-0 w-full max-h-screen transform transition-transform duration-300 ease-in-out ${
-              isMenuOpen ? 'translate-y-0' : 'translate-y-full'
-            } bg-[#08090a] border-t border-gray-600 overflow-y-auto`}
+            className={`absolute bottom-0 left-0 w-full h-full transform transition-transform  duration-300 ease-in-out  ${
+              isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+            } bg-[#08090a] border-t border-gray-600 overflow-y-auto sidebar-scrollbar`}
           >
-            <div className="p-6 mt-16">
+            <div className="p-6 mt-16 mb-12">
               <h2 className="text-xl font-semibold text-white mb-6 font-ibm-plex-sans">
                 Table of Contents
               </h2>
@@ -86,7 +77,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
                     key={idx}
                     href={`#section-${idx + 1}`}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block text-white transition font-semibold text-[16px] leading-normal tracking-[0.39px] font-ibm-plex-sans hover:text-gray-300 py-2"
+                    className="block text-white  font-semibold text-[16px] leading-normal tracking-[0.39px] font-ibm-plex-sans hover:text-gray-300 py-2"
                   >
                     {idx + 1}. {title}
                   </a>
@@ -97,8 +88,8 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
         </div>
 
         {/* Desktop Sidebar */}
-        <aside className="hidden lg:block sticky top-32 left-4 lg:left-8 w-64 h-[calc(100vh-13rem)] overflow-y-auto sidebar-scrollbar border border-[#08090a]  mt-20 ">
-          <nav className="space-y-12 ">
+        <aside className="hidden lg:block sticky top-32 left-4 lg:left-8 w-64 h-[calc(100vh-13rem)] overflow-y-auto sidebar-scrollbar border border-[#08090a] mt-20 ">
+          <nav className="space-y-12  ">
             {sections.map((title, idx) => (
               <a
                 key={idx}
@@ -112,7 +103,7 @@ export default function TermsLayout({ children }: { children: ReactNode }) {
         </aside>
 
         {/* Main content injected here */}
-        <main className=" flex-1 scroll-smooth md:ml-8 lg:ml-24 ">{children}</main>
+        <main className="flex-1 scroll-smooth md:ml-8 lg:ml-24">{children}</main>
       </div>
     </div>
   )
