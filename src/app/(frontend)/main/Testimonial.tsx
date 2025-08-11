@@ -145,7 +145,7 @@ const TestimonialRow = ({
       ))}
     </div>
   </div>
-)
+) 
 
 const Testimonials = () => {
   return (

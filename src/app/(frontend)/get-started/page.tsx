@@ -135,7 +135,7 @@ const Page = () => {
             <div className="text-5xl font-bold text-cyan-400"></div>
             <h2 className="text-2xl font-bold font-aldrich"> Welcome to Outliny</h2>
             <p className="text-sm text-gray-400 max-w-sm mx-auto">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
             </p>
             <ul className="text-xs text-gray-400 space-y-2 mt-4">
               <li>✅ High conversion rates on autopilot</li>

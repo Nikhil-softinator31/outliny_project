@@ -8,7 +8,7 @@ import FAQ from './Faq'
 
 import BottomCard from './BottomCard'
 
-import Card1 from './Card1'
+import EnterpriseCards from './EnterpriseCards'
 
 
 import SpotlightCard from './SpotlightCard'
@@ -24,7 +24,7 @@ const Main = () => {
         <SpotlightCard />
         <Automate />
         <Carousel />
-        <Card1 />
+        <EnterpriseCards/>
         <FAQ />
         <Testimonial />
         <BottomCard />

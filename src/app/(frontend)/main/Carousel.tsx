@@ -17,9 +17,9 @@ const Carousel = () => {
   ]
 
   return (
-    <section className=" py-8">
+    <div className="mt-20">
       <div
-        className="relative mx-auto h-[80px] max-w-[1200px] overflow-hidden m-10"
+        className=" mx-auto h-[80px] max-w-[1200px] overflow-hidden m-10 "
         style={{
           maskImage:
             'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)',
@@ -36,14 +36,13 @@ const Carousel = () => {
                 src={logo}
                 alt="brand logo"
                 fill
-                sizes="(max-width: 768px) 100px, 200px"
                 className="object-contain"
               />
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

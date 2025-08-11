@@ -97,21 +97,18 @@ body {
   backface-visibility: hidden;
 }
 
-/* real carousel css */
+/* carausel animation */
 @keyframes infiniteLoop {
-  0% {
-    transform: translate3d(0, 0, 0);
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translate3d(calc(-200px * 10), 0, 0);
+  to {
+    transform: translateX(-50%);
   }
 }
 
-/* Tailwind ke liye animation class define karna */
-@layer utilities {
-  .animate-infiniteLoop {
-    animation: infiniteLoop 25s linear infinite;
-  }
+.animate-infiniteLoop {
+  animation: infiniteLoop 25s linear infinite;
 }
 
 /* footer css */

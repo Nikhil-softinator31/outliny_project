@@ -1,5 +1,5 @@
 'use client'
-import { useState ,useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -13,9 +13,11 @@ const Navbar = () => {
     { name: 'Templates', href: '/templates' },
     { name: 'Pricing', href: '/pricing' },
   ]
+
+  //this is put for the overflow scroling in the navbar
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden' 
+      document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
     }
@@ -24,7 +26,6 @@ const Navbar = () => {
       document.body.style.overflow = ''
     }
   }, [isMenuOpen])
-
 
   return (
     <nav className="w-full bg-[#08090a] text-white z-50 border-b border-[#232323] fixed top-0">

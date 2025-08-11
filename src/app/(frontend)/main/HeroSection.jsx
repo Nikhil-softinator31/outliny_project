@@ -47,10 +47,7 @@ const HeroSection = () => {
           <h1 ref={text1} className="  text-[30px] sm:text-5xl   font-semibold text-left">
             Outliny Brand
           </h1>
-          <p
-            ref={text2}
-            className=" text-[30px] sm:text-5xl   flex-wrap text-3xl  font-semibold  "
-          >
+          <p ref={text2} className=" text-[30px] sm:text-5xl   flex-wrap text-3xl  font-semibold  ">
             Consistency, Simplified.
           </p>
           <p
