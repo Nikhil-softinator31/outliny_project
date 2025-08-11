@@ -22,7 +22,6 @@ const PartnersPage = () => {
       </p>
 
       {/* Why Partner */}
-
       <h2 className="text-2xl md:text-[30px] flex gap-3 font-semibold text-white mt-20 mb-4 ">
       <FaPuzzlePiece /> Why Partner with Outliny?
       </h2>

@@ -78,10 +78,6 @@ const dataSections = [
   },
 ]
 
-
-
-
-
 const termsContent = [
   {
     title: 'Introduction',
@@ -101,12 +97,12 @@ const termsContent = [
       </>
     ),
   },
-  
+
   {
     title: ' Create an Account',
     content: (
       <>
-        <div className=''>
+        <div className="">
           <ol className="list-decimal ml-6 space-y-2">
             <li>Visit outliny.com/signup.</li>
             <li>Enter your email and choose a secure password.</li>
@@ -129,7 +125,7 @@ const termsContent = [
       </>
     ),
   },
-  
+
   {
     title: 'Core Concepts',
     content: (
@@ -238,6 +234,34 @@ Authorization: Bearer YOUR_API_KEY
   }
 }`}
         </pre>
+        <p className=" mt-4 mb-1 font-semibold">Or using JavaScript (Fetch API):</p>
+        <pre className="overflow-auto bg-[#1a1a1a] p-4 rounded text-sm overflow-x-auto mb-6">
+          {`fetch('https://api.outliny.com/pdf/generate', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ template_id: 'your-template-id',
+   data: { name: 'Jane Doe', invoice_number: 'INV-1001' } })
+})
+.then(res => res.json())
+.then(console.log);
+`}
+        </pre>
+
+        <p className=" mt-4 mb-1 font-semibold">Security Best Practices:</p>
+        <ul className="list-disc ml-5 space-y-4 text-sm sm:text-base font-roboto mt-5">
+          <li>
+            Never expose your API key in frontend code or public repos. Use environment variables
+            instead.
+          </li>
+          <li>Regenerate your key immediately if compromised.</li>
+          <li>Always use HTTPS to encrypt data in transit</li>
+          <li>
+            Use multiple keys for separate environments (development, production) for isolation.
+          </li>
+        </ul>
       </>
     ),
   },
@@ -251,7 +275,10 @@ Authorization: Bearer YOUR_API_KEY
           <br />
           <span className="text-blue-400 underline cursor-pointer">Download the Collection</span>
         </p>
-        <span className="block mt-3 font-semibold text-white mb-1">What’s Included?</span>
+        <p className=" mt-3 font-semibold text-white ">What’s Included?</p>
+        <span className=" font-semibold  mb-1">
+          The collection includes pre-configured requests for:
+        </span>
         <ul className="list-disc ml-5 space-y-4 text-sm sm:text-base font-roboto mt-5">
           <li>Authentication headers</li>
           <li>Generate a PDF</li>
@@ -276,13 +303,14 @@ Authorization: Bearer YOUR_API_KEY
         <div className="mt-2 text-sm text-gray-400">
           <b>Pro Tip:</b> Save your API key as an environment variable in Postman for easier reuse.
         </div>
-        <span className="block mt-4 font-semibold text-white mb-1">Example: Generate a PDF</span>
+        <p className=" mt-4 font-semibold text-white mb-1">Example: Generate a PDF</p>
+        <span className=""> Select the Generate a PDF request and fill in:</span>
         <ul className="list-disc ml-5 space-y-4 text-sm sm:text-base font-roboto mt-5">
           <li>
             <b>template_id</b> – found in your Outliny dashboard.
           </li>
           <li>
-            <b>data</b> – dynamic data you want injected into the template.
+            <b>data</b> – dynamic date you want injected into the template.
           </li>
         </ul>
         <pre className="bg-[#1a1a1a] p-4 rounded-md text-sm  mt-6 mb-2 max-w-full">
@@ -294,6 +322,24 @@ Authorization: Bearer YOUR_API_KEY
   }
 }`}
         </pre>
+
+        <p className="  font-semibold text-white ">Test Before You Code:</p>
+        <p className="">
+          Using Postman helps validate your request structure and data before implementing your
+          integration in code. Ideal for:
+        </p>
+        <ul className="list-disc ml-5 space-y-4 text-sm sm:text-base font-roboto ">
+          <li>Debugging data issues.</li>
+          <li>Verifying template rendering</li>
+          <li>Testing new endpoints</li>
+        </ul>
+
+        <p className=" mt-4 font-semibold text-white mb-1"> Next Steps:</p>
+        <ul className="list-disc ml-5 space-y-4 text-sm sm:text-base font-roboto mt-5">
+          <li>Install an API Client</li>
+          <li>Authentication </li>
+          <li>Testing new endpoints</li>
+        </ul>
       </>
     ),
   },
@@ -335,7 +381,7 @@ Authorization: Bearer YOUR_API_KEY
   {
     title: 'Support and Feedback',
     content: (
-      <div className='space-y-3'>
+      <div className="space-y-3">
         <p>
           <b>Community Forum:</b> info@softinator.com
         </p>
@@ -356,17 +402,12 @@ export default function DocsPage() {
         <section
           key={idx}
           id={`section-${idx + 1}`}
-          className="space-y-8 scroll-mt-24 text-[#FFFFFFBF]"
+          className=" scroll-mt-24 text-[#FFFFFFBF]"
         >
-          <h2 className="text-xl  font-semibold text-white mb-2 mt-10 ">
-           {section.title}
-          </h2>
+          <h2 className="text-xl  font-semibold text-white mb-2 mt-10 ">{section.title}</h2>
           {section.content}
         </section>
       ))}
-
-    
-
     </div>
   )
 }
