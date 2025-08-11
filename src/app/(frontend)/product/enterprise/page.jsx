@@ -7,6 +7,7 @@ import { BiSolidHandRight } from "react-icons/bi";
 import { IoRocketOutline } from "react-icons/io5";
 import { CiCreditCard1 } from "react-icons/ci";
 import { MdDeveloperBoard } from "react-icons/md";
+import { FaLifeRing } from 'react-icons/fa';
 
 const EnterpriseFeaturesPage = () => {
   return (
@@ -29,7 +30,16 @@ const EnterpriseFeaturesPage = () => {
         <li>Zero-Log by Default — We do not store any content unless you choose to enable logging.</li>
         <li>Employee Data Isolation — Outliny employees cannot view your templates or payloads.</li>
       </ul>
+
+      <h2 className="text-2xl font-semibold mt-20 mb-4 flex gap-3 md:text-[30px] "><FaLifeRing/> Teamwork Made Effortless</h2>
+      <ul  className="list-disc ml-6 md:ml-14 mb-4 space-y-2 text-sm sm:text-base font-roboto ">
+        <li>Teams Feature - Create dedicated groups within your organization, invite members, assign roles, and manage template access by team.</li>
+        <li>Shared Projects & Folders -  Co-author template libraries, track progress, and ensure consistency across departments.</li>
+        <li>In-App Notifications - Stay in sync with real-time alerts on comments, approvals, and updates.</li>
+      
+      </ul>
   
+       
 
       <Section
          title={
