@@ -131,7 +131,7 @@ const sections = [
       { title: 'Base URL', sectionId: 'section-6' },
       { title: 'Authentication', sectionId: 'section-7' },
       { title: 'Postman Collection', sectionId: 'section-8' },
-      { title: 'Integrate the API', sectionId: 'section-9' },
+      { title: ' QuickStart: Integrate the API', sectionId: 'section-9' },
     ],
   },
 
