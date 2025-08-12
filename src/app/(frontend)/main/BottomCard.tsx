@@ -15,13 +15,12 @@ const BottomCard: React.FC = () => {
   const images = ['/one.png', '/two.png', '/three.png', '/four.png']
 
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
   }
 
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -61,7 +60,7 @@ const BottomCard: React.FC = () => {
               generation with confidence.
             </p>
             <div
-              className="relative bg-[#1A1A1A] rounded-xl border w-full border-[#2c2c2c] overflow-hidden  pt-2 px-4 pb-4 sm:h-screen  group"
+              className="relative bg-[#1A1A1A] rounded-xl border w-full border-[#2c2c2c] overflow-hidden  pt-2 px-4 pb-4 sm:h-screen  "
               onMouseEnter={() => setShowPauseBtn(true)}
               onMouseLeave={() => setShowPauseBtn(false)}
             >
@@ -87,7 +86,7 @@ const BottomCard: React.FC = () => {
               )}
 
               {/* Centered Pause Button on hover */}
-              {isPlaying && showPauseBtn && (
+              {isPlaying && (
                 <button
                   onClick={togglePlay}
                   className="absolute inset-0 flex items-center justify-center z-20"
@@ -102,7 +101,7 @@ const BottomCard: React.FC = () => {
       </div>
 
       {/* Second Section */}
-      <div className="flex flex-wrap gap-4 lg:gap-4 w-full  ">
+      <div className="flex flex-wrap gap-4 w-full  ">
         {/* Slider Card */}
         <div className="w-full sm:w-[48%] lg:w-[24%] xl:w-[26%] bg-[#0E0E0E] rounded-2xl border border-[#202020]   ">
           <div className="overflow-hidden">

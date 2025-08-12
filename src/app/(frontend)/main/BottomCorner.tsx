@@ -47,7 +47,7 @@ const BottomCorner: React.FC = () => {
           {icons.map((icon, index) => (
             <div
               key={index}
-              className=" p-3   -translate-x-80 m-1 rounded-lg border border-gray-600 text-center bg-[#0E0E0E] text-white"
+              className=" p-3   -translate-x-36 m-1 rounded-lg border border-gray-600 text-center bg-[#0E0E0E] text-white"
             >
               {icon}
             </div>
