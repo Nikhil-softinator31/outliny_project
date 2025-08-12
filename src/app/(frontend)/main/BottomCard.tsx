@@ -60,7 +60,7 @@ const BottomCard: React.FC = () => {
               generation with confidence.
             </p>
             <div
-              className="relative bg-[#1A1A1A] rounded-xl border w-full border-[#2c2c2c] overflow-hidden  pt-2 px-4 pb-4 sm:h-screen  "
+              className="relative bg-[#1A1A1A] rounded-xl border w-full border-[#2c2c2c] overflow-hidden  pt-2 px-4 pb-4 sm:h-screen  group"
               onMouseEnter={() => setShowPauseBtn(true)}
               onMouseLeave={() => setShowPauseBtn(false)}
             >
@@ -86,7 +86,7 @@ const BottomCard: React.FC = () => {
               )}
 
               {/* Centered Pause Button on hover */}
-              {isPlaying && (
+              {isPlaying && showPauseBtn && (
                 <button
                   onClick={togglePlay}
                   className="absolute inset-0 flex items-center justify-center z-20"

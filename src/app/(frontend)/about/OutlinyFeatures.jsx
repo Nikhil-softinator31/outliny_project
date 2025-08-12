@@ -52,7 +52,7 @@ export default function OutlinyFeatures() {
           </div>
 
           {/* Arrows */}
-          <svg className="absolute w-full h-full pointer-events-none z-0">
+          <svg className=" absolute w-full h-full pointer-events-none z-0">
             <defs>
               <marker
                 id="arrow"

@@ -26,23 +26,24 @@ const TemplateEditorPage = () => {
   return (
     <div className=" max-w-[99rem] mx-auto py-16 px-4 sm:px-6 lg:px-8 text-[#ebebeb] bg-[#08090a]">
       <h1 className="text-center text-3xl sm:text-4xl md:text-[50px] font-semibold mb-6 mt-10 md:mt-24 md:mb-10 text-white font-poppins">
-        Template Editor
+        Design & Code in One Place
       </h1>
 
       <p className="mb-4 max-w-7xl mx-auto text-center text-sm sm:text-base font-inter ">
-        Outliny&apos;s Template Editor gives you full creative control — design beautiful,
-        brand-consistent Emails and PDFs with powerful drag-and-drop tools, dynamic data binding,
-        and open standard exports. No more messy HTML, broken designs, or locked-in platforms.
+        Build, preview, and maintain email and PDF templates, no extra tooling required. Outliny
+        Template Editor gives you full creative control, design beautiful, brand-consistent Emails
+        and PDFs with powerful drag-and-drop tools, dynamic data binding, and open standard exports.
+        No more messy HTML, broken designs, or locked-in platforms.
       </p>
 
       {/* What You Can Create */}
       <div>
         <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold text-white mt-20 mb-3">
-        <IoCreate /> What You Can Create
+          <IoCreate /> What You Can Create
         </h2>
 
-        <div className="space-y-8 ml-2">
-          <div className="flex flex-col sm:flex-row items-start gap-4">
+        <div className="space-y-3  ">
+          <div className="flex flex-col sm:flex-row items-start gap-4 mt-2">
             <IoMailOutline className="text-2xl mt-1" />
             <div>
               <h3 className="text-lg font-semibold text-white">Emails</h3>
@@ -66,7 +67,7 @@ const TemplateEditorPage = () => {
       {/* Easy Drag-and-Drop Design */}
       <div>
         <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
-        <IoColorPaletteOutline /> Easy Drag-and-Drop Design
+          <IoColorPaletteOutline /> Easy Drag-and-Drop Design
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Our visual editors are built on top of industry-leading tools:
@@ -85,7 +86,7 @@ const TemplateEditorPage = () => {
       {/* Dynamic Data with Jinja Variables */}
       <div>
         <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        <FaFire /> Dynamic Data with Jinja Variables
+          <FaFire /> Dynamic Data with Jinja Variables
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Easily insert dynamic fields into your templates using Jinja syntax:
@@ -104,7 +105,7 @@ const TemplateEditorPage = () => {
       {/* Professional Template Gallery */}
       <div>
         <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
-        <RiBookShelfLine /> Professional Template Gallery
+          <RiBookShelfLine /> Professional Template Gallery
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Get started faster with our curated library:
@@ -126,7 +127,7 @@ const TemplateEditorPage = () => {
       {/* Modular Design */}
       <div>
         <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
-        <FaPuzzlePiece /> Modular Design
+          <FaPuzzlePiece /> Modular Design
         </h2>
         <p className="py-4 text-sm sm:text-base font-sans px-2">
           Build custom modules — reusable blocks (like footers, headers, legal notices) that your
@@ -140,7 +141,7 @@ const TemplateEditorPage = () => {
       {/* Features Overview */}
       <div>
         <h2 className="text-xl sm:text-2xl md:text-[30px] flex gap-3 font-semibold mt-10 mb-3 text-white">
-         <GrOverview/> Features Overview
+          <GrOverview /> Features Overview
         </h2>
         <div className="overflow-x-auto  rounded-lg p-4">
           <table className="min-w-[500px] sm:min-w-full text-sm sm:text-base">
@@ -153,10 +154,7 @@ const TemplateEditorPage = () => {
             </thead>
             <tbody>
               {features.map((feature, index) => (
-                <tr
-                  key={index}
-                  className=' border-b-[1px] border-gray-700'
-                >
+                <tr key={index} className=" border-b-[1px] border-gray-700">
                   <td className="py-3 px-4">{feature.name}</td>
                   <td className="py-3 px-4">{feature.emails}</td>
                   <td className="py-3 px-4">{feature.pdfs}</td>
@@ -170,8 +168,8 @@ const TemplateEditorPage = () => {
       {/* Import and Export Templates */}
       <div>
         <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        <BsBoxSeam />
-        Import and Export Templates
+          <BsBoxSeam />
+          Import and Export Templates
         </h2>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Emails: Fully MJML compatible — import/export easily.</li>
@@ -185,7 +183,7 @@ const TemplateEditorPage = () => {
       {/* Built for Teams and Enterprises */}
       <div>
         <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        <TbTargetArrow /> Built for Teams and Enterprises
+          <TbTargetArrow /> Built for Teams and Enterprises
         </h2>
         <ul className="list-disc ml-6 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Centralize all templates in one secure, organized place.</li>
@@ -197,8 +195,8 @@ const TemplateEditorPage = () => {
       {/* Start Building Now */}
       <div>
         <h2 className="text-xl sm:text-2xl flex gap-3 md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        <IoRocketOutline />
-        Start Building Now!
+          <IoRocketOutline />
+          Start Building Now!
         </h2>
         <div className="space-y-4 ml-4 sm:ml-6 md:ml-12">
           {[
@@ -217,7 +215,7 @@ const TemplateEditorPage = () => {
       {/* Pro Tips */}
       <div>
         <h2 className="text-xl sm:text-2xl flex gap-3   md:text-[30px] font-semibold mt-10 mb-3 text-white">
-        <FaFire /> Pro Tips
+          <FaFire /> Pro Tips
         </h2>
         <ul className="list-disc ml-7 md:ml-16 mb-4 space-y-2 text-sm sm:text-base font-roboto">
           <li>Use Jinja loops and conditionals for advanced dynamic content.</li>
