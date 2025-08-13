@@ -1,5 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import { FeatureTemplateData } from './FeatureTemplateData'
+import FeatureTemplate from './FeatureTemplate'
+import Carousel from '../main/Carousel'
 
 const HeroSection = () => {
   return (
@@ -23,10 +26,17 @@ const HeroSection = () => {
       <h2 className=" text-[26px] sm:text-[26px] md:text-[40px] lg:text-[40px] leading-tight font-extrabold font-poppins px-4 mt-8 text-white">
         Outliny Features
       </h2>
-      <p className="text-white text-[14px] sm:text-[20px] md:text-[20px] mx-auto mt-4 md:mt-10 px-4  lg:max-w-[40em] font-poppins leading-9" >
+      <p className="text-white text-[14px] sm:text-[20px] md:text-[20px] mx-auto mt-4 md:mt-10 px-4  lg:max-w-[40em] font-poppins leading-9">
         Everything you need to effortlessly maintain brand consistency across all your digital
         communications.
       </p>
+
+      <Carousel />
+
+      {FeatureTemplateData.map((data, idx) => (
+        <FeatureTemplate key={idx} data={data} />
+      ))}
+      
     </div>
   )
 }
